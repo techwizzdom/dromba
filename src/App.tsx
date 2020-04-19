@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 import './App.css';
 
+import useTheme from './useTheme';
+
+import Header from './components/Header';
+import { ThemeContext } from './components/ThemeContext';
+import MainContainer from './components/MainContainer';
+
+import About from './routes/About';
+import Timeline from './routes/Timeline';
+import Home from './routes/Home';
+
 function App() {
+  const [theme, toggleTheme] = useTheme();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <Router>
+        <MainContainer>
+          <Header toggleTheme={toggleTheme} />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/timeline" component={Timeline} />
+            <Route path="/about" component={About} />
+          </Switch>
+        </MainContainer>
+      </Router>
+    </ThemeContext.Provider>
   );
 }
 
