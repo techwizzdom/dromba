@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
+import { ThemeContext } from '../ThemeContext';
 import { Link } from 'react-router-dom';
 
 const mainNavigationCss = css`
@@ -7,21 +8,26 @@ const mainNavigationCss = css`
   width: 100%;
   font-size: 20px;
   display: flex;
+  justify-content: space-between;
+  padding: 0 64px;
 `;
 
-const navigationItemCss = css``;
+const navigationItemCss = (theme: any) => css`
+  color: ${theme.textColor};
+`;
 
 const MainNavigation: React.FC = () => {
+  const theme = React.useContext(ThemeContext);
   return (
     <div className={mainNavigationCss}>
-      <Link to="/" className={navigationItemCss}>
+      <Link to="/" className={navigationItemCss(theme)}>
         Das Haus
       </Link>
-      <Link to="timeline" className={navigationItemCss}>
+      <Link to="timeline" className={navigationItemCss(theme)}>
         Timeline
       </Link>
-      <Link to="about" className={navigationItemCss}>
-        About me
+      <Link to="about" className={navigationItemCss(theme)}>
+        About who?
       </Link>
     </div>
   );
