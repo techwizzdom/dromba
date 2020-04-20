@@ -2,6 +2,7 @@ import * as React from 'react';
 import { css } from 'emotion';
 import ThemeToggle from '../ThemeToggle';
 import MainNavigation from '../MainNavigation';
+import Logo from '../../assets/svg/logo.svg';
 
 interface IProps {
   toggleTheme: () => void;
@@ -10,14 +11,17 @@ interface IProps {
 const headerContainerCss = css`
   height: 48px;
   display: flex;
+  align-items: center;
+`;
+
+const logoWrapperCss = css`
+  padding: 0 48px 0 16px;
 `;
 
 const logoCss = css`
-  width: 48px;
-  min-width: 48px;
-  height: 48px;
-  background-color: #123434;
-  margin-right: 48px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
 `;
 
 const themeToggleContainerCss = css`
@@ -27,7 +31,9 @@ const themeToggleContainerCss = css`
 const Header: React.FC<IProps> = (props: IProps) => {
   return (
     <div className={headerContainerCss}>
-      <div className={logoCss}></div>
+      <div className={logoWrapperCss}>
+        <img src={Logo} className={logoCss} alt="logo" />
+      </div>
       <MainNavigation />
       <div className={themeToggleContainerCss}>
         <ThemeToggle toggleTheme={props.toggleTheme} />
