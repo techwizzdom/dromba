@@ -7,6 +7,9 @@ const mainContainer = (theme: any) => css`
   width: 100%;
   height: 100%;
   color: ${theme.textColor};
+  transition-property: color, background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
 `;
 
 const MainContainer: React.FC = (props: any) => {
