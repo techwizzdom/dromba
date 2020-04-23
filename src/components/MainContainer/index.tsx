@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'emotion';
+
 import { ThemeContext } from '../ThemeContext';
 
 const mainContainer = (theme: any) => css`

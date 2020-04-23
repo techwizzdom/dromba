@@ -2,7 +2,7 @@ import * as React from 'react';
 import { css } from 'emotion';
 import ThemeToggle from '../ThemeToggle';
 import MainNavigation from '../MainNavigation';
-import Logo from '../../assets/svg/logo.svg';
+import Logo from '../../assets/icons/logo.svg';
 
 interface IProps {
   toggleTheme: () => void;
