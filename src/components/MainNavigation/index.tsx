@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const mainNavigationCss = css`
   font-family: 'Indie Flower', cursive;
+  /* font-family: 'Rock Salt', cursive; */
   width: 100%;
   font-size: 20px;
   display: flex;
