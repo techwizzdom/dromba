@@ -30,6 +30,9 @@ const MainNavigation: React.FC = () => {
       <Link to="about" className={navigationItemCss(theme)}>
         About who?
       </Link>
+      <Link to="blog" className={navigationItemCss(theme)}>
+        Blog
+      </Link>
     </nav>
   );
 };

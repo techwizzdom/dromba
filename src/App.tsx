@@ -12,6 +12,7 @@ import MainContainer from './components/MainContainer';
 import About from './routes/About';
 import Timeline from './routes/Timeline';
 import Home from './routes/Home';
+import Blog from './routes/Blog';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/timeline" component={Timeline} />
             <Route path="/about" component={About} />
+            <Route path="/blog" component={Blog} />
           </Switch>
         </MainContainer>
       </Router>
