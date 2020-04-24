@@ -9,7 +9,9 @@ const routeContainer = css`
 `;
 
 const RouteContainer: React.FC = (props: any) => {
-  return <div className={routeContainer}>{props.children}</div>;
+  const { children } = props;
+
+  return <div className={routeContainer}>{children}</div>;
 };
 
 export default RouteContainer;
