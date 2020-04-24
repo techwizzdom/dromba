@@ -12,9 +12,9 @@ const ParagraphCss = (size: ParagraphSize) => css`
 `;
 
 const Paragraph: React.FC<IParagraphProps> = (props: IParagraphProps) => {
-  const { size } = props;
+  const { size, children } = props;
 
-  return <p className={ParagraphCss(size)}>{props.children}</p>;
+  return <p className={ParagraphCss(size)}>{children}</p>;
 };
 
 export default Paragraph;

@@ -14,8 +14,11 @@ const mainContainer = (theme: any) => css`
 `;
 
 const MainContainer: React.FC = (props: any) => {
+  const { children } = props;
+
   const theme = React.useContext(ThemeContext);
-  return <div className={mainContainer(theme)}>{props.children}</div>;
+
+  return <div className={mainContainer(theme)}>{children}</div>;
 };
 
 export default MainContainer;

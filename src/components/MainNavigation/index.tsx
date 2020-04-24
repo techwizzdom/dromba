@@ -20,7 +20,7 @@ const navigationItemCss = (theme: any) => css`
 const MainNavigation: React.FC = () => {
   const theme = React.useContext(ThemeContext);
   return (
-    <div className={mainNavigationCss}>
+    <nav className={mainNavigationCss}>
       <Link to="/" className={navigationItemCss(theme)}>
         Das Haus
       </Link>
@@ -30,7 +30,7 @@ const MainNavigation: React.FC = () => {
       <Link to="about" className={navigationItemCss(theme)}>
         About who?
       </Link>
-    </div>
+    </nav>
   );
 };
 
