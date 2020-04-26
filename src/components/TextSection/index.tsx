@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { HeadingTags } from '../../enums/HeadingTags';
 import { ParagraphSize } from '../../enums/ParagraphSize';
-import Heading from '../core/Heading';
 import Paragraph from '../core/Paragraph';
+import { H3 } from '../core/Heading';
 
 interface ITextSectionProps {
   title: string;
@@ -21,7 +20,7 @@ const TextSection: React.FC<ITextSectionProps> = (props: ITextSectionProps) => {
 
   return (
     <section className={textSectionCss}>
-      <Heading tag={HeadingTags.H3}>{title}</Heading>
+      <H3>{title}</H3>
       <Paragraph size={ParagraphSize.Medium}>{content}</Paragraph>
     </section>
   );
