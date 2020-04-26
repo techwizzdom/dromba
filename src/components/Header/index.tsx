@@ -4,7 +4,7 @@ import ThemeToggle from '../ThemeToggle';
 import MainNavigation from '../MainNavigation';
 import Logo from '../../assets/icons/logo.svg';
 
-interface IProps {
+interface IHeaderProps {
   toggleTheme: () => void;
 }
 
@@ -28,7 +28,7 @@ const themeToggleContainerCss = css`
   padding: 0 16px 0 32px;
 `;
 
-const Header: React.FC<IProps> = (props: IProps) => {
+const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => {
   return (
     <div className={headerContainerCss}>
       <div className={logoWrapperCss}>
