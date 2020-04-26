@@ -1,60 +1,106 @@
 import * as React from 'react';
-import { css } from 'emotion';
+import { cx, css } from 'emotion';
 import { HeadingTags } from '../../../enums/HeadingTags';
 import { HeadingSize } from '../../../enums/HeadingSize';
+import { underlineOnHover } from '../../../styles/css/textHover';
+import { TextHoverUnderlineHeight } from '../../../enums/TextHoverUnderlineHeight';
+import { ThemeContext } from '../../ThemeContext';
 
 interface IHeadingProps {
   children: React.ReactNode;
   tag: HeadingTags;
   size: HeadingSize;
+  isHoverable?: boolean;
 }
 
 interface IHProps {
   children: React.ReactNode;
+  isHoverable?: boolean;
 }
 
-const headingCss = (size: HeadingSize) => css`
+export const headingCss = (
+  size: HeadingSize,
+  theme: any,
+  isHoverable?: boolean,
+) => css`
   font-size: ${size}px;
+  position: relative;
+
+  ${isHoverable
+    ? underlineOnHover(TextHoverUnderlineHeight.Medium, theme)
+    : null}
 `;
 
 const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
-  const { tag, size, children } = props;
+  const { tag, size, isHoverable = false, children } = props;
 
-  return React.createElement(tag, { className: headingCss(size) }, children);
+  const theme = React.useContext(ThemeContext);
+
+  return React.createElement(
+    tag,
+    {
+      className: cx(headingCss(size, theme, isHoverable), 'heading'),
+    },
+    children,
+  );
 };
 
 export const H1: React.FC<IHProps> = (props: IHProps) => (
-  <Heading tag={HeadingTags.H1} size={HeadingSize.H1}>
+  <Heading
+    tag={HeadingTags.H1}
+    size={HeadingSize.H1}
+    isHoverable={props.isHoverable}
+  >
     {props.children}
   </Heading>
 );
 
 export const H2: React.FC<IHProps> = (props: IHProps) => (
-  <Heading tag={HeadingTags.H2} size={HeadingSize.H2}>
+  <Heading
+    tag={HeadingTags.H2}
+    size={HeadingSize.H2}
+    isHoverable={props.isHoverable}
+  >
     {props.children}
   </Heading>
 );
 
 export const H3: React.FC<IHProps> = (props: IHProps) => (
-  <Heading tag={HeadingTags.H3} size={HeadingSize.H3}>
+  <Heading
+    tag={HeadingTags.H3}
+    size={HeadingSize.H3}
+    isHoverable={props.isHoverable}
+  >
     {props.children}
   </Heading>
 );
 
 export const H4: React.FC<IHProps> = (props: IHProps) => (
-  <Heading tag={HeadingTags.H4} size={HeadingSize.H4}>
+  <Heading
+    tag={HeadingTags.H4}
+    size={HeadingSize.H4}
+    isHoverable={props.isHoverable}
+  >
     {props.children}
   </Heading>
 );
 
 export const H5: React.FC<IHProps> = (props: IHProps) => (
-  <Heading tag={HeadingTags.H5} size={HeadingSize.H5}>
+  <Heading
+    tag={HeadingTags.H5}
+    size={HeadingSize.H5}
+    isHoverable={props.isHoverable}
+  >
     {props.children}
   </Heading>
 );
 
 export const H6: React.FC<IHProps> = (props: IHProps) => (
-  <Heading tag={HeadingTags.H6} size={HeadingSize.H6}>
+  <Heading
+    tag={HeadingTags.H6}
+    size={HeadingSize.H6}
+    isHoverable={props.isHoverable}
+  >
     {props.children}
   </Heading>
 );
