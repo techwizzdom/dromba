@@ -2,8 +2,8 @@ import * as React from 'react';
 import { css } from 'emotion';
 import { ThemeContext } from '../ThemeContext';
 
-interface IProps {
-  toggleTheme: any;
+interface IThemeToogleProps {
+  toggleTheme: () => void;
 }
 
 const togglerContainerCss = (theme: any) => css`
@@ -44,7 +44,7 @@ const switcherLineCss = (theme: any) => css`
   background-color: ${theme.themeToggleLine};
 `;
 
-const ThemeToggle: React.FC<IProps> = (props: IProps) => {
+const ThemeToggle: React.FC<IThemeToogleProps> = (props: IThemeToogleProps) => {
   const theme = React.useContext(ThemeContext);
   return (
     <button
