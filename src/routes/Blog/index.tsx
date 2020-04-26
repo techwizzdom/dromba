@@ -1,22 +1,26 @@
 import React from 'react';
 import RouteContainer from '../../components/RouteContainer';
-import TextSection from '../../components/TextSection';
-
-const fetchBlogPosts = () => {
-  fetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dvidovic91',
-  )
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      console.log(data);
-    });
-};
+import BlogPost, { IBlogPostProps } from '../../components/BlogPost';
+import { useMediumBlogPosts } from '../../services/useMediumBlogPosts';
 
 function Blog() {
-  fetchBlogPosts();
-  return <RouteContainer>Blog post</RouteContainer>;
+  const [blogPosts, isLoading] = useMediumBlogPosts();
+
+  return (
+    <RouteContainer>
+      {isLoading
+        ? 'Loading...'
+        : blogPosts.map((post: IBlogPostProps, i: number) => (
+            <BlogPost
+              key={i}
+              title={post.title}
+              subtitle={post.subtitle}
+              thumbnail={post.thumbnail}
+              url={post.url}
+            />
+          ))}
+    </RouteContainer>
+  );
 }
 
 export default Blog;
