@@ -18,10 +18,7 @@ const blogPostCss = css`
   align-items: flex-start;
   margin-bottom: 64px;
 
-  ${underlineClassNameOnHover(
-    '.headingTitleHover',
-    TextHoverUnderlineHeight.Medium,
-  )}
+  ${underlineClassNameOnHover('.heading', TextHoverUnderlineHeight.Medium)}
 `;
 
 const thumbnailCss = css`
