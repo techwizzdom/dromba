@@ -24,6 +24,29 @@ code {
   box-sizing: border-box;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
 #root {
   /* height: 100%; */
   box-sizing: border-box;
