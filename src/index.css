@@ -48,6 +48,12 @@ a {
   color: inherit;
 }
 
+button {
+  background-color: none;
+  border: none;
+  outline: none;
+}
+
 #root {
   /* height: 100%; */
   box-sizing: border-box;
