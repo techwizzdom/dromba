@@ -4,16 +4,22 @@ import { ThemeContext } from '../ThemeContext';
 import { Link } from 'react-router-dom';
 import { TextHoverUnderlineHeight } from '../../enums/TextHoverUnderlineHeight';
 import { underlineOnHover } from '../../styles/css/textHover';
+import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
 
 const mainNavigationCss = css`
   font-family: 'Indie Flower', cursive;
   /* font-family: 'Maven Pro', sans-serif; */
   /* font-family: 'Rock Salt', cursive; */
+  max-width: 768px;
   width: 100%;
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  padding: 0 64px;
+  padding: 0 32px;
+
+  @media ${MediaBreakpoints.Tablet} {
+    max-width: 576px;
+  }
 `;
 
 const navigationItemCss = (theme: any) => css`

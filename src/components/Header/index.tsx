@@ -12,20 +12,21 @@ const headerContainerCss = css`
   height: 48px;
   display: flex;
   align-items: center;
+  justify-content: center;
 `;
 
 const logoWrapperCss = css`
-  padding: 0 48px 0 16px;
+  padding: 0 16px;
 `;
 
 const logoCss = css`
-  width: 40px;
-  min-width: 40px;
+  width: 56px;
+  min-width: 56px;
   height: 40px;
 `;
 
 const themeToggleContainerCss = css`
-  padding: 0 16px 0 32px;
+  padding: 0 16px;
 `;
 
 const Header: React.FC<IHeaderProps> = (props: IHeaderProps) => {
