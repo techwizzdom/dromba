@@ -11,9 +11,11 @@ export default () => {
   const toggleTheme = () => {
     if (selectedTheme === Themes.Light) {
       window.localStorage.setItem('selectedTheme', Themes.Dark);
+      document.body.style.backgroundColor = dark.backgroundColor;
       setSelectedTheme(Themes.Dark);
     } else {
       window.localStorage.setItem('selectedTheme', Themes.Light);
+      document.body.style.backgroundColor = light.backgroundColor;
       setSelectedTheme(Themes.Light);
     }
   };
