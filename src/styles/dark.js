@@ -8,6 +8,6 @@ export const dark = {
   textColor: colors.baseWhite,
   textColorSecondary: colors.vanishingGray,
   themeToggleColor: colors.radioactiveSun,
-  themeToggleLine: colors.turqoise,
+  themeToggleLine: colors.baseWhite,
   timelineConnectionLineColor: colors.vanishingGray,
 };
