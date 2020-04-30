@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { Device } from '../enums/Device';
+import { DeviceType } from '../enums/DeviceType';
 import { MediaBreakpoints } from '../enums/MediaBreakpoints';
 
-export function useDevice(): Device {
+export function useDevice(): DeviceType {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ export function useDevice(): Device {
   }, []);
 
   if (width <= MediaBreakpoints.Tablet && width > MediaBreakpoints.Mobile) {
-    return Device.Tablet;
+    return DeviceType.Tablet;
   } else if (width <= MediaBreakpoints.Mobile) {
-    return Device.Mobile;
+    return DeviceType.Mobile;
   }
 
-  return Device.Desktop;
+  return DeviceType.Desktop;
 }
