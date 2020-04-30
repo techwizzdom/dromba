@@ -11,6 +11,10 @@ const routeContainer = css`
   @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
     max-width: 576px;
   }
+
+  @media (max-width: ${MediaBreakpoints.Mobile}px) {
+    padding: 64px 20px;
+  }
 `;
 
 const RouteContainer: React.FC = (props: any) => {
