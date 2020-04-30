@@ -8,7 +8,7 @@ const routeContainer = css`
   margin: 0 auto;
   width: 100%;
 
-  @media ${MediaBreakpoints.Tablet} {
+  @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
     max-width: 576px;
   }
 `;

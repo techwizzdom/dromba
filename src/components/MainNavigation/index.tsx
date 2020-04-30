@@ -17,7 +17,7 @@ const mainNavigationCss = css`
   justify-content: space-between;
   padding: 0 32px;
 
-  @media ${MediaBreakpoints.Tablet} {
+  @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
     max-width: 576px;
   }
 `;
