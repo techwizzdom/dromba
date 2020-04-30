@@ -44,20 +44,21 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
+  const toggleMenu = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className={headerMobileCss}>
       <div className={topBarCss}>
-        <IconButton
-          icon={HamburgerMenu}
-          onClick={() => setIsExpanded(!isExpanded)}
-        />
+        <IconButton icon={HamburgerMenu} onClick={() => toggleMenu()} />
         <img className={logoCss} src={Logo} alt="logo" />
         <div className={themeToggleContainerCss}>
           <ThemeToggle toggleTheme={toggleTheme} />
         </div>
       </div>
       <div className={navigationCss(isExpanded)}>
-        <NavigationItems />
+        <NavigationItems isMobile={true} />
       </div>
     </div>
   );
