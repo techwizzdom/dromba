@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { useDevice } from '../../hooks/useDevice';
-import { DeviceType } from '../../enums/DeviceType';
 import { Link } from 'react-router-dom';
 import { underlineOnHover } from '../../styles/css/textHover';
 import { TextHoverUnderlineHeight } from '../../enums/TextHoverUnderlineHeight';
 import { css } from 'emotion';
 import { ThemeContext } from '../ThemeContext';
+
+interface INavigationItemsProps {
+  isMobile?: boolean;
+}
 
 const navigationItemCss = (theme: any, isMobile: boolean) => css`
   position: relative;
@@ -17,11 +19,12 @@ const navigationItemCss = (theme: any, isMobile: boolean) => css`
   ${underlineOnHover(TextHoverUnderlineHeight.Medium, theme)};
 `;
 
-const NavigationItems: React.FC = () => {
-  const deviceType = useDevice();
-  const theme = React.useContext(ThemeContext);
+const NavigationItems: React.FC<INavigationItemsProps> = (
+  props: INavigationItemsProps,
+) => {
+  const { isMobile = false } = props;
 
-  const isMobile = deviceType === DeviceType.Mobile;
+  const theme = React.useContext(ThemeContext);
 
   return (
     <>
