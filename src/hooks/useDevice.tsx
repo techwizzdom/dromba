@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Device } from '../enums/Device';
 import { MediaBreakpoints } from '../enums/MediaBreakpoints';
 
-export function useMediaType(): Device {
+export function useDevice(): Device {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
