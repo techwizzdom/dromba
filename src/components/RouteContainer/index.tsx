@@ -13,7 +13,7 @@ const routeContainer = css`
   }
 
   @media (max-width: ${MediaBreakpoints.Mobile}px) {
-    padding: 64px 20px;
+    padding: 64px 8px;
   }
 `;
 
