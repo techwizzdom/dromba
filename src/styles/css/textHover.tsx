@@ -28,3 +28,15 @@ export const underlineOnHover = (theme: any) => css`
     background-size: 100% 100%;
   }
 `;
+
+export const underline = (theme: any) => css`
+  display: inline;
+  background-image: linear-gradient(
+    transparent 90%,
+    ${theme.textColor} 90%,
+    ${theme.textColor} 100%
+  );
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 100% 100%;
+`;
