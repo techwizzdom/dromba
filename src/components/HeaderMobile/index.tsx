@@ -7,14 +7,16 @@ import IconButton from '../IconButton';
 import NavigationItems from '../NavigationItems';
 
 import Logo from '../../assets/icons/logo.svg';
-import HamburgerMenu from '../../assets/icons/hamburger-menu.svg';
+import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
+import { ThemeContext } from '../ThemeContext';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;
 }
 
 const headerMobileCss = css`
-  padding: 0 8px;
+  padding: 0;
+  position: relative;
 `;
 
 const topBarCss = css`
@@ -27,15 +29,30 @@ const logoCss = css`
   width: 32px;
 `;
 
-const navigationCss = (isExpanded: boolean) => css`
-  height: ${isExpanded ? '128px' : 0};
+const navigationCss = (theme: any, isExpanded: boolean) => css`
+  position: absolute;
+  top: 48px;
+  left: 0;
+  z-index: 1;
+  padding-bottom: ${isExpanded ? '96px' : '0'};
+  height: ${isExpanded ? '100vh' : 0};
+  width: 100vw;
+  background-color: ${isExpanded ? theme.backgroundColor : 'transparent'};
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  transition: height 0.4s cubic-bezier(0.79, 0.01, 0.22, 0.99);
+  transition: height ${isExpanded ? '0.5s' : '0.2s'} ease,
+    padding-bottom ${isExpanded ? '0.5s' : '0.2s'} ease,
+    background-color ${isExpanded ? '0.5s' : '0.2s'} ease-in-out;
 `;
 
-const themeToggleContainerCss = css``;
+const navigationItemsCss = css`
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
   props: IHeaderMobileProps,
@@ -43,6 +60,7 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
   const { toggleTheme } = props;
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
+  const theme = React.useContext(ThemeContext);
 
   const toggleMenu = () => {
     setIsExpanded(!isExpanded);
@@ -51,14 +69,14 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
   return (
     <div className={headerMobileCss}>
       <div className={topBarCss}>
-        <IconButton icon={HamburgerMenu} onClick={() => toggleMenu()} />
+        <IconButton Icon={HamburgerMenu} onClick={() => toggleMenu()} />
         <img className={logoCss} src={Logo} alt="logo" />
-        <div className={themeToggleContainerCss}>
-          <ThemeToggle toggleTheme={toggleTheme} />
-        </div>
+        <ThemeToggle toggleTheme={toggleTheme} />
       </div>
-      <div className={navigationCss(isExpanded)}>
-        <NavigationItems isMobile={true} />
+      <div className={navigationCss(theme, isExpanded)}>
+        <div className={navigationItemsCss}>
+          <NavigationItems isMobile={true} onNavigationItemClick={toggleMenu} />
+        </div>
       </div>
     </div>
   );
