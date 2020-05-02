@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { underlineOnHover } from '../../styles/css/textHover';
-import { TextHoverUnderlineHeight } from '../../enums/TextHoverUnderlineHeight';
 import { css } from 'emotion';
 import { ThemeContext } from '../ThemeContext';
 
@@ -16,7 +15,7 @@ const navigationItemCss = (theme: any, isMobile: boolean) => css`
   justify-content: center;
   height: ${isMobile ? '32px' : 'auto'};
 
-  ${underlineOnHover(TextHoverUnderlineHeight.Medium, theme)};
+  ${underlineOnHover(theme)};
 `;
 
 const NavigationItems: React.FC<INavigationItemsProps> = (

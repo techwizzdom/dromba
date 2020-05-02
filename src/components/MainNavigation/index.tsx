@@ -4,12 +4,9 @@ import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
 import NavigationItems from '../NavigationItems';
 
 const mainNavigationCss = css`
-  font-family: 'Indie Flower', cursive;
-  /* font-family: 'Maven Pro', sans-serif; */
-  /* font-family: 'Rock Salt', cursive; */
   max-width: 768px;
   width: 100%;
-  font-size: 20px;
+  font-size: 16px;
   display: flex;
   justify-content: space-between;
   padding: 0 32px;

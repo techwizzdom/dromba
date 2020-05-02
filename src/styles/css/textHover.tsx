@@ -1,42 +1,30 @@
 import { css } from 'emotion';
-import { TextHoverUnderlineHeight } from '../../enums/TextHoverUnderlineHeight';
 
-export const underlineClassNameOnHover = (
-  className: string,
-  height: TextHoverUnderlineHeight,
-) => css`
-  &:hover ${className}::after {
-    content: '';
-    transform: scaleX(1);
-    transform-origin: left center;
-    height: ${height}px;
+export const underlineClassNameOnHover = (className: string) => css`
+  &:hover ${className} {
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 100% 100%;
   }
 `;
 
-export const underlineOnHover = (
-  height: TextHoverUnderlineHeight,
-  theme: any,
-) => css`
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    bottom: 2px;
-    background-color: ${theme.textColor};
-    width: 100%;
-    height: ${height};
-    transform: scaleX(0);
-    transform-origin: right center;
-    transition: transform 0.4s cubic-bezier(0.79, 0.01, 0.22, 0.99);
-  }
+export const underlineOnHover = (theme: any) => css`
+  display: inline;
+  background-image: linear-gradient(
+    transparent 90%,
+    ${theme.textColor} 90%,
+    ${theme.textColor} 100%
+  );
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 0% 100%;
+  transform: none;
+  transition: background-size 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s,
+    background-position 0s step-end 0.5s;
 
   &:hover {
-    &::after {
-      content: '';
-      transform: scaleX(1);
-      transform-origin: left center;
-      background-color: ${theme.textColor};
-      height: ${height};
-    }
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 100% 100%;
   }
 `;
