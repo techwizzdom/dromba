@@ -1,11 +1,20 @@
 import React from 'react';
 import { css } from 'emotion';
+import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
 
 const routeContainer = css`
   padding: 80px 32px;
   max-width: 768px;
   margin: 0 auto;
   width: 100%;
+
+  @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
+    max-width: 576px;
+  }
+
+  @media (max-width: ${MediaBreakpoints.Mobile}px) {
+    padding: 64px 20px;
+  }
 `;
 
 const RouteContainer: React.FC = (props: any) => {

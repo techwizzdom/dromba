@@ -3,7 +3,6 @@ import { cx, css } from 'emotion';
 import { HeadingTags } from '../../../enums/HeadingTags';
 import { HeadingSize } from '../../../enums/HeadingSize';
 import { underlineOnHover } from '../../../styles/css/textHover';
-import { TextHoverUnderlineHeight } from '../../../enums/TextHoverUnderlineHeight';
 import { ThemeContext } from '../../ThemeContext';
 
 interface IHeadingProps {
@@ -26,9 +25,7 @@ export const headingCss = (
   font-size: ${size}px;
   position: relative;
 
-  ${isHoverable
-    ? underlineOnHover(TextHoverUnderlineHeight.Medium, theme)
-    : null}
+  ${isHoverable ? underlineOnHover(theme) : null}
 `;
 
 const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {

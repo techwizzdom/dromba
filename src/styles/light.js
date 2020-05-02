@@ -8,6 +8,6 @@ export const light = {
   textColor: colors.baseBlack,
   textColorSecondary: colors.darkMoon,
   themeToggleColor: colors.turqoise,
-  themeToggleLine: colors.radioactiveSun,
+  themeToggleLine: colors.baseBlack,
   timelineConnectionLineColor: colors.darkMoon,
 };

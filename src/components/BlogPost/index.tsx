@@ -3,7 +3,6 @@ import { css } from 'emotion';
 import Paragraph from '../core/Paragraph';
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { H5 } from '../core/Heading';
-import { TextHoverUnderlineHeight } from '../../enums/TextHoverUnderlineHeight';
 import { underlineClassNameOnHover } from '../../styles/css/textHover';
 
 export interface IBlogPostProps {
@@ -18,7 +17,7 @@ const blogPostCss = css`
   align-items: flex-start;
   margin-bottom: 64px;
 
-  ${underlineClassNameOnHover('.heading', TextHoverUnderlineHeight.Medium)}
+  ${underlineClassNameOnHover('.heading')}
 `;
 
 const thumbnailCss = css`
@@ -28,10 +27,7 @@ const thumbnailCss = css`
   margin-right: 32px;
 `;
 
-const textWrapperCss = css`
-  display: flex;
-  flex-direction: column;
-`;
+const textWrapperCss = css``;
 
 const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
   const { title, subtitle, thumbnail, url } = props;

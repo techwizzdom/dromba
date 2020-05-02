@@ -14,7 +14,6 @@ const togglerContainerCss = (theme: any) => css`
   transition-duration: 0.5s;
   height: 26px;
   width: 56px;
-  outline: none;
   position: relative;
   cursor: pointer;
 `;
