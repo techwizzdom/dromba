@@ -3,7 +3,6 @@ import { css } from 'emotion';
 import Paragraph from '../core/Paragraph';
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { H5 } from '../core/Heading';
-import { TextHoverUnderlineHeight } from '../../enums/TextHoverUnderlineHeight';
 import { underlineClassNameOnHover } from '../../styles/css/textHover';
 
 export interface IBlogPostProps {
