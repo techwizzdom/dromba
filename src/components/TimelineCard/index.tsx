@@ -1,6 +1,7 @@
 import { css } from 'emotion';
 import * as React from 'react';
 import { ThemeContext } from '../ThemeContext';
+import CircleLogo from '../CircleLogo';
 
 interface ITimelineCardProps {
   title: string;
@@ -35,12 +36,6 @@ const timelineCardContentLeftCss = css`
   margin: 6px 12px auto 0;
 `;
 
-const companyLogoCss = css`
-  width: 32px;
-  height: 32px;
-  border-radius: 50px;
-`;
-
 const timelineCardContentRightCss = (theme: any) => css``;
 
 const titleCss = css`
@@ -70,7 +65,7 @@ const TimelineCard: React.FC<ITimelineCardProps> = (
   return (
     <div className={timelineCardContainerCss(theme, isLastCard)}>
       <div className={timelineCardContentLeftCss}>
-        <img className={companyLogoCss} src={companyLogo} alt="company-logo" />
+        <CircleLogo logo={companyLogo} />
       </div>
       <div className={timelineCardContentRightCss(theme)}>
         <div className={titleCss}>{title}</div>
