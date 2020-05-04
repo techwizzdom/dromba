@@ -1,5 +1,5 @@
 export enum HeadingSize {
-  H1 = 48,
+  H1 = 54,
   H2 = 32,
   H3 = 28,
   H4 = 24,

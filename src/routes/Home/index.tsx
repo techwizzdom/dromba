@@ -1,14 +1,12 @@
 import React from 'react';
 import RouteContainer from '../../components/RouteContainer';
-import TextSection from '../../components/TextSection';
+import { H1 } from '../../components/core/Heading';
 
 function Home() {
   return (
     <RouteContainer>
-      <TextSection
-        title="Random title"
-        content="Curabitur eget eros eros. Mauris laoreet justo vel facilisis fermentum. Aliquam venenatis pellentesque elit, at ornare ex tempor et. Fusce molestie sagittis bibendum. Quisque nec purus id urna volutpat rhoncus. Cras sit amet nulla ligula. Fusce maximus sed leo eu condimentum. Curabitur id dui id tortor consectetur mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur sit amet tincidunt libero. Fusce maximus lectus."
-      />
+      <H1>Aspiring Frontend developer.</H1>
+      <H1>Based anywhere on this planet.</H1>
     </RouteContainer>
   );
 }
