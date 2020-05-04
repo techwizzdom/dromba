@@ -3,8 +3,8 @@ import { css } from 'emotion';
 import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
 
 const routeContainer = css`
-  padding: 80px 32px;
-  max-width: 768px;
+  padding: 80px 0 80px 130px;
+  max-width: 866px;
   margin: 0 auto;
   width: 100%;
 
