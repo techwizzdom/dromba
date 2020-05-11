@@ -8,7 +8,7 @@ const mainNavigationCss = css`
   width: 100%;
   font-size: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 32px;
 
   @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {

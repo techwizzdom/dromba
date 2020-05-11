@@ -19,7 +19,7 @@ const navigationItemCss = (
   color: ${theme.textColor};
   display: ${isMobile ? 'flex' : 'block'};
   justify-content: center;
-  margin: ${isMobile ? '8px 0' : '0'};
+  margin: ${isMobile ? '8px 0' : '0 32px 0 0'};
 
   ${underlineOnHover(theme)};
   ${isSelected ? underline(theme) : null}
@@ -44,9 +44,9 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Home))}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        Das Haus
+        Home
       </Link>
-      <Link
+      {/* <Link
         to={Routes.Timeline}
         className={navigationItemCss(
           theme,
@@ -63,7 +63,7 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
         About who?
-      </Link>
+      </Link> */}
       <Link
         to={Routes.Blog}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Blog))}

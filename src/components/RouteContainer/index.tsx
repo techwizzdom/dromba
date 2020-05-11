@@ -9,7 +9,7 @@ const routeContainer = css`
   width: 100%;
 
   @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
-    max-width: 576px;
+    /* max-width: 576px; */
   }
 
   @media (max-width: ${MediaBreakpoints.Mobile}px) {
