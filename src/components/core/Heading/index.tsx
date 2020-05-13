@@ -22,7 +22,7 @@ export const headingCss = (
   theme: any,
   isHoverable?: boolean,
 ) => css`
-  font-size: ${size}px;
+  font-size: ${size};
   position: relative;
 
   ${isHoverable ? underlineOnHover(theme) : null}

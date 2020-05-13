@@ -1,34 +1,21 @@
 import { css } from 'emotion';
 import * as React from 'react';
+
 import { ThemeContext } from '../ThemeContext';
-import CircleLogo from '../CircleLogo';
+import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 interface ITimelineCardProps {
   title: string;
   subtitle: string;
   description: string;
-  isLastCard?: boolean;
 }
 
-const timelineCardContainerCss = (theme: any, isLastCard: boolean) => css`
+const timelineCardContainerCss = css`
   display: flex;
   align-items: flex-start;
   position: relative;
-  /* max-width: 600px; */
-  margin-bottom: 68px;
 
-  /* ::before {
-    display: ${isLastCard ? 'none' : 'block'};
-    content: '';
-    position: absolute;
-    top: 50px;
-    right: 0;
-    bottom: -63px;
-    left: 15px;
-    width: 1px;
-    border-radius: 2px;
-    background-color: ${theme.timelineConnectionLineColor};
-  } */
+  margin-bottom: ${VerticalSpacingHeight.large};
 `;
 
 const timelineCardContentLeftCss = css`
@@ -38,29 +25,23 @@ const timelineCardContentLeftCss = css`
 `;
 
 const borderCss = (theme: any) => css`
-  height: 1px;
   flex-grow: 1;
-  background-color: ${theme.timelineConnectionLineColor};
-  min-width: 100px;
+
   margin-right: 48px;
+  height: 1px;
+  min-width: 100px;
+
+  background-color: ${theme.timelineConnectionLineColor};
 `;
 
-const timelineCardContentRightCss = (theme: any) => css`
+const timelineCardContentRightCss = css`
   flex: 1;
 `;
 
-// const titleCss = css`
-//   font-weight: 600;
-// `;
-
 const titleCss = css`
-  font-weight: 800;
   flex-grow: 1;
-`;
 
-const subtitleCss = (theme: any) => css`
-  color: ${theme.textColorSecondary};
-  margin-bottom: 12px;
+  font-weight: 800;
 `;
 
 const descriptionCss = css`
@@ -70,20 +51,17 @@ const descriptionCss = css`
 const TimelineCard: React.FC<ITimelineCardProps> = (
   props: ITimelineCardProps,
 ) => {
-  const { title, subtitle, description, isLastCard = false } = props;
+  const { title, description } = props;
 
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div className={timelineCardContainerCss(theme, isLastCard)}>
+    <div className={timelineCardContainerCss}>
       <div className={timelineCardContentLeftCss}>
-        {/* <CircleLogo logo={companyLogo} /> */}
         <div className={borderCss(theme)} />
         <div className={titleCss}>{title}</div>
       </div>
-      <div className={timelineCardContentRightCss(theme)}>
-        {/* <div className={titleCss}>{title}</div> */}
-        {/* <div className={subtitleCss(theme)}>{subtitle}</div> */}
+      <div className={timelineCardContentRightCss}>
         <div className={descriptionCss}>{description}</div>
       </div>
     </div>

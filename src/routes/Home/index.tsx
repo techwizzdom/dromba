@@ -1,14 +1,21 @@
 import React from 'react';
+
 import RouteContainer from '../../components/RouteContainer';
 import { H1 } from '../../components/core/Heading';
 import TimelineCard from '../../components/TimelineCard';
 import IndentContainer from '../../components/IndentContainer';
+import VerticalSpacing from '../../components/VerticalSpacing';
+
+import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 function Home() {
   return (
     <RouteContainer>
       <H1>Aspiring Frontend developer.</H1>
       <H1>Based anywhere on this planet.</H1>
+
+      <VerticalSpacing height={VerticalSpacingHeight.giant} />
+
       <IndentContainer>
         <TimelineCard
           title="Productive"

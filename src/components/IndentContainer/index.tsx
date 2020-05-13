@@ -1,16 +1,13 @@
 import React from 'react';
 import { css } from 'emotion';
-import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
+
+import { Media } from '../../enums/Media';
 
 const indentContainer = css`
-  padding-left: 128px;
+  padding-left: 96px;
 
-  @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
-    max-width: 576px;
-  }
-
-  @media (max-width: ${MediaBreakpoints.Mobile}px) {
-    padding: 64px 8px;
+  @media ${Media.Mobile} {
+    padding-left: 0;
   }
 `;
 

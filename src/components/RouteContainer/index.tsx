@@ -1,19 +1,21 @@
 import React from 'react';
 import { css } from 'emotion';
-import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
+
+import { Media } from '../../enums/Media';
 
 const routeContainer = css`
-  padding: 80px 0 80px 130px;
-  max-width: 866px;
+  padding: 64px 16px 32px 184px;
   margin: 0 auto;
+  max-width: 1072px;
   width: 100%;
 
-  @media (min-width: ${MediaBreakpoints.Mobile}px) and (max-width: ${MediaBreakpoints.Tablet}px) {
-    /* max-width: 576px; */
+  @media ${Media.Tablet} {
+    padding-left: 88px;
+    max-width: 992px;
   }
 
-  @media (max-width: ${MediaBreakpoints.Mobile}px) {
-    padding: 64px 8px;
+  @media ${Media.Mobile} {
+    padding: 32px 8px;
   }
 `;
 
