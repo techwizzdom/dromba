@@ -8,7 +8,7 @@ import NavigationItems from '../NavigationItems';
 
 import Logo from '../../assets/icons/logo.svg';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;

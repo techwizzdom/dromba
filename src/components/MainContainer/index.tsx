@@ -1,7 +1,7 @@
 import React from 'react';
 import { css } from 'emotion';
 
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 
 const mainContainer = (theme: any) => css`
   background-color: ${theme.backgroundColor};

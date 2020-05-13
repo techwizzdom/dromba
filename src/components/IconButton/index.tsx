@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FunctionComponent } from 'react';
 import { css } from 'emotion';
 
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 
 interface IIconButtonProps {
   Icon: FunctionComponent<React.SVGProps<SVGSVGElement>>;

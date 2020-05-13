@@ -2,7 +2,7 @@ import * as React from 'react';
 import { css } from 'emotion';
 import { Link, useLocation } from 'react-router-dom';
 
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { Routes } from '../../routes/Routes';
 
 import { underlineOnHover, underline } from '../../styles/css/textHover';

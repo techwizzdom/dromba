@@ -1,7 +1,7 @@
 import { css } from 'emotion';
 import * as React from 'react';
 
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 interface ITimelineCardProps {

@@ -6,7 +6,7 @@ import './App.css';
 import useTheme from './useTheme';
 
 import Header from './components/Header';
-import { ThemeContext } from './components/ThemeContext';
+import { ThemeContext } from './context/ThemeContext';
 import MainContainer from './components/MainContainer';
 
 import Home from './routes/Home';
