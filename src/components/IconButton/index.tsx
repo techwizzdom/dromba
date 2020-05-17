@@ -1,29 +1,37 @@
 import * as React from 'react';
+import { FunctionComponent } from 'react';
 import { css } from 'emotion';
 
+import { ThemeContext } from '../../context/ThemeContext';
+
 interface IIconButtonProps {
-  icon: string;
+  Icon: FunctionComponent<React.SVGProps<SVGSVGElement>>;
   onClick: () => void;
 }
 
 const iconButtonCss = css`
-  width: 48px;
-  height: 48px;
+  padding: 8px;
+
+  background-color: transparent;
   cursor: pointer;
 `;
 
-const iconCss = css`
+const iconCss = (theme: any) => css`
   width: 24px;
   height: 24px;
+
+  fill: ${theme.svgFill.primary};
 `;
 
 const IconButton: React.FC<IIconButtonProps> = (props: IIconButtonProps) => {
-  const { icon, onClick } = props;
+  const { Icon, onClick } = props;
+
+  const theme = React.useContext(ThemeContext);
 
   return (
-    <button className={iconButtonCss} onClick={onClick}>
-      <img className={iconCss} src={icon} alt="icon" />
-    </button>
+    <div className={iconButtonCss} onClick={onClick}>
+      <Icon className={iconCss(theme)} />
+    </div>
   );
 };
 

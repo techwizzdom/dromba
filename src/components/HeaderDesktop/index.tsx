@@ -1,7 +1,11 @@
 import * as React from 'react';
 import { css } from 'emotion';
+
 import ThemeToggle from '../ThemeToggle';
 import MainNavigation from '../MainNavigation';
+
+import { Media } from '../../enums/Media';
+
 import Logo from '../../assets/icons/logo.svg';
 
 interface IHeaderDesktopProps {
@@ -9,24 +13,24 @@ interface IHeaderDesktopProps {
 }
 
 const headerDesktopCss = css`
-  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
-`;
 
-const logoWrapperCss = css`
-  padding: 0 16px;
+  padding: 4px 16px;
+  margin: 0 auto;
+  max-width: 1072px;
+  height: 48px;
+
+  @media ${Media.Tablet} {
+    max-width: 992px;
+  }
 `;
 
 const logoCss = css`
-  width: 56px;
-  min-width: 56px;
+  min-width: 40px;
+  width: 40px;
   height: 40px;
-`;
-
-const themeToggleContainerCss = css`
-  padding: 0 16px;
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
@@ -36,13 +40,9 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
 
   return (
     <div className={headerDesktopCss}>
-      <div className={logoWrapperCss}>
-        <img src={Logo} className={logoCss} alt="logo" />
-      </div>
+      <img src={Logo} className={logoCss} alt="logo" />
       <MainNavigation />
-      <div className={themeToggleContainerCss}>
-        <ThemeToggle toggleTheme={toggleTheme} />
-      </div>
+      <ThemeToggle toggleTheme={toggleTheme} />
     </div>
   );
 };

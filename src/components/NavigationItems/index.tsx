@@ -1,42 +1,60 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
-import { underlineOnHover } from '../../styles/css/textHover';
 import { css } from 'emotion';
-import { ThemeContext } from '../ThemeContext';
+import { Link, useLocation } from 'react-router-dom';
+
+import { ThemeContext } from '../../context/ThemeContext';
+import { Routes } from '../../routes/Routes';
+
+import { underlineOnHover, underline } from '../../styles/css/textHover';
 
 interface INavigationItemsProps {
+  onNavigationItemClick?: () => void;
   isMobile?: boolean;
 }
 
-const navigationItemCss = (theme: any, isMobile: boolean) => css`
-  position: relative;
-  color: ${theme.textColor};
+const navigationItemCss = (
+  theme: any,
+  isMobile: boolean,
+  isSelected: boolean,
+) => css`
   display: ${isMobile ? 'flex' : 'block'};
   justify-content: center;
-  height: ${isMobile ? '32px' : 'auto'};
+  position: relative;
+
+  margin: ${isMobile ? '8px 0' : '0 32px 0 0'};
+
+  color: ${theme.textColor};
 
   ${underlineOnHover(theme)};
+  ${isSelected ? underline(theme) : null}
 `;
 
 const NavigationItems: React.FC<INavigationItemsProps> = (
   props: INavigationItemsProps,
 ) => {
-  const { isMobile = false } = props;
+  const { onNavigationItemClick, isMobile = false } = props;
 
+  const location = useLocation();
   const theme = React.useContext(ThemeContext);
+
+  const isSelected = (route: Routes): boolean => {
+    return route === location.pathname;
+  };
 
   return (
     <>
-      <Link to="/" className={navigationItemCss(theme, isMobile)}>
-        Das Haus
+      <Link
+        to={Routes.Home}
+        className={navigationItemCss(theme, isMobile, isSelected(Routes.Home))}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        Home
       </Link>
-      <Link to="timeline" className={navigationItemCss(theme, isMobile)}>
-        Timeline
-      </Link>
-      <Link to="about" className={navigationItemCss(theme, isMobile)}>
-        About who?
-      </Link>
-      <Link to="blog" className={navigationItemCss(theme, isMobile)}>
+      <Link
+        to={Routes.Blog}
+        className={navigationItemCss(theme, isMobile, isSelected(Routes.Blog))}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
         Blog
       </Link>
     </>

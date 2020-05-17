@@ -10,4 +10,7 @@ export const dark = {
   themeToggleColor: colors.radioactiveSun,
   themeToggleLine: colors.baseWhite,
   timelineConnectionLineColor: colors.vanishingGray,
+  svgFill: {
+    primary: colors.baseWhite,
+  },
 };

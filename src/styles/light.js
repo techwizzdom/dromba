@@ -10,4 +10,7 @@ export const light = {
   themeToggleColor: colors.turqoise,
   themeToggleLine: colors.baseBlack,
   timelineConnectionLineColor: colors.darkMoon,
+  svgFill: {
+    primary: colors.baseBlack,
+  },
 };

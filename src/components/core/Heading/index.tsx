@@ -3,7 +3,7 @@ import { cx, css } from 'emotion';
 import { HeadingTags } from '../../../enums/HeadingTags';
 import { HeadingSize } from '../../../enums/HeadingSize';
 import { underlineOnHover } from '../../../styles/css/textHover';
-import { ThemeContext } from '../../ThemeContext';
+import { ThemeContext } from '../../../context/ThemeContext';
 
 interface IHeadingProps {
   children: React.ReactNode;
@@ -22,7 +22,7 @@ export const headingCss = (
   theme: any,
   isHoverable?: boolean,
 ) => css`
-  font-size: ${size}px;
+  font-size: ${size};
   position: relative;
 
   ${isHoverable ? underlineOnHover(theme) : null}

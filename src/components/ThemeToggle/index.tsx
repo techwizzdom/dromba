@@ -1,59 +1,53 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { ThemeContext } from '../ThemeContext';
+import { ThemeContext } from '../../context/ThemeContext';
+
+import { ReactComponent as Moon } from '../../assets/icons/moon.svg';
+import { ReactComponent as Sun } from '../../assets/icons/sun.svg';
 
 interface IThemeToogleProps {
   toggleTheme: () => void;
 }
 
 const togglerContainerCss = (theme: any) => css`
-  padding: 2px;
-  border: none;
-  background-color: ${theme.backgroundColor};
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  height: 26px;
-  width: 56px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
   cursor: pointer;
 `;
 
-const switcherCss = (theme: any) => css`
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
-  background-color: ${theme.themeToggleColor};
-  margin-left: ${theme.isDark ? '30px' : '0'};
-  transition-property: margin, background-color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  position: absolute;
-  z-index: 1;
-  top: 4px;
-`;
+const sunIconCss = (theme: any) => css`
+  width: ${theme.isDark ? '40px' : 0};
+  height: ${theme.isDark ? '40px' : 0};
 
-const switcherLineCss = (theme: any) => css`
-  position: absolute;
-  z-index: 0;
-  width: 36px;
-  height: 8px;
-  top: 10px;
-  left: 10px;
-  border-radius: 20px;
-  background-color: ${theme.themeToggleLine};
+  transform: rotate(${theme.isDark ? 0 : '360deg'});
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+`;
+const moonIconCss = (theme: any) => css`
+  padding: 4px;
+  width: ${theme.isDark ? 0 : '32px'};
+  height: ${theme.isDark ? 0 : '32px'};
+
+  transform: rotate(${theme.isDark ? 0 : '360deg'});
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
 `;
 
 const ThemeToggle: React.FC<IThemeToogleProps> = (props: IThemeToogleProps) => {
   const theme = React.useContext(ThemeContext);
+
   return (
-    <button
-      type="button"
+    <div
+      role="button"
       className={togglerContainerCss(theme)}
       onClick={() => props.toggleTheme()}
     >
-      <div className={switcherCss(theme)} />
-      <div className={switcherLineCss(theme)} />
-    </button>
+      <Sun className={sunIconCss(theme)} />
+      <Moon className={moonIconCss(theme)} />
+    </div>
   );
 };
 
