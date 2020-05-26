@@ -20,7 +20,9 @@ interface ILandingScreenProps {
 const landingScreenWrapperCss = css`
   position: relative;
 
-  animation: animateBackground ${LandingConfig.duration}ms linear infinite
+  background-color: #000000;
+
+  /* animation: animateBackground ${LandingConfig.duration}ms linear infinite
     forwards;
 
   @keyframes animateBackground {
@@ -33,7 +35,7 @@ const landingScreenWrapperCss = css`
     100% {
       background-color: #111111;
     }
-  }
+  } */
 
   cursor: pointer;
 `;
@@ -99,8 +101,13 @@ const mindField = (
 const ancientAnomalies = (
   context: CanvasRenderingContext2D,
   linesArray: any,
+  viewportWidth: number,
+  viewportHeight: number,
 ) => {
   ohThoseLines(context, linesArray, 25, 400, 1);
+
+  // context.clearRect(0, 0, viewportWidth, viewportHeight);
+  // context.beginPath();
 };
 
 const passingThrough = (
@@ -259,9 +266,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       });
     }
     // mindField(context, linesArray, viewportWidth, viewportHeight);
+    // ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
     // ancientAnomalies(context, linesArray);
-    passingThrough(context, linesArray, viewportWidth, viewportHeight);
-    // daydream(context, linesArray, viewportWidth, viewportHeight);
+    // passingThrough(context, linesArray, viewportWidth, viewportHeight);
+    daydream(context, linesArray, viewportWidth, viewportHeight);
+    // weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
   }
 
   const draw = () => {
