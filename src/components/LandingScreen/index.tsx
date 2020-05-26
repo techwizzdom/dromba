@@ -11,6 +11,20 @@ interface ILandingScreenProps {
 
 const landingScreenWrapperCss = css`
   position: relative;
+/* 
+  width: 50vw;
+height: 50vw; */
+
+/* background-color: ${landingScreen.backgroundColor}; */
+animation: animateBackground 5.5s linear infinite forwards;
+
+@keyframes animateBackground {
+  0% { background-color: #111111; }
+  50% { background-color: #000000; }
+  100% { background-color: #111111; }
+}
+
+cursor: pointer;
 `;
 
 const titleCss = css`
@@ -26,19 +40,21 @@ const titleCss = css`
 `;
 
 const landingScreenCss = css`
-  width: 50vw;
-  height: 50vw;
+  animation: fadeLines 5.5s linear infinite forwards;
 
-  /* background-color: ${landingScreen.backgroundColor}; */
-  animation: animateBackground 4s linear infinite forwards;
-
-  @keyframes animateBackground {
-    0% { background-color: #111111; }
-    50% { background-color: #000000; }
-    100% { background-color: #111111; }
+  @keyframes fadeLines {
+    0% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
-  cursor: pointer;
+  /* transition: opacity 2s ease; */
 `;
 
 const LandingScreen: React.FC<ILandingScreenProps> = (
@@ -601,6 +617,9 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       chaos(60, 10);
     }, 3400);
 
+    context.clearRect(0, 0, 300, 400);
+    context.beginPath();
+
     // firstTwist(20, 15);
 
     // setTimeout(() => {
@@ -644,7 +663,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     // ctx.scale(3, 3);
 
     if (ctx) {
-      ctx.scale(2, 2);
+      // ctx.scale(2, 2);
       startDrawing(ctx);
       // startDrawing(ctx);
       // startDrawing(ctx);
@@ -694,6 +713,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   useEffect(() => {
     draw();
+    setInterval(() => draw(), 5500);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
