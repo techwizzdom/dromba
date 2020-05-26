@@ -11,9 +11,9 @@ interface ILandingScreenProps {
 
 const landingScreenWrapperCss = css`
   position: relative;
-/* 
-  width: 50vw;
-height: 50vw; */
+
+  /* width: 100vw;
+  height: 100vw; */
 
 /* background-color: ${landingScreen.backgroundColor}; */
 animation: animateBackground 5.5s linear infinite forwards;
@@ -40,7 +40,7 @@ const titleCss = css`
 `;
 
 const landingScreenCss = css`
-  animation: fadeLines 5.5s linear infinite forwards;
+  /* animation: fadeLines 5.5s linear infinite forwards;
 
   @keyframes fadeLines {
     0% {
@@ -52,7 +52,7 @@ const landingScreenCss = css`
     100% {
       opacity: 0;
     }
-  }
+  } */
 
   /* transition: opacity 2s ease; */
 `;
@@ -61,6 +61,10 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   props: ILandingScreenProps,
 ) => {
   const { onClick } = props;
+
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+  const devicePixelRatio = window.devicePixelRatio;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -82,7 +86,10 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   };
 
   const getInitialCoordinates = (): [number, number] => {
-    return [getRandomInt(300) + 0.5, getRandomInt(100) + 0.5];
+    return [
+      getRandomInt(viewportWidth) + 0.5,
+      getRandomInt(viewportHeight) + 0.5,
+    ];
   };
 
   const getInitialDirection = (): [number, number] => {
@@ -617,7 +624,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       chaos(60, 10);
     }, 3400);
 
-    context.clearRect(0, 0, 300, 400);
+    context.clearRect(0, 0, viewportWidth, viewportHeight);
     context.beginPath();
 
     // firstTwist(20, 15);
@@ -654,16 +661,19 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   //   coordinates: [number, number],
   // ) => {};
 
+  console.log(window.devicePixelRatio);
+
   const draw = () => {
     if (!canvasRef.current) {
       return;
     }
 
     const ctx = canvasRef.current.getContext('2d');
-    // ctx.scale(3, 3);
 
     if (ctx) {
+      // ctx.scale(3, 3);
       // ctx.scale(2, 2);
+      ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
       startDrawing(ctx);
       // startDrawing(ctx);
       // startDrawing(ctx);
@@ -722,9 +732,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       <canvas
         ref={canvasRef}
         className={landingScreenCss}
+        width={viewportWidth * devicePixelRatio}
+        height={viewportHeight * devicePixelRatio}
         style={{
-          height: '100vh',
-          width: '100vw',
+          height: `${viewportHeight}px`,
+          width: `${viewportWidth}px`,
         }}
         onClick={onClick}
         role="button"
