@@ -122,9 +122,9 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
     const clearCanvas = true;
 
-    // mindField(context, linesArray, viewportWidth, viewportHeight);
+    mindField(context, linesArray, viewportWidth, viewportHeight);
 
-    perpetual(context, linesArray, viewportWidth, viewportHeight);
+    // perpetual(context, linesArray, viewportWidth, viewportHeight);
 
     setTimeout(() => {
       linesArray = [];
@@ -185,7 +185,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
         });
       }
 
-      passingThrough(context, linesArray, viewportWidth, viewportHeight);
+      weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
     }, 20000);
 
     setTimeout(() => {
@@ -199,7 +199,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
         });
       }
 
-      weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
+      passingThrough(context, linesArray, viewportWidth, viewportHeight);
     }, 25000);
 
     // ancientAnomalies(context, linesArray);
