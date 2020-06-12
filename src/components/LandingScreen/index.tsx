@@ -273,22 +273,22 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     // weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
   }
 
-  const draw = () => {
+  const draw = (ctx: CanvasRenderingContext2D) => {
+    startDrawing(ctx);
+  };
+
+  useEffect(() => {
     if (!canvasRef.current) {
       return;
     }
 
-    const ctx = canvasRef.current.getContext('2d');
+    const ctx: any = canvasRef.current.getContext('2d');
 
     if (ctx) {
       ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-      startDrawing(ctx);
+      draw(ctx);
+      setInterval(() => draw(ctx), LandingConfig.duration);
     }
-  };
-
-  useEffect(() => {
-    draw();
-    setInterval(() => draw(), LandingConfig.duration);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
