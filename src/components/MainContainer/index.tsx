@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import LandingScreen from '../LandingScreen';
 
 const mainContainer = (theme: any) => css`
+  position: relative;
   background-color: ${theme.backgroundColor};
   width: 100%;
   height: 100%;
@@ -13,12 +15,32 @@ const mainContainer = (theme: any) => css`
   transition-timing-function: ease;
 `;
 
+const app = (initialLoad: boolean) => css`
+  display: block;
+  pointer-events: ${initialLoad ? 'none' : 'auto'};
+
+  opacity: ${initialLoad ? 0 : 1};
+
+  transition: opacity 0.5s ease-in-out;
+`;
+
 const MainContainer: React.FC = (props: any) => {
   const { children } = props;
 
+  const [initialLoad, setInitialLoad] = useState<boolean>(true);
+
   const theme = React.useContext(ThemeContext);
 
-  return <div className={mainContainer(theme)}>{children}</div>;
+  return (
+    <div className={mainContainer(theme)}>
+      {initialLoad ? (
+        <LandingScreen onClick={() => setInitialLoad(false)} />
+      ) : (
+        <></>
+      )}
+      <div className={app(initialLoad)}>{children}</div>
+    </div>
+  );
 };
 
 export default MainContainer;

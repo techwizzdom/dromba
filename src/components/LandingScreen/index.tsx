@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 
 import { landingScreen } from '../../styles/landingScreen';
@@ -17,8 +17,14 @@ interface ILandingScreenProps {
   onClick: () => void;
 }
 
-const landingScreenWrapperCss = css`
-  position: relative;
+const landingScreenWrapperCss = (isVisible: boolean) => css`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: ${isVisible ? 1 : 0};
+
+  transition: opacity 2s ease-in-out;
 
   background-color: #000000;
 
@@ -220,6 +226,8 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 ) => {
   const { onClick } = props;
 
+  const [isVisible, setIsVisible] = useState<boolean>(true);
+
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
   const devicePixelRatio = window.devicePixelRatio;
@@ -252,6 +260,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     return [getRandomInt(3), getRandomInt(3)];
   };
 
+  const startFading = () => {
+    setIsVisible(false);
+    setTimeout(() => onClick(), 2000);
+  };
+
   async function startDrawing(context: CanvasRenderingContext2D) {
     const linesArray: any = [];
 
@@ -265,11 +278,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
         twistCounter: 0,
       });
     }
-    // mindField(context, linesArray, viewportWidth, viewportHeight);
+    mindField(context, linesArray, viewportWidth, viewportHeight);
     // ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
     // ancientAnomalies(context, linesArray);
     // passingThrough(context, linesArray, viewportWidth, viewportHeight);
-    daydream(context, linesArray, viewportWidth, viewportHeight);
+    // daydream(context, linesArray, viewportWidth, viewportHeight);
     // weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
   }
 
@@ -293,7 +306,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   }, []);
 
   return (
-    <div className={landingScreenWrapperCss}>
+    <div
+      className={landingScreenWrapperCss(isVisible)}
+      onClick={() => startFading()}
+      role="button"
+    >
       <canvas
         ref={canvasRef}
         className={landingScreenCss}
@@ -303,8 +320,6 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
           height: `${viewportHeight}px`,
           width: `${viewportWidth}px`,
         }}
-        onClick={onClick}
-        role="button"
       />
       <div className={titleCss}>What shall we create?</div>
     </div>
