@@ -2,16 +2,16 @@ import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 
-import { landingScreen } from '../../styles/landingScreen';
-import { useRandomColor } from '../../hooks/useRandomColor';
+import { LandingConfig } from '../../config/LandingConfig';
 import {
-  chaos,
-  megaChaos,
-  ohThoseLines,
-  slightlyCurved,
-} from '../../util/landingPage';
-import { LandingConfig, Arts } from '../../config/LandingConfig';
-import { ArtName } from '../../enums/ArtName';
+  mindField,
+  ancientAnomalies,
+  daydream,
+  weightOfTheLand,
+  passingThrough,
+  perpetual,
+} from '../../util/artCollections';
+import { getRandomInt, randomColor } from '../../util/landingPage';
 
 interface ILandingScreenProps {
   onClick: () => void;
@@ -23,25 +23,8 @@ const landingScreenWrapperCss = (isVisible: boolean) => css`
   left: 0;
 
   opacity: ${isVisible ? 1 : 0};
-
   transition: opacity 2s ease-in-out;
-
   background-color: #000000;
-
-  /* animation: animateBackground ${LandingConfig.duration}ms linear infinite
-    forwards;
-
-  @keyframes animateBackground {
-    0% {
-      background-color: #111111;
-    }
-    50% {
-      background-color: #000000;
-    }
-    100% {
-      background-color: #111111;
-    }
-  } */
 
   cursor: pointer;
 `;
@@ -57,150 +40,6 @@ const titleCss = css`
   font-size: 64px;
   font-weight: 900;
 `;
-
-const mindField = (
-  context: CanvasRenderingContext2D,
-  linesArray: any,
-  viewportWidth: number,
-  viewportHeight: number,
-) => {
-  megaChaos(context, linesArray, 10, 120, 1);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 240, 2);
-  }, 1200);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 20, 50, 3);
-  }, 2400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 6, 100, 4);
-  }, 3400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 10, 80, 5);
-  }, 4000);
-
-  megaChaos(context, linesArray, 10, 120, 1);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 240, 2);
-  }, 1200);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 20, 50, 3);
-  }, 2400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 6, 100, 4);
-  }, 3400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 10, 80, 5);
-  }, 4000);
-
-  context.clearRect(0, 0, viewportWidth, viewportHeight);
-  context.beginPath();
-};
-
-const ancientAnomalies = (
-  context: CanvasRenderingContext2D,
-  linesArray: any,
-  viewportWidth: number,
-  viewportHeight: number,
-) => {
-  ohThoseLines(context, linesArray, 25, 400, 1);
-
-  // context.clearRect(0, 0, viewportWidth, viewportHeight);
-  // context.beginPath();
-};
-
-const passingThrough = (
-  context: CanvasRenderingContext2D,
-  linesArray: any,
-  viewportWidth: number,
-  viewportHeight: number,
-) => {
-  chaos(context, linesArray, 15, 140, 1);
-
-  setTimeout(() => {
-    chaos(context, linesArray, 15, 140, 2);
-  }, 600);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 120, 2);
-  }, 1200);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 120, 3);
-  }, 1800);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 120, 4);
-  }, 2400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 120, 5);
-  }, 3000);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 120, 7);
-  }, 3600);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 120, 10);
-  }, 4200);
-
-  context.clearRect(0, 0, viewportWidth, viewportHeight);
-  context.beginPath();
-};
-
-const weightOfTheLand = (
-  context: CanvasRenderingContext2D,
-  linesArray: any,
-  viewportWidth: number,
-  viewportHeight: number,
-) => {
-  megaChaos(context, linesArray, 30, 40, 8);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 240, 12);
-  }, 1200);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 10, 30, 43);
-  }, 2400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 1, 300, 6);
-  }, 2700);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 10, 200, 143);
-  }, 3000);
-
-  context.clearRect(0, 0, viewportWidth, viewportHeight);
-  context.beginPath();
-};
-
-const daydream = (
-  context: CanvasRenderingContext2D,
-  linesArray: any,
-  viewportWidth: number,
-  viewportHeight: number,
-) => {
-  megaChaos(context, linesArray, 50, 100, 1);
-
-  ohThoseLines(context, linesArray, 10, 500, 1);
-
-  slightlyCurved(context, linesArray, 25, 200, 1);
-
-  chaos(context, linesArray, 50, 100, 1);
-
-  context.clearRect(0, 0, viewportWidth, viewportHeight);
-  context.beginPath();
-};
 
 const landingScreenCss = css`
   animation: fadeLines ${LandingConfig.duration}ms linear infinite forwards;
@@ -234,22 +73,24 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
-  const randomColor = () => {
-    return {
-      hue: 360 * Math.random(),
-      saturation: 100 * Math.random(),
-      lightness: 100 * Math.random(),
-      opacity: 0.5,
-    };
-  };
+  const getInitialCoordinates = (
+    leftFourth?: boolean,
+    rightFourth?: boolean,
+  ): [number, number] => {
+    if (leftFourth) {
+      return [
+        getRandomInt(viewportWidth) + 0.5,
+        getRandomInt(viewportHeight) + 0.5,
+      ];
+    }
 
-  const getRandomInt = (max: number, min: number = 0): number => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-  };
+    if (rightFourth) {
+      return [
+        getRandomInt(viewportWidth) + 0.5,
+        getRandomInt(viewportHeight) + 0.5,
+      ];
+    }
 
-  const getInitialCoordinates = (): [number, number] => {
     return [
       getRandomInt(viewportWidth) + 0.5,
       getRandomInt(viewportHeight) + 0.5,
@@ -265,8 +106,8 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     setTimeout(() => onClick(), 2000);
   };
 
-  async function startDrawing(context: CanvasRenderingContext2D) {
-    const linesArray: any = [];
+  const draw = (context: CanvasRenderingContext2D) => {
+    let linesArray: any = [];
 
     const numberOfLines = 300;
 
@@ -278,16 +119,91 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
         twistCounter: 0,
       });
     }
-    mindField(context, linesArray, viewportWidth, viewportHeight);
-    // ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
+
+    const clearCanvas = true;
+
+    // mindField(context, linesArray, viewportWidth, viewportHeight);
+
+    perpetual(context, linesArray, viewportWidth, viewportHeight);
+
+    setTimeout(() => {
+      linesArray = [];
+      for (let i = 0; i < numberOfLines; i++) {
+        linesArray.push({
+          coordinates: getInitialCoordinates(),
+          color: randomColor(),
+          initialDirection: getDirection(),
+          twistCounter: 0,
+        });
+      }
+
+      ancientAnomalies(
+        context,
+        linesArray,
+        viewportWidth,
+        viewportHeight,
+        clearCanvas,
+      );
+    }, 5000);
+
+    setTimeout(() => {
+      linesArray = [];
+      for (let i = 0; i < numberOfLines; i++) {
+        linesArray.push({
+          coordinates: getInitialCoordinates(),
+          color: randomColor(),
+          initialDirection: getDirection(),
+          twistCounter: 0,
+        });
+      }
+
+      ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
+    }, 10000);
+
+    setTimeout(() => {
+      linesArray = [];
+      for (let i = 0; i < numberOfLines; i++) {
+        linesArray.push({
+          coordinates: getInitialCoordinates(),
+          color: randomColor(),
+          initialDirection: getDirection(),
+          twistCounter: 0,
+        });
+      }
+
+      ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
+    }, 15000);
+
+    setTimeout(() => {
+      linesArray = [];
+      for (let i = 0; i < numberOfLines; i++) {
+        linesArray.push({
+          coordinates: getInitialCoordinates(),
+          color: randomColor(),
+          initialDirection: getDirection(),
+          twistCounter: 0,
+        });
+      }
+
+      passingThrough(context, linesArray, viewportWidth, viewportHeight);
+    }, 20000);
+
+    setTimeout(() => {
+      linesArray = [];
+      for (let i = 0; i < numberOfLines; i++) {
+        linesArray.push({
+          coordinates: getInitialCoordinates(),
+          color: randomColor(),
+          initialDirection: getDirection(),
+          twistCounter: 0,
+        });
+      }
+
+      weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
+    }, 25000);
+
     // ancientAnomalies(context, linesArray);
     // passingThrough(context, linesArray, viewportWidth, viewportHeight);
-    // daydream(context, linesArray, viewportWidth, viewportHeight);
-    // weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
-  }
-
-  const draw = (ctx: CanvasRenderingContext2D) => {
-    startDrawing(ctx);
   };
 
   useEffect(() => {
@@ -295,12 +211,12 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       return;
     }
 
-    const ctx: any = canvasRef.current.getContext('2d');
+    const context: any = canvasRef.current.getContext('2d');
 
-    if (ctx) {
-      ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-      draw(ctx);
-      setInterval(() => draw(ctx), LandingConfig.duration);
+    if (context) {
+      context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+      draw(context);
+      setInterval(() => draw(context), 30000);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

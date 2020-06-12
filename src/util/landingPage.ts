@@ -1,5 +1,14 @@
 import { LandingConfig } from '../config/LandingConfig';
 
+export const randomColor = () => {
+  return {
+    hue: 360 * Math.random(),
+    saturation: 100 * Math.random(),
+    lightness: 100 * Math.random(),
+    opacity: 0.5,
+  };
+};
+
 export const getRandomInt = (max: number, min: number = 0): number => {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -214,6 +223,7 @@ export const ohThoseLines = (
   delay: number,
   repetitions: number,
   lineWidth: number,
+  colorChaos?: boolean,
 ) => {
   setIntervalX(
     () => {
@@ -233,11 +243,16 @@ export const ohThoseLines = (
         context.beginPath();
         context.moveTo(coordinates[0], coordinates[1]);
 
-        linesArray[i].color.hue = linesArray[i].color.hue - 8;
-        if (linesArray[i].color.hue < 0) {
-          linesArray[i].color.hue = linesArray[i].color.hue + 16;
+        if (colorChaos) {
+          linesArray[i].color.hue = randomColor().hue;
+          linesArray[i].color.saturation = randomColor().saturation;
+          linesArray[i].color.lightness = randomColor().lightness;
+        } else {
+          linesArray[i].color.hue = linesArray[i].color.hue - 1;
+          if (linesArray[i].color.hue < 0) {
+            linesArray[i].color.hue = linesArray[i].color.hue + 2;
+          }
         }
-
         if (directionX === 0 && directionY === 0) {
           linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
         }
