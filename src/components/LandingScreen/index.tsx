@@ -3,14 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 
 import { LandingConfig } from '../../config/LandingConfig';
-import {
-  mindField,
-  ancientAnomalies,
-  daydream,
-  weightOfTheLand,
-  passingThrough,
-  perpetual,
-} from '../../util/artCollections';
+import { mindField, afterlife } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 interface ILandingScreenProps {
@@ -74,20 +67,19 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   const getInitialCoordinates = (
-    leftFourth?: boolean,
-    rightFourth?: boolean,
+    positionX?: [number, number],
+    positionY?: [number, number],
   ): [number, number] => {
-    if (leftFourth) {
+    if (positionX && positionY) {
       return [
-        getRandomInt(viewportWidth) + 0.5,
-        getRandomInt(viewportHeight) + 0.5,
-      ];
-    }
-
-    if (rightFourth) {
-      return [
-        getRandomInt(viewportWidth) + 0.5,
-        getRandomInt(viewportHeight) + 0.5,
+        getRandomInt(
+          viewportWidth - (1 - positionX[1]) * viewportWidth,
+          viewportWidth - (1 - positionX[0]) * viewportWidth,
+        ) + 0.5,
+        getRandomInt(
+          viewportHeight - (1 - positionY[1]) * viewportHeight,
+          viewportHeight - (1 - positionY[0]) * viewportHeight,
+        ) + 0.5,
       ];
     }
 
@@ -95,6 +87,46 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       getRandomInt(viewportWidth) + 0.5,
       getRandomInt(viewportHeight) + 0.5,
     ];
+  };
+
+  const randomStartPosition = (index: number): [number, number] => {
+    if (index === 0) {
+      return [0.1, 0.1];
+    }
+
+    if (index === 1) {
+      return [0.5, 0.6];
+    }
+
+    if (index === 2) {
+      return [0.7, 0.9];
+    }
+
+    if (index === 3) {
+      return [0.3, 0.8];
+    }
+
+    if (index === 4) {
+      return [0.1, 0.9];
+    }
+
+    if (index === 5) {
+      return [0.9, 0.9];
+    }
+
+    if (index === 5) {
+      return [0.8, 0.7];
+    }
+
+    if (index === 6) {
+      return [0.1, 0.6];
+    }
+
+    if (index === 7) {
+      return [0.2, 0.3];
+    }
+
+    return [0.3, 0.7];
   };
 
   const getDirection = (): [number, number] => {
@@ -106,104 +138,28 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     setTimeout(() => onClick(), 2000);
   };
 
-  const draw = (context: CanvasRenderingContext2D) => {
+  const draw = (context: CanvasRenderingContext2D, index: number) => {
+    console.log(index);
     let linesArray: any = [];
 
     const numberOfLines = 300;
 
+    const randomIndexOne = getRandomInt(9);
+    const randomIndexTwo = getRandomInt(9);
+
     for (let i = 0; i < numberOfLines; i++) {
       linesArray.push({
-        coordinates: getInitialCoordinates(),
+        coordinates: getInitialCoordinates(
+          randomStartPosition(index),
+          randomStartPosition(index),
+        ),
         color: randomColor(),
         initialDirection: getDirection(),
         twistCounter: 0,
       });
     }
 
-    const clearCanvas = true;
-
-    mindField(context, linesArray, viewportWidth, viewportHeight);
-
-    // perpetual(context, linesArray, viewportWidth, viewportHeight);
-
-    setTimeout(() => {
-      linesArray = [];
-      for (let i = 0; i < numberOfLines; i++) {
-        linesArray.push({
-          coordinates: getInitialCoordinates(),
-          color: randomColor(),
-          initialDirection: getDirection(),
-          twistCounter: 0,
-        });
-      }
-
-      ancientAnomalies(
-        context,
-        linesArray,
-        viewportWidth,
-        viewportHeight,
-        clearCanvas,
-      );
-    }, 5000);
-
-    setTimeout(() => {
-      linesArray = [];
-      for (let i = 0; i < numberOfLines; i++) {
-        linesArray.push({
-          coordinates: getInitialCoordinates(),
-          color: randomColor(),
-          initialDirection: getDirection(),
-          twistCounter: 0,
-        });
-      }
-
-      ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
-    }, 10000);
-
-    setTimeout(() => {
-      linesArray = [];
-      for (let i = 0; i < numberOfLines; i++) {
-        linesArray.push({
-          coordinates: getInitialCoordinates(),
-          color: randomColor(),
-          initialDirection: getDirection(),
-          twistCounter: 0,
-        });
-      }
-
-      ancientAnomalies(context, linesArray, viewportWidth, viewportHeight);
-    }, 15000);
-
-    setTimeout(() => {
-      linesArray = [];
-      for (let i = 0; i < numberOfLines; i++) {
-        linesArray.push({
-          coordinates: getInitialCoordinates(),
-          color: randomColor(),
-          initialDirection: getDirection(),
-          twistCounter: 0,
-        });
-      }
-
-      weightOfTheLand(context, linesArray, viewportWidth, viewportHeight);
-    }, 20000);
-
-    setTimeout(() => {
-      linesArray = [];
-      for (let i = 0; i < numberOfLines; i++) {
-        linesArray.push({
-          coordinates: getInitialCoordinates(),
-          color: randomColor(),
-          initialDirection: getDirection(),
-          twistCounter: 0,
-        });
-      }
-
-      passingThrough(context, linesArray, viewportWidth, viewportHeight);
-    }, 25000);
-
-    // ancientAnomalies(context, linesArray);
-    // passingThrough(context, linesArray, viewportWidth, viewportHeight);
+    afterlife(context, linesArray, viewportWidth, viewportHeight);
   };
 
   useEffect(() => {
@@ -215,8 +171,9 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
     if (context) {
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-      draw(context);
-      setInterval(() => draw(context), 30000);
+      draw(context, 0);
+      let index = 1;
+      setInterval(() => draw(context, index++), 5000);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

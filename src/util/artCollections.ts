@@ -45,6 +45,14 @@ export const mindField = (
     megaChaos(context, linesArray, 10, 80, 5);
   }, 4000);
 
+  setTimeout(() => {
+    megaChaos(context, linesArray, 20, 80, 3);
+  }, 4800);
+
+  setTimeout(() => {
+    megaChaos(context, linesArray, 5, 300, 5);
+  }, 6400);
+
   // setTimeout(() => {
   //   console.log('clearMindField');
   //   context.clearRect(0, 0, viewportWidth, viewportHeight);
@@ -65,6 +73,46 @@ export const ancientAnomalies = (
   }
 
   ohThoseLines(context, linesArray, 25, 1900, 1);
+};
+
+export const afterlife = (
+  context: CanvasRenderingContext2D,
+  linesArray: any,
+  viewportWidth: number,
+  viewportHeight: number,
+) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
+  chaos(context, linesArray, 15, 140, 1);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 15, 140, 2);
+  }, 600);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 5, 120, 2);
+  }, 1200);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 5, 120, 3);
+  }, 1800);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 5, 120, 4);
+  }, 2400);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 5, 120, 5);
+  }, 3000);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 5, 120, 7);
+  }, 3600);
+
+  setTimeout(() => {
+    chaos(context, linesArray, 5, 120, 10);
+  }, 4200);
 };
 
 export const perpetual = (

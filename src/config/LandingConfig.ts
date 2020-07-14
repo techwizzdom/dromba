@@ -1,7 +1,5 @@
 import { ArtName } from '../enums/ArtName';
 
-const duration = 7000;
-
 export const LandingConfig = {
   numberOfLines: 300,
   colorOpacity: 0.5,
