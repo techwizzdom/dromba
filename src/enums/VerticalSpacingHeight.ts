@@ -1,7 +1,7 @@
 export enum VerticalSpacingHeight {
-  small = '8px',
-  medium = '16px',
-  large = '32px',
-  xlarge = '64px',
-  giant = '96px',
+  Small = '8px',
+  Medium = '16px',
+  Large = '32px',
+  Xlarge = '64px',
+  Giant = '96px',
 }

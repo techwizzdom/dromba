@@ -17,7 +17,7 @@ function Blog() {
       <H1>Sometimes, I like to question the obvious.</H1>
       <H1>And write about it.</H1>
 
-      <VerticalSpacing height={VerticalSpacingHeight.giant} />
+      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
       <IndentContainer>
         {isLoading

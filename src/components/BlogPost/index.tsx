@@ -19,7 +19,7 @@ const blogPostCss = css`
   align-items: flex-start;
   justify-content: space-between;
 
-  margin-bottom: ${VerticalSpacingHeight.large};
+  margin-bottom: ${VerticalSpacingHeight.Large};
 
   ${underlineClassNameOnHover('.heading')}
 `;

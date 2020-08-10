@@ -15,7 +15,7 @@ const timelineCardContainerCss = css`
   align-items: flex-start;
   position: relative;
 
-  margin-bottom: ${VerticalSpacingHeight.large};
+  margin-bottom: ${VerticalSpacingHeight.Large};
 `;
 
 const timelineCardContentLeftCss = css`

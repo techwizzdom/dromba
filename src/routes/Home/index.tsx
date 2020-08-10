@@ -14,7 +14,7 @@ function Home() {
       <H1>Aspiring Frontend developer.</H1>
       <H1>Based anywhere on this planet.</H1>
 
-      <VerticalSpacing height={VerticalSpacingHeight.giant} />
+      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
       <IndentContainer>
         <TimelineCard
