@@ -3,11 +3,13 @@ import * as React from 'react';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
+import VerticalSpacing from '../VerticalSpacing';
 
 interface ITimelineCardProps {
   title: string;
   subtitle: string;
-  description: string;
+  upperDescription: string;
+  lowerDescription?: string;
 }
 
 const timelineCardContainerCss = css`
@@ -38,10 +40,18 @@ const timelineCardContentRightCss = css`
   flex: 1;
 `;
 
-const titleCss = css`
-  flex-grow: 1;
+const titleWrapper = css`
+  display: flex;
+  flex-direction: column;
+`;
 
+const titleCss = css`
   font-weight: 800;
+`;
+
+const subtitleCss = css`
+  font-size: 12px;
+  font-weight: 500;
 `;
 
 const descriptionCss = css`
@@ -51,7 +61,7 @@ const descriptionCss = css`
 const TimelineCard: React.FC<ITimelineCardProps> = (
   props: ITimelineCardProps,
 ) => {
-  const { title, description } = props;
+  const { title, subtitle, upperDescription, lowerDescription } = props;
 
   const theme = React.useContext(ThemeContext);
 
@@ -59,10 +69,15 @@ const TimelineCard: React.FC<ITimelineCardProps> = (
     <div className={timelineCardContainerCss}>
       <div className={timelineCardContentLeftCss}>
         <div className={borderCss(theme)} />
-        <div className={titleCss}>{title}</div>
+        <div className={titleWrapper}>
+          <div className={titleCss}>{title}</div>
+          <div className={subtitleCss}>{subtitle}</div>
+        </div>
       </div>
       <div className={timelineCardContentRightCss}>
-        <div className={descriptionCss}>{description}</div>
+        <div className={descriptionCss}>{upperDescription}</div>
+        <VerticalSpacing height={VerticalSpacingHeight.Small} />
+        <div className={descriptionCss}>{lowerDescription}</div>
       </div>
     </div>
   );
