@@ -13,6 +13,7 @@ const iconButtonCss = css`
   padding: 8px;
 
   background-color: transparent;
+
   cursor: pointer;
 `;
 

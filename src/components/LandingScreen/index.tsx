@@ -24,6 +24,7 @@ const landingScreenWrapperCss = (isVisible: boolean) => css`
 
 const titleCss = css`
   position: absolute;
+
   top: auto;
   left: auto;
   bottom: 100px;

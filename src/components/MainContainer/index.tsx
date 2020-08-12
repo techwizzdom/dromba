@@ -6,10 +6,13 @@ import LandingScreen from '../LandingScreen';
 
 const mainContainer = (theme: any) => css`
   position: relative;
-  background-color: ${theme.backgroundColor};
+
   width: 100%;
   height: 100%;
+
+  background-color: ${theme.backgroundColor};
   color: ${theme.textColor};
+
   transition-property: color, background-color;
   transition-duration: 0.5s;
   transition-timing-function: ease;
@@ -17,11 +20,11 @@ const mainContainer = (theme: any) => css`
 
 const app = (initialLoad: boolean) => css`
   display: block;
-  pointer-events: ${initialLoad ? 'none' : 'auto'};
 
   opacity: ${initialLoad ? 0 : 1};
-
   transition: opacity 0.5s ease-in-out;
+
+  pointer-events: ${initialLoad ? 'none' : 'auto'};
 `;
 
 const MainContainer: React.FC = (props: any) => {

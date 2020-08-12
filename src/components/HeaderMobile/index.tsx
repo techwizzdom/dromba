@@ -15,8 +15,9 @@ interface IHeaderMobileProps {
 }
 
 const headerMobileCss = css`
-  padding: 0;
   position: relative;
+
+  padding: 0;
 `;
 
 const topBarCss = css`
@@ -30,28 +31,33 @@ const logoCss = css`
 `;
 
 const navigationCss = (theme: any, isExpanded: boolean) => css`
+  display: flex;
+  flex-direction: column;
   position: absolute;
+
+  height: ${isExpanded ? '100vh' : 0};
+  width: 100vw;
+
+  padding-bottom: ${isExpanded ? '96px' : '0'};
   top: 48px;
   left: 0;
   z-index: 1;
-  padding-bottom: ${isExpanded ? '96px' : '0'};
-  height: ${isExpanded ? '100vh' : 0};
-  width: 100vw;
+
   background-color: ${isExpanded ? theme.backgroundColor : 'transparent'};
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
+
   transition: height ${isExpanded ? '0.5s' : '0.2s'} ease,
     padding-bottom ${isExpanded ? '0.5s' : '0.2s'} ease,
     background-color ${isExpanded ? '0.5s' : '0.2s'} ease-in-out;
 `;
 
 const navigationItemsCss = css`
-  margin: auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin: auto 0;
 `;
 
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
