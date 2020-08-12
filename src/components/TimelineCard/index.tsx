@@ -2,8 +2,10 @@ import { css } from 'emotion';
 import * as React from 'react';
 
 import { ThemeContext } from '../../context/ThemeContext';
-import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import VerticalSpacing from '../VerticalSpacing';
+
+import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
+import { Media } from '../../enums/Media';
 
 interface ITimelineCardProps {
   title: string;
@@ -23,15 +25,20 @@ const timelineCardContainerCss = css`
 const timelineCardContentLeftCss = css`
   display: flex;
   flex: 1;
-  align-items: center;
+  align-items: flex-start;
+
+  @media ${Media.TabletDown} {
+    flex: 0;
+    flex-direction: column;
+  }
 `;
 
 const borderCss = (theme: any) => css`
   flex-grow: 1;
 
-  margin-right: 48px;
+  margin: 8px 48px 0 0;
   height: 1px;
-  min-width: 100px;
+  min-width: 144px;
 
   background-color: ${theme.timelineConnectionLineColor};
 `;
@@ -40,9 +47,13 @@ const timelineCardContentRightCss = css`
   flex: 1;
 `;
 
-const titleWrapper = css`
+const titleWrapperCss = css`
   display: flex;
   flex-direction: column;
+
+  @media ${Media.TabletDown} {
+    margin-top: 16px;
+  }
 `;
 
 const titleCss = css`
@@ -50,12 +61,16 @@ const titleCss = css`
 `;
 
 const subtitleCss = css`
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 500;
 `;
 
 const descriptionCss = css`
   margin-left: 48px;
+
+  @media ${Media.Mobile} {
+    margin-left: 0;
+  }
 `;
 
 const TimelineCard: React.FC<ITimelineCardProps> = (
@@ -69,7 +84,7 @@ const TimelineCard: React.FC<ITimelineCardProps> = (
     <div className={timelineCardContainerCss}>
       <div className={timelineCardContentLeftCss}>
         <div className={borderCss(theme)} />
-        <div className={titleWrapper}>
+        <div className={titleWrapperCss}>
           <div className={titleCss}>{title}</div>
           <div className={subtitleCss}>{subtitle}</div>
         </div>
