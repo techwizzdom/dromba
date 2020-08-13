@@ -7,6 +7,8 @@ export const light = {
   border: colors.baseBlack,
   textColor: colors.baseBlack,
   textColorSecondary: colors.darkMoon,
+  hyperlinkColor: colors.baseWhite,
+  hyperlinkBackgroundColor: colors.forestGreen,
   themeToggleColor: colors.turqoise,
   themeToggleLine: colors.baseBlack,
   timelineConnectionLineColor: colors.darkMoon,

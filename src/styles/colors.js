@@ -5,4 +5,6 @@ export const colors = {
   radioactiveSun: '#e4edab',
   vanishingGray: '#d4d4d6',
   darkMoon: '#59595c',
+  alienGreen: '#25ff1a',
+  forestGreen: '#108b0a',
 };
