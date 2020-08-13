@@ -5,6 +5,7 @@ import { H1, H6 } from '../../components/core/Heading';
 import TimelineCard from '../../components/TimelineCard';
 import IndentContainer from '../../components/IndentContainer';
 import VerticalSpacing from '../../components/VerticalSpacing';
+import Hyperlink from '../../components/Hyperlink';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
@@ -18,8 +19,7 @@ function Home() {
 
       <H6>
         As a 25 years old guy, there's a lot for me to achieve. Many things I
-        don't know; zero of them I can't learn. Nothing beats consistent effort,
-        paired with elevated motivation and intention.
+        don't know; zero of them I can't learn.
       </H6>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
@@ -33,37 +33,50 @@ function Home() {
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
 
       <IndentContainer>
-        <TimelineCard
-          title="Productive"
-          subtitle="(Aug 2019 - still here)"
-          upperDescription="One of the most successful agencies in Croatia, Infinum, didn't like any of available tools for managing their business. That's why they started to build their own product - Productive, which is growing since 2015."
-          lowerDescription='Besides the "regular engineering stuff" (Frontend, Backend, Design), working on a product like this brought me massive knowledge in the fields of Business Management, Product Ownership, and Sales.'
-        />
+        <TimelineCard title="Productive" subtitle="(Aug 2019 - still here)">
+          One of the most successful agencies in Croatia, Infinum, didn't like
+          any of available tools for managing their business. That's why they
+          started to build their own product -{' '}
+          <Hyperlink href="https://www.productive.io/">Productive</Hyperlink>,
+          which is growing since 2015.
+          <VerticalSpacing height={VerticalSpacingHeight.Small} />
+          Besides the "regular engineering stuff" (Frontend, Backend, Design),
+          working on a product like this brought me massive knowledge in the
+          fields of Business Management, Product Ownership, and Sales.
+        </TimelineCard>
 
-        <TimelineCard
-          title="Infinum"
-          subtitle="(Feb 2019 - still here)"
-          upperDescription="Before Productive, I worked with the US-based clients on {{Loop Community}}; an audio project where Artists can upload their songs divided into basic parts, like voices and instruments."
-          lowerDescription="My main tasks were building beautiful user interfaces, as well as close communication with Design and Backend teams to make it done."
-        />
+        <TimelineCard title="Infinum" subtitle="(Feb 2019 - still here)">
+          Before Productive, I worked with the US-based clients on{' '}
+          <Hyperlink href="https://loopcommunity.com/">
+            Loop Community
+          </Hyperlink>
+          ; an audio project where Artists can upload their songs divided into
+          basic parts, like voices and instruments.
+          <VerticalSpacing height={VerticalSpacingHeight.Small} />
+          My main tasks were building beautiful user interfaces, as well as
+          close communication with Design and Backend teams to make it done."
+        </TimelineCard>
 
-        <TimelineCard
-          title="OptimIT"
-          subtitle="(Feb 2018 - Feb 2019)"
-          upperDescription="I've worked as a full-stack developer on E-commerce projects for two big Telecommunication companies in region - {{A1}} and {{Tomato}}."
-        />
+        <TimelineCard title="OptimIT" subtitle="(Feb 2018 - Feb 2019)">
+          I've worked as a full-stack developer on E-commerce projects for two
+          big Telecommunication companies in region -{' '}
+          <Hyperlink href="https://www.a1.hr/">A1</Hyperlink> and{' '}
+          <Hyperlink href="https://www.tomato.com.hr/">Tomato</Hyperlink>.
+        </TimelineCard>
 
-        <TimelineCard
-          title="Asseco SEE"
-          subtitle="(Jan 2017 - Jul 2017)"
-          upperDescription="At first, I was working on an internal file sharing platform; later on, I got my hands onto the {{PBZ mobile banking app}}, one of the largest banks in Croatia under the Intesa Sanpaolo bank."
-        />
+        <TimelineCard title="Asseco SEE" subtitle="(Jan 2017 - Jul 2017)">
+          At first, I was working on an internal file sharing platform; later
+          on, I got my hands onto the{' '}
+          <Hyperlink href="https://play.google.com/store/apps/details?id=hr.asseco.android.intesa.isbd.pbz&hl=en">
+            PBZ mobile banking app
+          </Hyperlink>
+          , one of the largest banks in Croatia under the Intesa Sanpaolo bank.
+        </TimelineCard>
 
-        <TimelineCard
-          title="OptimIT"
-          subtitle="(Jul 2015 - Aug 2015)"
-          upperDescription="This was my first and last internship, where I used to work on a project for creating digital signatures on PDF documents."
-        />
+        <TimelineCard title="OptimIT" subtitle="(Jul 2015 - Aug 2015)">
+          This was my first and last internship, where I used to work on a
+          project for creating digital signatures on PDF documents.
+        </TimelineCard>
       </IndentContainer>
 
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
@@ -76,23 +89,24 @@ function Home() {
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
 
       <IndentContainer>
-        <TimelineCard
-          title="Master's Degree"
-          subtitle="(Sep 2016 - Jun 2018)"
-          upperDescription="I graduated at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia."
-        />
+        <TimelineCard title="Master's Degree" subtitle="(Sep 2016 - Jun 2018)">
+          I graduated at the Faculty of Electrical Engineering and Computing in
+          Zagreb, Croatia.
+        </TimelineCard>
 
-        <TimelineCard
-          title="Exchange Student"
-          subtitle="(Sep 2017 - Feb 2018)"
-          upperDescription="I spent a semester at Hochschule für Telekomunikation in Leipzig, Germany. Strengthening my knowledge and meeting different people from all over the world was one of the best experiences in my life."
-        />
+        <TimelineCard title="Exchange Student" subtitle="(Sep 2017 - Feb 2018)">
+          I spent a semester at Hochschule für Telekomunikation in Leipzig,
+          Germany. Strengthening my knowledge and meeting different people from
+          all over the world was one of the best experiences in my life.
+        </TimelineCard>
 
         <TimelineCard
           title="Bachelor's Degree"
           subtitle="(Sep 2013 - Jun 2016)"
-          upperDescription="That's when everything started; again at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia."
-        />
+        >
+          That's when everything started; again at the Faculty of Electrical
+          Engineering and Computing in Zagreb, Croatia.
+        </TimelineCard>
       </IndentContainer>
 
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
@@ -100,7 +114,11 @@ function Home() {
       <H6>
         This website was designed and build from scratch completely by myself. I
         love ReactJS so much that I used it here, even though it's not a perfect
-        solution for this. Check out the source code if you're interested.
+        solution for this. Check out the{' '}
+        <Hyperlink href="https://github.com/dromba/dromba">
+          source code
+        </Hyperlink>{' '}
+        if you're interested.
       </H6>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
@@ -122,8 +140,16 @@ function Home() {
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
       <H6>
-        Check out my profiles on LinkedIn and Medium, or contact me at
-        dvidovic91@gmail.com. It's so nice to hear from you!
+        Check out my profiles on{' '}
+        <Hyperlink href="https://www.linkedin.com/in/dvidovic/">
+          LinkedIn
+        </Hyperlink>{' '}
+        and <Hyperlink href="https://medium.com/@dvidovic91">Medium</Hyperlink>,
+        or contact me at{' '}
+        <Hyperlink href="dvidovic91@gmail.com" isEmail={true}>
+          dvidovic91@gmail.com
+        </Hyperlink>
+        . It's so nice to hear from you!
       </H6>
     </RouteContainer>
   );
