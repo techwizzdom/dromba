@@ -2,7 +2,6 @@ import { css } from 'emotion';
 import * as React from 'react';
 
 import { ThemeContext } from '../../context/ThemeContext';
-import VerticalSpacing from '../VerticalSpacing';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { Media } from '../../enums/Media';
@@ -10,8 +9,7 @@ import { Media } from '../../enums/Media';
 interface ITimelineCardProps {
   title: string;
   subtitle: string;
-  upperDescription: string;
-  lowerDescription?: string;
+  children: React.ReactNode;
 }
 
 const timelineCardContainerCss = css`
@@ -76,7 +74,7 @@ const descriptionCss = css`
 const TimelineCard: React.FC<ITimelineCardProps> = (
   props: ITimelineCardProps,
 ) => {
-  const { title, subtitle, upperDescription, lowerDescription } = props;
+  const { title, subtitle, children } = props;
 
   const theme = React.useContext(ThemeContext);
 
@@ -90,9 +88,7 @@ const TimelineCard: React.FC<ITimelineCardProps> = (
         </div>
       </div>
       <div className={timelineCardContentRightCss}>
-        <div className={descriptionCss}>{upperDescription}</div>
-        <VerticalSpacing height={VerticalSpacingHeight.Small} />
-        <div className={descriptionCss}>{lowerDescription}</div>
+        <div className={descriptionCss}>{children}</div>
       </div>
     </div>
   );
