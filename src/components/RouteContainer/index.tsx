@@ -9,6 +9,7 @@ const routeContainer = css`
 
   max-width: 1072px;
   width: 100%;
+  min-height: 100vh;
 
   @media ${Media.Tablet} {
     padding-left: 88px;
