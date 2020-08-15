@@ -18,30 +18,32 @@ const mainContainer = (theme: any) => css`
   transition-timing-function: ease;
 `;
 
-const app = (initialLoad: boolean) => css`
+const app = (isInitialLoad: boolean) => css`
   display: block;
+  height: ${isInitialLoad ? '100vh' : 'auto'};
 
-  opacity: ${initialLoad ? 0 : 1};
+  overflow: ${isInitialLoad ? 'hidden' : 'visible'};
+  opacity: ${isInitialLoad ? 0 : 1};
   transition: opacity 0.5s ease-in-out;
 
-  pointer-events: ${initialLoad ? 'none' : 'auto'};
+  pointer-events: ${isInitialLoad ? 'none' : 'auto'};
 `;
 
 const MainContainer: React.FC = (props: any) => {
   const { children } = props;
 
-  const [initialLoad, setInitialLoad] = useState<boolean>(true);
+  const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
 
   const theme = React.useContext(ThemeContext);
 
   return (
     <div className={mainContainer(theme)}>
-      {initialLoad ? (
-        <LandingScreen onClick={() => setInitialLoad(false)} />
+      {isInitialLoad ? (
+        <LandingScreen onClick={() => setIsInitialLoad(false)} />
       ) : (
         <></>
       )}
-      <div className={app(initialLoad)}>{children}</div>
+      <div className={app(isInitialLoad)}>{children}</div>
     </div>
   );
 };
