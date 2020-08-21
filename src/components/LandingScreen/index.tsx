@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 
 import { LandingConfig } from '../../config/LandingConfig';
-import { mindField, afterlife } from '../../util/artCollections';
+import { afterlife } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 interface ILandingScreenProps {
@@ -22,17 +22,29 @@ const landingScreenWrapperCss = (isVisible: boolean) => css`
   cursor: pointer;
 `;
 
-const titleCss = css`
+const textWrapperCss = css`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
   position: absolute;
 
   top: auto;
   left: auto;
   bottom: 100px;
   right: 100px;
+`;
 
+const titleCss = css`
   color: white;
   font-size: 64px;
   font-weight: 900;
+`;
+
+const subtitleCss = css`
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
 `;
 
 const landingScreenCss = css`
@@ -145,8 +157,8 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
     const numberOfLines = 300;
 
-    const randomIndexOne = getRandomInt(9);
-    const randomIndexTwo = getRandomInt(9);
+    // const randomIndexOne = getRandomInt(9);
+    // const randomIndexTwo = getRandomInt(9);
 
     for (let i = 0; i < numberOfLines; i++) {
       linesArray.push({
@@ -195,7 +207,10 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
           width: `${viewportWidth}px`,
         }}
       />
-      <div className={titleCss}>What shall we create?</div>
+      <div className={textWrapperCss}>
+        <div className={titleCss}>What shall we create?</div>
+        <div className={subtitleCss}>Click anywhere to start</div>
+      </div>
     </div>
   );
 };
