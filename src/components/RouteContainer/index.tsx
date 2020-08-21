@@ -6,8 +6,10 @@ import { Media } from '../../enums/Media';
 const routeContainer = css`
   padding: 64px 16px 32px 184px;
   margin: 0 auto;
+
   max-width: 1072px;
   width: 100%;
+  min-height: 100vh;
 
   @media ${Media.Tablet} {
     padding-left: 88px;

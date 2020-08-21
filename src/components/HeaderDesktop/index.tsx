@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { css } from 'emotion';
+import { Link } from 'react-router-dom';
+
+import { Routes } from '../../routes/Routes';
 
 import ThemeToggle from '../ThemeToggle';
 import MainNavigation from '../MainNavigation';
@@ -27,6 +30,10 @@ const headerDesktopCss = css`
   }
 `;
 
+const logoLinkCss = css`
+  height: 40px;
+`;
+
 const logoCss = css`
   min-width: 40px;
   width: 40px;
@@ -40,7 +47,9 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
 
   return (
     <div className={headerDesktopCss}>
-      <img src={Logo} className={logoCss} alt="logo" />
+      <Link to={Routes.Home} className={logoLinkCss}>
+        <img src={Logo} className={logoCss} alt="logo" />
+      </Link>
       <MainNavigation />
       <ThemeToggle toggleTheme={toggleTheme} />
     </div>
