@@ -30,11 +30,11 @@ const topBarCss = css`
 `;
 
 const logoLinkCss = css`
-  height: 32px;
+  height: 40px;
 `;
 
 const logoCss = css`
-  width: 32px;
+  width: 40px;
 `;
 
 const navigationCss = (theme: any, isExpanded: boolean) => css`
