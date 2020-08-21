@@ -12,8 +12,8 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 function Home() {
   return (
     <RouteContainer>
-      <H1>Aspiring Frontend developer.</H1>
-      <H1>Based anywhere on this planet.</H1>
+      <H1>Just a random guy, typing some random words.</H1>
+      <H1>Frontend developer, I guess.</H1>
 
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
@@ -41,7 +41,7 @@ function Home() {
           which is growing since 2015.
           <VerticalSpacing height={VerticalSpacingHeight.Small} />
           Besides the "regular engineering stuff" (Frontend, Backend, Design),
-          working on a product like this brought me massive knowledge in the
+          working on a product like this is bringing me massive knowledge in the
           fields of Business Management, Product Ownership, and Sales.
         </TimelineCard>
 
@@ -53,8 +53,9 @@ function Home() {
           ; an audio project where Artists can upload their songs divided into
           basic parts, like voices and instruments.
           <VerticalSpacing height={VerticalSpacingHeight.Small} />
-          My main tasks were building beautiful user interfaces, as well as
-          close communication with Design and Backend teams to make it done."
+          My main tasks were building beautiful user interfaces,discussing the
+          solutions with Design and Backend teams, and communication with the
+          clients."
         </TimelineCard>
 
         <TimelineCard title="OptimIT" subtitle="(Feb 2018 - Feb 2019)">
@@ -91,21 +92,31 @@ function Home() {
       <IndentContainer>
         <TimelineCard title="Master's Degree" subtitle="(Sep 2016 - Jun 2018)">
           I graduated at the Faculty of Electrical Engineering and Computing in
-          Zagreb, Croatia.
+          Zagreb, Croatia, and became a{' '}
+          <Hyperlink href="https://www.fer.unizg.hr/en/study_programs/graduate_study/information_and_communication_technology">
+            Master of Science in Information and Communication Technology.
+          </Hyperlink>
         </TimelineCard>
 
         <TimelineCard title="Exchange Student" subtitle="(Sep 2017 - Feb 2018)">
-          I spent a semester at Hochschule für Telekomunikation in Leipzig,
-          Germany. Strengthening my knowledge and meeting different people from
-          all over the world was one of the best experiences in my life.
+          I spent a semester at{' '}
+          <Hyperlink href="https://www.hft-leipzig.de/de/studierende/gesellschaft-und-informatik.html">
+            Hochschule für Telekomunikation in Leipzig
+          </Hyperlink>
+          , Germany. Strengthening my knowledge and meeting different people
+          from all over the world was one of the best experiences in my life.
         </TimelineCard>
 
         <TimelineCard
           title="Bachelor's Degree"
           subtitle="(Sep 2013 - Jun 2016)"
         >
-          That's when everything started; again at the Faculty of Electrical
-          Engineering and Computing in Zagreb, Croatia.
+          I became a{' '}
+          <Hyperlink href="https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing">
+            Bachelor of Science in Computing
+          </Hyperlink>
+          ,again at the Faculty of Electrical Engineering and Computing in
+          Zagreb, Croatia.
         </TimelineCard>
       </IndentContainer>
 
