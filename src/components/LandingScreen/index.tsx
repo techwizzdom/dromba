@@ -119,11 +119,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const randomStartPosition = (index: number): [number, number] => {
     if (index === 0) {
-      return [0.1, 0.1];
+      return [0.4, 0.6];
     }
 
     if (index === 1) {
-      return [0.5, 0.6];
+      return [0.1, 0.9];
     }
 
     if (index === 2) {
