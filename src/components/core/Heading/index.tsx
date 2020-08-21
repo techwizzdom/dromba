@@ -1,9 +1,14 @@
 import * as React from 'react';
 import { cx, css } from 'emotion';
+import { useDevice } from '../../../hooks/useDevice';
+
+import { ThemeContext } from '../../../context/ThemeContext';
+
 import { HeadingTags } from '../../../enums/HeadingTags';
 import { HeadingSize } from '../../../enums/HeadingSize';
+import { DeviceType } from '../../../enums/DeviceType';
+
 import { underlineOnHover } from '../../../styles/css/textHover';
-import { ThemeContext } from '../../../context/ThemeContext';
 
 interface IHeadingProps {
   children: React.ReactNode;
@@ -45,7 +50,7 @@ const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
 export const H1: React.FC<IHProps> = (props: IHProps) => (
   <Heading
     tag={HeadingTags.H1}
-    size={HeadingSize.H1}
+    size={useDevice() === DeviceType.Mobile ? HeadingSize.H2 : HeadingSize.H1}
     isHoverable={props.isHoverable}
   >
     {props.children}
@@ -55,7 +60,7 @@ export const H1: React.FC<IHProps> = (props: IHProps) => (
 export const H2: React.FC<IHProps> = (props: IHProps) => (
   <Heading
     tag={HeadingTags.H2}
-    size={HeadingSize.H2}
+    size={useDevice() === DeviceType.Mobile ? HeadingSize.H3 : HeadingSize.H2}
     isHoverable={props.isHoverable}
   >
     {props.children}
@@ -65,7 +70,7 @@ export const H2: React.FC<IHProps> = (props: IHProps) => (
 export const H3: React.FC<IHProps> = (props: IHProps) => (
   <Heading
     tag={HeadingTags.H3}
-    size={HeadingSize.H3}
+    size={useDevice() === DeviceType.Mobile ? HeadingSize.H4 : HeadingSize.H3}
     isHoverable={props.isHoverable}
   >
     {props.children}
