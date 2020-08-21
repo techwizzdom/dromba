@@ -1,34 +1,43 @@
 import React from 'react';
+import { useDevice } from '../../hooks/useDevice';
 
 import RouteContainer from '../../components/RouteContainer';
-import { H1, H6 } from '../../components/core/Heading';
+import { H1, H5 } from '../../components/core/Heading';
 import TimelineCard from '../../components/TimelineCard';
 import IndentContainer from '../../components/IndentContainer';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import Hyperlink from '../../components/Hyperlink';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
+import { DeviceType } from '../../enums/DeviceType';
 
 function Home() {
+  const deviceType = useDevice();
   return (
     <RouteContainer>
       <H1>Just a random guy, typing some random words.</H1>
       <H1>Frontend developer, I guess.</H1>
 
-      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
+      <VerticalSpacing
+        height={
+          deviceType === DeviceType.Mobile
+            ? VerticalSpacingHeight.Xlarge
+            : VerticalSpacingHeight.Giant
+        }
+      />
 
-      <H6>
+      <H5>
         As a 25 years old guy, there's a lot for me to achieve. Many things I
         don't know; zero of them I can't learn.
-      </H6>
+      </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
-      <H6>
+      <H5>
         In the early days of my Computer Science studies, I've landed my first
         intership. The rest is history; I'm still working, craving for endless
         opportunities. Here's a short summary of my working experience:
-      </H6>
+      </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
 
@@ -82,10 +91,10 @@ function Home() {
 
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
 
-      <H6>
+      <H5>
         I'm also grateful for my education, which helped me a lot in my career
         and personal growth.
-      </H6>
+      </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
 
@@ -120,9 +129,15 @@ function Home() {
         </TimelineCard>
       </IndentContainer>
 
-      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
+      <VerticalSpacing
+        height={
+          deviceType === DeviceType.Mobile
+            ? VerticalSpacingHeight.Xlarge
+            : VerticalSpacingHeight.Giant
+        }
+      />
 
-      <H6>
+      <H5>
         This website was designed and build from scratch completely by myself. I
         love ReactJS so much that I used it here, even though it's not a perfect
         solution for this. Check out the{' '}
@@ -130,27 +145,27 @@ function Home() {
           source code
         </Hyperlink>{' '}
         if you're interested.
-      </H6>
+      </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
-      <H6>
+      <H5>
         Besides JS, I adore HTML/CSS (yes, I've just said that); and I also have
         experience with Java, Ruby, and design tools. On the non-technical side,
         I was involved in Product Management, Sales, Business Management, and
         Rebranding.
-      </H6>
+      </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
-      <H6>
+      <H5>
         I like to fill my free time with photography, sports, writing, and
         reading. Most of the time backed up with electronic music.
-      </H6>
+      </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
-      <H6>
+      <H5>
         Check out my profiles on{' '}
         <Hyperlink href="https://www.linkedin.com/in/dvidovic/">
           LinkedIn
@@ -161,7 +176,7 @@ function Home() {
           dvidovic91@gmail.com
         </Hyperlink>
         . It's so nice to hear from you!
-      </H6>
+      </H5>
     </RouteContainer>
   );
 }
