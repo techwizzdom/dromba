@@ -3,8 +3,11 @@ import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 
 import { LandingConfig } from '../../config/LandingConfig';
+
 import { afterlife } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
+
+import { Media } from '../../enums/Media';
 
 interface ILandingScreenProps {
   onClick: () => void;
@@ -33,18 +36,30 @@ const textWrapperCss = css`
   left: auto;
   bottom: 100px;
   right: 100px;
+
+  @media ${Media.Mobile} {
+    align-items: flex-start;
+  }
 `;
 
 const titleCss = css`
   color: white;
   font-size: 64px;
   font-weight: 900;
+
+  @media ${Media.Mobile} {
+    line-height: 1.2;
+  }
 `;
 
 const subtitleCss = css`
   color: white;
   font-size: 18px;
   font-weight: 500;
+
+  @media ${Media.Mobile} {
+    margin-top: 16px;
+  }
 `;
 
 const landingScreenCss = css`
