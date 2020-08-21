@@ -1,6 +1,10 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { css } from 'emotion';
+import { Link } from 'react-router-dom';
+
+import { ThemeContext } from '../../context/ThemeContext';
+import { Routes } from '../../routes/Routes';
 
 import ThemeToggle from '../ThemeToggle';
 import IconButton from '../IconButton';
@@ -8,7 +12,6 @@ import NavigationItems from '../NavigationItems';
 
 import Logo from '../../assets/icons/logo.svg';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
-import { ThemeContext } from '../../context/ThemeContext';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;
@@ -24,6 +27,10 @@ const topBarCss = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+const logoLinkCss = css`
+  height: 32px;
 `;
 
 const logoCss = css`
@@ -76,7 +83,9 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
     <div className={headerMobileCss}>
       <div className={topBarCss}>
         <IconButton Icon={HamburgerMenu} onClick={() => toggleMenu()} />
-        <img className={logoCss} src={Logo} alt="logo" />
+        <Link to={Routes.Home} className={logoLinkCss}>
+          <img className={logoCss} src={Logo} alt="logo" />
+        </Link>
         <ThemeToggle toggleTheme={toggleTheme} />
       </div>
       <div className={navigationCss(theme, isExpanded)}>
