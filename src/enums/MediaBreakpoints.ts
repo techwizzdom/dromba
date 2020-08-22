@@ -1,4 +1,4 @@
 export enum MediaBreakpoints {
-  Tablet = 991,
+  Tablet = 992,
   Mobile = 768,
 }

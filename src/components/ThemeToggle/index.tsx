@@ -9,7 +9,7 @@ interface IThemeToogleProps {
   toggleTheme: () => void;
 }
 
-const togglerContainerCss = (theme: any) => css`
+const togglerContainerCss = css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@ const ThemeToggle: React.FC<IThemeToogleProps> = (props: IThemeToogleProps) => {
   return (
     <div
       role="button"
-      className={togglerContainerCss(theme)}
+      className={togglerContainerCss}
       onClick={() => props.toggleTheme()}
     >
       <Sun className={sunIconCss(theme)} />
