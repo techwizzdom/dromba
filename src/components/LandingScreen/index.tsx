@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
+import { useDevice } from '../../hooks/useDevice';
 
 import { LandingConfig } from '../../config/LandingConfig';
 
-import { afterlife } from '../../util/artCollections';
+import { afterlife, mindField, caldera } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 import { Media } from '../../enums/Media';
+import { DeviceType } from '../../enums/DeviceType';
 
 interface ILandingScreenProps {
   onClick: () => void;
@@ -94,6 +96,8 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  const deviceType = useDevice();
+
   const getInitialCoordinates = (
     positionX?: [number, number],
     positionY?: [number, number],
@@ -139,7 +143,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     }
 
     if (index === 5) {
-      return [0.9, 0.9];
+      return [0.7, 0.7];
     }
 
     if (index === 5) {
@@ -178,8 +182,12 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     for (let i = 0; i < numberOfLines; i++) {
       linesArray.push({
         coordinates: getInitialCoordinates(
-          randomStartPosition(index),
-          randomStartPosition(index),
+          deviceType === DeviceType.Mobile
+            ? randomStartPosition(index)
+            : undefined,
+          deviceType === DeviceType.Mobile
+            ? randomStartPosition(index)
+            : undefined,
         ),
         color: randomColor(),
         initialDirection: getDirection(),
@@ -187,7 +195,11 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       });
     }
 
-    afterlife(context, linesArray, viewportWidth, viewportHeight);
+    if (deviceType === DeviceType.Mobile) {
+      afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+    } else {
+      caldera(context, linesArray, viewportWidth, viewportHeight, index);
+    }
   };
 
   useEffect(() => {

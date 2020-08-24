@@ -40,6 +40,7 @@ export const chaos = (
   delay: number,
   repetitions: number,
   lineWidth: number,
+  index: number,
   megaChaos: boolean = false,
 ) => {
   setIntervalX(
@@ -60,14 +61,185 @@ export const chaos = (
         context.beginPath();
         context.moveTo(coordinates[0], coordinates[1]);
 
-        linesArray[i].color.hue = linesArray[i].color.hue - 8;
+        linesArray[i].color.hue = linesArray[i].color.hue - index;
         if (linesArray[i].color.hue < 0) {
-          linesArray[i].color.hue = linesArray[i].color.hue + 16;
+          linesArray[i].color.hue = linesArray[i].color.hue + index * 16;
         }
 
         if (megaChaos) {
           linesArray[i].initialDirection = getDirection();
         }
+
+        if (directionX === 0 && directionY === 0) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          }
+        }
+        if (directionX === 0 && directionY === 1) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          }
+        }
+        if (directionX === 0 && directionY === 2) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] - getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+          }
+        }
+        if (directionX === 1 && directionY === 0) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] - getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+          }
+        }
+        if (directionX === 1 && directionY === 1) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] - getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+          }
+        }
+        if (directionX === 1 && directionY === 2) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] - getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+          }
+        }
+        if (directionX === 2 && directionY === 0) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+          }
+        }
+        if (directionX === 2 && directionY === 1) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] - getRandomInt(3);
+          }
+        }
+        if (directionX === 2 && directionY === 2) {
+          if (
+            linesArray[i].twistCounter % getRandomInt(4) === 0 ||
+            linesArray[i].twistCounter % getRandomInt(4) === 0
+          ) {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+            linesArray[i].coordinates[1] =
+              linesArray[i].coordinates[1] + getRandomInt(3);
+          } else {
+            linesArray[i].coordinates[0] =
+              linesArray[i].coordinates[0] + getRandomInt(3);
+          }
+        }
+
+        linesArray[i].twistCounter++;
+
+        context.lineTo(coordinates[0], coordinates[1]);
+        context.stroke();
+      }
+    },
+    delay,
+    repetitions,
+  );
+};
+
+export const iyewaye = (
+  context: CanvasRenderingContext2D,
+  linesArray: any,
+  delay: number,
+  repetitions: number,
+  lineWidth: number,
+  index: number,
+) => {
+  setIntervalX(
+    () => {
+      for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+        const coordinates = linesArray[i].coordinates;
+        const hue = linesArray[i].color.hue;
+        const saturation = linesArray[i].color.saturation;
+        const lightness = linesArray[i].color.lightness;
+        const opacity = linesArray[i].color.opacity;
+
+        const directionX = linesArray[i].initialDirection[0];
+        const directionY = linesArray[i].initialDirection[1];
+
+        const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
+        context.strokeStyle = hsla;
+        context.lineWidth = lineWidth;
+        context.beginPath();
+        context.moveTo(coordinates[0], coordinates[1]);
+
+        linesArray[i].color.hue = linesArray[i].color.hue - index;
+        if (linesArray[i].color.hue < 0) {
+          linesArray[i].color.hue = linesArray[i].color.hue + index * 16;
+        }
+
+        linesArray[i].initialDirection = getDirection();
 
         if (directionX === 0 && directionY === 0) {
           if (
@@ -213,8 +385,9 @@ export const megaChaos = (
   delay: number,
   repetitions: number,
   lineWidth: number,
+  index: number,
 ) => {
-  chaos(context, linesArray, delay, repetitions, lineWidth, true);
+  chaos(context, linesArray, delay, repetitions, lineWidth, index, true);
 };
 
 export const ohThoseLines = (
