@@ -5,6 +5,7 @@ import {
   slightlyCurved,
   iyewaye,
   getRandomInt,
+  tideSlide,
 } from './landingPage';
 
 export const caldera = (
@@ -36,23 +37,9 @@ export const caldera = (
       iyewaye(context, linesArray, 10, 80, 5, index);
     }, 4000);
 
-    iyewaye(context, linesArray, 10, 120, 1, index);
-
     setTimeout(() => {
-      iyewaye(context, linesArray, 5, 240, 2, index);
-    }, 1200);
-
-    setTimeout(() => {
-      iyewaye(context, linesArray, 20, 50, 3, index);
-    }, 2400);
-
-    setTimeout(() => {
-      iyewaye(context, linesArray, 6, 100, 10, index);
-    }, 3400);
-
-    setTimeout(() => {
-      iyewaye(context, linesArray, 10, 80, 5, index);
-    }, 4000);
+      iyewaye(context, linesArray, 40, 25, 5, index);
+    }, 4800);
   } else {
     const randomic = getRandomInt(3);
 
@@ -75,77 +62,93 @@ export const caldera = (
         iyewaye(context, linesArray, 10, 80, 5, index);
       }, 4000);
 
-      iyewaye(context, linesArray, 10, 120, 1, index);
-
       setTimeout(() => {
-        iyewaye(context, linesArray, 5, 240, 2, index);
-      }, 1200);
-
-      setTimeout(() => {
-        iyewaye(context, linesArray, 20, 50, 3, index);
-      }, 2400);
-
-      setTimeout(() => {
-        iyewaye(context, linesArray, 6, 100, 10, index);
-      }, 3400);
-
-      setTimeout(() => {
-        iyewaye(context, linesArray, 10, 80, 5, index);
-      }, 4000);
+        iyewaye(context, linesArray, 40, 25, 5, index);
+      }, 4800);
     }
 
     if (randomic === 1) {
-      iyewaye(context, linesArray, 10, 80, 5, index);
+      ohThoseLines(context, linesArray, 10, 120, 1);
 
       setTimeout(() => {
-        iyewaye(context, linesArray, 6, 100, 10, index);
-      }, 800);
+        tideSlide(context, linesArray, 10, 300, 1, index, 32);
+      }, 1200);
 
       setTimeout(() => {
-        iyewaye(context, linesArray, 20, 50, 3, index);
-      }, 1400);
+        tideSlide(context, linesArray, 20, 30, 1, index, 32);
+      }, 4200);
 
       setTimeout(() => {
-        iyewaye(context, linesArray, 5, 240, 2, index);
-      }, 2400);
+        tideSlide(context, linesArray, 50, 20, 1, index, 32);
+      }, 4900);
+      // ohThoseLines(context, linesArray, 10, 120, 1);
 
-      setTimeout(() => {
-        iyewaye(context, linesArray, 10, 120, 1, index);
-      }, 3600);
+      // setTimeout(() => {
+      //   tideSlide(context, linesArray, 10, 180, 10, index);
+      // }, 1200);
 
-      iyewaye(context, linesArray, 10, 80, 5, index);
+      // setTimeout(() => {
+      //   tideSlide(context, linesArray, 20, 50, 10, index);
+      // }, 3000);
 
-      setTimeout(() => {
-        iyewaye(context, linesArray, 6, 100, 10, index);
-      }, 800);
+      // setTimeout(() => {
+      //   tideSlide(context, linesArray, 30, 25, 10, index);
+      // }, 4000);
 
-      setTimeout(() => {
-        iyewaye(context, linesArray, 20, 50, 3, index);
-      }, 1400);
-
-      setTimeout(() => {
-        iyewaye(context, linesArray, 5, 240, 2, index);
-      }, 2400);
-
-      setTimeout(() => {
-        iyewaye(context, linesArray, 10, 120, 1, index);
-      }, 3600);
+      // setTimeout(() => {
+      //   tideSlide(context, linesArray, 50, 20, 10, index);
+      // }, 4750);
     }
 
     if (randomic === 2) {
-      iyewaye(context, linesArray, 5, 140, 5, index);
+      iyewaye(context, linesArray, 10, 120, 1, index);
 
       setTimeout(() => {
-        iyewaye(context, linesArray, 1, 4100, 1, index);
-      }, 700);
-
-      iyewaye(context, linesArray, 5, 140, 5, index);
+        tideSlide(context, linesArray, 15, 80, 2, index);
+      }, 1200);
 
       setTimeout(() => {
-        iyewaye(context, linesArray, 1, 4100, 1, index);
-      }, 700);
+        tideSlide(context, linesArray, 25, 40, 3, index);
+      }, 2400);
+
+      setTimeout(() => {
+        tideSlide(context, linesArray, 6, 100, 10, index);
+      }, 3400);
+
+      setTimeout(() => {
+        tideSlide(context, linesArray, 10, 80, 15, index);
+      }, 4000);
+
+      setTimeout(() => {
+        tideSlide(context, linesArray, 50, 20, 15, index);
+      }, 4800);
     }
   }
+};
+
+export const opressor = (
+  context: CanvasRenderingContext2D,
+  linesArray: any,
+  viewportWidth: number,
+  viewportHeight: number,
+  index: number,
+) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
+  ohThoseLines(context, linesArray, 10, 120, 1);
+
+  setTimeout(() => {
+    tideSlide(context, linesArray, 10, 300, 1, index, 32);
+  }, 1200);
+
+  setTimeout(() => {
+    tideSlide(context, linesArray, 20, 30, 1, index, 32);
+  }, 4200);
+
+  setTimeout(() => {
+    tideSlide(context, linesArray, 50, 20, 1, index, 32);
+  }, 4900);
 };
 
 export const mindField = (
@@ -175,38 +178,6 @@ export const mindField = (
   setTimeout(() => {
     megaChaos(context, linesArray, 10, 80, 5, index);
   }, 4000);
-
-  megaChaos(context, linesArray, 10, 120, 1, index);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 5, 240, 2, index);
-  }, 1200);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 20, 50, 3, index);
-  }, 2400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 6, 100, 10, index);
-  }, 3400);
-
-  setTimeout(() => {
-    megaChaos(context, linesArray, 10, 80, 5, index);
-  }, 4000);
-
-  // setTimeout(() => {
-  //   megaChaos(context, linesArray, 20, 80, 3, index);
-  // }, 4800);
-
-  // setTimeout(() => {
-  //   megaChaos(context, linesArray, 5, 300, 5, index);
-  // }, 6400);
-
-  // setTimeout(() => {
-  //   console.log('clearMindField');
-  //   context.clearRect(0, 0, viewportWidth, viewportHeight);
-  //   context.beginPath();
-  // }, 4950);
 };
 
 export const ancientAnomalies = (
