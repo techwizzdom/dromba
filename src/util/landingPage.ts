@@ -5,7 +5,7 @@ export const randomColor = () => {
     hue: 360 * Math.random(),
     saturation: 100 * Math.random(),
     lightness: 100 * Math.random(),
-    opacity: 0.5,
+    opacity: LandingConfig.colorOpacity,
   };
 };
 
@@ -52,8 +52,8 @@ export const chaos = (
         const lightness = linesArray[i].color.lightness;
         const opacity = linesArray[i].color.opacity;
 
-        const directionX = linesArray[i].initialDirection[0];
-        const directionY = linesArray[i].initialDirection[1];
+        const directionX = linesArray[i].direction[0];
+        const directionY = linesArray[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -67,7 +67,7 @@ export const chaos = (
         }
 
         if (megaChaos) {
-          linesArray[i].initialDirection = getDirection();
+          linesArray[i].direction = getDirection();
         }
 
         if (directionX === 0 && directionY === 0) {
@@ -225,8 +225,8 @@ export const iyewaye = (
         const lightness = linesArray[i].color.lightness;
         const opacity = linesArray[i].color.opacity;
 
-        const directionX = linesArray[i].initialDirection[0];
-        const directionY = linesArray[i].initialDirection[1];
+        const directionX = linesArray[i].direction[0];
+        const directionY = linesArray[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -239,7 +239,7 @@ export const iyewaye = (
           linesArray[i].color.hue = linesArray[i].color.hue + index * 16;
         }
 
-        linesArray[i].initialDirection = getDirection();
+        linesArray[i].direction = getDirection();
 
         if (directionX === 0 && directionY === 0) {
           if (
@@ -407,8 +407,8 @@ export const ohThoseLines = (
         const lightness = linesArray[i].color.lightness;
         const opacity = linesArray[i].color.opacity;
 
-        const directionX = linesArray[i].initialDirection[0];
-        const directionY = linesArray[i].initialDirection[1];
+        const directionX = linesArray[i].direction[0];
+        const directionY = linesArray[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -484,8 +484,8 @@ export const slightlyCurved = (
         const lightness = linesArray[i].color.lightness;
         const opacity = linesArray[i].color.opacity;
 
-        const directionX = linesArray[i].initialDirection[0];
-        const directionY = linesArray[i].initialDirection[1];
+        const directionX = linesArray[i].direction[0];
+        const directionY = linesArray[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;

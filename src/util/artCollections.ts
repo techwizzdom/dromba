@@ -271,6 +271,9 @@ export const perpetual = (
   viewportWidth: number,
   viewportHeight: number,
 ) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
   ohThoseLines(context, linesArray, 25, 1900, 1);
 };
 

@@ -5,7 +5,7 @@ import { useDevice } from '../../hooks/useDevice';
 
 import { LandingConfig } from '../../config/LandingConfig';
 
-import { afterlife, mindField, caldera } from '../../util/artCollections';
+import { afterlife, caldera } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 import { Media } from '../../enums/Media';
@@ -174,12 +174,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     console.log(index);
     let linesArray: any = [];
 
-    const numberOfLines = 300;
-
-    // const randomIndexOne = getRandomInt(9);
-    // const randomIndexTwo = getRandomInt(9);
-
-    for (let i = 0; i < numberOfLines; i++) {
+    for (let i = 0; i < LandingConfig.numberOfLines; i++) {
       linesArray.push({
         coordinates: getInitialCoordinates(
           deviceType === DeviceType.Mobile
@@ -190,7 +185,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
             : undefined,
         ),
         color: randomColor(),
-        initialDirection: getDirection(),
+        direction: getDirection(),
         twistCounter: 0,
       });
     }
@@ -213,7 +208,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
       draw(context, 0);
       let index = 1;
-      setInterval(() => draw(context, index++), 5000);
+      setInterval(() => draw(context, index++), LandingConfig.duration);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
