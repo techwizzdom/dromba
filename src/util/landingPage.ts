@@ -453,12 +453,12 @@ export const tideSlide = (
           linesArray[i].coordinates[1] =
             linesArray[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
         }
-        if (directionX === 2 && directionY === 2) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
-        }
+        // if (directionX === 2 && directionY === 2) {
+        //   linesArray[i].coordinates[0] =
+        //     linesArray[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
+        //   linesArray[i].coordinates[1] =
+        //     linesArray[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
+        // }
 
         context.lineTo(coordinates[0], coordinates[1]);
         context.stroke();
