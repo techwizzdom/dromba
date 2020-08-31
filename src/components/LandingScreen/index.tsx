@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
+import { useDevice } from '../../hooks/useDevice';
 
 import { LandingConfig } from '../../config/LandingConfig';
 
-import { afterlife } from '../../util/artCollections';
+import { afterlife, caldera } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 import { Media } from '../../enums/Media';
+import { DeviceType } from '../../enums/DeviceType';
 
 interface ILandingScreenProps {
   onClick: () => void;
@@ -94,6 +96,8 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  const deviceType = useDevice();
+
   const getInitialCoordinates = (
     positionX?: [number, number],
     positionY?: [number, number],
@@ -139,7 +143,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     }
 
     if (index === 5) {
-      return [0.9, 0.9];
+      return [0.7, 0.7];
     }
 
     if (index === 5) {
@@ -170,24 +174,27 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     console.log(index);
     let linesArray: any = [];
 
-    const numberOfLines = 300;
-
-    // const randomIndexOne = getRandomInt(9);
-    // const randomIndexTwo = getRandomInt(9);
-
-    for (let i = 0; i < numberOfLines; i++) {
+    for (let i = 0; i < LandingConfig.numberOfLines; i++) {
       linesArray.push({
         coordinates: getInitialCoordinates(
-          randomStartPosition(index),
-          randomStartPosition(index),
+          deviceType === DeviceType.Mobile
+            ? randomStartPosition(index)
+            : undefined,
+          deviceType === DeviceType.Mobile
+            ? randomStartPosition(index)
+            : undefined,
         ),
         color: randomColor(),
-        initialDirection: getDirection(),
+        direction: getDirection(),
         twistCounter: 0,
       });
     }
 
-    afterlife(context, linesArray, viewportWidth, viewportHeight);
+    if (deviceType === DeviceType.Mobile) {
+      afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+    } else {
+      caldera(context, linesArray, viewportWidth, viewportHeight, index);
+    }
   };
 
   useEffect(() => {
@@ -201,7 +208,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
       draw(context, 0);
       let index = 1;
-      setInterval(() => draw(context, index++), 5000);
+      setInterval(() => draw(context, index++), LandingConfig.duration);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
