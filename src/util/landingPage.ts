@@ -45,7 +45,7 @@ export const chaos = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+      for (let i = 0; i < linesArray.length; i++) {
         const coordinates = linesArray[i].coordinates;
         const hue = linesArray[i].color.hue;
         const saturation = linesArray[i].color.saturation;
@@ -218,7 +218,7 @@ export const iyewaye = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+      for (let i = 0; i < linesArray.length; i++) {
         const coordinates = linesArray[i].coordinates;
         const hue = linesArray[i].color.hue;
         const saturation = linesArray[i].color.saturation;
@@ -390,7 +390,7 @@ export const tideSlide = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+      for (let i = 0; i < linesArray.length; i++) {
         const coordinates = linesArray[i].coordinates;
         const hue = linesArray[i].color.hue;
         const saturation = linesArray[i].color.saturation;
@@ -490,7 +490,7 @@ export const ohThoseLines = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+      for (let i = 0; i < linesArray.length; i++) {
         const coordinates = linesArray[i].coordinates;
         const hue = linesArray[i].color.hue;
         const saturation = linesArray[i].color.saturation;
@@ -567,7 +567,7 @@ export const slightlyCurved = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+      for (let i = 0; i < linesArray.length; i++) {
         const coordinates = linesArray[i].coordinates;
         const hue = linesArray[i].color.hue;
         const saturation = linesArray[i].color.saturation;

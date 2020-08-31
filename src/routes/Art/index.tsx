@@ -26,7 +26,10 @@ function Art() {
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
       {isArtEnabled ? (
-        <LandingScreen onClick={() => setIsArtEnabled(false)} />
+        <LandingScreen
+          isRandomArtEnabled={true}
+          onClick={() => setIsArtEnabled(false)}
+        />
       ) : (
         <></>
       )}

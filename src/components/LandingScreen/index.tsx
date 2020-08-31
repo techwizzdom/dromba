@@ -5,7 +5,7 @@ import { useDevice } from '../../hooks/useDevice';
 
 import { LandingConfig } from '../../config/LandingConfig';
 
-import { afterlife, caldera } from '../../util/artCollections';
+import { afterlife, caldera, randomArt } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 import { Media } from '../../enums/Media';
@@ -15,6 +15,7 @@ interface ILandingScreenProps {
   onClick: () => void;
   title?: string;
   subtitle?: string;
+  isRandomArtEnabled?: boolean;
 }
 
 const landingScreenWrapperCss = (isVisible: boolean) => css`
@@ -90,7 +91,7 @@ const landingScreenCss = css`
 const LandingScreen: React.FC<ILandingScreenProps> = (
   props: ILandingScreenProps,
 ) => {
-  const { onClick, title, subtitle } = props;
+  const { onClick, title, subtitle, isRandomArtEnabled } = props;
 
   const [isVisible, setIsVisible] = useState<boolean>(true);
 
@@ -182,7 +183,14 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     console.log('drawing');
     let linesArray: any = [];
 
-    for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+    for (
+      let i = 0;
+      i <
+      (isRandomArtEnabled
+        ? getRandomInt(500, 300)
+        : LandingConfig.numberOfLines);
+      i++
+    ) {
       linesArray.push({
         coordinates: getInitialCoordinates(
           deviceType === DeviceType.Mobile
@@ -198,10 +206,14 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       });
     }
 
-    if (deviceType === DeviceType.Mobile) {
-      afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+    if (isRandomArtEnabled) {
+      randomArt(context, linesArray, viewportWidth, viewportHeight, index);
     } else {
-      caldera(context, linesArray, viewportWidth, viewportHeight, index);
+      if (deviceType === DeviceType.Mobile) {
+        afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+      } else {
+        caldera(context, linesArray, viewportWidth, viewportHeight, index);
+      }
     }
   };
 
