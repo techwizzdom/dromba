@@ -18,32 +18,36 @@ const mainContainer = (theme: any) => css`
   transition-timing-function: ease;
 `;
 
-const app = (isInitialLoad: boolean) => css`
+const appCss = (isArtVisible: boolean) => css`
   display: block;
-  height: ${isInitialLoad ? '100vh' : 'auto'};
+  height: ${isArtVisible ? '100vh' : 'auto'};
 
-  overflow: ${isInitialLoad ? 'hidden' : 'visible'};
-  opacity: ${isInitialLoad ? 0 : 1};
+  overflow: ${isArtVisible ? 'hidden' : 'visible'};
+  opacity: ${isArtVisible ? 0 : 1};
   transition: opacity 0.5s ease-in-out;
 
-  pointer-events: ${isInitialLoad ? 'none' : 'auto'};
+  pointer-events: ${isArtVisible ? 'none' : 'auto'};
 `;
 
 const MainContainer: React.FC = (props: any) => {
   const { children } = props;
 
-  const [isInitialLoad, setIsInitialLoad] = useState<boolean>(true);
+  const [isArtVisible, setIsArtVisible] = useState<boolean>(true);
 
   const theme = React.useContext(ThemeContext);
 
   return (
     <div className={mainContainer(theme)}>
-      {isInitialLoad ? (
-        <LandingScreen onClick={() => setIsInitialLoad(false)} />
+      {isArtVisible ? (
+        <LandingScreen
+          title="What shall we create?"
+          subtitle="Click anywhere to start"
+          onClick={() => setIsArtVisible(false)}
+        />
       ) : (
         <></>
       )}
-      <div className={app(isInitialLoad)}>{children}</div>
+      <div className={appCss(isArtVisible)}>{children}</div>
     </div>
   );
 };
