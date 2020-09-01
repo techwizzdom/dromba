@@ -3,7 +3,7 @@ import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
 
-const indentContainer = css`
+const indentContainerCss = css`
   padding-left: 104px;
 
   @media ${Media.Mobile} {
@@ -14,7 +14,7 @@ const indentContainer = css`
 const IndentContainer: React.FC = (props: any) => {
   const { children } = props;
 
-  return <div className={indentContainer}>{children}</div>;
+  return <div className={indentContainerCss}>{children}</div>;
 };
 
 export default IndentContainer;

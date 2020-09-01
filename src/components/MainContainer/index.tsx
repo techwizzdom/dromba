@@ -6,7 +6,7 @@ import { Theme } from '../../styles';
 
 import LandingScreen from '../LandingScreen';
 
-const mainContainer = (theme: Theme) => css`
+const mainContainerCss = (theme: Theme) => css`
   position: relative;
 
   width: 100%;
@@ -39,7 +39,7 @@ const MainContainer: React.FC = (props: any) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div className={mainContainer(theme)}>
+    <div className={mainContainerCss(theme)}>
       {isArtVisible ? (
         <LandingScreen
           title="What shall we create?"
