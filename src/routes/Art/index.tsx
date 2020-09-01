@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { css } from 'emotion';
+import { ThemeContext } from '../../context/ThemeContext';
 
-import { H1, H5 } from '../../components/core/Heading';
+import { H1 } from '../../components/core/Heading';
 
 import RouteContainer from '../../components/RouteContainer';
 import IndentContainer from '../../components/IndentContainer';
@@ -20,8 +21,26 @@ const artCss = (isInitialLoad: boolean) => css`
   ${isInitialLoad ? 'pointer-events: none;' : ''};
 `;
 
+const artButtonCss = (theme: any) => css`
+  padding: 8px;
+  border-radius: 2px;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  color: ${theme.hyperlinkColor};
+  background-color: ${theme.hyperlinkBackgroundColor};
+
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+`;
+
 function Art() {
   const [isArtEnabled, setIsArtEnabled] = useState<boolean>(false);
+
+  const theme = React.useContext(ThemeContext);
 
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
@@ -35,17 +54,21 @@ function Art() {
       )}
 
       <div className={artCss(isArtEnabled)}>
-        <H1>We don't see enough art on an average day.</H1>
+        <H1>Not exposed to enough art.</H1>
+
+        <H1>This randomizer might help.</H1>
 
         <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
         <IndentContainer>
-          <H5>
-            That's why we need this random art generator. According to the
-            stats, there's 1 in XYZ posibility that it'll be the same.
-          </H5>
+          <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
-          <button onClick={() => setIsArtEnabled(true)}>Art</button>
+          <button
+            className={artButtonCss(theme)}
+            onClick={() => setIsArtEnabled(true)}
+          >
+            Dive in
+          </button>
         </IndentContainer>
       </div>
     </RouteContainer>
