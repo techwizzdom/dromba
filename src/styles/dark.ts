@@ -1,6 +1,7 @@
 import { colors } from './colors';
+import { Theme } from '.';
 
-export const dark = {
+export const dark: Theme = {
   isLight: false,
   isDark: true,
   backgroundColor: colors.baseBlack,
