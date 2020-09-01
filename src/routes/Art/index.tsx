@@ -56,7 +56,7 @@ function Art() {
       <div className={artCss(isArtEnabled)}>
         <H1>Not exposed to enough art.</H1>
 
-        <H1>This randomizer might help.</H1>
+        <H1>This might help.</H1>
 
         <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
