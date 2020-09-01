@@ -2,6 +2,7 @@ import * as React from 'react';
 import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 
 export interface IHyperlinkProps {
   children: React.ReactNode;
@@ -9,7 +10,7 @@ export interface IHyperlinkProps {
   isEmail?: boolean;
 }
 
-const hyperlinkCss = (theme: any) => css`
+const hyperlinkCss = (theme: Theme) => css`
   padding: 2px;
   border-radius: 2px;
 

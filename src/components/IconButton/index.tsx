@@ -3,6 +3,7 @@ import { FunctionComponent } from 'react';
 import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 
 interface IIconButtonProps {
   Icon: FunctionComponent<React.SVGProps<SVGSVGElement>>;
@@ -17,7 +18,7 @@ const iconButtonCss = css`
   cursor: pointer;
 `;
 
-const iconCss = (theme: any) => css`
+const iconCss = (theme: Theme) => css`
   width: 24px;
   height: 24px;
 

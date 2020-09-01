@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
+
 import LandingScreen from '../LandingScreen';
 
-const mainContainer = (theme: any) => css`
+const mainContainer = (theme: Theme) => css`
   position: relative;
 
   width: 100%;

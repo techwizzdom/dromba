@@ -4,6 +4,7 @@ import { css } from 'emotion';
 import { Link } from 'react-router-dom';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 import { Routes } from '../../routes/Routes';
 
 import ThemeToggle from '../ThemeToggle';
@@ -37,7 +38,7 @@ const logoCss = css`
   width: 40px;
 `;
 
-const navigationCss = (theme: any, isExpanded: boolean) => css`
+const navigationCss = (theme: Theme, isExpanded: boolean) => css`
   display: flex;
   flex-direction: column;
   position: absolute;

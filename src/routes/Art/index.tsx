@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { css } from 'emotion';
+
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 
 import { H1 } from '../../components/core/Heading';
 
@@ -21,7 +23,7 @@ const artCss = (isInitialLoad: boolean) => css`
   ${isInitialLoad ? 'pointer-events: none;' : ''};
 `;
 
-const artButtonCss = (theme: any) => css`
+const artButtonCss = (theme: Theme) => css`
   padding: 8px;
   border-radius: 2px;
 

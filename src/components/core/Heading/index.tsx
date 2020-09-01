@@ -3,6 +3,7 @@ import { cx, css } from 'emotion';
 import { useDevice } from '../../../hooks/useDevice';
 
 import { ThemeContext } from '../../../context/ThemeContext';
+import { Theme } from '../../../styles';
 
 import { HeadingTags } from '../../../enums/HeadingTags';
 import { HeadingSize } from '../../../enums/HeadingSize';
@@ -24,7 +25,7 @@ interface IHProps {
 
 export const headingCss = (
   size: HeadingSize,
-  theme: any,
+  theme: Theme,
   isHoverable?: boolean,
 ) => css`
   font-size: ${size};

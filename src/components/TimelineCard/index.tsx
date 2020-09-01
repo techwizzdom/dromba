@@ -2,6 +2,7 @@ import { css } from 'emotion';
 import * as React from 'react';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { Media } from '../../enums/Media';
@@ -31,7 +32,7 @@ const timelineCardContentLeftCss = css`
   }
 `;
 
-const borderCss = (theme: any) => css`
+const borderCss = (theme: Theme) => css`
   flex-grow: 1;
 
   margin: 8px 48px 0 0;

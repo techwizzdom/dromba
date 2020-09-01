@@ -3,6 +3,7 @@ import { css } from 'emotion';
 import { Link, useLocation } from 'react-router-dom';
 
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 import { Routes } from '../../routes/Routes';
 
 import { underlineOnHover, underline } from '../../styles/css/textHover';
@@ -13,7 +14,7 @@ interface INavigationItemsProps {
 }
 
 const navigationItemCss = (
-  theme: any,
+  theme: Theme,
   isMobile: boolean,
   isSelected: boolean,
 ) => css`
