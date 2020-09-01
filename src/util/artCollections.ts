@@ -6,7 +6,7 @@ import {
   iyewaye,
   getRandomInt,
   tideSlide,
-} from './landingPage';
+} from './coreArt';
 
 export const caldera = (
   context: CanvasRenderingContext2D,

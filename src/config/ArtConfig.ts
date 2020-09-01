@@ -1,6 +1,6 @@
 import { MediaBreakpoints } from '../enums/MediaBreakpoints';
 
-export const LandingConfig = {
+export const ArtConfig = {
   numberOfLines: 600,
   colorOpacity: 0.5,
   canvasOpacityMin: 0,

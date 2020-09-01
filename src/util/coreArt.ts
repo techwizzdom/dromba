@@ -1,11 +1,11 @@
-import { LandingConfig } from '../config/LandingConfig';
+import { ArtConfig } from '../config/ArtConfig';
 
 export const randomColor = () => {
   return {
     hue: 360 * Math.random(),
     saturation: 100 * Math.random(),
     lightness: 100 * Math.random(),
-    opacity: LandingConfig.colorOpacity,
+    opacity: ArtConfig.colorOpacity,
   };
 };
 

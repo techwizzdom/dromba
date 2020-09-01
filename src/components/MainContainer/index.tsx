@@ -4,7 +4,7 @@ import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
 
-import LandingScreen from '../LandingScreen';
+import AbstractArt from '../AbstractArt';
 
 interface IMainContainerProps {
   children: React.ReactNode;
@@ -47,7 +47,7 @@ const MainContainer: React.FC<IMainContainerProps> = (
   return (
     <div className={mainContainerCss(theme)}>
       {isArtVisible ? (
-        <LandingScreen
+        <AbstractArt
           title="What shall we create?"
           subtitle="Click anywhere to start"
           onClick={() => setIsArtVisible(false)}

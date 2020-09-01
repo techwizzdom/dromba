@@ -3,15 +3,15 @@ import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 import { useDevice } from '../../hooks/useDevice';
 
-import { LandingConfig } from '../../config/LandingConfig';
+import { ArtConfig } from '../../config/ArtConfig';
 
 import { afterlife, caldera, randomArt } from '../../util/artCollections';
-import { getRandomInt, randomColor } from '../../util/landingPage';
+import { getRandomInt, randomColor } from '../../util/coreArt';
 
 import { Media } from '../../enums/Media';
 import { DeviceType } from '../../enums/DeviceType';
 
-interface ILandingScreenProps {
+interface IAbstractArtProps {
   onClick: () => void;
   title?: string;
   subtitle?: string;
@@ -70,27 +70,25 @@ const subtitleCss = css`
 const landingScreenCss = css`
   position: relative;
 
-  animation: fadeLines ${LandingConfig.duration}ms linear infinite forwards;
+  animation: fadeLines ${ArtConfig.duration}ms linear infinite forwards;
 
   @keyframes fadeLines {
     0% {
-      opacity: ${LandingConfig.canvasOpacityMin};
+      opacity: ${ArtConfig.canvasOpacityMin};
     }
     25% {
-      opacity: ${LandingConfig.canvasOpacityMax};
+      opacity: ${ArtConfig.canvasOpacityMax};
     }
     75% {
-      opacity: ${LandingConfig.canvasOpacityMax};
+      opacity: ${ArtConfig.canvasOpacityMax};
     }
     100% {
-      opacity: ${LandingConfig.canvasOpacityMin};
+      opacity: ${ArtConfig.canvasOpacityMin};
     }
   }
 `;
 
-const LandingScreen: React.FC<ILandingScreenProps> = (
-  props: ILandingScreenProps,
-) => {
+const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
   const { onClick, title, subtitle, isRandomArtEnabled } = props;
 
   const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -186,9 +184,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     for (
       let i = 0;
       i <
-      (isRandomArtEnabled
-        ? getRandomInt(500, 300)
-        : LandingConfig.numberOfLines);
+      (isRandomArtEnabled ? getRandomInt(500, 300) : ArtConfig.numberOfLines);
       i++
     ) {
       linesArray.push({
@@ -232,7 +228,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
       const artIntervalId = setInterval(
         () => draw(context, index++),
-        LandingConfig.duration,
+        ArtConfig.duration,
       );
 
       setArtIntervalId(artIntervalId);
@@ -268,4 +264,4 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   );
 };
 
-export default LandingScreen;
+export default AbstractArt;
