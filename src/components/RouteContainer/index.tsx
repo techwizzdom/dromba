@@ -9,7 +9,7 @@ interface IRouteContainerProps {
 }
 
 const routeContainerCss = (isNormalizeHeaderHeightEnabled: boolean) => css`
-  padding: 64px 16px 32px 184px;
+  padding: 64px 16px 32px 192px;
   margin: 0 auto;
 
   max-width: 1072px;

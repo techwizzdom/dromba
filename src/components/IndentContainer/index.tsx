@@ -4,7 +4,7 @@ import { css } from 'emotion';
 import { Media } from '../../enums/Media';
 
 const indentContainer = css`
-  padding-left: 96px;
+  padding-left: 104px;
 
   @media ${Media.Mobile} {
     padding-left: 0;
