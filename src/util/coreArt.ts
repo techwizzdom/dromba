@@ -1,6 +1,14 @@
 import { ArtConfig } from '../config/ArtConfig';
+import { IArtSpectatorItem } from '../components/AbstractArt';
 
-export const randomColor = () => {
+export interface IColor {
+  hue: number;
+  saturation: number;
+  lightness: number;
+  opacity: number;
+}
+
+export const randomColor = (): IColor => {
   return {
     hue: 360 * Math.random(),
     saturation: 100 * Math.random(),
@@ -36,7 +44,7 @@ const getDirection = (): [number, number] => {
 
 export const chaos = (
   context: CanvasRenderingContext2D,
-  linesArray: any,
+  artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
   lineWidth: number,
@@ -45,15 +53,15 @@ export const chaos = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < linesArray.length; i++) {
-        const coordinates = linesArray[i].coordinates;
-        const hue = linesArray[i].color.hue;
-        const saturation = linesArray[i].color.saturation;
-        const lightness = linesArray[i].color.lightness;
-        const opacity = linesArray[i].color.opacity;
+      for (let i = 0; i < artSpectator.length; i++) {
+        const coordinates = artSpectator[i].coordinates;
+        const hue = artSpectator[i].color.hue;
+        const saturation = artSpectator[i].color.saturation;
+        const lightness = artSpectator[i].color.lightness;
+        const opacity = artSpectator[i].color.opacity;
 
-        const directionX = linesArray[i].direction[0];
-        const directionY = linesArray[i].direction[1];
+        const directionX = artSpectator[i].direction[0];
+        const directionY = artSpectator[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -61,143 +69,143 @@ export const chaos = (
         context.beginPath();
         context.moveTo(coordinates[0], coordinates[1]);
 
-        linesArray[i].color.hue = linesArray[i].color.hue - index;
-        if (linesArray[i].color.hue < 0) {
-          linesArray[i].color.hue = linesArray[i].color.hue + index * 16;
+        artSpectator[i].color.hue = artSpectator[i].color.hue - index;
+        if (artSpectator[i].color.hue < 0) {
+          artSpectator[i].color.hue = artSpectator[i].color.hue + index * 16;
         }
 
         if (megaChaos) {
-          linesArray[i].direction = getDirection();
+          artSpectator[i].direction = getDirection();
         }
 
         if (directionX === 0 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           }
         }
         if (directionX === 0 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           }
         }
         if (directionX === 0 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 1 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
           }
         }
         if (directionX === 1 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
           }
         }
         if (directionX === 1 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 2 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 2 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 2 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
           }
         }
 
-        linesArray[i].twistCounter++;
+        artSpectator[i].twistCounter++;
 
         context.lineTo(coordinates[0], coordinates[1]);
         context.stroke();
@@ -210,7 +218,7 @@ export const chaos = (
 
 export const iyewaye = (
   context: CanvasRenderingContext2D,
-  linesArray: any,
+  artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
   lineWidth: number,
@@ -218,15 +226,15 @@ export const iyewaye = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < linesArray.length; i++) {
-        const coordinates = linesArray[i].coordinates;
-        const hue = linesArray[i].color.hue;
-        const saturation = linesArray[i].color.saturation;
-        const lightness = linesArray[i].color.lightness;
-        const opacity = linesArray[i].color.opacity;
+      for (let i = 0; i < artSpectator.length; i++) {
+        const coordinates = artSpectator[i].coordinates;
+        const hue = artSpectator[i].color.hue;
+        const saturation = artSpectator[i].color.saturation;
+        const lightness = artSpectator[i].color.lightness;
+        const opacity = artSpectator[i].color.opacity;
 
-        const directionX = linesArray[i].direction[0];
-        const directionY = linesArray[i].direction[1];
+        const directionX = artSpectator[i].direction[0];
+        const directionY = artSpectator[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -234,141 +242,141 @@ export const iyewaye = (
         context.beginPath();
         context.moveTo(coordinates[0], coordinates[1]);
 
-        linesArray[i].color.hue = linesArray[i].color.hue - index;
-        if (linesArray[i].color.hue < 0) {
-          linesArray[i].color.hue = linesArray[i].color.hue + index * 16;
+        artSpectator[i].color.hue = artSpectator[i].color.hue - index;
+        if (artSpectator[i].color.hue < 0) {
+          artSpectator[i].color.hue = artSpectator[i].color.hue + index * 16;
         }
 
-        linesArray[i].direction = getDirection();
+        artSpectator[i].direction = getDirection();
 
         if (directionX === 0 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           }
         }
         if (directionX === 0 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           }
         }
         if (directionX === 0 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 1 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
           }
         }
         if (directionX === 1 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
           }
         }
         if (directionX === 1 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] - getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 2 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 2 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] - getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] - getRandomInt(3);
           }
         }
         if (directionX === 2 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % getRandomInt(2) === 0 ||
-            linesArray[i].twistCounter % getRandomInt(2) === 0
+            artSpectator[i].twistCounter % getRandomInt(2) === 0 ||
+            artSpectator[i].twistCounter % getRandomInt(2) === 0
           ) {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
-            linesArray[i].coordinates[1] =
-              linesArray[i].coordinates[1] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[1] =
+              artSpectator[i].coordinates[1] + getRandomInt(3);
           } else {
-            linesArray[i].coordinates[0] =
-              linesArray[i].coordinates[0] + getRandomInt(3);
+            artSpectator[i].coordinates[0] =
+              artSpectator[i].coordinates[0] + getRandomInt(3);
           }
         }
 
-        linesArray[i].twistCounter++;
+        artSpectator[i].twistCounter++;
 
         context.lineTo(coordinates[0], coordinates[1]);
         context.stroke();
@@ -381,7 +389,7 @@ export const iyewaye = (
 
 export const tideSlide = (
   context: CanvasRenderingContext2D,
-  linesArray: any,
+  artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
   lineWidth: number,
@@ -390,15 +398,15 @@ export const tideSlide = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < linesArray.length; i++) {
-        const coordinates = linesArray[i].coordinates;
-        const hue = linesArray[i].color.hue;
-        const saturation = linesArray[i].color.saturation;
-        const lightness = linesArray[i].color.lightness;
-        const opacity = linesArray[i].color.opacity;
+      for (let i = 0; i < artSpectator.length; i++) {
+        const coordinates = artSpectator[i].coordinates;
+        const hue = artSpectator[i].color.hue;
+        const saturation = artSpectator[i].color.saturation;
+        const lightness = artSpectator[i].color.lightness;
+        const opacity = artSpectator[i].color.opacity;
 
-        const directionX = linesArray[i].direction[0];
-        const directionY = linesArray[i].direction[1];
+        const directionX = artSpectator[i].direction[0];
+        const directionY = artSpectator[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -406,58 +414,58 @@ export const tideSlide = (
         context.beginPath();
         context.moveTo(coordinates[0], coordinates[1]);
 
-        linesArray[i].color.hue = linesArray[i].color.hue - index;
-        if (linesArray[i].color.hue < 0) {
-          linesArray[i].color.hue = linesArray[i].color.hue + index * 16;
+        artSpectator[i].color.hue = artSpectator[i].color.hue - index;
+        if (artSpectator[i].color.hue < 0) {
+          artSpectator[i].color.hue = artSpectator[i].color.hue + index * 16;
         }
 
-        linesArray[i].direction = getDirection();
+        artSpectator[i].direction = getDirection();
 
         if (directionX === 0 && directionY === 0) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[0] =
+            artSpectator[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 0 && directionY === 1) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[0] =
+            artSpectator[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[1] =
+            artSpectator[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 0 && directionY === 2) {
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[1] =
+            artSpectator[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 1 && directionY === 0) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[0] =
+            artSpectator[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[1] =
+            artSpectator[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 1 && directionY === 1) {
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[1] =
+            artSpectator[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 1 && directionY === 2) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[0] =
+            artSpectator[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 2 && directionY === 0) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[0] =
+            artSpectator[i].coordinates[0] + getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[1] =
+            artSpectator[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
         }
         if (directionX === 2 && directionY === 1) {
-          linesArray[i].coordinates[0] =
-            linesArray[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
-          linesArray[i].coordinates[1] =
-            linesArray[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[0] =
+            artSpectator[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
+          artSpectator[i].coordinates[1] =
+            artSpectator[i].coordinates[1] + getRandomInt(coordinatesAmplitude);
         }
         // if (directionX === 2 && directionY === 2) {
-        //   linesArray[i].coordinates[0] =
-        //     linesArray[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
-        //   linesArray[i].coordinates[1] =
-        //     linesArray[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
+        //   artSpectator[i].coordinates[0] =
+        //     artSpectator[i].coordinates[0] - getRandomInt(coordinatesAmplitude);
+        //   artSpectator[i].coordinates[1] =
+        //     artSpectator[i].coordinates[1] - getRandomInt(coordinatesAmplitude);
         // }
 
         context.lineTo(coordinates[0], coordinates[1]);
@@ -471,18 +479,18 @@ export const tideSlide = (
 
 export const megaChaos = (
   context: CanvasRenderingContext2D,
-  linesArray: any,
+  artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
   lineWidth: number,
   index: number,
 ) => {
-  chaos(context, linesArray, delay, repetitions, lineWidth, index, true);
+  chaos(context, artSpectator, delay, repetitions, lineWidth, index, true);
 };
 
 export const ohThoseLines = (
   context: CanvasRenderingContext2D,
-  linesArray: any,
+  artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
   lineWidth: number,
@@ -490,15 +498,15 @@ export const ohThoseLines = (
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < linesArray.length; i++) {
-        const coordinates = linesArray[i].coordinates;
-        const hue = linesArray[i].color.hue;
-        const saturation = linesArray[i].color.saturation;
-        const lightness = linesArray[i].color.lightness;
-        const opacity = linesArray[i].color.opacity;
+      for (let i = 0; i < artSpectator.length; i++) {
+        const coordinates = artSpectator[i].coordinates;
+        const hue = artSpectator[i].color.hue;
+        const saturation = artSpectator[i].color.saturation;
+        const lightness = artSpectator[i].color.lightness;
+        const opacity = artSpectator[i].color.opacity;
 
-        const directionX = linesArray[i].direction[0];
-        const directionY = linesArray[i].direction[1];
+        const directionX = artSpectator[i].direction[0];
+        const directionY = artSpectator[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -507,46 +515,46 @@ export const ohThoseLines = (
         context.moveTo(coordinates[0], coordinates[1]);
 
         if (colorChaos) {
-          linesArray[i].color.hue = randomColor().hue;
-          linesArray[i].color.saturation = randomColor().saturation;
-          linesArray[i].color.lightness = randomColor().lightness;
+          artSpectator[i].color.hue = randomColor().hue;
+          artSpectator[i].color.saturation = randomColor().saturation;
+          artSpectator[i].color.lightness = randomColor().lightness;
         } else {
-          linesArray[i].color.hue = linesArray[i].color.hue - 1;
-          if (linesArray[i].color.hue < 0) {
-            linesArray[i].color.hue = linesArray[i].color.hue + 2;
+          artSpectator[i].color.hue = artSpectator[i].color.hue - 1;
+          if (artSpectator[i].color.hue < 0) {
+            artSpectator[i].color.hue = artSpectator[i].color.hue + 2;
           }
         }
         if (directionX === 0 && directionY === 0) {
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
         }
         if (directionX === 0 && directionY === 1) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
         }
         if (directionX === 0 && directionY === 2) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
         }
         if (directionX === 1 && directionY === 0) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
         }
         if (directionX === 1 && directionY === 1) {
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
         }
         if (directionX === 1 && directionY === 2) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
         }
         if (directionX === 2 && directionY === 0) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
         }
         if (directionX === 2 && directionY === 1) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
         }
         if (directionX === 2 && directionY === 2) {
-          linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-          linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+          artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+          artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
         }
 
         context.lineTo(coordinates[0], coordinates[1]);
@@ -560,22 +568,22 @@ export const ohThoseLines = (
 
 export const slightlyCurved = (
   context: CanvasRenderingContext2D,
-  linesArray: any,
+  artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
   lineWidth: number,
 ) => {
   setIntervalX(
     () => {
-      for (let i = 0; i < linesArray.length; i++) {
-        const coordinates = linesArray[i].coordinates;
-        const hue = linesArray[i].color.hue;
-        const saturation = linesArray[i].color.saturation;
-        const lightness = linesArray[i].color.lightness;
-        const opacity = linesArray[i].color.opacity;
+      for (let i = 0; i < artSpectator.length; i++) {
+        const coordinates = artSpectator[i].coordinates;
+        const hue = artSpectator[i].color.hue;
+        const saturation = artSpectator[i].color.saturation;
+        const lightness = artSpectator[i].color.lightness;
+        const opacity = artSpectator[i].color.opacity;
 
-        const directionX = linesArray[i].direction[0];
-        const directionY = linesArray[i].direction[1];
+        const directionX = artSpectator[i].direction[0];
+        const directionY = artSpectator[i].direction[1];
 
         const hsla = `hsla(${hue},${saturation}%,${lightness}%,${opacity})`;
         context.strokeStyle = hsla;
@@ -583,112 +591,112 @@ export const slightlyCurved = (
         context.beginPath();
         context.moveTo(coordinates[0], coordinates[1]);
 
-        linesArray[i].color.hue = linesArray[i].color.hue - 8;
-        if (linesArray[i].color.hue < 0) {
-          linesArray[i].color.hue = linesArray[i].color.hue + 16;
+        artSpectator[i].color.hue = artSpectator[i].color.hue - 8;
+        if (artSpectator[i].color.hue < 0) {
+          artSpectator[i].color.hue = artSpectator[i].color.hue + 16;
         }
 
         if (directionX === 0 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % 2 === 0 ||
-            linesArray[i].twistCounter % 3 === 0
+            artSpectator[i].twistCounter % 2 === 0 ||
+            artSpectator[i].twistCounter % 3 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           } else {
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           }
         }
         if (directionX === 0 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % 2 === 0 ||
-            linesArray[i].twistCounter % 3 === 0
+            artSpectator[i].twistCounter % 2 === 0 ||
+            artSpectator[i].twistCounter % 3 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           } else {
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           }
         }
         if (directionX === 0 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % 2 === 0 ||
-            linesArray[i].twistCounter % 3 === 0
+            artSpectator[i].twistCounter % 2 === 0 ||
+            artSpectator[i].twistCounter % 3 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
           }
         }
         if (directionX === 1 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % 2 === 0 ||
-            linesArray[i].twistCounter % 3 === 0
+            artSpectator[i].twistCounter % 2 === 0 ||
+            artSpectator[i].twistCounter % 3 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
           }
         }
         if (directionX === 1 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % 2 === 0 ||
-            linesArray[i].twistCounter % 3 === 0
+            artSpectator[i].twistCounter % 2 === 0 ||
+            artSpectator[i].twistCounter % 3 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
           }
         }
         if (directionX === 1 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % 2 === 0 ||
-            linesArray[i].twistCounter % 3 === 0
+            artSpectator[i].twistCounter % 2 === 0 ||
+            artSpectator[i].twistCounter % 3 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] - 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
           }
         }
         if (directionX === 2 && directionY === 0) {
           if (
-            linesArray[i].twistCounter % 4 === 0 ||
-            linesArray[i].twistCounter % 5 === 0
+            artSpectator[i].twistCounter % 4 === 0 ||
+            artSpectator[i].twistCounter % 5 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
           }
         }
         if (directionX === 2 && directionY === 1) {
           if (
-            linesArray[i].twistCounter % 4 === 0 ||
-            linesArray[i].twistCounter % 5 === 0
+            artSpectator[i].twistCounter % 4 === 0 ||
+            artSpectator[i].twistCounter % 5 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] - 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] - 1;
           }
         }
         if (directionX === 2 && directionY === 2) {
           if (
-            linesArray[i].twistCounter % 4 === 0 ||
-            linesArray[i].twistCounter % 5 === 0
+            artSpectator[i].twistCounter % 4 === 0 ||
+            artSpectator[i].twistCounter % 5 === 0
           ) {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
-            linesArray[i].coordinates[1] = linesArray[i].coordinates[1] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[1] = artSpectator[i].coordinates[1] + 1;
           } else {
-            linesArray[i].coordinates[0] = linesArray[i].coordinates[0] + 1;
+            artSpectator[i].coordinates[0] = artSpectator[i].coordinates[0] + 1;
           }
         }
 
-        linesArray[i].twistCounter++;
+        artSpectator[i].twistCounter++;
 
         context.lineTo(coordinates[0], coordinates[1]);
         context.stroke();

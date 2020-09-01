@@ -5,8 +5,13 @@ import { useDevice } from '../../hooks/useDevice';
 
 import { ArtConfig } from '../../config/ArtConfig';
 
-import { afterlife, caldera, randomArt } from '../../util/artCollections';
-import { getRandomInt, randomColor } from '../../util/coreArt';
+import {
+  afterlife,
+  caldera,
+  randomArt,
+  opressor,
+} from '../../util/artCollections';
+import { getRandomInt, randomColor, IColor } from '../../util/coreArt';
 
 import { Media } from '../../enums/Media';
 import { DeviceType } from '../../enums/DeviceType';
@@ -16,6 +21,13 @@ interface IAbstractArtProps {
   title?: string;
   subtitle?: string;
   isRandomArtEnabled?: boolean;
+}
+
+export interface IArtSpectatorItem {
+  coordinates: [number, number];
+  color: IColor;
+  direction: [number, number];
+  twistCounter: number;
 }
 
 const landingScreenWrapperCss = (isVisible: boolean) => css`
@@ -128,15 +140,15 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
 
   const randomStartPosition = (index: number): [number, number] => {
     if (index === 0) {
-      return [0.4, 0.6];
+      return [0.6, 0.8];
     }
 
     if (index === 1) {
-      return [0.1, 0.9];
+      return [0.1, 0.2];
     }
 
     if (index === 2) {
-      return [0.7, 0.9];
+      return [0.4, 0.6];
     }
 
     if (index === 3) {
@@ -179,7 +191,7 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
 
   const draw = (context: CanvasRenderingContext2D, index: number) => {
     console.log('drawing');
-    let linesArray: any = [];
+    let artSpectator = new Array<IArtSpectatorItem>();
 
     for (
       let i = 0;
@@ -187,7 +199,7 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
       (isRandomArtEnabled ? getRandomInt(500, 300) : ArtConfig.numberOfLines);
       i++
     ) {
-      linesArray.push({
+      artSpectator.push({
         coordinates: getInitialCoordinates(
           deviceType === DeviceType.Mobile
             ? randomStartPosition(index)
@@ -203,12 +215,12 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
     }
 
     if (isRandomArtEnabled) {
-      randomArt(context, linesArray, viewportWidth, viewportHeight, index);
+      randomArt(context, artSpectator, viewportWidth, viewportHeight, index);
     } else {
       if (deviceType === DeviceType.Mobile) {
-        afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+        opressor(context, artSpectator, viewportWidth, viewportHeight, index);
       } else {
-        caldera(context, linesArray, viewportWidth, viewportHeight, index);
+        caldera(context, artSpectator, viewportWidth, viewportHeight, index);
       }
     }
   };
@@ -218,7 +230,9 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
       return;
     }
 
-    const context: any = canvasRef.current.getContext('2d');
+    const context: CanvasRenderingContext2D | null = canvasRef.current.getContext(
+      '2d',
+    );
 
     if (context) {
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);

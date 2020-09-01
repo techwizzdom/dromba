@@ -1,9 +1,7 @@
-import { MediaBreakpoints } from '../enums/MediaBreakpoints';
-
 export const ArtConfig = {
-  numberOfLines: 600,
+  numberOfLines: 300,
   colorOpacity: 0.5,
   canvasOpacityMin: 0,
   canvasOpacityMax: 0.8,
-  duration: window.innerWidth < MediaBreakpoints.Mobile ? 5800 : 6000,
+  duration: 6000,
 };
