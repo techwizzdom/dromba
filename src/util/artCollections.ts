@@ -126,6 +126,122 @@ export const caldera = (
   }
 };
 
+export const randomArt = (
+  context: CanvasRenderingContext2D,
+  linesArray: any,
+  viewportWidth: number,
+  viewportHeight: number,
+  index: number,
+) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
+  let arr = [];
+
+  let totalDuration = 0;
+
+  while (totalDuration < 5000) {
+    let delay = getRandomInt(10, 2);
+    let numberOfRepetitons = getRandomInt(5000, 1);
+
+    const duration = delay * numberOfRepetitons;
+    if (duration < 1200) {
+      arr.push({
+        delay,
+        numberOfRepetitons,
+        lineWidth: getRandomInt(5, 1),
+        colorIndex: getRandomInt(64, 1),
+        duration,
+      });
+      totalDuration += duration;
+    }
+  }
+
+  console.log(arr);
+  console.log(totalDuration);
+
+  totalDuration = 0;
+
+  arr.forEach((ar, i) => {
+    const randomCase = getRandomInt(6);
+
+    if (i !== 0) {
+      totalDuration += ar.duration;
+    }
+
+    setTimeout(() => {
+      if (randomCase === 0) {
+        ohThoseLines(
+          context,
+          linesArray,
+          ar.delay,
+          ar.numberOfRepetitons,
+          ar.lineWidth,
+        );
+      } else if (randomCase === 1) {
+        tideSlide(
+          context,
+          linesArray,
+          ar.delay,
+          ar.numberOfRepetitons,
+          ar.lineWidth,
+          index,
+          ar.colorIndex,
+        );
+      } else if (randomCase === 2) {
+        megaChaos(
+          context,
+          linesArray,
+          ar.delay,
+          ar.numberOfRepetitons,
+          ar.lineWidth,
+          index,
+        );
+      } else if (randomCase === 3) {
+        chaos(
+          context,
+          linesArray,
+          ar.delay,
+          ar.numberOfRepetitons,
+          ar.lineWidth,
+          index,
+        );
+      } else if (randomCase === 4) {
+        iyewaye(
+          context,
+          linesArray,
+          ar.delay,
+          ar.numberOfRepetitons,
+          ar.lineWidth,
+          index,
+        );
+      } else if (randomCase === 5) {
+        slightlyCurved(
+          context,
+          linesArray,
+          ar.delay,
+          ar.numberOfRepetitons,
+          ar.lineWidth,
+        );
+      }
+    }, totalDuration);
+  });
+
+  // ohThoseLines(context, linesArray, 10, 120, 1);
+
+  // setTimeout(() => {
+  //   tideSlide(context, linesArray, 10, 300, 1, index, 32);
+  // }, 1200);
+
+  // setTimeout(() => {
+  //   tideSlide(context, linesArray, 20, 30, 1, index, 32);
+  // }, 4200);
+
+  // setTimeout(() => {
+  //   tideSlide(context, linesArray, 50, 20, 1, index, 32);
+  // }, 4900);
+};
+
 export const opressor = (
   context: CanvasRenderingContext2D,
   linesArray: any,

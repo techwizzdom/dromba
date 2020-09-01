@@ -1,4 +1,5 @@
 import { css } from 'emotion';
+import { Theme } from '..';
 
 export const underlineClassNameOnHover = (className: string) => css`
   &:hover ${className} {
@@ -8,7 +9,7 @@ export const underlineClassNameOnHover = (className: string) => css`
   }
 `;
 
-export const underlineOnHover = (theme: any) => css`
+export const underlineOnHover = (theme: Theme) => css`
   display: inline;
   background-image: linear-gradient(
     transparent 90%,
@@ -29,7 +30,7 @@ export const underlineOnHover = (theme: any) => css`
   }
 `;
 
-export const underline = (theme: any) => css`
+export const underline = (theme: Theme) => css`
   display: inline;
   background-image: linear-gradient(
     transparent 90%,

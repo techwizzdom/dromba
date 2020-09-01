@@ -11,6 +11,7 @@ import MainContainer from './components/MainContainer';
 
 import Home from './routes/Home';
 import Blog from './routes/Blog';
+import Art from './routes/Art';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -23,6 +24,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
+            <Route path="/art" component={Art} />
           </Switch>
         </MainContainer>
       </Router>

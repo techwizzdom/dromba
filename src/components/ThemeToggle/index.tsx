@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { css } from 'emotion';
+
 import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
 
 import { ReactComponent as Moon } from '../../assets/icons/moon.svg';
 import { ReactComponent as Sun } from '../../assets/icons/sun.svg';
@@ -20,14 +22,14 @@ const togglerContainerCss = css`
   cursor: pointer;
 `;
 
-const sunIconCss = (theme: any) => css`
+const sunIconCss = (theme: Theme) => css`
   width: ${theme.isDark ? '40px' : 0};
   height: ${theme.isDark ? '40px' : 0};
 
   transform: rotate(${theme.isDark ? 0 : '360deg'});
   transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
 `;
-const moonIconCss = (theme: any) => css`
+const moonIconCss = (theme: Theme) => css`
   padding: 4px;
   width: ${theme.isDark ? 0 : '32px'};
   height: ${theme.isDark ? 0 : '32px'};

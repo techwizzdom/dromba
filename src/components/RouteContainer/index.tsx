@@ -3,13 +3,20 @@ import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
 
-const routeContainer = css`
-  padding: 64px 16px 32px 184px;
+interface IRouteContainerProps {
+  children: React.ReactNode;
+  isNormalizeHeaderHeightEnabled?: boolean;
+}
+
+const routeContainerCss = (isNormalizeHeaderHeightEnabled: boolean) => css`
+  padding: 64px 16px 32px 192px;
   margin: 0 auto;
 
   max-width: 1072px;
   width: 100%;
-  min-height: 100vh;
+  min-height: ${isNormalizeHeaderHeightEnabled
+    ? 'calc(100vh - 48px)'
+    : '100vh'};
 
   @media ${Media.Tablet} {
     padding-left: 88px;
@@ -21,10 +28,16 @@ const routeContainer = css`
   }
 `;
 
-const RouteContainer: React.FC = (props: any) => {
-  const { children } = props;
+const RouteContainer: React.FC<IRouteContainerProps> = (
+  props: IRouteContainerProps,
+) => {
+  const { isNormalizeHeaderHeightEnabled = false, children } = props;
 
-  return <div className={routeContainer}>{children}</div>;
+  return (
+    <div className={routeContainerCss(isNormalizeHeaderHeightEnabled)}>
+      {children}
+    </div>
+  );
 };
 
 export default RouteContainer;

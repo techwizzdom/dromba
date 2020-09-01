@@ -5,7 +5,7 @@ import { useDevice } from '../../hooks/useDevice';
 
 import { LandingConfig } from '../../config/LandingConfig';
 
-import { afterlife, caldera } from '../../util/artCollections';
+import { afterlife, caldera, randomArt } from '../../util/artCollections';
 import { getRandomInt, randomColor } from '../../util/landingPage';
 
 import { Media } from '../../enums/Media';
@@ -13,6 +13,9 @@ import { DeviceType } from '../../enums/DeviceType';
 
 interface ILandingScreenProps {
   onClick: () => void;
+  title?: string;
+  subtitle?: string;
+  isRandomArtEnabled?: boolean;
 }
 
 const landingScreenWrapperCss = (isVisible: boolean) => css`
@@ -65,6 +68,8 @@ const subtitleCss = css`
 `;
 
 const landingScreenCss = css`
+  position: relative;
+
   animation: fadeLines ${LandingConfig.duration}ms linear infinite forwards;
 
   @keyframes fadeLines {
@@ -86,9 +91,11 @@ const landingScreenCss = css`
 const LandingScreen: React.FC<ILandingScreenProps> = (
   props: ILandingScreenProps,
 ) => {
-  const { onClick } = props;
+  const { onClick, title, subtitle, isRandomArtEnabled } = props;
 
   const [isVisible, setIsVisible] = useState<boolean>(true);
+
+  const [artIntervalId, setArtIntervalId] = useState<any>();
 
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
@@ -167,14 +174,23 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const startFading = () => {
     setIsVisible(false);
+    clearInterval(artIntervalId);
+    console.log('killed');
     setTimeout(() => onClick(), 2000);
   };
 
   const draw = (context: CanvasRenderingContext2D, index: number) => {
-    console.log(index);
+    console.log('drawing');
     let linesArray: any = [];
 
-    for (let i = 0; i < LandingConfig.numberOfLines; i++) {
+    for (
+      let i = 0;
+      i <
+      (isRandomArtEnabled
+        ? getRandomInt(500, 300)
+        : LandingConfig.numberOfLines);
+      i++
+    ) {
       linesArray.push({
         coordinates: getInitialCoordinates(
           deviceType === DeviceType.Mobile
@@ -190,10 +206,14 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       });
     }
 
-    if (deviceType === DeviceType.Mobile) {
-      afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+    if (isRandomArtEnabled) {
+      randomArt(context, linesArray, viewportWidth, viewportHeight, index);
     } else {
-      caldera(context, linesArray, viewportWidth, viewportHeight, index);
+      if (deviceType === DeviceType.Mobile) {
+        afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+      } else {
+        caldera(context, linesArray, viewportWidth, viewportHeight, index);
+      }
     }
   };
 
@@ -206,9 +226,16 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
     if (context) {
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+
       draw(context, 0);
       let index = 1;
-      setInterval(() => draw(context, index++), LandingConfig.duration);
+
+      const artIntervalId = setInterval(
+        () => draw(context, index++),
+        LandingConfig.duration,
+      );
+
+      setArtIntervalId(artIntervalId);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -229,10 +256,14 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
           width: `${viewportWidth}px`,
         }}
       />
-      <div className={textWrapperCss}>
-        <div className={titleCss}>What shall we create?</div>
-        <div className={subtitleCss}>Click anywhere to start</div>
-      </div>
+      {(title || subtitle) && (
+        <div className={textWrapperCss}>
+          {title && <div className={titleCss}>What shall we create?</div>}
+          {subtitle && (
+            <div className={subtitleCss}>Click anywhere to start</div>
+          )}
+        </div>
+      )}
     </div>
   );
 };
