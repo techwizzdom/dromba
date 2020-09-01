@@ -11,7 +11,9 @@ import {
   randomArt,
   opressor,
 } from '../../util/artCollections';
-import { getRandomInt, randomColor, IColor } from '../../util/coreArt';
+
+import { IColor } from '../../util/coreArt';
+import { getRandomInt, randomColor, getDirection } from '../../util/helpers';
 
 import { Media } from '../../enums/Media';
 import { DeviceType } from '../../enums/DeviceType';
@@ -176,10 +178,6 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
     }
 
     return [0.3, 0.7];
-  };
-
-  const getDirection = (): [number, number] => {
-    return [getRandomInt(3), getRandomInt(3)];
   };
 
   const startFading = () => {

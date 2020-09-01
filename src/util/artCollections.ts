@@ -4,9 +4,10 @@ import {
   chaos,
   slightlyCurved,
   iyewaye,
-  getRandomInt,
   tideSlide,
 } from './coreArt';
+
+import { getRandomInt } from './helpers';
 
 import { IArtSpectatorItem } from '../components/AbstractArt';
 

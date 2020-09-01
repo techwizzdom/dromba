@@ -1,5 +1,11 @@
-import { ArtConfig } from '../config/ArtConfig';
 import { IArtSpectatorItem } from '../components/AbstractArt';
+
+import {
+  setIntervalX,
+  getDirection,
+  getRandomInt,
+  randomColor,
+} from './helpers';
 
 export interface IColor {
   hue: number;
@@ -7,40 +13,6 @@ export interface IColor {
   lightness: number;
   opacity: number;
 }
-
-export const randomColor = (): IColor => {
-  return {
-    hue: 360 * Math.random(),
-    saturation: 100 * Math.random(),
-    lightness: 100 * Math.random(),
-    opacity: ArtConfig.colorOpacity,
-  };
-};
-
-export const getRandomInt = (max: number, min: number = 0): number => {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min)) + min;
-};
-
-const setIntervalX = (
-  callback: () => void,
-  delay: number,
-  repetitions: number,
-) => {
-  var x = 0;
-  var intervalID = window.setInterval(function () {
-    callback();
-
-    if (++x === repetitions) {
-      window.clearInterval(intervalID);
-    }
-  }, delay);
-};
-
-const getDirection = (): [number, number] => {
-  return [getRandomInt(3), getRandomInt(3)];
-};
 
 export const chaos = (
   context: CanvasRenderingContext2D,
