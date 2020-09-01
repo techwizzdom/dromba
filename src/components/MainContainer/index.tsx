@@ -6,6 +6,10 @@ import { Theme } from '../../styles';
 
 import LandingScreen from '../LandingScreen';
 
+interface IMainContainerProps {
+  children: React.ReactNode;
+}
+
 const mainContainerCss = (theme: Theme) => css`
   position: relative;
 
@@ -31,7 +35,9 @@ const appCss = (isArtVisible: boolean) => css`
   pointer-events: ${isArtVisible ? 'none' : 'auto'};
 `;
 
-const MainContainer: React.FC = (props: any) => {
+const MainContainer: React.FC<IMainContainerProps> = (
+  props: IMainContainerProps,
+) => {
   const { children } = props;
 
   const [isArtVisible, setIsArtVisible] = useState<boolean>(true);

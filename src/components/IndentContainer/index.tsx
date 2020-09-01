@@ -3,6 +3,10 @@ import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
 
+interface IIndentContainerProps {
+  children: React.ReactNode;
+}
+
 const indentContainerCss = css`
   padding-left: 104px;
 
@@ -11,7 +15,9 @@ const indentContainerCss = css`
   }
 `;
 
-const IndentContainer: React.FC = (props: any) => {
+const IndentContainer: React.FC<IIndentContainerProps> = (
+  props: IIndentContainerProps,
+) => {
   const { children } = props;
 
   return <div className={indentContainerCss}>{children}</div>;
