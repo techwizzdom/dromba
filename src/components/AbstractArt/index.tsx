@@ -46,6 +46,8 @@ const textWrapperCss = css`
 
   position: absolute;
 
+  font-family: 'Special Elite', cursive;
+
   top: auto;
   left: auto;
   bottom: 100px;
@@ -58,8 +60,8 @@ const textWrapperCss = css`
 
 const titleCss = css`
   color: white;
-  font-size: 64px;
-  font-weight: 900;
+  font-size: 32px;
+  font-weight: 500;
 
   @media ${Media.Mobile} {
     line-height: 1.2;
@@ -136,39 +138,39 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
   };
 
   const randomStartPosition = (index: number): [number, number] => {
-    if (index === 0) {
-      return [0.6, 0.8];
+    if (index % 8 === 0) {
+      return [0, 1];
     }
 
-    if (index === 1) {
+    if (index % 8 === 1) {
       return [0.1, 0.2];
     }
 
-    if (index === 2) {
+    if (index % 8 === 2) {
       return [0.4, 0.6];
     }
 
-    if (index === 3) {
+    if (index % 8 === 3) {
       return [0.3, 0.8];
     }
 
-    if (index === 4) {
+    if (index % 8 === 4) {
       return [0.1, 0.9];
     }
 
-    if (index === 5) {
+    if (index % 8 === 5) {
       return [0.7, 0.7];
     }
 
-    if (index === 5) {
+    if (index % 8 === 5) {
       return [0.8, 0.7];
     }
 
-    if (index === 6) {
-      return [0.1, 0.6];
+    if (index % 8 === 6) {
+      return [1, 1];
     }
 
-    if (index === 7) {
+    if (index % 8 === 7) {
       return [0.2, 0.3];
     }
 
@@ -189,17 +191,17 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
     for (
       let i = 0;
       i <
-      (isRandomArtEnabled ? getRandomInt(500, 300) : ArtConfig.numberOfLines);
+      (isRandomArtEnabled
+        ? deviceType === DeviceType.Mobile
+          ? 100
+          : getRandomInt(500, 300)
+        : ArtConfig.numberOfLines);
       i++
     ) {
       artSpectator.push({
         coordinates: getInitialCoordinates(
-          deviceType === DeviceType.Mobile
-            ? randomStartPosition(index)
-            : undefined,
-          deviceType === DeviceType.Mobile
-            ? randomStartPosition(index)
-            : undefined,
+          isRandomArtEnabled ? randomStartPosition(index) : undefined,
+          isRandomArtEnabled ? randomStartPosition(index) : undefined,
         ),
         color: randomColor(),
         direction: getDirection(),
