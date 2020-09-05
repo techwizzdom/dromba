@@ -24,13 +24,15 @@ const artCss = (isInitialLoad: boolean) => css`
 `;
 
 const artButtonCss = (theme: Theme) => css`
-  padding: 8px;
+  display: block;
+
+  margin: 0 8px 0 auto;
+  padding: 2px;
   border-radius: 2px;
 
   font-size: 20px;
-  font-weight: 600;
-
   color: ${theme.hyperlinkColor};
+
   background-color: ${theme.hyperlinkBackgroundColor};
 
   :hover {
@@ -56,15 +58,11 @@ function Art() {
       )}
 
       <div className={artCss(isArtEnabled)}>
-        <H1>Not exposed to enough art.</H1>
-
-        <H1>This might help.</H1>
+        <H1>Just</H1>
 
         <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
         <IndentContainer>
-          <VerticalSpacing height={VerticalSpacingHeight.Medium} />
-
           <button
             className={artButtonCss(theme)}
             onClick={() => setIsArtEnabled(true)}
