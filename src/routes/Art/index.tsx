@@ -13,14 +13,14 @@ import AbstractArt from '../../components/AbstractArt';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
-const artCss = (isInitialLoad: boolean) => css`
+const artCss = (isArtEnabled: boolean) => css`
   display: block;
 
-  ${isInitialLoad ? 'overflow: hidden;' : ''};
-  ${isInitialLoad ? 'opacity: 0;' : ''};
+  ${isArtEnabled ? 'overflow: hidden;' : ''};
+  ${isArtEnabled ? 'opacity: 0;' : ''};
   transition: opacity 0.5s ease-in-out;
 
-  ${isInitialLoad ? 'pointer-events: none;' : ''};
+  ${isArtEnabled ? 'pointer-events: none;' : ''};
 `;
 
 const artButtonCss = (theme: Theme) => css`
