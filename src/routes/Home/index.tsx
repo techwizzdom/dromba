@@ -15,8 +15,8 @@ function Home() {
   const deviceType = useDevice();
   return (
     <RouteContainer>
-      <H1>Just a random guy, typing some random words.</H1>
-      <H1>Frontend developer, I guess.</H1>
+      <H1>Aspiring Frontend developer.</H1>
+      <H1>Based anywhere on this planet.</H1>
 
       <VerticalSpacing
         height={
