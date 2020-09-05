@@ -4,9 +4,13 @@ import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
 
-import LandingScreen from '../LandingScreen';
+import AbstractArt from '../AbstractArt';
 
-const mainContainer = (theme: Theme) => css`
+interface IMainContainerProps {
+  children: React.ReactNode;
+}
+
+const mainContainerCss = (theme: Theme) => css`
   position: relative;
 
   width: 100%;
@@ -31,7 +35,9 @@ const appCss = (isArtVisible: boolean) => css`
   pointer-events: ${isArtVisible ? 'none' : 'auto'};
 `;
 
-const MainContainer: React.FC = (props: any) => {
+const MainContainer: React.FC<IMainContainerProps> = (
+  props: IMainContainerProps,
+) => {
   const { children } = props;
 
   const [isArtVisible, setIsArtVisible] = useState<boolean>(true);
@@ -39,9 +45,9 @@ const MainContainer: React.FC = (props: any) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div className={mainContainer(theme)}>
+    <div className={mainContainerCss(theme)}>
       {isArtVisible ? (
-        <LandingScreen
+        <AbstractArt
           title="What shall we create?"
           subtitle="Click anywhere to start"
           onClick={() => setIsArtVisible(false)}

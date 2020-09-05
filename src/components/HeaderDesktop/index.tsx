@@ -9,7 +9,7 @@ import MainNavigation from '../MainNavigation';
 
 import { Media } from '../../enums/Media';
 
-import Logo from '../../assets/icons/logo.svg';
+import Logodrobmba from '../../assets/images/logodrd.png';
 
 interface IHeaderDesktopProps {
   toggleTheme: () => void;
@@ -38,6 +38,8 @@ const logoCss = css`
   min-width: 40px;
   width: 40px;
   height: 40px;
+
+  transform: rotate(140deg);
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
@@ -48,7 +50,7 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
   return (
     <div className={headerDesktopCss}>
       <Link to={Routes.Home} className={logoLinkCss}>
-        <img src={Logo} className={logoCss} alt="logo" />
+        <img src={Logodrobmba} className={logoCss} alt="logo" />
       </Link>
       <MainNavigation />
       <ThemeToggle toggleTheme={toggleTheme} />

@@ -9,7 +9,7 @@ import { H1 } from '../../components/core/Heading';
 import RouteContainer from '../../components/RouteContainer';
 import IndentContainer from '../../components/IndentContainer';
 import VerticalSpacing from '../../components/VerticalSpacing';
-import LandingScreen from '../../components/LandingScreen';
+import AbstractArt from '../../components/AbstractArt';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
@@ -47,7 +47,7 @@ function Art() {
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
       {isArtEnabled ? (
-        <LandingScreen
+        <AbstractArt
           isRandomArtEnabled={true}
           onClick={() => setIsArtEnabled(false)}
         />

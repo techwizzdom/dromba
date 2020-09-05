@@ -11,7 +11,7 @@ import ThemeToggle from '../ThemeToggle';
 import IconButton from '../IconButton';
 import NavigationItems from '../NavigationItems';
 
-import Logo from '../../assets/icons/logo.svg';
+import Logodrobmba from '../../assets/images/logodrd.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
 
 interface IHeaderMobileProps {
@@ -31,11 +31,14 @@ const topBarCss = css`
 `;
 
 const logoLinkCss = css`
-  height: 40px;
+  margin-bottom: 4px;
+  height: 36px;
 `;
 
 const logoCss = css`
-  width: 40px;
+  width: 36px;
+
+  transform: rotate(140deg);
 `;
 
 const navigationCss = (theme: Theme, isExpanded: boolean) => css`
@@ -85,7 +88,7 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
       <div className={topBarCss}>
         <IconButton Icon={HamburgerMenu} onClick={() => toggleMenu()} />
         <Link to={Routes.Home} className={logoLinkCss}>
-          <img className={logoCss} src={Logo} alt="logo" />
+          <img className={logoCss} src={Logodrobmba} alt="logo" />
         </Link>
         <ThemeToggle toggleTheme={toggleTheme} />
       </div>

@@ -3,19 +3,28 @@ import { useEffect, useRef, useState } from 'react';
 import { css } from 'emotion';
 import { useDevice } from '../../hooks/useDevice';
 
-import { LandingConfig } from '../../config/LandingConfig';
+import { ArtConfig } from '../../config/ArtConfig';
 
-import { afterlife, caldera, randomArt } from '../../util/artCollections';
-import { getRandomInt, randomColor } from '../../util/landingPage';
+import { caldera, randomArt, opressor } from '../../util/artCollections';
+
+import { IColor } from '../../util/coreArt';
+import { getRandomInt, randomColor, getDirection } from '../../util/helpers';
 
 import { Media } from '../../enums/Media';
 import { DeviceType } from '../../enums/DeviceType';
 
-interface ILandingScreenProps {
+interface IAbstractArtProps {
   onClick: () => void;
   title?: string;
   subtitle?: string;
   isRandomArtEnabled?: boolean;
+}
+
+export interface IArtSpectatorItem {
+  coordinates: [number, number];
+  color: IColor;
+  direction: [number, number];
+  twistCounter: number;
 }
 
 const landingScreenWrapperCss = (isVisible: boolean) => css`
@@ -70,27 +79,25 @@ const subtitleCss = css`
 const landingScreenCss = css`
   position: relative;
 
-  animation: fadeLines ${LandingConfig.duration}ms linear infinite forwards;
+  animation: fadeLines ${ArtConfig.duration}ms linear infinite forwards;
 
   @keyframes fadeLines {
     0% {
-      opacity: ${LandingConfig.canvasOpacityMin};
+      opacity: ${ArtConfig.canvasOpacityMin};
     }
     25% {
-      opacity: ${LandingConfig.canvasOpacityMax};
+      opacity: ${ArtConfig.canvasOpacityMax};
     }
     75% {
-      opacity: ${LandingConfig.canvasOpacityMax};
+      opacity: ${ArtConfig.canvasOpacityMax};
     }
     100% {
-      opacity: ${LandingConfig.canvasOpacityMin};
+      opacity: ${ArtConfig.canvasOpacityMin};
     }
   }
 `;
 
-const LandingScreen: React.FC<ILandingScreenProps> = (
-  props: ILandingScreenProps,
-) => {
+const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
   const { onClick, title, subtitle, isRandomArtEnabled } = props;
 
   const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -130,15 +137,15 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const randomStartPosition = (index: number): [number, number] => {
     if (index === 0) {
-      return [0.4, 0.6];
+      return [0.6, 0.8];
     }
 
     if (index === 1) {
-      return [0.1, 0.9];
+      return [0.1, 0.2];
     }
 
     if (index === 2) {
-      return [0.7, 0.9];
+      return [0.4, 0.6];
     }
 
     if (index === 3) {
@@ -168,10 +175,6 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     return [0.3, 0.7];
   };
 
-  const getDirection = (): [number, number] => {
-    return [getRandomInt(3), getRandomInt(3)];
-  };
-
   const startFading = () => {
     setIsVisible(false);
     clearInterval(artIntervalId);
@@ -181,17 +184,15 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
   const draw = (context: CanvasRenderingContext2D, index: number) => {
     console.log('drawing');
-    let linesArray: any = [];
+    let artSpectator = new Array<IArtSpectatorItem>();
 
     for (
       let i = 0;
       i <
-      (isRandomArtEnabled
-        ? getRandomInt(500, 300)
-        : LandingConfig.numberOfLines);
+      (isRandomArtEnabled ? getRandomInt(500, 300) : ArtConfig.numberOfLines);
       i++
     ) {
-      linesArray.push({
+      artSpectator.push({
         coordinates: getInitialCoordinates(
           deviceType === DeviceType.Mobile
             ? randomStartPosition(index)
@@ -207,12 +208,12 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
     }
 
     if (isRandomArtEnabled) {
-      randomArt(context, linesArray, viewportWidth, viewportHeight, index);
+      randomArt(context, artSpectator, viewportWidth, viewportHeight, index);
     } else {
       if (deviceType === DeviceType.Mobile) {
-        afterlife(context, linesArray, viewportWidth, viewportHeight, index);
+        opressor(context, artSpectator, viewportWidth, viewportHeight, index);
       } else {
-        caldera(context, linesArray, viewportWidth, viewportHeight, index);
+        caldera(context, artSpectator, viewportWidth, viewportHeight, index);
       }
     }
   };
@@ -222,7 +223,9 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
       return;
     }
 
-    const context: any = canvasRef.current.getContext('2d');
+    const context: CanvasRenderingContext2D | null = canvasRef.current.getContext(
+      '2d',
+    );
 
     if (context) {
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
@@ -232,7 +235,7 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
 
       const artIntervalId = setInterval(
         () => draw(context, index++),
-        LandingConfig.duration,
+        ArtConfig.duration,
       );
 
       setArtIntervalId(artIntervalId);
@@ -268,4 +271,4 @@ const LandingScreen: React.FC<ILandingScreenProps> = (
   );
 };
 
-export default LandingScreen;
+export default AbstractArt;
