@@ -5,12 +5,7 @@ import { useDevice } from '../../hooks/useDevice';
 
 import { ArtConfig } from '../../config/ArtConfig';
 
-import {
-  afterlife,
-  caldera,
-  randomArt,
-  opressor,
-} from '../../util/artCollections';
+import { caldera, randomArt, opressor } from '../../util/artCollections';
 
 import { IColor } from '../../util/coreArt';
 import { getRandomInt, randomColor, getDirection } from '../../util/helpers';
