@@ -3,16 +3,16 @@ import { colors } from './colors';
 export const light = {
   isLight: true,
   isDark: false,
-  backgroundColor: colors.baseWhite,
-  border: colors.baseBlack,
-  textColor: colors.baseBlack,
+  backgroundColor: colors.baseLight,
+  border: colors.baseDark,
+  textColor: colors.baseDark,
   textColorSecondary: colors.darkMoon,
-  hyperlinkColor: colors.baseWhite,
+  hyperlinkColor: colors.baseLight,
   hyperlinkBackgroundColor: colors.forestGreen,
   themeToggleColor: colors.turqoise,
-  themeToggleLine: colors.baseBlack,
+  themeToggleLine: colors.baseDark,
   timelineConnectionLineColor: colors.darkMoon,
   svgFill: {
-    primary: colors.baseBlack,
+    primary: colors.baseDark,
   },
 };
