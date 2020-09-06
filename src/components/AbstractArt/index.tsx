@@ -33,8 +33,12 @@ export interface IArtSpectatorItem {
   twistCounter: number;
 }
 
-const landingScreenWrapperCss = (isVisible: boolean) => css`
+const abstractArtWrapperCss = (
+  isVisible: boolean,
+  viewportHeight: number,
+) => css`
   position: absolute;
+  height: ${viewportHeight}px;
   top: 0;
   left: 0;
 
@@ -86,7 +90,7 @@ const subtitleCss = css`
   }
 `;
 
-const landingScreenCss = css`
+const abstractArtCss = css`
   position: relative;
 
   animation: fadeLines ${ArtConfig.duration}ms linear infinite forwards;
@@ -190,13 +194,13 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
 
   return (
     <div
-      className={landingScreenWrapperCss(isVisible)}
+      className={abstractArtWrapperCss(isVisible, viewportHeight)}
       onClick={() => startFading()}
       role="button"
     >
       <canvas
         ref={canvasRef}
-        className={landingScreenCss}
+        className={abstractArtCss}
         width={viewportWidth * devicePixelRatio}
         height={viewportHeight * devicePixelRatio}
         style={{
