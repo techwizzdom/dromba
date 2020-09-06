@@ -11,46 +11,6 @@ import { getRandomInt } from './helpers';
 
 import { IArtSpectatorItem } from '../components/AbstractArt';
 
-const randomStartPosition = (index: number): [number, number] => {
-  if (index % 8 === 0) {
-    return [0, 1];
-  }
-
-  if (index % 8 === 1) {
-    return [0.1, 0.2];
-  }
-
-  if (index % 8 === 2) {
-    return [0.4, 0.6];
-  }
-
-  if (index % 8 === 3) {
-    return [0.3, 0.8];
-  }
-
-  if (index % 8 === 4) {
-    return [0.1, 0.9];
-  }
-
-  if (index % 8 === 5) {
-    return [0.7, 0.7];
-  }
-
-  if (index % 8 === 5) {
-    return [0.8, 0.7];
-  }
-
-  if (index % 8 === 6) {
-    return [1, 1];
-  }
-
-  if (index % 8 === 7) {
-    return [0.2, 0.3];
-  }
-
-  return [0.3, 0.7];
-};
-
 export const caldera = (
   context: CanvasRenderingContext2D,
   artSpectator: Array<IArtSpectatorItem>,
@@ -178,13 +138,10 @@ export const randomArt = (
     }
   }
 
-  console.log(arr);
-
   totalDuration = 0;
 
   arr.forEach((ar, i) => {
     const randomCase = getRandomInt(6);
-    console.log(randomCase);
 
     if (i !== 0) {
       totalDuration += ar.duration;

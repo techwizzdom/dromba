@@ -2,9 +2,11 @@ import * as React from 'react';
 import { css } from 'emotion';
 
 import Paragraph from '../core/Paragraph';
-import { ParagraphSize } from '../../enums/ParagraphSize';
 import { H5 } from '../core/Heading';
+
 import { underlineClassNameOnHover } from '../../styles/css/textHover';
+
+import { ParagraphSize } from '../../enums/ParagraphSize';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 export interface IBlogPostProps {

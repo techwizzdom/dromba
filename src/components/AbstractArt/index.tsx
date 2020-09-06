@@ -8,7 +8,13 @@ import { ArtConfig } from '../../config/ArtConfig';
 import { caldera, randomArt, opressor } from '../../util/artCollections';
 
 import { IColor } from '../../util/coreArt';
-import { getRandomInt, randomColor, getDirection } from '../../util/helpers';
+import {
+  getRandomInt,
+  randomColor,
+  getDirection,
+  getCoordinates,
+  getScreenPositionForIndex,
+} from '../../util/helpers';
 
 import { Media } from '../../enums/Media';
 import { DeviceType } from '../../enums/DeviceType';
@@ -114,94 +120,29 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
 
   const deviceType = useDevice();
 
-  const getInitialCoordinates = (
-    positionX?: [number, number],
-    positionY?: [number, number],
-  ): [number, number] => {
-    if (positionX && positionY) {
-      return [
-        getRandomInt(
-          viewportWidth - (1 - positionX[1]) * viewportWidth,
-          viewportWidth - (1 - positionX[0]) * viewportWidth,
-        ) + 0.5,
-        getRandomInt(
-          viewportHeight - (1 - positionY[1]) * viewportHeight,
-          viewportHeight - (1 - positionY[0]) * viewportHeight,
-        ) + 0.5,
-      ];
-    }
-
-    return [
-      getRandomInt(viewportWidth) + 0.5,
-      getRandomInt(viewportHeight) + 0.5,
-    ];
-  };
-
-  const randomStartPosition = (index: number): [number, number] => {
-    if (index % 8 === 0) {
-      return [0, 1];
-    }
-
-    if (index % 8 === 1) {
-      return [0.1, 0.2];
-    }
-
-    if (index % 8 === 2) {
-      return [0.4, 0.6];
-    }
-
-    if (index % 8 === 3) {
-      return [0.3, 0.8];
-    }
-
-    if (index % 8 === 4) {
-      return [0.1, 0.9];
-    }
-
-    if (index % 8 === 5) {
-      return [0.7, 0.7];
-    }
-
-    if (index % 8 === 5) {
-      return [0.8, 0.7];
-    }
-
-    if (index % 8 === 6) {
-      return [1, 1];
-    }
-
-    if (index % 8 === 7) {
-      return [0.2, 0.3];
-    }
-
-    return [0.3, 0.7];
-  };
-
   const startFading = () => {
     setIsVisible(false);
     clearInterval(artIntervalId);
-    console.log('killed');
     setTimeout(() => onClick(), 2000);
   };
 
   const draw = (context: CanvasRenderingContext2D, index: number) => {
-    console.log('drawing');
     let artSpectator = new Array<IArtSpectatorItem>();
 
     for (
       let i = 0;
       i <
-      (isRandomArtEnabled
-        ? deviceType === DeviceType.Mobile
-          ? 100
-          : getRandomInt(500, 300)
+      (deviceType === DeviceType.Mobile
+        ? 100
+        : isRandomArtEnabled
+        ? getRandomInt(500, 300)
         : ArtConfig.numberOfLines);
       i++
     ) {
       artSpectator.push({
-        coordinates: getInitialCoordinates(
-          isRandomArtEnabled ? randomStartPosition(index) : undefined,
-          isRandomArtEnabled ? randomStartPosition(index) : undefined,
+        coordinates: getCoordinates(
+          isRandomArtEnabled ? getScreenPositionForIndex(index) : undefined,
+          isRandomArtEnabled ? getScreenPositionForIndex(index) : undefined,
         ),
         color: randomColor(),
         direction: getDirection(),
