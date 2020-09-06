@@ -4,16 +4,16 @@ import { Theme } from '.';
 export const dark: Theme = {
   isLight: false,
   isDark: true,
-  backgroundColor: colors.baseBlack,
-  border: colors.baseWhite,
-  textColor: colors.baseWhite,
+  backgroundColor: colors.baseDark,
+  border: colors.baseLight,
+  textColor: colors.baseLight,
   textColorSecondary: colors.vanishingGray,
-  hyperlinkColor: colors.baseBlack,
+  hyperlinkColor: colors.baseDark,
   hyperlinkBackgroundColor: colors.alienGreen,
   themeToggleColor: colors.radioactiveSun,
-  themeToggleLine: colors.baseWhite,
+  themeToggleLine: colors.baseLight,
   timelineConnectionLineColor: colors.vanishingGray,
   svgFill: {
-    primary: colors.baseWhite,
+    primary: colors.baseLight,
   },
 };
