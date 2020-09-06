@@ -61,6 +61,8 @@ const textWrapperCss = css`
 
   @media ${Media.Mobile} {
     align-items: flex-start;
+
+    padding-left: 8px;
   }
 `;
 
