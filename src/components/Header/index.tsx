@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useDevice } from '../../hooks/useDevice';
+
 import { DeviceType } from '../../enums/DeviceType';
+
 import HeaderMobile from '../HeaderMobile';
 import HeaderDesktop from '../HeaderDesktop';
 

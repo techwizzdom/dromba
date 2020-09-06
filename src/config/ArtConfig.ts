@@ -12,7 +12,7 @@ const getDeviceType = () => {
 };
 
 export const ArtConfig = {
-  numberOfLines: 300,
+  numberOfLines: 600,
   colorOpacity: 0.8,
   canvasOpacityMin: 0,
   canvasOpacityMax: 0.8,
