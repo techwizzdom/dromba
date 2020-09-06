@@ -11,6 +11,46 @@ import { getRandomInt } from './helpers';
 
 import { IArtSpectatorItem } from '../components/AbstractArt';
 
+const randomStartPosition = (index: number): [number, number] => {
+  if (index % 8 === 0) {
+    return [0, 1];
+  }
+
+  if (index % 8 === 1) {
+    return [0.1, 0.2];
+  }
+
+  if (index % 8 === 2) {
+    return [0.4, 0.6];
+  }
+
+  if (index % 8 === 3) {
+    return [0.3, 0.8];
+  }
+
+  if (index % 8 === 4) {
+    return [0.1, 0.9];
+  }
+
+  if (index % 8 === 5) {
+    return [0.7, 0.7];
+  }
+
+  if (index % 8 === 5) {
+    return [0.8, 0.7];
+  }
+
+  if (index % 8 === 6) {
+    return [1, 1];
+  }
+
+  if (index % 8 === 7) {
+    return [0.2, 0.3];
+  }
+
+  return [0.3, 0.7];
+};
+
 export const caldera = (
   context: CanvasRenderingContext2D,
   artSpectator: Array<IArtSpectatorItem>,
@@ -47,6 +87,7 @@ export const caldera = (
     const randomic = getRandomInt(3);
 
     if (randomic === 0) {
+      // r1(context, artSpectator, viewportWidth, viewportHeight, index);
       iyewaye(context, artSpectator, 10, 120, 1, index);
 
       setTimeout(() => {
@@ -72,35 +113,17 @@ export const caldera = (
 
     if (randomic === 1) {
       ohThoseLines(context, artSpectator, 10, 120, 1);
+      // r2(context, artSpectator, viewportWidth, viewportHeight, index);
 
       setTimeout(() => {
         tideSlide(context, artSpectator, 10, 300, 1, index, 32);
       }, 1200);
-
       setTimeout(() => {
         tideSlide(context, artSpectator, 20, 30, 1, index, 32);
       }, 4200);
-
       setTimeout(() => {
         tideSlide(context, artSpectator, 50, 20, 1, index, 32);
       }, 4900);
-      // ohThoseLines(context, artSpectator, 10, 120, 1);
-
-      // setTimeout(() => {
-      //   tideSlide(context, artSpectator, 10, 180, 10, index);
-      // }, 1200);
-
-      // setTimeout(() => {
-      //   tideSlide(context, artSpectator, 20, 50, 10, index);
-      // }, 3000);
-
-      // setTimeout(() => {
-      //   tideSlide(context, artSpectator, 30, 25, 10, index);
-      // }, 4000);
-
-      // setTimeout(() => {
-      //   tideSlide(context, artSpectator, 50, 20, 10, index);
-      // }, 4750);
     }
 
     if (randomic === 2) {
@@ -109,19 +132,15 @@ export const caldera = (
       setTimeout(() => {
         tideSlide(context, artSpectator, 15, 80, 2, index);
       }, 1200);
-
       setTimeout(() => {
         tideSlide(context, artSpectator, 25, 40, 3, index);
       }, 2400);
-
       setTimeout(() => {
         tideSlide(context, artSpectator, 6, 100, 10, index);
       }, 3400);
-
       setTimeout(() => {
         tideSlide(context, artSpectator, 10, 80, 15, index);
       }, 4000);
-
       setTimeout(() => {
         tideSlide(context, artSpectator, 50, 20, 15, index);
       }, 4800);
@@ -138,7 +157,6 @@ export const randomArt = (
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
-
   let arr = [];
 
   let totalDuration = 0;
@@ -161,12 +179,12 @@ export const randomArt = (
   }
 
   console.log(arr);
-  console.log(totalDuration);
 
   totalDuration = 0;
 
   arr.forEach((ar, i) => {
     const randomCase = getRandomInt(6);
+    console.log(randomCase);
 
     if (i !== 0) {
       totalDuration += ar.duration;
@@ -229,7 +247,6 @@ export const randomArt = (
       }
     }, totalDuration);
   });
-
   // ohThoseLines(context, artSpectator, 10, 120, 1);
 
   // setTimeout(() => {
@@ -312,6 +329,143 @@ export const ancientAnomalies = (
   }
 
   ohThoseLines(context, artSpectator, 25, 1900, 1);
+};
+
+export const r1 = (
+  context: CanvasRenderingContext2D,
+  artSpectator: Array<IArtSpectatorItem>,
+  viewportWidth: number,
+  viewportHeight: number,
+  index: number,
+) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
+  setTimeout(() => {
+    megaChaos(context, artSpectator, 2, 221, 3, index);
+  }, 442);
+
+  setTimeout(() => {
+    chaos(context, artSpectator, 2, 18, 4, index);
+  }, 478);
+
+  setTimeout(() => {
+    tideSlide(context, artSpectator, 4, 195, 2, index);
+  }, 1258);
+
+  setTimeout(() => {
+    ohThoseLines(context, artSpectator, 2, 456, 2);
+  }, 2170);
+
+  setTimeout(() => {
+    chaos(context, artSpectator, 2, 187, 4, index);
+  }, 2544);
+
+  setTimeout(() => {
+    megaChaos(context, artSpectator, 3, 269, 2, index);
+  }, 3351);
+
+  setTimeout(() => {
+    slightlyCurved(context, artSpectator, 4, 99, 3);
+  }, 3747);
+
+  setTimeout(() => {
+    chaos(context, artSpectator, 4, 215, 4, index);
+  }, 4607);
+};
+
+export const r2 = (
+  context: CanvasRenderingContext2D,
+  artSpectator: Array<IArtSpectatorItem>,
+  viewportWidth: number,
+  viewportHeight: number,
+  index: number,
+) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
+  megaChaos(context, artSpectator, 2, 228, 4, index);
+
+  setTimeout(() => {
+    chaos(context, artSpectator, 6, 43, 4, index);
+  }, 258);
+
+  setTimeout(() => {
+    iyewaye(context, artSpectator, 4, 56, 1, index);
+  }, 482);
+
+  setTimeout(() => {
+    tideSlide(context, artSpectator, 2, 442, 4, index);
+  }, 1366);
+
+  setTimeout(() => {
+    iyewaye(context, artSpectator, 3, 32, 1, index);
+  }, 1462);
+
+  setTimeout(() => {
+    megaChaos(context, artSpectator, 3, 297, 1, index);
+  }, 2299);
+
+  setTimeout(() => {
+    ohThoseLines(context, artSpectator, 2, 275, 2);
+  }, 2849);
+
+  setTimeout(() => {
+    iyewaye(context, artSpectator, 7, 164, 1, index);
+  }, 3997);
+
+  setTimeout(() => {
+    slightlyCurved(context, artSpectator, 8, 47, 3);
+  }, 4373);
+
+  setTimeout(() => {
+    megaChaos(context, artSpectator, 4, 177, 2, index);
+  }, 5081);
+};
+
+export const r3 = (
+  context: CanvasRenderingContext2D,
+  artSpectator: Array<IArtSpectatorItem>,
+  viewportWidth: number,
+  viewportHeight: number,
+  index: number,
+) => {
+  context.clearRect(0, 0, viewportWidth, viewportHeight);
+  context.beginPath();
+
+  ohThoseLines(context, artSpectator, 6, 16, 4);
+
+  setTimeout(() => {
+    slightlyCurved(context, artSpectator, 3, 293, 3);
+  }, 879);
+
+  setTimeout(() => {
+    megaChaos(context, artSpectator, 3, 237, 3, index);
+  }, 1590);
+
+  setTimeout(() => {
+    tideSlide(context, artSpectator, 9, 87, 1, index);
+  }, 2373);
+
+  setTimeout(() => {
+    iyewaye(context, artSpectator, 2, 219, 2, index);
+  }, 2811);
+
+  setTimeout(() => {
+    tideSlide(context, artSpectator, 7, 131, 3, index);
+  }, 3728);
+
+  setTimeout(() => {
+    ohThoseLines(context, artSpectator, 2, 147, 2);
+  }, 4022);
+
+  setTimeout(() => {
+    iyewaye(context, artSpectator, 3, 34, 3, index);
+  }, 4124);
+
+  setTimeout(() => {
+    megaChaos(context, artSpectator, 2, 434, 1, index);
+  }, 4992);
 };
 
 export const afterlife = (
