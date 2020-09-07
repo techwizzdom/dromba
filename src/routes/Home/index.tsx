@@ -160,8 +160,9 @@ function Home() {
       <H5>
         Besides JS, I adore HTML/CSS (yes, I've just said that); and I also have
         experience with Java, Ruby, and design tools. Knowledge of Git, SASS,
-        testing libraries, Typescript, Storybook, continuous integration, etc. —
-        is inevitable. Everything in that wonderful Agile environment.
+        testing libraries, Typescript, Storybook, Server-side rendering,
+        continuous integration, etc. — is inevitable. Everything in that
+        wonderful Agile environment.
       </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
