@@ -35,7 +35,7 @@ function Home() {
 
       <H5>
         In the early days of my Computer Science studies, I've landed my first
-        intership. The rest is history; I'm still working, craving for endless
+        internship. The rest is history; I'm still working, craving for endless
         opportunities. Here's a short summary of my working experience:
       </H5>
 
@@ -43,7 +43,8 @@ function Home() {
 
       <IndentContainer>
         <TimelineCard title="Productive" subtitle="(Aug 2019 - still here)">
-          One of the most successful agencies in Croatia, Infinum, didn't like
+          The ambitious agency of{' '}
+          <Hyperlink href="https://infinum.com/">Infinum</Hyperlink> didn't like
           any of available tools for managing their business. That's why they
           started to build their own product -{' '}
           <Hyperlink href="https://www.productive.io/">Productive</Hyperlink>,
@@ -75,6 +76,10 @@ function Home() {
         </TimelineCard>
 
         <TimelineCard title="Asseco SEE" subtitle="(Jan 2017 - Jul 2017)">
+          Working in a huge corporation like{' '}
+          <Hyperlink href="https://asseco.com/">Asseco</Hyperlink> brought me
+          unique views of how 20000+ people company can operate.
+          <VerticalSpacing height={VerticalSpacingHeight.Small} />
           At first, I was working on an internal file sharing platform; later
           on, I got my hands onto the{' '}
           <Hyperlink href="https://play.google.com/store/apps/details?id=hr.asseco.android.intesa.isbd.pbz&hl=en">
@@ -138,7 +143,7 @@ function Home() {
       />
 
       <H5>
-        This website was designed and build from scratch completely by myself. I
+        This website was designed and built from scratch completely by myself. I
         love ReactJS so much that I used it here, even though it's not a perfect
         solution for this. Check out the{' '}
         <Hyperlink href="https://github.com/dromba/dromba">
@@ -151,9 +156,16 @@ function Home() {
 
       <H5>
         Besides JS, I adore HTML/CSS (yes, I've just said that); and I also have
-        experience with Java, Ruby, and design tools. On the non-technical side,
-        I was involved in Product Management, Sales, Business Management, and
-        Rebranding.
+        experience with Java, Ruby, and design tools. Knowledge of Git, SASS,
+        testing libraries, Typescript, Storybook, continuous integration, etc. —
+        is inevitable. Everything in that wonderful Agile environment.
+      </H5>
+
+      <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+
+      <H5>
+        On the non-technical side, I was involved in Product Management, Sales,
+        Business Management, and Rebranding.
       </H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
