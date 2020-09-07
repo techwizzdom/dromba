@@ -46,19 +46,13 @@ const timelineCardContentLeftCss = css`
 const borderCss = (theme: Theme) => css`
   flex-grow: 1;
 
-  /* margin: 8px 48px 0 0; */
   margin-top: 8px;
   height: 1px;
   min-width: 150px;
 
   background-color: ${theme.timelineConnectionLineColor};
 
-  /* @media ${Media.Mobile} {
-    margin-right: 24px;
-  } */
-
   @media ${Media.MobileSmall} {
-    /* margin-right: 12px; */
     min-width: 112px;
   }
 `;
