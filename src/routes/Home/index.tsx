@@ -43,7 +43,7 @@ function Home() {
 
       <IndentContainer>
         <TimelineCard title="Productive" subtitle="(Aug 2019 - still here)">
-          The ambitious agency of{' '}
+          The ambitious agency{' '}
           <Hyperlink href="https://infinum.com/">Infinum</Hyperlink> didn't like
           any of available tools for managing their business. That's why they
           started to build their own product -{' '}
@@ -88,7 +88,10 @@ function Home() {
           , one of the largest banks in Croatia under the Intesa Sanpaolo bank.
         </TimelineCard>
 
-        <TimelineCard title="OptimIT" subtitle="(Jul 2015 - Aug 2015)">
+        <TimelineCard
+          title="OptimIT Intership"
+          subtitle="(Jul 2015 - Aug 2015)"
+        >
           This was my first and last internship, where I used to work on a
           project for creating digital signatures on PDF documents.
         </TimelineCard>
@@ -113,7 +116,7 @@ function Home() {
         </TimelineCard>
 
         <TimelineCard title="Exchange Student" subtitle="(Sep 2017 - Feb 2018)">
-          I spent a semester at{' '}
+          I spent half a year at{' '}
           <Hyperlink href="https://www.hft-leipzig.de/de/studierende/gesellschaft-und-informatik.html">
             Hochschule für Telekomunikation in Leipzig
           </Hyperlink>
