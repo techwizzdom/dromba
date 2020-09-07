@@ -26,8 +26,6 @@ const timelineCardContentLeftCss = css`
   flex: 1;
   align-items: flex-start;
 
-  margin-right: 48px;
-
   @media ${Media.TabletDown} {
     flex: 0;
     flex-direction: column;
@@ -50,7 +48,13 @@ const borderCss = (theme: Theme) => css`
   height: 1px;
   min-width: 150px;
 
+  margin: 8px 48px 0 0;
+
   background-color: ${theme.timelineConnectionLineColor};
+
+  @media ${Media.Mobile} {
+    margin-right: 0;
+  }
 
   @media ${Media.MobileSmall} {
     min-width: 112px;
