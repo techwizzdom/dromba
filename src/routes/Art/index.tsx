@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
@@ -43,6 +44,7 @@ const artButtonCss = (theme: Theme) => css`
 
 function Art() {
   const [isArtEnabled, setIsArtEnabled] = useState<boolean>(false);
+  const [artStartTime, setArtStartTime] = useState<number>(0);
 
   const theme = React.useContext(ThemeContext);
 
@@ -51,7 +53,14 @@ function Art() {
       {isArtEnabled ? (
         <AbstractArt
           isRandomArtEnabled={true}
-          onClick={() => setIsArtEnabled(false)}
+          onClick={() => {
+            setIsArtEnabled(false);
+            ReactGA.event({
+              category: 'Visit',
+              action: 'User closed Random art',
+              value: Date.now() - artStartTime,
+            });
+          }}
         />
       ) : (
         <></>
@@ -65,7 +74,10 @@ function Art() {
         <IndentContainer>
           <button
             className={artButtonCss(theme)}
-            onClick={() => setIsArtEnabled(true)}
+            onClick={() => {
+              setIsArtEnabled(true);
+              setArtStartTime(Date.now());
+            }}
           >
             Dive in
           </button>

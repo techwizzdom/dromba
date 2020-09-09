@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
 import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
@@ -41,6 +42,7 @@ const MainContainer: React.FC<IMainContainerProps> = (
   const { children } = props;
 
   const [isArtVisible, setIsArtVisible] = useState<boolean>(true);
+  const artStartTime = Date.now();
 
   const theme = React.useContext(ThemeContext);
 
@@ -50,7 +52,14 @@ const MainContainer: React.FC<IMainContainerProps> = (
         <AbstractArt
           title="What shall we create?"
           subtitle="Click anywhere to start"
-          onClick={() => setIsArtVisible(false)}
+          onClick={() => {
+            setIsArtVisible(false);
+            ReactGA.event({
+              category: 'Abstract Art',
+              action: 'User closed Abstract art',
+              value: Date.now() - artStartTime,
+            });
+          }}
         />
       ) : (
         <></>
