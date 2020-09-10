@@ -57,7 +57,7 @@ const MainContainer: React.FC<IMainContainerProps> = (
             ReactGA.event({
               category: 'Abstract Art',
               action: 'User closed Abstract art',
-              value: Date.now() - artStartTime,
+              value: Math.round((Date.now() - artStartTime - 1000) / 1000),
             });
           }}
         />

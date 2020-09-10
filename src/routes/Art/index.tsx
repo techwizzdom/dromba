@@ -58,7 +58,7 @@ function Art() {
             ReactGA.event({
               category: 'Visit',
               action: 'User closed Random art',
-              value: Date.now() - artStartTime,
+              value: Math.round((Date.now() - artStartTime - 1000) / 1000),
             });
           }}
         />
