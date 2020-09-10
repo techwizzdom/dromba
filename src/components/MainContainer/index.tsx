@@ -55,8 +55,8 @@ const MainContainer: React.FC<IMainContainerProps> = (
           onClick={() => {
             setIsArtVisible(false);
             ReactGA.event({
-              category: 'Abstract Art',
-              action: 'User closed Abstract art',
+              category: 'Art Close',
+              action: 'Abstract art closed',
               value: Math.round((Date.now() - artStartTime - 1000) / 1000),
             });
           }}

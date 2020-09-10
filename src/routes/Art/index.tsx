@@ -56,8 +56,8 @@ function Art() {
           onClick={() => {
             setIsArtEnabled(false);
             ReactGA.event({
-              category: 'Visit',
-              action: 'User closed Random art',
+              category: 'Art Close',
+              action: 'Random art closed',
               value: Math.round((Date.now() - artStartTime - 1000) / 1000),
             });
           }}
