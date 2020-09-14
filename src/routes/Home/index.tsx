@@ -188,8 +188,8 @@ function Home() {
         </Hyperlink>{' '}
         and <Hyperlink href="https://medium.com/@dvidovic91">Medium</Hyperlink>,
         or contact me at{' '}
-        <Hyperlink href="dvidovic91@gmail.com" isEmail={true}>
-          dvidovic91@gmail.com
+        <Hyperlink href="patrick.domv@gmail.com" isEmail={true}>
+          patrick.domv@gmail.com
         </Hyperlink>
         . It's so nice to hear from you!
       </H5>
