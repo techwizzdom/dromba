@@ -19,6 +19,8 @@ import {
 import { Media } from '../../enums/Media';
 import { DeviceType } from '../../enums/DeviceType';
 
+import { t } from '../../translations/t';
+
 interface IAbstractArtProps {
   onClick: () => void;
   title?: string;
@@ -210,9 +212,9 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
       />
       {(title || subtitle) && (
         <div className={textWrapperCss}>
-          {title && <div className={titleCss}>What shall we create?</div>}
+          {title && <div className={titleCss}>{t.abstractArt.title}</div>}
           {subtitle && (
-            <div className={subtitleCss}>Click anywhere to start</div>
+            <div className={subtitleCss}>{t.abstractArt.subtitle}</div>
           )}
         </div>
       )}

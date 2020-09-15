@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 import RouteContainer from '../../components/RouteContainer';
 import BlogPost, { IBlogPostProps } from '../../components/BlogPost';
@@ -9,13 +10,22 @@ import VerticalSpacing from '../../components/VerticalSpacing';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
+import { t } from '../../translations/t';
+
 function Blog() {
   const [blogPosts, isLoading] = useMediumBlogPosts();
 
+  useEffect(() => {
+    ReactGA.event({
+      category: 'Blog',
+      action: 'Open blog page',
+    });
+  }, []);
+
   return (
     <RouteContainer>
-      <H1>Sometimes, I like to question the obvious.</H1>
-      <H1>And write about it.</H1>
+      <H1>{t.blog.title}</H1>
+      <H1>{t.blog.subtitle}</H1>
 
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 

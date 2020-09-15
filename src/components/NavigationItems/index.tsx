@@ -8,6 +8,8 @@ import { Routes } from '../../routes/Routes';
 
 import { underlineOnHover, underline } from '../../styles/css/textHover';
 
+import { t } from '../../translations/t';
+
 interface INavigationItemsProps {
   onNavigationItemClick?: () => void;
   isMobile?: boolean;
@@ -49,21 +51,21 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Home))}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        Who Am I?
+        {t.navigation.home}
       </Link>
       <Link
         to={Routes.Art}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Art))}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        Who Art You?
+        {t.navigation.art}
       </Link>
       <Link
         to={Routes.Blog}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Blog))}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        Blog
+        {t.navigation.blog}
       </Link>
     </>
   );
