@@ -14,6 +14,8 @@ import AbstractArt from '../../components/AbstractArt';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
+import { t } from '../../translations/t';
+
 const artCss = (isArtEnabled: boolean) => css`
   display: block;
 
@@ -67,7 +69,7 @@ function Art() {
       )}
 
       <div className={artCss(isArtEnabled)}>
-        <H1>Just</H1>
+        <H1>{t.art.title}</H1>
 
         <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
@@ -79,7 +81,7 @@ function Art() {
               setArtStartTime(Date.now());
             }}
           >
-            Dive in
+            {t.art.actionButton}
           </button>
         </IndentContainer>
       </div>
