@@ -1,11 +1,11 @@
-import ReactGA from 'react-ga';
-
 import { Themes } from '../enums/Themes';
 import { dark } from '../styles/dark';
 import { light } from '../styles/light';
 
+import { initGoogleAnalytics } from './metrics';
+
 export const init = () => {
-  ReactGA.initialize('UA-177550269-1');
+  initGoogleAnalytics();
 
   const localTheme = window.localStorage.getItem('selectedTheme');
 

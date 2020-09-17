@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+
 import { Themes } from './enums/Themes';
+
 import { light } from './styles/light';
 import { dark } from './styles/dark';
 import { Theme } from './styles';

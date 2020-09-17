@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import ReactGA from 'react-ga';
+import { trackEvent } from '../../util/metrics';
 
 import RouteContainer from '../../components/RouteContainer';
 import BlogPost, { IBlogPostProps } from '../../components/BlogPost';
@@ -16,10 +16,7 @@ function Blog() {
   const [blogPosts, isLoading] = useMediumBlogPosts();
 
   useEffect(() => {
-    ReactGA.event({
-      category: 'Blog',
-      action: 'Open blog page',
-    });
+    trackEvent('Blog', 'Open blog page');
   }, []);
 
   return (

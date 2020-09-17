@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ReactGA from 'react-ga';
 import { css } from 'emotion';
+import { trackEvent } from '../../util/metrics';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
@@ -54,11 +54,11 @@ const MainContainer: React.FC<IMainContainerProps> = (
           subtitle="Click anywhere to start"
           onClick={() => {
             setIsArtVisible(false);
-            ReactGA.event({
-              category: 'Art Close',
-              action: 'Abstract art closed',
-              value: Math.round((Date.now() - artStartTime - 1000) / 1000),
-            });
+            trackEvent(
+              'Art Close',
+              'Abstract art closed',
+              Math.round((Date.now() - artStartTime - 1000) / 1000),
+            );
           }}
         />
       ) : (
