@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ReactGA from 'react-ga';
 import { css } from 'emotion';
+import { trackEvent } from '../../util/metrics';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
@@ -57,11 +57,11 @@ function Art() {
           isRandomArtEnabled={true}
           onClick={() => {
             setIsArtEnabled(false);
-            ReactGA.event({
-              category: 'Art Close',
-              action: 'Random art closed',
-              value: Math.round((Date.now() - artStartTime - 1000) / 1000),
-            });
+            trackEvent(
+              'Art Close',
+              'Random art closed',
+              Math.round((Date.now() - artStartTime - 1000) / 1000),
+            );
           }}
         />
       ) : (

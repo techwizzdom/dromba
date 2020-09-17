@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactGA from 'react-ga';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
@@ -14,10 +13,12 @@ import Home from './routes/Home';
 import Blog from './routes/Blog';
 import Art from './routes/Art';
 
+import { init } from './util/init';
+
 function App() {
   const [theme, toggleTheme] = useTheme();
 
-  ReactGA.initialize('UA-177550269-1');
+  init();
 
   return (
     <ThemeContext.Provider value={theme}>
