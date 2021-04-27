@@ -38,6 +38,17 @@ function Home() {
 
       <IndentContainer>
         <TimelineCard
+          title={t.home.timelineCardOrbitalWitness.title}
+          subtitle={t.home.timelineCardOrbitalWitness.subtitle}
+        >
+          {t.home.timelineCardOrbitalWitness.text.pt1}
+          <VerticalSpacing height={VerticalSpacingHeight.Small} />
+          {t.home.timelineCardOrbitalWitness.text.pt2}
+          <Hyperlink href={t.link.orbitalWitness}>{t.company.orbitalWitness}</Hyperlink>
+          {t.home.timelineCardOrbitalWitness.text.pt3}
+        </TimelineCard>
+
+        <TimelineCard
           title={t.home.timelineCardProductive.title}
           subtitle={t.home.timelineCardProductive.subtitle}
         >
@@ -152,6 +163,10 @@ function Home() {
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
 
+      <H5>{t.home.paragraph.jsSkills.pt1}</H5>
+
+      <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+
       <H5>{t.home.paragraph.engineeringSkills}</H5>
 
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
@@ -172,8 +187,8 @@ function Home() {
         {t.home.paragraph.profiles.pt3}
         <Hyperlink href={t.link.medium}>{t.profile.medium}</Hyperlink>
         {t.home.paragraph.profiles.pt4}
-        <Hyperlink href={t.email.dpatrick} isEmail={true}>
-          {t.email.dpatrick}
+        <Hyperlink href={t.email.dvidovic} isEmail={true}>
+          {t.email.dvidovic}
         </Hyperlink>
         {t.home.paragraph.profiles.pt5}
       </H5>

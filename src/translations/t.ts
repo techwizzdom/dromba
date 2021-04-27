@@ -15,6 +15,7 @@ export const t = {
     subtitle: 'And write about it.',
   },
   company: {
+    orbitalWitness: 'Orbital Witness',
     infinum: 'Infinum',
     productive: 'Productive',
     loopCommunity: 'Loop Community',
@@ -27,21 +28,25 @@ export const t = {
   },
   email: {
     dpatrick: 'patrick.domv@gmail.com',
+    dvidovic: 'dvidovic91@gmail.com',
   },
   home: {
     title: 'Aspiring Frontend developer.',
-    subtitle: 'Based anywhere on this planet.',
+    subtitle: 'Based in magical London.',
     paragraph: {
       achiever:
-        "As a 25 years old guy, there's a lot for me to achieve. Many things I don't know; zero of them I can't learn.",
+        "As a 26 years old guy, there's a lot for me to achieve. Many things I don't know; zero of them I can't learn.",
       summary:
         "In the early days of my Computer Science studies, I've landed my first internship. The rest is history; I'm still working, craving for endless opportunities. Here's a short summary of my working experience:",
       education:
         "I'm also grateful for my education, which helped me a lot in my career and personal growth.",
       sourceCode: {
         pt1:
-          "This website was designed and built from scratch completely by myself. I love ReactJS so much that I used it here, even though it's not a perfect solution for this. Check out the ",
+          "This website was designed and built from scratch completely by myself. Check out the ",
         pt2: " if you're interested.",
+      },
+      jsSkills: {
+        pt1: 'I have tons of experience with Vue, React, and Ember. I adore Vue and React, but to be honest, I love Vue a bit more. It just makes me so happy. And Ember? Never again.',
       },
       engineeringSkills:
         "Besides JS, I adore HTML/CSS (yes, I've just said that); and I also have experience with Java, Ruby, and design tools. Knowledge of Git, SASS, testing libraries, Typescript, Storybook, Server-side rendering, continuous integration, etc. — is inevitable. Everything in that wonderful Agile environment.",
@@ -57,9 +62,18 @@ export const t = {
         pt5: ". It's so nice to hear from you!",
       },
     },
+    timelineCardOrbitalWitness: {
+      title: 'Orbital Witness',
+      subtitle: '(Jan 2021 - present)',
+      text: {
+        pt1: 'On a mission to automate due diligence and competely transform Real Estate - the world\'s biggest market.',
+        pt2: 'Working in startup means wearing many hats; I just love juggling with many things. ',
+        pt3: ' will be so huge.'
+      },
+    },
     timelineCardProductive: {
       title: 'Productive',
-      subtitle: '(Aug 2019 - still here)',
+      subtitle: '(Aug 2019 - Jan 2021)',
       text: {
         pt1: 'The ambitious agency ',
         pt2:
@@ -71,7 +85,7 @@ export const t = {
     },
     timelineCardInfinum: {
       title: 'Infinum',
-      subtitle: '(Feb 2019 - still here)',
+      subtitle: '(Feb 2019 - Jan 2021)',
       text: {
         pt1: 'Before Productive, I worked with the US-based clients on ',
         pt2:
@@ -138,6 +152,7 @@ export const t = {
     },
   },
   link: {
+    orbitalWitness: 'https://www.orbitalwitness.com/',
     infinum: 'https://infinum.com/',
     productive: 'https://www.productive.io/',
     loopCommunity: 'https://loopcommunity.com/',
