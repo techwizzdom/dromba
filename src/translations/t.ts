@@ -170,7 +170,7 @@ export const t = {
     sourceCode: 'https://github.com/dromba/dromba',
     github: 'https://github.com/dromba',
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
-    medium: 'https://medium.com/@dvidovic91',
+    medium: 'https://domagojvidovic.medium.com/',
   },
   navigation: {
     home: 'Who Am I?',

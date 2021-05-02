@@ -2,7 +2,7 @@ import { useFetch } from '../hooks/useFetch';
 
 export const useMediumBlogPosts = () => {
   const { data, isLoading } = useFetch(
-    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@dvidovic91',
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@domagojvidovic',
   );
 
   if (!isLoading) {
