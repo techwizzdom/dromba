@@ -13,6 +13,7 @@ export const t = {
   blog: {
     title: 'Sometimes, I like to question the obvious.',
     subtitle: 'And write about it.',
+    findMoreArticles: 'Find way more articles on '
   },
   company: {
     orbitalWitness: 'Orbital Witness',
