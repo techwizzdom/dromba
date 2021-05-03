@@ -5,8 +5,9 @@ import RouteContainer from '../../components/RouteContainer';
 import BlogPost, { IBlogPostProps } from '../../components/BlogPost';
 import { useMediumBlogPosts } from '../../services/useMediumBlogPosts';
 import IndentContainer from '../../components/IndentContainer';
-import { H1 } from '../../components/core/Heading';
+import { H1, H5 } from '../../components/core/Heading';
 import VerticalSpacing from '../../components/VerticalSpacing';
+import Hyperlink from '../../components/Hyperlink';
 
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
@@ -38,6 +39,15 @@ function Blog() {
                 url={post.url}
               />
             ))}
+        {isLoading
+          ? null
+          : <>
+              <VerticalSpacing height={VerticalSpacingHeight.Medium}/>
+              <H5>{t.blog.findMoreArticles}
+              <Hyperlink href={t.link.medium}>{t.profile.medium}</Hyperlink>
+              </H5>
+            </>
+          }
       </IndentContainer>
     </RouteContainer>
   );
