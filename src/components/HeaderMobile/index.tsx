@@ -12,6 +12,7 @@ import IconButton from '../IconButton';
 import NavigationItems from '../NavigationItems';
 
 import Logodromba from '../../assets/images/logodrd.png';
+import LogodrombaHiRes from '../../assets/images/logodrombahires.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
 import { ILogoDiving } from '../HeaderDesktop';
 
@@ -59,7 +60,7 @@ const logoAnimatedCss = (
         : 'calc((100vw / 2) - 18px)'}
     )
     translateY(${isJumping ? '128px' : '-43px'})
-    rotate(${isJumping ? '0deg' : '140deg'});
+    rotate(${isMoving ? (isJumping ? '-140deg' : '140deg') : '140deg'});
 
   min-width: 36px;
   width: ${isJumping ? '192px' : '36px'};
@@ -131,7 +132,7 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
       </div>
       <img
         className={logoAnimatedCss(isLogoDiving, false)}
-        src={Logodromba}
+        src={isLogoDiving.isJumping ? LogodrombaHiRes : Logodromba}
         alt="logo-animated"
       />
     </div>
