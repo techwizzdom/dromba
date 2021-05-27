@@ -182,7 +182,7 @@ export const t = {
   },
   profile: {
     twitter: 'Twitter',
-    devto:'DEV.to',
+    devto: 'DEV.to',
     linkedIn: 'LinkedIn',
     github: 'GitHub',
     medium: 'Medium',
