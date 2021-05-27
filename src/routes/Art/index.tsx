@@ -56,24 +56,46 @@ function Art(props: IArtProps) {
   const [artStartTime, setArtStartTime] = useState<number>(0);
 
   const theme = React.useContext(ThemeContext);
-  // const { isLogoDiving, setIsLogoDiving } = useLogoDiving();
 
   const { setIsLogoDiving } = props;
 
   const launchDiving = () => {
-    setIsLogoDiving({ isMoving: true, isJumping: false });
+    setIsLogoDiving({
+      isMoving: true,
+      isJumping: false,
+      isOriginalVisible: false,
+    });
     setTimeout(
-      () => setIsLogoDiving({ isMoving: true, isJumping: true }),
+      () =>
+        setIsLogoDiving({
+          isMoving: true,
+          isJumping: true,
+          isOriginalVisible: false,
+        }),
       1000,
     );
     setTimeout(
-      () => setIsLogoDiving({ isMoving: false, isJumping: false }),
-      2000,
+      () =>
+        setIsLogoDiving({
+          isMoving: false,
+          isJumping: false,
+          isOriginalVisible: false,
+        }),
+      2100,
     );
     setTimeout(() => {
       setIsArtEnabled(true);
       setArtStartTime(Date.now());
-    }, 2200);
+    }, 2100);
+    setTimeout(
+      () =>
+        setIsLogoDiving({
+          isMoving: false,
+          isJumping: false,
+          isOriginalVisible: true,
+        }),
+      2500,
+    );
   };
 
   return (

@@ -9,7 +9,9 @@ import MainNavigation from '../MainNavigation';
 
 import { Media } from '../../enums/Media';
 
-import Logodrobma from '../../assets/images/logodrd.png';
+import Logodromba from '../../assets/images/logodrd.png';
+import { useDevice } from '../../hooks/useDevice';
+import { DeviceType } from '../../enums/DeviceType';
 
 interface IHeaderDesktopProps {
   toggleTheme: () => void;
@@ -19,6 +21,7 @@ interface IHeaderDesktopProps {
 export interface ILogoDiving {
   isMoving: boolean;
   isJumping: boolean;
+  isOriginalVisible: boolean;
 }
 
 const headerDesktopCss = css`
@@ -41,7 +44,8 @@ const logoLinkCss = css`
   height: 40px;
 `;
 
-const logoCss = css`
+const logoCss = (isVisible: boolean) => css`
+  visibility: ${isVisible ? 'visible' : 'hidden'};
   min-width: 40px;
   width: 40px;
   height: 40px;
@@ -49,23 +53,33 @@ const logoCss = css`
   transform: rotate(140deg);
 `;
 
-// right: 192px;
-// right: 40px;
-// top: 256px;
-
-const logoAnimatedCss = ({ isMoving, isJumping }: ILogoDiving) => css`
+const logoAnimatedCss = (
+  { isMoving, isJumping }: ILogoDiving,
+  isDesktop: boolean,
+) => css`
   position: absolute;
-  right: ${isMoving ? (isJumping ? '-56px' : '192px') : 'calc(100vw - 16px)'};
-  top: ${isJumping ? '256px' : '4px'};
+  left: 0;
   visibility: ${isMoving ? 'visible' : 'hidden'};
+  transform: translateX(
+      ${isMoving
+        ? isJumping
+          ? isDesktop
+            ? '920px'
+            : 'calc(100vw - 172px)'
+          : isDesktop
+          ? '800px'
+          : 'calc(100vw - 282px)'
+        : '16px'}
+    )
+    translateY(${isMoving ? (isJumping ? '312px' : '0') : '0'})
+    rotate(${isJumping ? '0deg' : '140deg'});
 
   min-width: 40px;
-  width: ${isMoving ? (isJumping ? '256px' : '80px') : '40px'};
-  height: ${isMoving ? (isJumping ? '256px' : '80px') : '40px'};
+  width: ${isJumping ? '256px' : '40px'};
+  height: ${isJumping ? '256px' : '40px'};
 
-  transform: rotate(140deg);
-  transition: right 1s ease-out, top 1s ease-in, visibility 0.2s ease,
-    width 0.9s ease-in-out, height 0.9s ease-in-out;
+  transition: transform 1s ease-in-out, width 0.9s ease-in-out,
+    height 0.9s ease-in-out;
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
@@ -73,26 +87,27 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
 ) => {
   const { toggleTheme, isLogoDiving } = props;
 
-  // const { isLogoDiving, setIsLogoDiving } = useLogoDiving();
-
-  // const isLogoDiving = React.useContext(LogoContext);
+  const deviceType = useDevice();
 
   return (
     <div className={headerDesktopCss}>
+      <img
+        src={Logodromba}
+        className={logoAnimatedCss(
+          isLogoDiving,
+          deviceType === DeviceType.Desktop,
+        )}
+        alt="domagoj-vidovic-head-logo-animated"
+      />
       <Link to={Routes.Home} className={logoLinkCss}>
         <img
-          src={Logodrobma}
-          className={logoCss}
+          src={Logodromba}
+          className={logoCss(isLogoDiving.isOriginalVisible)}
           alt="domagoj-vidovic-head-logo"
         />
       </Link>
       <MainNavigation />
       <ThemeToggle toggleTheme={toggleTheme} />
-      <img
-        src={Logodrobma}
-        className={logoAnimatedCss(isLogoDiving)}
-        alt="domagoj-vidovic-head-logo-animated"
-      />
     </div>
   );
 };

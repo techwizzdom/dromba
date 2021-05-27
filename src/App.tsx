@@ -21,6 +21,7 @@ function App() {
   const [isLogoDiving, setIsLogoDiving] = useState<ILogoDiving>({
     isMoving: false,
     isJumping: false,
+    isOriginalVisible: true,
   });
 
   init();
