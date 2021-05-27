@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
@@ -14,9 +14,15 @@ import Blog from './routes/Blog';
 import Art from './routes/Art';
 
 import { init } from './util/init';
+import { ILogoDiving } from './components/HeaderDesktop';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
+  const [isLogoDiving, setIsLogoDiving] = useState<ILogoDiving>({
+    isMoving: false,
+    isJumping: false,
+    isOriginalVisible: true,
+  });
 
   init();
 
@@ -24,11 +30,16 @@ function App() {
     <ThemeContext.Provider value={theme}>
       <Router>
         <MainContainer>
-          <Header toggleTheme={toggleTheme} />
+          <Header toggleTheme={toggleTheme} isLogoDiving={isLogoDiving} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/blog" component={Blog} />
-            <Route path="/art" component={Art} />
+            <Route
+              path="/art"
+              render={(props) => (
+                <Art {...props} setIsLogoDiving={setIsLogoDiving} />
+              )}
+            />
           </Switch>
         </MainContainer>
       </Router>
