@@ -16,7 +16,7 @@ const indentContainerCss = css`
 `;
 
 const IndentContainer: React.FC<IIndentContainerProps> = (
-  props: IIndentContainerProps
+  props: IIndentContainerProps,
 ) => {
   const { children } = props;
 

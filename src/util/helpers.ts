@@ -20,7 +20,7 @@ export const getRandomInt = (max: number, min: number = 0): number => {
 export const setIntervalX = (
   callback: () => void,
   delay: number,
-  repetitions: number
+  repetitions: number,
 ) => {
   var x = 0;
   var intervalID = window.setInterval(function () {
@@ -38,7 +38,7 @@ export const getDirection = (): [number, number] => {
 
 export const getCoordinates = (
   positionX?: [number, number],
-  positionY?: [number, number]
+  positionY?: [number, number],
 ): [number, number] => {
   const viewportWidth = window.innerWidth;
   const viewportHeight = window.innerHeight;
@@ -47,11 +47,11 @@ export const getCoordinates = (
     return [
       getRandomInt(
         viewportWidth - (1 - positionX[1]) * viewportWidth,
-        viewportWidth - (1 - positionX[0]) * viewportWidth
+        viewportWidth - (1 - positionX[0]) * viewportWidth,
       ) + 0.5,
       getRandomInt(
         viewportHeight - (1 - positionY[1]) * viewportHeight,
-        viewportHeight - (1 - positionY[0]) * viewportHeight
+        viewportHeight - (1 - positionY[0]) * viewportHeight,
       ) + 0.5,
     ];
   }

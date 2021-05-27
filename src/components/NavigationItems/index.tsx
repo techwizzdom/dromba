@@ -18,7 +18,7 @@ interface INavigationItemsProps {
 const navigationItemCss = (
   theme: Theme,
   isMobile: boolean,
-  isSelected: boolean
+  isSelected: boolean,
 ) => css`
   display: ${isMobile ? 'flex' : 'block'};
   justify-content: center;
@@ -33,7 +33,7 @@ const navigationItemCss = (
 `;
 
 const NavigationItems: React.FC<INavigationItemsProps> = (
-  props: INavigationItemsProps
+  props: INavigationItemsProps,
 ) => {
   const { onNavigationItemClick, isMobile = false } = props;
 

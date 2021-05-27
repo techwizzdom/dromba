@@ -26,7 +26,7 @@ interface IHProps {
 export const headingCss = (
   size: HeadingSize,
   theme: Theme,
-  isHoverable?: boolean
+  isHoverable?: boolean,
 ) => css`
   font-size: ${size};
   position: relative;
@@ -44,7 +44,7 @@ const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
     {
       className: cx(headingCss(size, theme, isHoverable), 'heading'),
     },
-    children
+    children,
   );
 };
 

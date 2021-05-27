@@ -29,7 +29,7 @@ const routeContainerCss = (isNormalizeHeaderHeightEnabled: boolean) => css`
 `;
 
 const RouteContainer: React.FC<IRouteContainerProps> = (
-  props: IRouteContainerProps
+  props: IRouteContainerProps,
 ) => {
   const { isNormalizeHeaderHeightEnabled = false, children } = props;
 

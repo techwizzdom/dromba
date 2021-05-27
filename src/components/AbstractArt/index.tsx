@@ -37,7 +37,7 @@ export interface IArtSpectatorItem {
 
 const abstractArtWrapperCss = (
   isVisible: boolean,
-  viewportHeight: number
+  viewportHeight: number,
 ) => css`
   position: absolute;
   height: ${viewportHeight}px;
@@ -150,7 +150,7 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
       artSpectator.push({
         coordinates: getCoordinates(
           isRandomArtEnabled ? getScreenPositionForIndex(index) : undefined,
-          isRandomArtEnabled ? getScreenPositionForIndex(index) : undefined
+          isRandomArtEnabled ? getScreenPositionForIndex(index) : undefined,
         ),
         color: randomColor(),
         direction: getDirection(),
@@ -185,7 +185,7 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
 
       const artIntervalId = setInterval(
         () => draw(context, index++),
-        ArtConfig.duration
+        ArtConfig.duration,
       );
 
       setArtIntervalId(artIntervalId);

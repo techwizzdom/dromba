@@ -43,7 +43,7 @@ const logoCss = css`
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
-  props: IHeaderDesktopProps
+  props: IHeaderDesktopProps,
 ) => {
   const { toggleTheme } = props;
 

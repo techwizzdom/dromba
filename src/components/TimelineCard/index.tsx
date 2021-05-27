@@ -92,7 +92,7 @@ const descriptionCss = css`
 `;
 
 const TimelineCard: React.FC<ITimelineCardProps> = (
-  props: ITimelineCardProps
+  props: ITimelineCardProps,
 ) => {
   const { title, subtitle, children } = props;
 
