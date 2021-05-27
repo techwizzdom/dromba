@@ -54,11 +54,7 @@ const logoAnimatedCss = (
   transform: translateX(
       ${isMoving
         ? isJumping
-          ? isDesktop
-            ? '920px'
-            : 'calc(100vw - 150px)'
-          : isDesktop
-          ? '800px'
+          ? 'calc(100vw - 150px)'
           : 'calc(100vw - 120px)'
         : 'calc((100vw / 2) - 18px)'}
     )
