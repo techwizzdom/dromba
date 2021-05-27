@@ -13,9 +13,11 @@ import NavigationItems from '../NavigationItems';
 
 import Logodrobmba from '../../assets/images/logodrd.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
+import { ILogoDiving } from '../HeaderDesktop';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;
+  isLogoDiving: ILogoDiving;
 }
 
 const headerMobileCss = css`
@@ -74,7 +76,7 @@ const navigationItemsCss = css`
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
   props: IHeaderMobileProps,
 ) => {
-  const { toggleTheme } = props;
+  const { toggleTheme, isLogoDiving } = props;
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const theme = React.useContext(ThemeContext);
