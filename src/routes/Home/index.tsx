@@ -44,7 +44,9 @@ function Home() {
           {t.home.timelineCardOrbitalWitness.text.pt1}
           <VerticalSpacing height={VerticalSpacingHeight.Small} />
           {t.home.timelineCardOrbitalWitness.text.pt2}
-          <Hyperlink href={t.link.orbitalWitness}>{t.company.orbitalWitness}</Hyperlink>
+          <Hyperlink href={t.link.orbitalWitness}>
+            {t.company.orbitalWitness}
+          </Hyperlink>
           {t.home.timelineCardOrbitalWitness.text.pt3}
         </TimelineCard>
 

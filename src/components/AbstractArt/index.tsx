@@ -174,9 +174,8 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
       return;
     }
 
-    const context: CanvasRenderingContext2D | null = canvasRef.current.getContext(
-      '2d',
-    );
+    const context: CanvasRenderingContext2D | null =
+      canvasRef.current.getContext('2d');
 
     if (context) {
       context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);

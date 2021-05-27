@@ -39,15 +39,15 @@ function Blog() {
                 url={post.url}
               />
             ))}
-        {isLoading
-          ? null
-          : <>
-              <VerticalSpacing height={VerticalSpacingHeight.Medium}/>
-              <H5>{t.blog.findMoreArticles}
+        {isLoading ? null : (
+          <>
+            <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+            <H5>
+              {t.blog.findMoreArticles}
               <Hyperlink href={t.link.medium}>{t.profile.medium}</Hyperlink>
-              </H5>
-            </>
-          }
+            </H5>
+          </>
+        )}
       </IndentContainer>
     </RouteContainer>
   );
