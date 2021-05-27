@@ -181,6 +181,10 @@ function Home() {
 
       <H5>
         {t.home.paragraph.profiles.pt1}
+        <Hyperlink href={t.link.twitter}>{t.profile.twitter}</Hyperlink>
+        {t.home.paragraph.profiles.pt2}
+        <Hyperlink href={t.link.devto}>{t.profile.devto}</Hyperlink>
+        {t.home.paragraph.profiles.pt2}
         <Hyperlink href={t.link.linkedIn}>{t.profile.linkedIn}</Hyperlink>
         {t.home.paragraph.profiles.pt2}
         <Hyperlink href={t.link.github}>{t.profile.github}</Hyperlink>
