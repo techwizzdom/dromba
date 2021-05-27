@@ -86,7 +86,7 @@ function Art(props: IArtProps) {
     setTimeout(() => {
       setIsArtEnabled(true);
       setArtStartTime(Date.now());
-    }, 2100);
+    }, 2200);
     setTimeout(
       () =>
         setIsLogoDiving({
