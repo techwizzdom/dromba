@@ -32,8 +32,8 @@ export const t = {
     dvidovic: 'dvidovic91@gmail.com',
   },
   home: {
-    title: 'Aspiring Frontend developer.',
-    subtitle: 'Based in magical London.',
+    title: 'Aspiring Frontend Engineer.',
+    subtitle: 'Based in London.',
     paragraph: {
       achiever:
         "As a 26 years old guy, there's a lot for me to achieve. Many things I don't know; zero of them I can't learn.",
@@ -169,6 +169,8 @@ export const t = {
     bachelorStudies:
       'https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing',
     sourceCode: 'https://github.com/dromba/dromba',
+    twitter: 'https://twitter.com/domagojvidovicc',
+    devto: 'https://dev.to/domagojvidovic',
     github: 'https://github.com/dromba',
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
@@ -179,6 +181,8 @@ export const t = {
     blog: 'Blog',
   },
   profile: {
+    twitter: 'Twitter',
+    devto: 'DEV.to',
     linkedIn: 'LinkedIn',
     github: 'GitHub',
     medium: 'Medium',
