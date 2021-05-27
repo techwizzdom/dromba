@@ -25,23 +25,19 @@ export const caldera = (
     iyewaye(context, artSpectator, 10, 120, 1, index);
 
     setTimeout(() => {
-      iyewaye(context, artSpectator, 5, 240, 2, index);
+      tideSlide(context, artSpectator, 15, 80, 2, index);
     }, 1200);
-
     setTimeout(() => {
-      iyewaye(context, artSpectator, 20, 50, 3, index);
+      tideSlide(context, artSpectator, 25, 40, 3, index);
     }, 2400);
-
     setTimeout(() => {
-      iyewaye(context, artSpectator, 6, 100, 10, index);
+      tideSlide(context, artSpectator, 6, 100, 10, index);
     }, 3400);
-
     setTimeout(() => {
-      iyewaye(context, artSpectator, 10, 80, 5, index);
+      tideSlide(context, artSpectator, 10, 80, 15, index);
     }, 4000);
-
     setTimeout(() => {
-      iyewaye(context, artSpectator, 40, 25, 5, index);
+      tideSlide(context, artSpectator, 50, 20, 15, index);
     }, 4800);
   } else {
     const randomic = getRandomInt(3);
