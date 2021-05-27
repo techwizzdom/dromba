@@ -13,7 +13,7 @@ export const t = {
   blog: {
     title: 'Sometimes, I like to question the obvious.',
     subtitle: 'And write about it.',
-    findMoreArticles: 'Find way more articles on '
+    findMoreArticles: 'Find way more articles on ',
   },
   company: {
     orbitalWitness: 'Orbital Witness',
@@ -42,8 +42,7 @@ export const t = {
       education:
         "I'm also grateful for my education, which helped me a lot in my career and personal growth.",
       sourceCode: {
-        pt1:
-          "This website was designed and built from scratch completely by myself. Check out the ",
+        pt1: 'This website was designed and built from scratch completely by myself. Check out the ',
         pt2: " if you're interested.",
       },
       jsSkills: {
@@ -67,9 +66,9 @@ export const t = {
       title: 'Orbital Witness',
       subtitle: '(Jan 2021 - present)',
       text: {
-        pt1: 'On a mission to automate due diligence and competely transform Real Estate - the world\'s biggest market.',
+        pt1: "On a mission to automate due diligence and competely transform Real Estate - the world's biggest market.",
         pt2: 'Working in startup means wearing many hats; I just love juggling with many things. ',
-        pt3: ' will be so huge.'
+        pt3: ' will be so huge.',
       },
     },
     timelineCardProductive: {
@@ -77,11 +76,9 @@ export const t = {
       subtitle: '(Aug 2019 - Jan 2021)',
       text: {
         pt1: 'The ambitious agency ',
-        pt2:
-          " didn't like any of available tools for managing their business. That's why they started to build their own product - ",
+        pt2: " didn't like any of available tools for managing their business. That's why they started to build their own product - ",
         pt3: ', which is growing since 2015.',
-        pt4:
-          'Besides the "regular engineering stuff" (Frontend, Backend, Design), working on a product like this is bringing me massive knowledge in the fields of Business Management, Product Ownership, and Sales.',
+        pt4: 'Besides the "regular engineering stuff" (Frontend, Backend, Design), working on a product like this is bringing me massive knowledge in the fields of Business Management, Product Ownership, and Sales.',
       },
     },
     timelineCardInfinum: {
@@ -89,18 +86,15 @@ export const t = {
       subtitle: '(Feb 2019 - Jan 2021)',
       text: {
         pt1: 'Before Productive, I worked with the US-based clients on ',
-        pt2:
-          '; an audio project where Artists can upload their songs divided into basic parts, like voices and instruments.',
-        pt3:
-          'My main tasks were building beautiful user interfaces,discussing the solutions with Design and Backend teams, and communication with the clients.',
+        pt2: '; an audio project where Artists can upload their songs divided into basic parts, like voices and instruments.',
+        pt3: 'My main tasks were building beautiful user interfaces,discussing the solutions with Design and Backend teams, and communication with the clients.',
       },
     },
     timelineCardOptimIT: {
       title: 'OptimIT',
       subtitle: '(Feb 2018 - Feb 2019)',
       text: {
-        pt1:
-          "I've worked as a full-stack developer on E-commerce projects for two big Telecommunication companies in region - ",
+        pt1: "I've worked as a full-stack developer on E-commerce projects for two big Telecommunication companies in region - ",
         pt2: ' and ',
       },
     },
@@ -109,28 +103,23 @@ export const t = {
       subtitle: '(Jan 2017 - Jul 2017)',
       text: {
         pt1: 'Working in a huge corporation like ',
-        pt2:
-          ' brought me unique views of how 20000+ people company can operate.',
-        pt3:
-          'At first, I was working on an internal file sharing platform; later on, I got my hands onto the ',
-        pt4:
-          ', one of the largest banks in Croatia under the Intesa Sanpaolo bank.',
+        pt2: ' brought me unique views of how 20000+ people company can operate.',
+        pt3: 'At first, I was working on an internal file sharing platform; later on, I got my hands onto the ',
+        pt4: ', one of the largest banks in Croatia under the Intesa Sanpaolo bank.',
       },
     },
     timelineCardOptimITInt: {
       title: 'OptimIT Intership',
       subtitle: '(Jul 2015 - Aug 2015)',
       text: {
-        pt1:
-          'This was my first and last internship, where I used to work on a project for creating digital signatures on PDF documents.',
+        pt1: 'This was my first and last internship, where I used to work on a project for creating digital signatures on PDF documents.',
       },
     },
     timelineCardMaster: {
       title: "Master's Degree",
       subtitle: '(Sep 2016 - Jun 2018)',
       text: {
-        pt1:
-          'I graduated at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia, and became a ',
+        pt1: 'I graduated at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia, and became a ',
       },
     },
     timelineCardExchange: {
@@ -138,8 +127,7 @@ export const t = {
       subtitle: '(Sep 2017 - Feb 2018)',
       text: {
         pt1: 'I spent half a year at ',
-        pt2:
-          ', Germany. Strengthening my knowledge and meeting different people from all over the world was one of the best experiences in my life.',
+        pt2: ', Germany. Strengthening my knowledge and meeting different people from all over the world was one of the best experiences in my life.',
       },
     },
     timelineCardBachelor: {
@@ -147,8 +135,7 @@ export const t = {
       subtitle: '(Sep 2013 - Jun 2016)',
       text: {
         pt1: 'I became a ',
-        pt2:
-          ', again at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia.',
+        pt2: ', again at the Faculty of Electrical Engineering and Computing in Zagreb, Croatia.',
       },
     },
   },

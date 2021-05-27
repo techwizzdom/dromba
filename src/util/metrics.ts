@@ -7,7 +7,7 @@ export const initGoogleAnalytics = () => {
 export const trackEvent = (
   category: string,
   action: string,
-  value?: number,
+  value?: number
 ) => {
   ReactGA.event({
     category,

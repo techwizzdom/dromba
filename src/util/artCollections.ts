@@ -16,7 +16,7 @@ export const caldera = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -113,7 +113,7 @@ export const randomArt = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -154,7 +154,7 @@ export const randomArt = (
           artSpectator,
           ar.delay,
           ar.numberOfRepetitons,
-          ar.lineWidth,
+          ar.lineWidth
         );
       } else if (randomCase === 1) {
         tideSlide(
@@ -164,7 +164,7 @@ export const randomArt = (
           ar.numberOfRepetitons,
           ar.lineWidth,
           index,
-          ar.colorIndex,
+          ar.colorIndex
         );
       } else if (randomCase === 2) {
         megaChaos(
@@ -173,7 +173,7 @@ export const randomArt = (
           ar.delay,
           ar.numberOfRepetitons,
           ar.lineWidth,
-          index,
+          index
         );
       } else if (randomCase === 3) {
         chaos(
@@ -182,7 +182,7 @@ export const randomArt = (
           ar.delay,
           ar.numberOfRepetitons,
           ar.lineWidth,
-          index,
+          index
         );
       } else if (randomCase === 4) {
         iyewaye(
@@ -191,7 +191,7 @@ export const randomArt = (
           ar.delay,
           ar.numberOfRepetitons,
           ar.lineWidth,
-          index,
+          index
         );
       } else if (randomCase === 5) {
         slightlyCurved(
@@ -199,7 +199,7 @@ export const randomArt = (
           artSpectator,
           ar.delay,
           ar.numberOfRepetitons,
-          ar.lineWidth,
+          ar.lineWidth
         );
       }
     }, totalDuration);
@@ -224,7 +224,7 @@ export const opressor = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -249,7 +249,7 @@ export const mindField = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -278,7 +278,7 @@ export const ancientAnomalies = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  clearCanvas?: boolean,
+  clearCanvas?: boolean
 ) => {
   if (clearCanvas) {
     context.clearRect(0, 0, viewportWidth, viewportHeight);
@@ -293,7 +293,7 @@ export const r1 = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -336,7 +336,7 @@ export const r2 = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -385,7 +385,7 @@ export const r3 = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -430,7 +430,7 @@ export const afterlife = (
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
   viewportHeight: number,
-  index: number,
+  index: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -470,7 +470,7 @@ export const perpetual = (
   context: CanvasRenderingContext2D,
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
-  viewportHeight: number,
+  viewportHeight: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -482,7 +482,7 @@ export const passingThrough = (
   context: CanvasRenderingContext2D,
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
-  viewportHeight: number,
+  viewportHeight: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -522,7 +522,7 @@ export const weightOfTheLand = (
   context: CanvasRenderingContext2D,
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
-  viewportHeight: number,
+  viewportHeight: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();
@@ -553,7 +553,7 @@ export const daydream = (
   context: CanvasRenderingContext2D,
   artSpectator: Array<IArtSpectatorItem>,
   viewportWidth: number,
-  viewportHeight: number,
+  viewportHeight: number
 ) => {
   context.clearRect(0, 0, viewportWidth, viewportHeight);
   context.beginPath();

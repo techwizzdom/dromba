@@ -21,7 +21,7 @@ export const chaos = (
   repetitions: number,
   lineWidth: number,
   index: number,
-  megaChaos: boolean = false,
+  megaChaos: boolean = false
 ) => {
   setIntervalX(
     () => {
@@ -184,7 +184,7 @@ export const chaos = (
       }
     },
     delay,
-    repetitions,
+    repetitions
   );
 };
 
@@ -194,7 +194,7 @@ export const iyewaye = (
   delay: number,
   repetitions: number,
   lineWidth: number,
-  index: number,
+  index: number
 ) => {
   setIntervalX(
     () => {
@@ -355,7 +355,7 @@ export const iyewaye = (
       }
     },
     delay,
-    repetitions,
+    repetitions
   );
 };
 
@@ -366,7 +366,7 @@ export const tideSlide = (
   repetitions: number,
   lineWidth: number,
   index: number,
-  coordinatesAmplitude: number = 16,
+  coordinatesAmplitude: number = 16
 ) => {
   setIntervalX(
     () => {
@@ -445,7 +445,7 @@ export const tideSlide = (
       }
     },
     delay,
-    repetitions,
+    repetitions
   );
 };
 
@@ -455,7 +455,7 @@ export const megaChaos = (
   delay: number,
   repetitions: number,
   lineWidth: number,
-  index: number,
+  index: number
 ) => {
   chaos(context, artSpectator, delay, repetitions, lineWidth, index, true);
 };
@@ -466,7 +466,7 @@ export const ohThoseLines = (
   delay: number,
   repetitions: number,
   lineWidth: number,
-  colorChaos?: boolean,
+  colorChaos?: boolean
 ) => {
   setIntervalX(
     () => {
@@ -534,7 +534,7 @@ export const ohThoseLines = (
       }
     },
     delay,
-    repetitions,
+    repetitions
   );
 };
 
@@ -543,7 +543,7 @@ export const slightlyCurved = (
   artSpectator: Array<IArtSpectatorItem>,
   delay: number,
   repetitions: number,
-  lineWidth: number,
+  lineWidth: number
 ) => {
   setIntervalX(
     () => {
@@ -675,6 +675,6 @@ export const slightlyCurved = (
       }
     },
     delay,
-    repetitions,
+    repetitions
   );
 };

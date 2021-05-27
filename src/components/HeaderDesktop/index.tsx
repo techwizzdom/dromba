@@ -43,14 +43,18 @@ const logoCss = css`
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
-  props: IHeaderDesktopProps,
+  props: IHeaderDesktopProps
 ) => {
   const { toggleTheme } = props;
 
   return (
     <div className={headerDesktopCss}>
       <Link to={Routes.Home} className={logoLinkCss}>
-        <img src={Logodrobmba} className={logoCss} alt="domagoj-vidovic-head-logo" />
+        <img
+          src={Logodrobmba}
+          className={logoCss}
+          alt="domagoj-vidovic-head-logo"
+        />
       </Link>
       <MainNavigation />
       <ThemeToggle toggleTheme={toggleTheme} />

@@ -60,7 +60,7 @@ function Art() {
             trackEvent(
               'Art Close',
               'Random art closed',
-              Math.round((Date.now() - artStartTime - 1000) / 1000),
+              Math.round((Date.now() - artStartTime - 1000) / 1000)
             );
           }}
         />

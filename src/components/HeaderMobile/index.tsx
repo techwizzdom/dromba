@@ -72,7 +72,7 @@ const navigationItemsCss = css`
 `;
 
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
-  props: IHeaderMobileProps,
+  props: IHeaderMobileProps
 ) => {
   const { toggleTheme } = props;
 

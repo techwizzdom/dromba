@@ -13,7 +13,7 @@ const verticalSpacingCss = (height: VerticalSpacingHeight) => css`
 `;
 
 const VerticalSpacing: React.FC<IVerticalSpacingProps> = (
-  props: IVerticalSpacingProps,
+  props: IVerticalSpacingProps
 ) => {
   const { height } = props;
 

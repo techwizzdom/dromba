@@ -37,7 +37,7 @@ const appCss = (isArtVisible: boolean) => css`
 `;
 
 const MainContainer: React.FC<IMainContainerProps> = (
-  props: IMainContainerProps,
+  props: IMainContainerProps
 ) => {
   const { children } = props;
 
@@ -57,7 +57,7 @@ const MainContainer: React.FC<IMainContainerProps> = (
             trackEvent(
               'Art Close',
               'Abstract art closed',
-              Math.round((Date.now() - artStartTime - 1000) / 1000),
+              Math.round((Date.now() - artStartTime - 1000) / 1000)
             );
           }}
         />

@@ -8,7 +8,7 @@ import { Theme } from './styles';
 
 export default () => {
   const [selectedTheme, setSelectedTheme] = useState<Themes | string>(
-    Themes.Light,
+    Themes.Light
   );
 
   const toggleTheme = () => {
