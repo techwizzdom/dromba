@@ -72,7 +72,7 @@ function Art(props: IArtProps) {
           isJumping: true,
           isOriginalVisible: false,
         }),
-      1000,
+      700,
     );
     setTimeout(
       () =>
@@ -81,7 +81,7 @@ function Art(props: IArtProps) {
           isJumping: false,
           isOriginalVisible: false,
         }),
-      2100,
+      1650,
     );
     setTimeout(
       () =>
@@ -90,12 +90,12 @@ function Art(props: IArtProps) {
           isJumping: false,
           isOriginalVisible: true,
         }),
-      3000,
+      2000,
     );
     setTimeout(() => {
       setIsArtEnabled(true);
       setArtStartTime(Date.now());
-    }, 2250);
+    }, 1700);
   };
 
   return (
