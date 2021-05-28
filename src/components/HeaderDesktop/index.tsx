@@ -78,8 +78,8 @@ const logoAnimatedCss = (
   width: ${isMoving ? (isJumping ? '256px' : '0px') : '40px'};
   height: ${isMoving ? (isJumping ? '256px' : '0px') : '40px'};
 
-  transition: transform 1s ease-in-out, width 0.9s ease-in-out,
-    height 0.9s ease-in-out;
+  transition: transform 0.7s ease-in-out, width 0.6s ease-in-out,
+    height 0.6s ease-in-out;
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
