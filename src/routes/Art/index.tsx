@@ -72,7 +72,7 @@ function Art(props: IArtProps) {
           isJumping: true,
           isOriginalVisible: false,
         }),
-      700,
+      1000,
     );
     setTimeout(
       () =>
@@ -81,8 +81,12 @@ function Art(props: IArtProps) {
           isJumping: false,
           isOriginalVisible: false,
         }),
-      1650,
+      2100,
     );
+    setTimeout(() => {
+      setIsArtEnabled(true);
+      setArtStartTime(Date.now());
+    }, 2200);
     setTimeout(
       () =>
         setIsLogoDiving({
@@ -90,12 +94,8 @@ function Art(props: IArtProps) {
           isJumping: false,
           isOriginalVisible: true,
         }),
-      2000,
+      2500,
     );
-    setTimeout(() => {
-      setIsArtEnabled(true);
-      setArtStartTime(Date.now());
-    }, 1700);
   };
 
   return (
@@ -105,11 +105,6 @@ function Art(props: IArtProps) {
           isRandomArtEnabled={true}
           onClick={() => {
             setIsArtEnabled(false);
-            setIsLogoDiving({
-              isMoving: false,
-              isJumping: false,
-              isOriginalVisible: true,
-            });
             trackEvent(
               'Art Close',
               'Random art closed',
@@ -131,8 +126,6 @@ function Art(props: IArtProps) {
             className={artButtonCss(theme)}
             onClick={() => {
               launchDiving();
-              // setIsArtEnabled(true);
-              // setArtStartTime(Date.now());
             }}
           >
             {t.art.actionButton}

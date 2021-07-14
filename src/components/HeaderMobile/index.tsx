@@ -65,8 +65,8 @@ const logoAnimatedCss = (
   width: ${isMoving ? (isJumping ? '192px' : '0') : '36px'};
   height: ${isMoving ? (isJumping ? '192px' : '0') : '36px'};
 
-  transition: transform 0.7s ease-in-out, width 0.6s ease-in-out,
-    height 0.6s ease-in-out;
+  transition: transform 1s ease-in-out, width 0.9s ease-in-out,
+    height 0.9s ease-in-out;
 `;
 
 const navigationCss = (theme: Theme, isExpanded: boolean) => css`
