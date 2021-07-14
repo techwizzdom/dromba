@@ -11,13 +11,11 @@ import ThemeToggle from '../ThemeToggle';
 import IconButton from '../IconButton';
 import NavigationItems from '../NavigationItems';
 
-import Logodromba from '../../assets/images/logodrd.png';
+import Logodrobmba from '../../assets/images/logodrd.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
-import { ILogoDiving } from '../HeaderDesktop';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;
-  isLogoDiving: ILogoDiving;
 }
 
 const headerMobileCss = css`
@@ -37,36 +35,10 @@ const logoLinkCss = css`
   height: 36px;
 `;
 
-const logoCss = (isVisible: boolean) => css`
-  visibility: ${isVisible ? 'visible' : 'hidden'};
+const logoCss = css`
   width: 36px;
 
   transform: rotate(140deg);
-`;
-
-const logoAnimatedCss = (
-  { isMoving, isJumping }: ILogoDiving,
-  isDesktop: boolean,
-) => css`
-  position: absolute;
-  left: 0;
-  visibility: ${isMoving ? 'visible' : 'hidden'};
-  transform: translateX(
-      ${isMoving
-        ? isJumping
-          ? 'calc(100vw - 150px)'
-          : 'calc(100vw - 120px)'
-        : 'calc((100vw / 2) - 18px)'}
-    )
-    translateY(${isJumping ? '128px' : '-43px'})
-    rotate(${isJumping ? '0deg' : '140deg'});
-
-  min-width: 36px;
-  width: ${isJumping ? '192px' : '36px'};
-  height: ${isJumping ? '192px' : '36px'};
-
-  transition: transform 1s ease-in-out, width 0.9s ease-in-out,
-    height 0.9s ease-in-out;
 `;
 
 const navigationCss = (theme: Theme, isExpanded: boolean) => css`
@@ -102,7 +74,7 @@ const navigationItemsCss = css`
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
   props: IHeaderMobileProps,
 ) => {
-  const { toggleTheme, isLogoDiving } = props;
+  const { toggleTheme } = props;
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const theme = React.useContext(ThemeContext);
@@ -116,11 +88,7 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
       <div className={topBarCss}>
         <IconButton Icon={HamburgerMenu} onClick={() => toggleMenu()} />
         <Link to={Routes.Home} className={logoLinkCss}>
-          <img
-            className={logoCss(isLogoDiving.isOriginalVisible)}
-            src={Logodromba}
-            alt="logo"
-          />
+          <img className={logoCss} src={Logodrobmba} alt="logo" />
         </Link>
         <ThemeToggle toggleTheme={toggleTheme} />
       </div>
@@ -129,11 +97,6 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
           <NavigationItems isMobile={true} onNavigationItemClick={toggleMenu} />
         </div>
       </div>
-      <img
-        className={logoAnimatedCss(isLogoDiving, false)}
-        src={Logodromba}
-        alt="logo-animated"
-      />
     </div>
   );
 };
