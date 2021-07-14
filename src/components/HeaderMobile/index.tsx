@@ -11,7 +11,7 @@ import ThemeToggle from '../ThemeToggle';
 import IconButton from '../IconButton';
 import NavigationItems from '../NavigationItems';
 
-import Logodrobmba from '../../assets/images/logodrd.png';
+import Logodrobmba from '../../assets/images/logodrombahires.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
 
 interface IHeaderMobileProps {
@@ -37,8 +37,6 @@ const logoLinkCss = css`
 
 const logoCss = css`
   width: 36px;
-
-  transform: rotate(140deg);
 `;
 
 const navigationCss = (theme: Theme, isExpanded: boolean) => css`

@@ -9,7 +9,7 @@ import MainNavigation from '../MainNavigation';
 
 import { Media } from '../../enums/Media';
 
-import Logodrobmba from '../../assets/images/logodrd.png';
+import Logodrobmba from '../../assets/images/logodrombahires.png';
 
 interface IHeaderDesktopProps {
   toggleTheme: () => void;
@@ -38,8 +38,6 @@ const logoCss = css`
   min-width: 40px;
   width: 40px;
   height: 40px;
-
-  transform: rotate(140deg);
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
