@@ -15,13 +15,6 @@ import AbstractArt from '../../components/AbstractArt';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 import { t } from '../../translations/t';
-import { Dispatch } from 'react';
-import { SetStateAction } from 'react';
-import { ILogoDiving } from '../../components/HeaderDesktop';
-
-interface IArtProps {
-  setIsLogoDiving: Dispatch<SetStateAction<ILogoDiving>>;
-}
 
 const artCss = (isArtEnabled: boolean) => css`
   display: block;
@@ -51,52 +44,11 @@ const artButtonCss = (theme: Theme) => css`
   }
 `;
 
-function Art(props: IArtProps) {
+function Art() {
   const [isArtEnabled, setIsArtEnabled] = useState<boolean>(false);
   const [artStartTime, setArtStartTime] = useState<number>(0);
 
   const theme = React.useContext(ThemeContext);
-
-  const { setIsLogoDiving } = props;
-
-  const launchDiving = () => {
-    setIsLogoDiving({
-      isMoving: true,
-      isJumping: false,
-      isOriginalVisible: false,
-    });
-    setTimeout(
-      () =>
-        setIsLogoDiving({
-          isMoving: true,
-          isJumping: true,
-          isOriginalVisible: false,
-        }),
-      700,
-    );
-    setTimeout(
-      () =>
-        setIsLogoDiving({
-          isMoving: false,
-          isJumping: false,
-          isOriginalVisible: false,
-        }),
-      1650,
-    );
-    setTimeout(
-      () =>
-        setIsLogoDiving({
-          isMoving: false,
-          isJumping: false,
-          isOriginalVisible: true,
-        }),
-      2000,
-    );
-    setTimeout(() => {
-      setIsArtEnabled(true);
-      setArtStartTime(Date.now());
-    }, 1700);
-  };
 
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
@@ -105,11 +57,6 @@ function Art(props: IArtProps) {
           isRandomArtEnabled={true}
           onClick={() => {
             setIsArtEnabled(false);
-            setIsLogoDiving({
-              isMoving: false,
-              isJumping: false,
-              isOriginalVisible: true,
-            });
             trackEvent(
               'Art Close',
               'Random art closed',
@@ -130,9 +77,8 @@ function Art(props: IArtProps) {
           <button
             className={artButtonCss(theme)}
             onClick={() => {
-              launchDiving();
-              // setIsArtEnabled(true);
-              // setArtStartTime(Date.now());
+              setIsArtEnabled(true);
+              setArtStartTime(Date.now());
             }}
           >
             {t.art.actionButton}
