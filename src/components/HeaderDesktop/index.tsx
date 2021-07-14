@@ -10,7 +10,6 @@ import MainNavigation from '../MainNavigation';
 import { Media } from '../../enums/Media';
 
 import Logodromba from '../../assets/images/logodrd.png';
-import LogodrombaHiRes from '../../assets/images/logodrombahires.png';
 import { useDevice } from '../../hooks/useDevice';
 import { DeviceType } from '../../enums/DeviceType';
 
@@ -65,7 +64,7 @@ const logoAnimatedCss = (
       ${isMoving
         ? isJumping
           ? isDesktop
-            ? '870px'
+            ? '920px'
             : 'calc(100vw - 172px)'
           : isDesktop
           ? '800px'
@@ -73,7 +72,7 @@ const logoAnimatedCss = (
         : '16px'}
     )
     translateY(${isMoving ? (isJumping ? '312px' : '0') : '0'})
-    rotate(${isMoving ? (isJumping ? '-140deg' : '140deg') : '140deg'});
+    rotate(${isJumping ? '0deg' : '140deg'});
 
   min-width: 40px;
   width: ${isJumping ? '256px' : '40px'};
@@ -93,7 +92,7 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
   return (
     <div className={headerDesktopCss}>
       <img
-        src={isLogoDiving.isJumping ? LogodrombaHiRes : Logodromba}
+        src={Logodromba}
         className={logoAnimatedCss(
           isLogoDiving,
           deviceType === DeviceType.Desktop,
