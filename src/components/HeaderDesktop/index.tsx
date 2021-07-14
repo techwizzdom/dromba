@@ -73,10 +73,11 @@ const logoAnimatedCss = (
         : '16px'}
     )
     translateY(${isMoving ? (isJumping ? '312px' : '0') : '0'})
-    rotate(${isMoving ? (isJumping ? '-140deg' : '0deg') : '140deg'});
+    rotate(${isMoving ? (isJumping ? '-140deg' : '140deg') : '140deg'});
 
-  width: ${isMoving ? (isJumping ? '256px' : '0px') : '40px'};
-  height: ${isMoving ? (isJumping ? '256px' : '0px') : '40px'};
+  min-width: 40px;
+  width: ${isJumping ? '256px' : '40px'};
+  height: ${isJumping ? '256px' : '40px'};
 
   transition: transform 1s ease-in-out, width 0.9s ease-in-out,
     height 0.9s ease-in-out;
