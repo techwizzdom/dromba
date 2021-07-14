@@ -178,19 +178,17 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
       canvasRef.current.getContext('2d');
 
     if (context) {
-      setTimeout(() => {
-        context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+      context.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
 
-        draw(context, 0);
-        let index = 1;
+      draw(context, 0);
+      let index = 1;
 
-        const artIntervalId = setInterval(
-          () => draw(context, index++),
-          ArtConfig.duration,
-        );
+      const artIntervalId = setInterval(
+        () => draw(context, index++),
+        ArtConfig.duration,
+      );
 
-        setArtIntervalId(artIntervalId);
-      }, 200);
+      setArtIntervalId(artIntervalId);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
