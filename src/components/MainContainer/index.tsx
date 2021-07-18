@@ -17,11 +17,11 @@ const mainContainerCss = (theme: Theme) => css`
   width: 100%;
   height: 100%;
 
-  background-color: ${theme.backgroundColor};
+  background: ${theme.gradientBackground};
   color: ${theme.textColor};
 
-  transition-property: color, background-color;
-  transition-duration: 0.5s;
+  transition-property: color;
+  transition-duration: 1s;
   transition-timing-function: ease;
 `;
 
