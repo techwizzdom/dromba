@@ -5,6 +5,8 @@ export const dark: Theme = {
   isLight: false,
   isDark: true,
   backgroundColor: colors.baseDark,
+  gradientBackground: colors.gradientDark,
+  gradientMedian: colors.baseDark,
   border: colors.baseLight,
   textColor: colors.baseLight,
   textColorSecondary: colors.vanishingGray,

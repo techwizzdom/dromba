@@ -1,4 +1,5 @@
 import { useFetch } from '../hooks/useFetch';
+import { BlogPostType } from '../enums/BlogPostType';
 
 export const useMediumBlogPosts = () => {
   const { data, isLoading } = useFetch(
@@ -8,13 +9,22 @@ export const useMediumBlogPosts = () => {
   if (!isLoading) {
     return [
       data.items
-        .filter((item: any) => item.categories.length)
+        .filter(
+          (item: any) =>
+            item.categories.length &&
+            !(
+              item.categories.includes('software-engineering') ||
+              item.categories.includes('programming') ||
+              item.categories.includes('software-development')
+            ),
+        )
         .map((item: any) => {
           return {
             title: item.title,
             subtitle: blogPostSubtitle(item),
             thumbnail: blogPostThumbnailSmall(item),
             url: item.link,
+            type: BlogPostType.Medium,
           };
         }),
       isLoading,

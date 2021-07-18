@@ -52,7 +52,7 @@ const navigationCss = (theme: Theme, isExpanded: boolean) => css`
   left: 0;
   z-index: 1;
 
-  background-color: ${isExpanded ? theme.backgroundColor : 'transparent'};
+  background: ${isExpanded ? theme.gradientBackground : 'transparent'};
   overflow: hidden;
 
   transition: height ${isExpanded ? '0.5s' : '0.2s'} ease,
@@ -79,6 +79,12 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
 
   const toggleMenu = () => {
     setIsExpanded(!isExpanded);
+
+    if (isExpanded) {
+      document.body.style.overflow = 'visible';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
   };
 
   return (

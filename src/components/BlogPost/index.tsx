@@ -8,12 +8,14 @@ import { underlineClassNameOnHover } from '../../styles/css/textHover';
 
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
+import { BlogPostType } from '../../enums/BlogPostType';
 
 export interface IBlogPostProps {
   title: string;
   subtitle: string;
   thumbnail: string;
   url: string;
+  type: BlogPostType;
 }
 
 const blogPostCss = css`
@@ -26,11 +28,13 @@ const blogPostCss = css`
   ${underlineClassNameOnHover('.heading')}
 `;
 
-const thumbnailCss = css`
+const thumbnailCss = (type: BlogPostType) => css`
   height: 128px;
   width: 128px;
   min-width: 128px;
   margin-left: 48px;
+
+  object-fit: ${type === BlogPostType.DevTo ? 'cover' : 'unset'};
 `;
 
 const textWrapperCss = css`
@@ -38,7 +42,7 @@ const textWrapperCss = css`
 `;
 
 const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
-  const { title, subtitle, thumbnail, url } = props;
+  const { title, subtitle, thumbnail, url, type } = props;
 
   return (
     <a
@@ -51,7 +55,7 @@ const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
         <H5 isHoverable={true}>{title}</H5>
         <Paragraph size={ParagraphSize.Medium}>{subtitle}</Paragraph>
       </div>
-      <img src={thumbnail} className={thumbnailCss} alt="blog-post" />
+      <img src={thumbnail} className={thumbnailCss(type)} alt="blog-post" />
     </a>
   );
 };
