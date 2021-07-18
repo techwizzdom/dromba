@@ -4,6 +4,8 @@ export const light = {
   isLight: true,
   isDark: false,
   backgroundColor: colors.baseLight,
+  gradientBackground: colors.gradientGreen,
+  gradientMedian: colors.greenMedian,
   border: colors.baseDark,
   textColor: colors.baseDark,
   textColorSecondary: colors.darkMoon,

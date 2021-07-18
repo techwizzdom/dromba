@@ -14,13 +14,13 @@ const initializeBodyBackgroundColor = () => {
 
   if (localTheme) {
     if (localTheme === Themes.Dark) {
-      document.body.style.backgroundColor = dark.backgroundColor;
+      document.body.style.backgroundColor = dark.gradientMedian;
     }
 
     if (localTheme === Themes.Light) {
-      document.body.style.backgroundColor = light.backgroundColor;
+      document.body.style.backgroundColor = light.gradientMedian;
     }
   } else {
-    document.body.style.backgroundColor = light.backgroundColor;
+    document.body.style.backgroundColor = light.gradientMedian;
   }
 };
