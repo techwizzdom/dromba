@@ -44,11 +44,14 @@ function Blog() {
                   type={post.type}
                 />
               ))}
-        {isMediumBlogPostsLoading ? null : (
+        {isMediumBlogPostsLoading || isDevToBlogPostsLoading ? null : (
           <>
             <VerticalSpacing height={VerticalSpacingHeight.Medium} />
             <H5>
               {t.blog.findMoreArticles}
+              <Hyperlink href={t.link.devto}>
+                {t.profile.devto}
+              </Hyperlink> and{' '}
               <Hyperlink href={t.link.medium}>{t.profile.medium}</Hyperlink>
             </H5>
           </>
