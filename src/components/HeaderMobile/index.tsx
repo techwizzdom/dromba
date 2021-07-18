@@ -13,9 +13,14 @@ import NavigationItems from '../NavigationItems';
 
 import Logodrobmba from '../../assets/images/logodrombahires.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
+import { useDevice } from '../../hooks/useDevice';
+
+import { ILogoDiving } from '../HeaderDesktop';
+import { DeviceType } from '../../enums/DeviceType';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;
+  isLogoDiving: ILogoDiving;
 }
 
 const headerMobileCss = css`
@@ -35,8 +40,21 @@ const logoLinkCss = css`
   height: 36px;
 `;
 
-const logoCss = css`
+const logoCss = (
+  { isMoving, isJumping }: ILogoDiving,
+  isDesktop: boolean,
+) => css`
   width: 36px;
+
+  transform: translateX(${isMoving ? (isJumping ? '30vw' : '20vw') : '0'})
+    translateY(${isJumping ? '128px' : '0'})
+    rotate(${isJumping ? '220deg' : '0'});
+  min-width: 36px;
+  width: ${isJumping ? '192px' : '36px'};
+  height: ${isJumping ? '192px' : '36px'};
+
+  transition: transform 0.8s ease-in-out, width 0.9s ease-in-out,
+    height 0.9s ease-in-out;
 `;
 
 const navigationCss = (theme: Theme, isExpanded: boolean) => css`
@@ -72,7 +90,8 @@ const navigationItemsCss = css`
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
   props: IHeaderMobileProps,
 ) => {
-  const { toggleTheme } = props;
+  const { toggleTheme, isLogoDiving } = props;
+  const deviceType = useDevice();
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const theme = React.useContext(ThemeContext);
@@ -92,7 +111,11 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
       <div className={topBarCss}>
         <IconButton Icon={HamburgerMenu} onClick={() => toggleMenu()} />
         <Link to={Routes.Home} className={logoLinkCss}>
-          <img className={logoCss} src={Logodrobmba} alt="logo" />
+          <img
+            className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
+            src={Logodrobmba}
+            alt="logo"
+          />
         </Link>
         <ThemeToggle toggleTheme={toggleTheme} />
       </div>

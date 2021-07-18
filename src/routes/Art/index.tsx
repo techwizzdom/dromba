@@ -15,6 +15,13 @@ import AbstractArt from '../../components/AbstractArt';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 import { t } from '../../translations/t';
+import { Dispatch } from 'react';
+import { SetStateAction } from 'react';
+import { ILogoDiving } from '../../components/HeaderDesktop';
+
+interface IArtProps {
+  setIsLogoDiving: Dispatch<SetStateAction<ILogoDiving>>;
+}
 
 const artCss = (isArtEnabled: boolean) => css`
   display: block;
@@ -44,11 +51,29 @@ const artButtonCss = (theme: Theme) => css`
   }
 `;
 
-function Art() {
+function Art(props: IArtProps) {
+  const { setIsLogoDiving } = props;
+
   const [isArtEnabled, setIsArtEnabled] = useState<boolean>(false);
   const [artStartTime, setArtStartTime] = useState<number>(0);
 
   const theme = React.useContext(ThemeContext);
+
+  const launchDiving = () => {
+    setIsLogoDiving({ isMoving: true, isJumping: false });
+    setTimeout(
+      () => setIsLogoDiving({ isMoving: true, isJumping: true }),
+      1000,
+    );
+    setTimeout(
+      () => setIsLogoDiving({ isMoving: false, isJumping: false }),
+      2000,
+    );
+    setTimeout(() => {
+      setIsArtEnabled(true);
+      setArtStartTime(Date.now());
+    }, 2200);
+  };
 
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
@@ -77,8 +102,7 @@ function Art() {
           <button
             className={artButtonCss(theme)}
             onClick={() => {
-              setIsArtEnabled(true);
-              setArtStartTime(Date.now());
+              launchDiving();
             }}
           >
             {t.art.actionButton}

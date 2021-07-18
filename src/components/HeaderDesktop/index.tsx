@@ -10,9 +10,17 @@ import MainNavigation from '../MainNavigation';
 import { Media } from '../../enums/Media';
 
 import Logodrobmba from '../../assets/images/logodrombahires.png';
+import { DeviceType } from '../../enums/DeviceType';
+import { useDevice } from '../../hooks/useDevice';
 
 interface IHeaderDesktopProps {
   toggleTheme: () => void;
+  isLogoDiving: ILogoDiving;
+}
+
+export interface ILogoDiving {
+  isMoving: boolean;
+  isJumping: boolean;
 }
 
 const headerDesktopCss = css`
@@ -34,23 +42,47 @@ const logoLinkCss = css`
   height: 40px;
 `;
 
-const logoCss = css`
+const logoCss = (
+  { isMoving, isJumping }: ILogoDiving,
+  isDesktop: boolean,
+) => css`
   min-width: 40px;
   width: 40px;
   height: 40px;
+
+  transform: translateX(
+      ${isMoving
+        ? isJumping
+          ? isDesktop
+            ? '840px'
+            : 'calc(100vw - 172px)'
+          : isDesktop
+          ? '720px'
+          : 'calc(100vw - 282px)'
+        : '16px'}
+    )
+    translateY(${isMoving ? (isJumping ? '200px' : '0') : '0'})
+    rotate(${isJumping ? '220deg' : '0'});
+
+  width: ${isJumping ? '256px' : '40px'};
+  height: ${isJumping ? '256px' : '40px'};
+
+  transition: transform 1s ease-in-out, width 0.9s ease-in-out,
+    height 0.9s ease-in-out;
 `;
 
 const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
   props: IHeaderDesktopProps,
 ) => {
-  const { toggleTheme } = props;
+  const { toggleTheme, isLogoDiving } = props;
+  const deviceType = useDevice();
 
   return (
     <div className={headerDesktopCss}>
       <Link to={Routes.Home} className={logoLinkCss}>
         <img
           src={Logodrobmba}
-          className={logoCss}
+          className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
           alt="domagoj-vidovic-head-logo"
         />
       </Link>
