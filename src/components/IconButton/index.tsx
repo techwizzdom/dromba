@@ -8,10 +8,11 @@ import { Theme } from '../../styles';
 interface IIconButtonProps {
   Icon: FunctionComponent<React.SVGProps<SVGSVGElement>>;
   onClick: () => void;
+  customPadding?: string;
 }
 
-const iconButtonCss = css`
-  padding: 8px;
+const iconButtonCss = (padding?: string) => css`
+  padding: ${padding || '8px'};
 
   background-color: transparent;
 
@@ -26,12 +27,12 @@ const iconCss = (theme: Theme) => css`
 `;
 
 const IconButton: React.FC<IIconButtonProps> = (props: IIconButtonProps) => {
-  const { Icon, onClick } = props;
+  const { Icon, onClick, customPadding } = props;
 
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div className={iconButtonCss} onClick={onClick}>
+    <div className={iconButtonCss(customPadding)} onClick={onClick}>
       <Icon className={iconCss(theme)} />
     </div>
   );
