@@ -31,12 +31,12 @@ const headerMobileCss = css`
 
 const topBarCss = css`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
 `;
 
 const logoLinkCss = css`
-  margin-bottom: 4px;
+  margin: 4px 0;
   height: 36px;
 `;
 
@@ -109,7 +109,11 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
   return (
     <div className={headerMobileCss}>
       <div className={topBarCss}>
-        <IconButton Icon={HamburgerMenu} onClick={() => toggleMenu()} />
+        <IconButton
+          Icon={HamburgerMenu}
+          onClick={() => toggleMenu()}
+          customPadding="8px 24px 24px 8px"
+        />
         <Link to={Routes.Home} className={logoLinkCss}>
           <img
             className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
