@@ -129,9 +129,11 @@ const AbstractArt: React.FC<IAbstractArtProps> = (props: IAbstractArtProps) => {
   const deviceType = useDevice();
 
   const startFading = () => {
-    setIsVisible(false);
-    clearInterval(artIntervalId);
-    setTimeout(() => onClick(), 2000);
+    if (this.isEnabled) {
+      setIsVisible(false);
+      clearInterval(artIntervalId);
+      setTimeout(() => onClick(), 2000);
+    }
   };
 
   const draw = (context: CanvasRenderingContext2D, index: number) => {
