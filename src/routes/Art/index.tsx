@@ -71,6 +71,7 @@ function Art(props: IArtProps) {
     );
     setTimeout(() => {
       setIsArtEnabled(true);
+      document.querySelector('#root')?.classList.add('is-art-active');
       setArtStartTime(Date.now());
     }, 2200);
   };
@@ -82,6 +83,7 @@ function Art(props: IArtProps) {
           isRandomArtEnabled={true}
           onClick={() => {
             setIsArtEnabled(false);
+            document.querySelector('#root')?.classList.remove('is-art-active');
             trackEvent(
               'Art Close',
               'Random art closed',

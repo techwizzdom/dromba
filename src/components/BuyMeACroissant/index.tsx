@@ -38,6 +38,7 @@ const BuyMeACroissant: React.FC = () => {
 
   return (
     <a
+      id="buy-me-a-croissant"
       className={buyMeACroissantCss(theme)}
       href={t.link.buyMeACroissant}
       target="_blank"
