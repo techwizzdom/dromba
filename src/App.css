@@ -7,6 +7,10 @@
   pointer-events: none;
 }
 
+#root.is-art-active #buy-me-a-croissant {
+  visibility: hidden;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
