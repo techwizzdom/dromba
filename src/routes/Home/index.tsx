@@ -187,6 +187,8 @@ function Home() {
         {t.home.paragraph.profiles.pt2}
         <Hyperlink href={t.link.devto}>{t.profile.devto}</Hyperlink>
         {t.home.paragraph.profiles.pt2}
+        <Hyperlink href={t.link.tiktok}>{t.profile.tiktok}</Hyperlink>
+        {t.home.paragraph.profiles.pt2}
         <Hyperlink href={t.link.linkedIn}>{t.profile.linkedIn}</Hyperlink>
         {t.home.paragraph.profiles.pt2}
         <Hyperlink href={t.link.github}>{t.profile.github}</Hyperlink>

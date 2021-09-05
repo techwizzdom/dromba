@@ -11,8 +11,7 @@ export const t = {
     actionButton: 'Dive in',
   },
   blog: {
-    title: 'Sometimes, I like to question the obvious.',
-    subtitle: 'And write about it.',
+    title: 'Master Web Development With Me.',
     findMoreArticles: 'Find way more articles on ',
   },
   company: {
@@ -32,8 +31,8 @@ export const t = {
     dvidovic: 'dvidovic91@gmail.com',
   },
   home: {
-    title: 'Aspiring Frontend Engineer.',
-    subtitle: 'Based in London.',
+    title: 'Frontend Engineer.',
+    subtitle: 'In a London Tech-Startup.',
     paragraph: {
       achiever:
         "As a 26 years old guy, there's a lot for me to achieve. Many things I don't know; zero of them I can't learn.",
@@ -161,6 +160,8 @@ export const t = {
     github: 'https://github.com/dromba',
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
+    buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
+    tiktok: 'https://www.tiktok.com/@javascript_wizz',
   },
   navigation: {
     home: 'Who Am I?',
@@ -173,6 +174,7 @@ export const t = {
     linkedIn: 'LinkedIn',
     github: 'GitHub',
     medium: 'Medium',
+    tiktok: 'TikTok',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',

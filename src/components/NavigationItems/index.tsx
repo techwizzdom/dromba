@@ -67,6 +67,14 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         {t.navigation.blog}
       </Link>
+      <a
+        className={navigationItemCss(theme, isMobile, false)}
+        href={t.link.buyMeACroissant}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Buy Me a Croissant
+      </a>
     </>
   );
 };

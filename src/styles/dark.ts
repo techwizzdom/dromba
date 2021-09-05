@@ -18,4 +18,5 @@ export const dark: Theme = {
   svgFill: {
     primary: colors.baseLight,
   },
+  buyMeACroissantBackgroundColor: colors.radioactiveSun,
 };
