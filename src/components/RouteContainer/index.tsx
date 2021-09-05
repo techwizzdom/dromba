@@ -2,6 +2,7 @@ import React from 'react';
 import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
+import BuyMeACroissant from '../BuyMeACroissant';
 
 interface IRouteContainerProps {
   children: React.ReactNode;
@@ -36,6 +37,7 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
   return (
     <div className={routeContainerCss(isNormalizeHeaderHeightEnabled)}>
       {children}
+      <BuyMeACroissant />
     </div>
   );
 };
