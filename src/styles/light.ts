@@ -17,4 +17,5 @@ export const light = {
   svgFill: {
     primary: colors.baseDark,
   },
+  buyMeACroissantBackgroundColor: colors.radioactiveSun,
 };

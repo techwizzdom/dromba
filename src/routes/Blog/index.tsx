@@ -25,7 +25,6 @@ function Blog() {
   return (
     <RouteContainer>
       <H1>{t.blog.title}</H1>
-      <H1>{t.blog.subtitle}</H1>
 
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
