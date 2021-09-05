@@ -161,6 +161,7 @@ export const t = {
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
     buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
+    tiktok: 'https://www.tiktok.com/@javascript_wizz',
   },
   navigation: {
     home: 'Who Am I?',
@@ -173,6 +174,7 @@ export const t = {
     linkedIn: 'LinkedIn',
     github: 'GitHub',
     medium: 'Medium',
+    tiktok: 'TikTok',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',
