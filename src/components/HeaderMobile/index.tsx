@@ -44,14 +44,12 @@ const logoCss = (
   { isMoving, isJumping }: ILogoDiving,
   isDesktop: boolean,
 ) => css`
-  width: 36px;
-
   transform: translateX(${isMoving ? (isJumping ? '30vw' : '20vw') : '0'})
     translateY(${isJumping ? '128px' : '0'})
     rotate(${isJumping ? '220deg' : '0'});
-  min-width: 36px;
-  width: ${isJumping ? '192px' : '36px'};
-  height: ${isJumping ? '192px' : '36px'};
+
+  width: ${isMoving ? (isJumping ? '192px' : '0') : '36px'};
+  height: ${isMoving ? (isJumping ? '192px' : '0') : '36px'};
 
   transition: transform 0.8s ease-in-out, width 0.9s ease-in-out,
     height 0.9s ease-in-out;

@@ -46,10 +46,6 @@ const logoCss = (
   { isMoving, isJumping }: ILogoDiving,
   isDesktop: boolean,
 ) => css`
-  min-width: 40px;
-  width: 40px;
-  height: 40px;
-
   transform: translateX(
       ${isMoving
         ? isJumping
@@ -64,8 +60,8 @@ const logoCss = (
     translateY(${isMoving ? (isJumping ? '200px' : '0') : '0'})
     rotate(${isJumping ? '220deg' : '0'});
 
-  width: ${isJumping ? '256px' : '40px'};
-  height: ${isJumping ? '256px' : '40px'};
+  width: ${isMoving ? (isJumping ? '256px' : '0') : '40px'};
+  height: ${isMoving ? (isJumping ? '256px' : '0') : '40px'};
 
   transition: transform 1s ease-in-out, width 0.9s ease-in-out,
     height 0.9s ease-in-out;
