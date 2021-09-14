@@ -15,6 +15,7 @@ import Art from './routes/Art';
 
 import { init } from './util/init';
 import { ILogoDiving } from './components/HeaderDesktop';
+import Me from './routes/Me';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -32,7 +33,8 @@ function App() {
         <MainContainer>
           <Header toggleTheme={toggleTheme} isLogoDiving={isLogoDiving} />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={Me} />
+            <Route path="/about" component={Home} />
             <Route path="/blog" component={Blog} />
             <Route
               path="/art"

@@ -112,7 +112,7 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
           onClick={() => toggleMenu()}
           customPadding="8px 24px 24px 8px"
         />
-        <Link to={Routes.Home} className={logoLinkCss}>
+        <Link to={Routes.Me} className={logoLinkCss}>
           <img
             className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
             src={Logodrobmba}
