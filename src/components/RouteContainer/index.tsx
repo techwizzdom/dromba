@@ -7,10 +7,14 @@ import BuyMeACroissant from '../BuyMeACroissant';
 interface IRouteContainerProps {
   children: React.ReactNode;
   isNormalizeHeaderHeightEnabled?: boolean;
+  isPureCenteringEnabled?: boolean;
 }
 
-const routeContainerCss = (isNormalizeHeaderHeightEnabled: boolean) => css`
-  padding: 64px 16px 32px 192px;
+const routeContainerCss = (
+  isNormalizeHeaderHeightEnabled: boolean,
+  isPureCenteringEnabled: boolean,
+) => css`
+  padding: 64px ${isPureCenteringEnabled ? '0 0' : '16px 32px 192px'};
   margin: 0 auto;
 
   max-width: 1072px;
@@ -32,10 +36,19 @@ const routeContainerCss = (isNormalizeHeaderHeightEnabled: boolean) => css`
 const RouteContainer: React.FC<IRouteContainerProps> = (
   props: IRouteContainerProps,
 ) => {
-  const { isNormalizeHeaderHeightEnabled = false, children } = props;
+  const {
+    isNormalizeHeaderHeightEnabled = false,
+    isPureCenteringEnabled = false,
+    children,
+  } = props;
 
   return (
-    <div className={routeContainerCss(isNormalizeHeaderHeightEnabled)}>
+    <div
+      className={routeContainerCss(
+        isNormalizeHeaderHeightEnabled,
+        isPureCenteringEnabled,
+      )}
+    >
       {children}
       <BuyMeACroissant />
     </div>

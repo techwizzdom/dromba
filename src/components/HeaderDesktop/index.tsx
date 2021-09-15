@@ -75,7 +75,7 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
 
   return (
     <div className={headerDesktopCss}>
-      <Link to={Routes.Home} className={logoLinkCss}>
+      <Link to={Routes.Me} className={logoLinkCss}>
         <img
           src={Logodrobmba}
           className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
