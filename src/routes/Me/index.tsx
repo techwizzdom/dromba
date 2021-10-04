@@ -66,6 +66,15 @@ const indexDownCss = css`
     max-width: 32px;
     max-height: 32px;
   }
+
+  @media (max-width: 335px) {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+  }
 `;
 
 const planWrapperCss = css`
@@ -74,6 +83,12 @@ const planWrapperCss = css`
 
   h4 {
     margin: 0 4px 0 12px;
+  }
+
+  @media (max-width: 335px) {
+    h4 {
+      font-size: 20px;
+    }
   }
 `;
 
