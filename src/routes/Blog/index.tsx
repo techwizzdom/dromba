@@ -13,6 +13,7 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 import { t } from '../../translations/t';
 import { useDevToBlogPosts } from '../../services/useDevToBlogPosts';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 function Blog() {
   const [mediumBlogPosts, isMediumBlogPostsLoading] = useMediumBlogPosts();
@@ -29,20 +30,22 @@ function Blog() {
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
       <IndentContainer>
-        {isMediumBlogPostsLoading || isDevToBlogPostsLoading
-          ? 'Loading...'
-          : devToBlogPosts
-              .concat(mediumBlogPosts)
-              .map((post: IBlogPostProps, i: number) => (
-                <BlogPost
-                  key={i}
-                  title={post.title}
-                  subtitle={post.subtitle}
-                  thumbnail={post.thumbnail}
-                  url={post.url}
-                  type={post.type}
-                />
-              ))}
+        {isMediumBlogPostsLoading || isDevToBlogPostsLoading ? (
+          <LoadingSpinner />
+        ) : (
+          devToBlogPosts
+            .concat(mediumBlogPosts)
+            .map((post: IBlogPostProps, i: number) => (
+              <BlogPost
+                key={i}
+                title={post.title}
+                subtitle={post.subtitle}
+                thumbnail={post.thumbnail}
+                url={post.url}
+                type={post.type}
+              />
+            ))
+        )}
         {isMediumBlogPostsLoading || isDevToBlogPostsLoading ? null : (
           <>
             <VerticalSpacing height={VerticalSpacingHeight.Medium} />
