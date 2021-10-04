@@ -8,6 +8,7 @@ interface IRouteContainerProps {
   children: React.ReactNode;
   isNormalizeHeaderHeightEnabled?: boolean;
   isPureCenteringEnabled?: boolean;
+  onClick?: () => void;
 }
 
 const routeContainerCss = (
@@ -39,6 +40,7 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
   const {
     isNormalizeHeaderHeightEnabled = false,
     isPureCenteringEnabled = false,
+    onClick,
     children,
   } = props;
 
@@ -48,6 +50,7 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
         isNormalizeHeaderHeightEnabled,
         isPureCenteringEnabled,
       )}
+      onClick={() => onClick && onClick()}
     >
       {children}
       <BuyMeACroissant />
