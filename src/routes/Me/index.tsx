@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import RouteContainer from '../../components/RouteContainer';
 import logoMe from '../../assets/images/me.jpg';
@@ -15,6 +15,7 @@ import { Media } from '../../enums/Media';
 import IndexDown from '../../assets/images/index-down.png';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
+import Hyperlink from '../../components/Hyperlink';
 
 const meWrapper = css`
   display: flex;
@@ -76,6 +77,22 @@ const planWrapperCss = css`
   }
 `;
 
+const privacyPolicyCss = (isPolicyOpen: boolean) => css`
+  display: ${isPolicyOpen ? 'block' : 'none'};
+  width: 300px;
+  position: fixed;
+  bottom: 32px;
+  left: calc(50vw - 150px);
+  padding: 12px 16px;
+  font-size: 12px;
+  text-align: center;
+  --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
+    var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+  border: 2px solid #000000a6;
+  border-radius: 4px;
+`;
+
 const profilesCss = (theme: Theme) => css`
   display: flex;
   align-items: center;
@@ -122,9 +139,17 @@ const linkedInWrapperCss = css`
 
 function Me() {
   const theme = React.useContext(ThemeContext);
+  const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(
+    localStorage.getItem('isPolicyViewedDrommer') === 'true' ? false : true,
+  );
+
+  const closePolicy = () => {
+    localStorage.setItem('isPolicyViewedDrommer', 'true');
+    setIsPolicyOpen(false);
+  };
 
   return (
-    <RouteContainer isPureCenteringEnabled={true}>
+    <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <div className={meWrapper}>
         <div className={meCss}>
           <img className={logoMeCss} src={logoMe} alt="logo-me" />
@@ -145,7 +170,7 @@ function Me() {
           rel="noopener noreferrer"
           href={t.link.zeroKnowledgeTo80k}
         >
-          0 knowledge to $80k/year in 6 months
+          All The Resources You Need To Become A Frontend Engineer
         </a>
         <div className={profilesCss(theme)}>
           <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
@@ -169,6 +194,13 @@ function Me() {
             <LinkedIn />
           </a>
         </div>
+      </div>
+      <div className={privacyPolicyCss(isPolicyOpen)}>
+        To improve your experience even more, I use cookies for analytics. Find
+        out more{' '}
+        <Hyperlink href="https://www.freeprivacypolicy.com/live/00b087ad-a4a1-4885-8265-15beceb176df">
+          here
+        </Hyperlink>
       </div>
     </RouteContainer>
   );
