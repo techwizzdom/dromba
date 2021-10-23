@@ -14,6 +14,9 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { t } from '../../translations/t';
 import { useDevToBlogPosts } from '../../services/useDevToBlogPosts';
 import LoadingSpinner from '../../components/LoadingSpinner';
+import { Link } from 'react-router-dom';
+import { Posts } from '../../posts/posts';
+import { BlogPostType } from '../../enums/BlogPostType';
 
 function Blog() {
   const [mediumBlogPosts, isMediumBlogPostsLoading] = useMediumBlogPosts();
@@ -22,6 +25,13 @@ function Blog() {
   useEffect(() => {
     trackEvent('Blog', 'Open blog page');
   }, []);
+
+  const postss = Posts.map((post) => {
+    return {
+      ...post,
+      markdown: require(`../../blog-posts/${post.path}.md`),
+    };
+  });
 
   return (
     <RouteContainer>
@@ -33,18 +43,30 @@ function Blog() {
         {isMediumBlogPostsLoading || isDevToBlogPostsLoading ? (
           <LoadingSpinner />
         ) : (
-          devToBlogPosts
-            .concat(mediumBlogPosts)
-            .map((post: IBlogPostProps, i: number) => (
+          // devToBlogPosts
+          //   .concat(mediumBlogPosts)
+          //   .map((post: IBlogPostProps, i: number) => (
+          //     <Link to="post/123" key={i}>
+          //       <BlogPost
+          //         title={post.title}
+          //         subtitle={post.subtitle}
+          //         thumbnail={post.thumbnail}
+          //         url={post.url}
+          //         type={post.type}
+          //       />
+          //     </Link>
+          //   ))
+          postss.map((post, i) => (
+            <Link to={`post/${post.path}`} key={i}>
               <BlogPost
-                key={i}
                 title={post.title}
                 subtitle={post.subtitle}
-                thumbnail={post.thumbnail}
-                url={post.url}
-                type={post.type}
+                thumbnail={'gdfgfd'}
+                url={'fgdfgfd'}
+                type={BlogPostType.DevTo}
               />
-            ))
+            </Link>
+          ))
         )}
         {isMediumBlogPostsLoading || isDevToBlogPostsLoading ? null : (
           <>

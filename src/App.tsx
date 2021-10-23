@@ -37,7 +37,7 @@ function App() {
             <Route exact path="/" component={Me} />
             <Route path="/about" component={Home} />
             <Route path="/blog" component={Blog} />
-            <Route path="/post" component={Post} />
+            <Route path="/post/:id" component={Post} />
             <Route
               path="/art"
               render={(props) => (

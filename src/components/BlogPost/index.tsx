@@ -47,7 +47,7 @@ const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
   return (
     <a
       className={blogPostCss}
-      href={url}
+      // href={url}
       target="_blank"
       rel="noopener noreferrer"
     >
