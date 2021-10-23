@@ -1,3 +1,7 @@
+# title
+
+## subtitile
+
 I remember my first encounter with responsive design. Before any investigation, it seemed incredibly complex.
 
 The same app runs and behaves differently based on so many types of user devices?
@@ -43,12 +47,12 @@ That's why I'll focus on Mobile-First Design in this article.
 
 We'll keep this simple. Let's say that you have a number of items you want to display on your feed. It will look something like this:
 
-![Mobile design](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6wb86405qvl0ah46jo30.png)
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6wb86405qvl0ah46jo30.png" />
 
-<figcaption>Mobile design</figcaption>
 We have two components here:
-1. Parent component, `container` 
-2. Child components, `items` 
+
+1. Parent component, `container`
+2. Child components, `items`
 
 If we ignore the CSS code for everything except the layout, it will look something like this:
 

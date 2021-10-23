@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import marked from 'marked';
-import DOMPurify from 'dompurify';
-// import hljs from 'highlight.js';
-import Markdown from 'markdown-to-jsx';
-import ReactHtmlParser from 'react-html-parser';
-// import Prism from 'prismjs';
+import Prism from 'prismjs';
+import RouteContainer from '../components/RouteContainer';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -17,7 +14,6 @@ function Post() {
     .then((text) => {
       setPost(text);
     });
-  const hljs = require('highlight.js');
   require('prismjs/components/prism-markup-templating');
   require('prismjs/components/prism-css');
   require('prismjs/components/prism-php');
@@ -31,21 +27,11 @@ function Post() {
   marked.setOptions({
     renderer: new marked.Renderer(),
     highlight: function (code, lang) {
-      // const hljs = require('highlight.js');
-      // const language = hljs.getLanguage(lang) ? lang : 'plaintext';
-      // return hljs.highlight(code, { language }).value;
-      // Prism.hooks.add('before-highlight', function (env) {
-      //   env.code = env.element.textContent || '';
-      // });
-      window.Prism.hooks.add('before-highlight', function (env) {
+      Prism.hooks.add('before-highlight', function (env) {
         env.code = (env.element as HTMLElement).innerText;
       });
-      if (window.Prism.languages[lang]) {
-        const x = window.Prism.highlight(
-          code,
-          window.Prism.languages[lang],
-          lang,
-        );
+      if (Prism.languages[lang]) {
+        const x = Prism.highlight(code, Prism.languages[lang], lang);
         var langClass = 'language-' + lang;
         return `<pre class="${langClass}"><code class="${langClass}">${x}</code></pre>`;
       } else {
@@ -55,11 +41,9 @@ function Post() {
     breaks: true,
   });
   return (
-    <div>
-      <div dangerouslySetInnerHTML={{ __html: marked(post) }} />
-      {/* {ReactHtmlParser(marked(post))} */}
-      {/* <Markdown children={post} /> */}
-    </div>
+    <RouteContainer>
+      <article dangerouslySetInnerHTML={{ __html: marked(post) }} />
+    </RouteContainer>
   );
 }
 

@@ -2,6 +2,40 @@ html {
   min-height: 100%;
 }
 
+code.language-css,
+code.language-javascript,
+code.language-html {
+  padding: 0 !important;
+}
+
+code,
+pre {
+  border-radius: 4px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+article p {
+  margin-bottom: 16px;
+}
+
+article img {
+  max-width: 100%;
+  max-height: calc(50vh + 180px);
+  align-self: center;
+}
+
+article hr {
+  border: 1px solid #181818;
+  margin: 16px 0 32px;
+  border-radius: 4px;
+  width: 128px;
+  align-self: center;
+}
+
 body {
   height: 100vh;
   font-family: 'Montserrat', monospace, -apple-system, BlinkMacSystemFont,
