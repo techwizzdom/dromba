@@ -15,25 +15,25 @@ import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 
 interface IThisIsMeProps {
-  isPlanVisible?: boolean;
+  isMainScreenMode?: boolean;
 }
 
 function ThisIsMe(props: IThisIsMeProps) {
   const theme = React.useContext(ThemeContext);
-  const { isPlanVisible = false } = props;
+  const { isMainScreenMode = false } = props;
   return (
     <div className={meWrapper}>
       <div className={meCss}>
         <img className={logoMeCss} src={logoMe} alt="logo-me" />
         <div>
-          {isPlanVisible && <H3>Hey, I'm Dom.</H3>}
-          <p className={pCss(isPlanVisible)}>
-            {isPlanVisible ? 'A ' : 'Dom is a '}Frontend Engineer and Mentor.
+          {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
+          <p className={pCss(isMainScreenMode)}>
+            {isMainScreenMode ? 'A ' : 'Dom is a '}Frontend Engineer and Mentor.
           </p>
-          <p className={pCss(isPlanVisible)}>In a London tech startup.</p>
+          <p className={pCss(isMainScreenMode)}>In a London tech startup.</p>
         </div>
       </div>
-      {isPlanVisible && (
+      {isMainScreenMode && (
         <>
           <div className={planWrapperCss}>
             <img src={IndexDown} className={indexDownCss} alt="index-down" />
@@ -50,7 +50,7 @@ function ThisIsMe(props: IThisIsMeProps) {
           </a>
         </>
       )}
-      <div className={profilesCss(theme, isPlanVisible)}>
+      <div className={profilesCss(theme, isMainScreenMode)}>
         <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
           <DevTo className={devToIconCss} />
         </a>
@@ -76,11 +76,11 @@ function ThisIsMe(props: IThisIsMeProps) {
   );
 }
 
-const profilesCss = (theme: Theme, isPlanVisible: boolean) => css`
+const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: ${isPlanVisible ? '64px' : '0'};
+  margin-top: ${isMainScreenMode ? '64px' : '0'};
 
   svg {
     margin: 0 12px;
@@ -195,8 +195,8 @@ const planWrapperCss = css`
   }
 `;
 
-const pCss = (isPlanVisible: boolean) => css`
-  font-size: ${isPlanVisible ? '16px' : '18px'};
+const pCss = (isMainScreenMode: boolean) => css`
+  font-size: ${isMainScreenMode ? '16px' : '18px'};
 `;
 
 export default ThisIsMe;

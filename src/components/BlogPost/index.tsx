@@ -8,6 +8,7 @@ import { underlineClassNameOnHover } from '../../styles/css/textHover';
 
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
+import { MediaBreakpoints } from '../../enums/MediaBreakpoints';
 
 export interface IBlogPostProps {
   title: string;
@@ -46,12 +47,16 @@ const wrapperCss = css`
 const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
   const { title, subtitle, thumbnail, tags } = props;
 
+  const isMobile = window.innerWidth < MediaBreakpoints.Mobile;
+
   return (
     <div className={blogPostCss}>
       <div className={textWrapperCss}>
         <div className={wrapperCss}>
           <H5 isHoverable={true}>{title}</H5>
-          <Paragraph size={ParagraphSize.Medium}>{subtitle}</Paragraph>
+          {!isMobile && (
+            <Paragraph size={ParagraphSize.Medium}>{subtitle}</Paragraph>
+          )}
         </div>
         <p>{tags.join(', ')}</p>
       </div>
