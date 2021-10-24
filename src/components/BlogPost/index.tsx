@@ -8,7 +8,6 @@ import { underlineClassNameOnHover } from '../../styles/css/textHover';
 
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
-import { BlogPostType } from '../../enums/BlogPostType';
 
 export interface IBlogPostProps {
   title: string;
