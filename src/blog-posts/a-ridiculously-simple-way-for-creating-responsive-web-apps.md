@@ -1,7 +1,3 @@
-# title
-
-## subtitile
-
 I remember my first encounter with responsive design. Before any investigation, it seemed incredibly complex.
 
 The same app runs and behaves differently based on so many types of user devices?
@@ -48,6 +44,8 @@ That's why I'll focus on Mobile-First Design in this article.
 We'll keep this simple. Let's say that you have a number of items you want to display on your feed. It will look something like this:
 
 <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6wb86405qvl0ah46jo30.png" />
+
+<figcaption>Mobile design</figcaption>
 
 We have two components here:
 
@@ -98,7 +96,7 @@ Just joking, this is no complex magic. As I've said, just a bunch of if statemen
 
 We're trying to spread the items, keeping 3 of them in each row:
 
-![Desktop design](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6qtz8vetlsnyj2ttfftl.png)
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6qtz8vetlsnyj2ttfftl.png" />
 
 <figcaption>Desktop design</figcaption>
 
