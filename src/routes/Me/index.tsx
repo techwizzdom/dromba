@@ -16,6 +16,7 @@ import IndexDown from '../../assets/images/index-down.png';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
 import Hyperlink from '../../components/Hyperlink';
+import Helmetiser from '../../components/core/Helmetiser';
 
 const meWrapper = css`
   display: flex;
@@ -165,6 +166,10 @@ function Me() {
 
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
+      <Helmetiser
+        title="Personal Website And Blog"
+        description="Master Web Dev With Me."
+      />
       <div className={meWrapper}>
         <div className={meCss}>
           <img className={logoMeCss} src={logoMe} alt="logo-me" />

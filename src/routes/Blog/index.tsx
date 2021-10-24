@@ -12,22 +12,22 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { t } from '../../translations/t';
 import { Link } from 'react-router-dom';
 import { Posts } from '../../blog-posts/posts';
+import Helmetiser from '../../components/core/Helmetiser';
 
 function Blog() {
   useEffect(() => {
     trackEvent('Blog', 'Open blog page');
   }, []);
 
-  const posts = Posts.reverse();
-
   return (
     <RouteContainer>
+      <Helmetiser title="Blog" description="Master Web Dev With Me." />
       <H1>{t.blog.title}</H1>
 
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
 
       <IndentContainer>
-        {posts.map((post, i) => (
+        {Posts.map((post, i) => (
           <Link to={`post/${post.path}`} key={i}>
             <BlogPost
               title={post.title}

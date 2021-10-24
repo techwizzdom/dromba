@@ -18,6 +18,7 @@ import { t } from '../../translations/t';
 import { Dispatch } from 'react';
 import { SetStateAction } from 'react';
 import { ILogoDiving } from '../../components/HeaderDesktop';
+import Helmetiser from '../../components/core/Helmetiser';
 
 interface IArtProps {
   setIsLogoDiving: Dispatch<SetStateAction<ILogoDiving>>;
@@ -78,6 +79,7 @@ function Art(props: IArtProps) {
 
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
+      <Helmetiser title="Who Art You?" description="Master Web Dev With Me." />
       {isArtEnabled ? (
         <AbstractArt
           isRandomArtEnabled={true}

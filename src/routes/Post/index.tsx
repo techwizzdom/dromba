@@ -8,6 +8,8 @@ import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
 import { Media } from '../../enums/Media';
 import { trackEvent } from '../../util/metrics';
+import { Helmet } from 'react-helmet';
+import Helmetiser from '../../components/core/Helmetiser';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -24,7 +26,6 @@ function Post() {
   const poster = require(`../../blog-posts/${postPath}.md`);
   const { title, subtitle, img, path } =
     posts.find((post) => post.path === postPath) || {};
-  debugger;
 
   const theme = React.useContext(ThemeContext);
 
@@ -68,6 +69,7 @@ function Post() {
   });
   return (
     <RouteContainer>
+      <Helmetiser title={title} description={subtitle} />
       <article>
         <h1 className={titleCss}>{title}</h1>
         <h2 className={subtitleCss}>{subtitle}</h2>
