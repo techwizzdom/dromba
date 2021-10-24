@@ -161,7 +161,7 @@ Ideally, we want to split modules into different folders. Within those modules, 
 
 <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jumfdh6gb3wedgtg8rrk.png" alt="The desired folder structure" />
 
-<figcaption>The desired folder structure</figcaption>
+<figcaption class="img">The desired folder structure</figcaption>
 <br>
 
 Folder `store` will be created in the root folder of our project.

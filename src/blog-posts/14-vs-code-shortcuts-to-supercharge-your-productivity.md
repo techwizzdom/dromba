@@ -41,7 +41,7 @@ This one is quite uncommon, but it's extremely powerful! First, you need to sele
 Then, `cmd shift + L` (Mac) / `crtl shift + L` (Windows) select all occurrences of that text. It's so useful for situations like renaming a variable across the file:
 
 <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1npwkhc4wih2nlfxzosb.gif">
-<figcaption>Magic</figcaption>
+<figcaption class="img">Magic</figcaption>
 
 Imagine manually renaming a variable repeated 30 times in the file. Nightmare.
 

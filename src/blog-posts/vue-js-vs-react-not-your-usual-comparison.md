@@ -24,7 +24,9 @@ Now, after tons of experience in frontend development and frameworks like Vue.js
 
 We’re building a super simple app in both React and Vue.js today. It looks something like this:
 
-![our-really-complex-app](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d2ki894xuns0kr702ttt.gif)
+<img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d2ki894xuns0kr702ttt.gif" alt="our-really-complex-app"/>
+
+<figcaption class="img">Our super complex app</figcaption>
 
 Let’s dive into the code here. React, you come first. This is a project created with `create-react-app`; I slightly modified `App.js` here.
 

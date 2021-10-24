@@ -70,6 +70,14 @@ article figcaption {
   font-weight: 100;
 }
 
+article figcaption.img {
+  margin-top: 36px;
+}
+
+article pre {
+  margin: 0;
+}
+
 body {
   height: 100vh;
   font-family: 'Montserrat', monospace, -apple-system, BlinkMacSystemFont,

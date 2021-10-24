@@ -45,7 +45,7 @@ We'll keep this simple. Let's say that you have a number of items you want to di
 
 <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6wb86405qvl0ah46jo30.png" />
 
-<figcaption>Mobile design</figcaption>
+<figcaption class="img">Mobile design</figcaption>
 
 We have two components here:
 
@@ -98,7 +98,7 @@ We're trying to spread the items, keeping 3 of them in each row:
 
 <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6qtz8vetlsnyj2ttfftl.png" />
 
-<figcaption>Desktop design</figcaption>
+<figcaption class="img">Desktop design</figcaption>
 
 The code looks like this:
 
