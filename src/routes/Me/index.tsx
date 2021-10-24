@@ -40,7 +40,7 @@ function Me() {
         title="Personal Website And Blog"
         description="Master Web Dev With Me."
       />
-      <ThisIsMe isPlanVisible={true} />
+      <ThisIsMe isMainScreenMode={true} />
       <div className={privacyPolicyCss(isPolicyOpen)}>
         To improve your experience even more, I use cookies for analytics. Find
         out more{' '}
