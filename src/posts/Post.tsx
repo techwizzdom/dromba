@@ -7,6 +7,7 @@ import { css } from 'emotion';
 import LoadingSpinner from '../components/LoadingSpinner';
 import { ThemeContext } from '../context/ThemeContext';
 import { Theme } from '../styles';
+import { Media } from '../enums/Media';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -85,10 +86,18 @@ function Post() {
 
 const titleCss = css`
   font-size: 32px;
+
+  @media ${Media.Mobile} {
+    font-size: 28px;
+  }
 `;
 
 const subtitleCss = css`
   font-weight: 100;
+
+  @media ${Media.Mobile} {
+    font-size: 20px;
+  }
 `;
 
 const imgCss = css`
@@ -111,6 +120,20 @@ const sectionCss = (theme: Theme) => css`
   h2 {
     font-size: 28px;
     margin-bottom: 4px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  @media ${Media.Mobile} {
+    h2 {
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
   }
 `;
 

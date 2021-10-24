@@ -37,7 +37,7 @@ article, section {
 }
 
 article p {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-size: 18px;
 }
 
@@ -49,7 +49,7 @@ article img {
 
 article hr {
   border: 1px solid #181818;
-  margin: 16px 0 32px;
+  margin: 32px 0 48px;
   border-radius: 4px;
   width: 128px;
   align-self: center;
@@ -60,7 +60,7 @@ article li {
 }
 
 article ol {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 article figcaption {

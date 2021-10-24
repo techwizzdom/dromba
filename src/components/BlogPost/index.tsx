@@ -14,8 +14,6 @@ export interface IBlogPostProps {
   title: string;
   subtitle: string;
   thumbnail: string;
-  url: string;
-  type: BlogPostType;
 }
 
 const blogPostCss = css`
@@ -28,13 +26,12 @@ const blogPostCss = css`
   ${underlineClassNameOnHover('.heading')}
 `;
 
-const thumbnailCss = (type: BlogPostType) => css`
+const thumbnailCss = css`
   height: 128px;
   width: 128px;
   min-width: 128px;
   margin-left: 48px;
-
-  object-fit: ${type === BlogPostType.DevTo ? 'cover' : 'unset'};
+  object-fit: cover;
 `;
 
 const textWrapperCss = css`
@@ -42,21 +39,16 @@ const textWrapperCss = css`
 `;
 
 const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
-  const { title, subtitle, thumbnail, url, type } = props;
+  const { title, subtitle, thumbnail } = props;
 
   return (
-    <a
-      className={blogPostCss}
-      // href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <div className={blogPostCss}>
       <div className={textWrapperCss}>
         <H5 isHoverable={true}>{title}</H5>
         <Paragraph size={ParagraphSize.Medium}>{subtitle}</Paragraph>
       </div>
-      <img src={thumbnail} className={thumbnailCss(type)} alt="blog-post" />
-    </a>
+      <img src={thumbnail} className={thumbnailCss} alt="blog-post" />
+    </div>
   );
 };
 
