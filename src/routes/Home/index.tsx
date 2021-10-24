@@ -12,11 +12,16 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { DeviceType } from '../../enums/DeviceType';
 
 import { t } from '../../translations/t';
+import Helmetiser from '../../components/core/Helmetiser';
 
 function Home() {
   const deviceType = useDevice();
   return (
     <RouteContainer>
+      <Helmetiser
+        title="Who Am I?"
+        description="Frontend Engineer in a London tech-startup?"
+      />
       <H1>{t.home.title}</H1>
       <H1>{t.home.subtitle}</H1>
 

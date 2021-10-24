@@ -21,6 +21,7 @@
     "lint-staged": "^11.0.0",
     "marked": "^3.0.7",
     "path": "^0.12.7",
+    "prerender-node": "^3.2.5",
     "prettier": "^2.3.0",
     "prismjs": "^1.25.0",
     "react": "^16.12.0",
