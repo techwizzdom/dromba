@@ -16,6 +16,7 @@ import Art from './routes/Art';
 import { init } from './util/init';
 import { ILogoDiving } from './components/HeaderDesktop';
 import Me from './routes/Me';
+import Post from './routes/Post';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -36,6 +37,7 @@ function App() {
             <Route exact path="/" component={Me} />
             <Route path="/about" component={Home} />
             <Route path="/blog" component={Blog} />
+            <Route path="/post/:id" component={Post} />
             <Route
               path="/art"
               render={(props) => (
