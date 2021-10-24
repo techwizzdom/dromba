@@ -11,7 +11,7 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 import { t } from '../../translations/t';
 import { Link } from 'react-router-dom';
-import { Posts } from '../../posts/posts';
+import { Posts } from '../../blog-posts/posts';
 
 function Blog() {
   useEffect(() => {

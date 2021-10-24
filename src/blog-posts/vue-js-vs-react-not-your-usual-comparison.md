@@ -28,7 +28,7 @@ We’re building a super simple app in both React and Vue.js today. It looks som
 
 Let’s dive into the code here. React, you come first. This is a project created with `create-react-app`; I slightly modified `App.js` here.
 
-```javascript
+```jsx
 import { useState } from 'react';
 
 function App() {
@@ -85,7 +85,7 @@ I trust the naming of the functions. I believe they do what they say. I don’t 
 
 This is a project created with the Vue CLI. I modified `App.vue` here a bit:
 
-```javascript
+```html
 <template>
   <p class="magical-question">Which FE framework is the best?</p>
   <button class="magical-button" @click="findOutMoreAboutThatMagicalFramework">
@@ -95,19 +95,19 @@ This is a project created with the Vue CLI. I modified `App.vue` here a bit:
 </template>
 
 <script>
-export default {
-  name: 'App',
-  data() {
-    return {
-      isMagicalAnswerVisible: false,
-    };
-  },
-  methods: {
-    findOutMoreAboutThatMagicalFramework() {
-      this.isMagicalAnswerVisible = true;
+  export default {
+    name: 'App',
+    data() {
+      return {
+        isMagicalAnswerVisible: false,
+      };
     },
-  },
-};
+    methods: {
+      findOutMoreAboutThatMagicalFramework() {
+        this.isMagicalAnswerVisible = true;
+      },
+    },
+  };
 </script>
 ```
 

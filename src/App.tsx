@@ -16,7 +16,7 @@ import Art from './routes/Art';
 import { init } from './util/init';
 import { ILogoDiving } from './components/HeaderDesktop';
 import Me from './routes/Me';
-import Post from './posts/Post';
+import Post from './routes/Post';
 
 function App() {
   const [theme, toggleTheme] = useTheme();

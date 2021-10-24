@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import marked from 'marked';
 import Prism from 'prismjs';
-import RouteContainer from '../components/RouteContainer';
-import { Posts } from './posts';
+import RouteContainer from '../../components/RouteContainer';
+import { Posts } from '../../blog-posts/posts';
 import { css } from 'emotion';
-import LoadingSpinner from '../components/LoadingSpinner';
-import { ThemeContext } from '../context/ThemeContext';
-import { Theme } from '../styles';
-import { Media } from '../enums/Media';
+import { ThemeContext } from '../../context/ThemeContext';
+import { Theme } from '../../styles';
+import { Media } from '../../enums/Media';
+import { trackEvent } from '../../util/metrics';
 
 function Post() {
   const [post, setPost] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
 
   const posts = Posts;
 
@@ -22,14 +21,17 @@ function Post() {
 
   const postPath = getPostPath();
 
-  const poster = require(`../blog-posts/${postPath}.md`);
+  const poster = require(`../../blog-posts/${postPath}.md`);
   const { title, subtitle, img, path } =
     posts.find((post) => post.path === postPath) || {};
   debugger;
 
   const theme = React.useContext(ThemeContext);
 
-  // const { title, subtitle, image } = props;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    trackEvent('Post', title || '');
+  }, [title]);
 
   fetch(poster)
     .then((response) => {
@@ -69,12 +71,7 @@ function Post() {
       <article>
         <h1 className={titleCss}>{title}</h1>
         <h2 className={subtitleCss}>{subtitle}</h2>
-        <img
-          className={imgCss}
-          src={img}
-          alt={path}
-          onLoad={() => setIsLoading(false)}
-        />
+        <img className={imgCss} src={img} alt={path} />
         <section
           className={sectionCss(theme)}
           dangerouslySetInnerHTML={{ __html: marked(post) }}
