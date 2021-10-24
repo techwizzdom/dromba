@@ -8,7 +8,6 @@ import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
 import { Media } from '../../enums/Media';
 import { trackEvent } from '../../util/metrics';
-import { Helmet } from 'react-helmet';
 import Helmetiser from '../../components/core/Helmetiser';
 
 function Post() {
