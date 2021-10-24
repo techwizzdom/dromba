@@ -33,6 +33,7 @@ function Blog() {
               title={post.title}
               subtitle={post.subtitle}
               thumbnail={post.thumbnail}
+              tags={post.tags}
             />
           </Link>
         ))}

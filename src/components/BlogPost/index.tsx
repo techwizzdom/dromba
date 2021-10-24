@@ -13,6 +13,7 @@ export interface IBlogPostProps {
   title: string;
   subtitle: string;
   thumbnail: string;
+  tags: string[];
 }
 
 const blogPostCss = css`
@@ -37,14 +38,22 @@ const textWrapperCss = css`
   flex-grow: 2;
 `;
 
+const wrapperCss = css`
+  flex-grow: 2;
+  margin-bottom: 8px;
+`;
+
 const BlogPost: React.FC<IBlogPostProps> = (props: IBlogPostProps) => {
-  const { title, subtitle, thumbnail } = props;
+  const { title, subtitle, thumbnail, tags } = props;
 
   return (
     <div className={blogPostCss}>
       <div className={textWrapperCss}>
-        <H5 isHoverable={true}>{title}</H5>
-        <Paragraph size={ParagraphSize.Medium}>{subtitle}</Paragraph>
+        <div className={wrapperCss}>
+          <H5 isHoverable={true}>{title}</H5>
+          <Paragraph size={ParagraphSize.Medium}>{subtitle}</Paragraph>
+        </div>
+        <p>{tags.join(', ')}</p>
       </div>
       <img src={thumbnail} className={thumbnailCss} alt="blog-post" />
     </div>

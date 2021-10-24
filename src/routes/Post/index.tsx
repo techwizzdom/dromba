@@ -9,6 +9,7 @@ import { Theme } from '../../styles';
 import { Media } from '../../enums/Media';
 import { trackEvent } from '../../util/metrics';
 import Helmetiser from '../../components/core/Helmetiser';
+import ThisIsMe from '../../components/ThisIsMe';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -22,8 +23,10 @@ function Post() {
 
   const postPath = getPostPath();
 
+  const readingTime = require('reading-time/lib/reading-time');
+
   const poster = require(`../../blog-posts/${postPath}.md`);
-  const { title, subtitle, img, path } =
+  const { title, subtitle, img, path, postDate, tags } =
     posts.find((post) => post.path === postPath) || {};
 
   const theme = React.useContext(ThemeContext);
@@ -66,18 +69,46 @@ function Post() {
     },
     breaks: true,
   });
+  function removeTags(string: string) {
+    return string
+      .replace(/<[^>]*>/g, ' ')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
+  }
+  const readingTimeLabel = readingTime(removeTags(marked(post)));
+  const postDateLabel = postDate?.toDateString();
+  let postDateDay = postDateLabel?.split(' ')[2] || '';
+  if (postDateDay[0] === '0') {
+    postDateDay = postDateDay[1];
+  }
+  const postDateMonth = postDateLabel?.split(' ')[1];
+  const postDateYear = postDateLabel?.split(' ')[3];
   return (
     <RouteContainer>
       <Helmetiser title={title} description={subtitle} />
       <article>
         <h1 className={titleCss}>{title}</h1>
         <h2 className={subtitleCss}>{subtitle}</h2>
+        <div className={postInfoCss}>
+          <div className={postTimeCss}>
+            <p className={dateCss}>
+              {postDateDay} {postDateMonth}
+              {Number(postDateYear) < new Date().getFullYear()
+                ? ` ${postDateYear}`
+                : ''}
+            </p>
+            {' · '}
+            <p className={timeCss}>{readingTimeLabel.text}</p>
+          </div>
+          <p>{tags?.join(', ')}</p>
+        </div>
         <img className={imgCss} src={img} alt={path} />
         <section
           className={sectionCss(theme)}
           dangerouslySetInnerHTML={{ __html: marked(post) }}
         />
       </article>
+      <ThisIsMe />
     </RouteContainer>
   );
 }
@@ -92,6 +123,7 @@ const titleCss = css`
 
 const subtitleCss = css`
   font-weight: 100;
+  margin-bottom: 16px;
 
   @media ${Media.Mobile} {
     font-size: 20px;
@@ -99,7 +131,7 @@ const subtitleCss = css`
 `;
 
 const imgCss = css`
-  margin: 16px 0 32px;
+  margin: 0 0 32px;
 `;
 
 const sectionCss = (theme: Theme) => css`
@@ -132,6 +164,45 @@ const sectionCss = (theme: Theme) => css`
     h3 {
       font-size: 20px;
     }
+  }
+`;
+
+const postTimeCss = css`
+  display: flex;
+  align-items: center;
+`;
+
+const postInfoCss = css`
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  @media ${Media.Mobile} {
+    flex-direction: column;
+
+    p {
+      font-size: 12px;
+    }
+  }
+`;
+
+const dateCss = css`
+  margin-right: 4px;
+
+  @media ${Media.Mobile} {
+    // font-size: 28px;
+  }
+`;
+
+const timeCss = css`
+  margin-left: 4px;
+
+  @media ${Media.Mobile} {
+    // font-size: 28px;
   }
 `;
 
