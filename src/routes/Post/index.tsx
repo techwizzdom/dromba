@@ -10,9 +10,11 @@ import { Media } from '../../enums/Media';
 import { trackEvent } from '../../util/metrics';
 import Helmetiser from '../../components/core/Helmetiser';
 import ThisIsMe from '../../components/ThisIsMe';
+import LoadingSpinner from '../../components/LoadingSpinner';
 
 function Post() {
   const [post, setPost] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
 
   const posts = Posts;
 
@@ -102,13 +104,22 @@ function Post() {
           </div>
           <p>{tags?.join(', ')}</p>
         </div>
-        <img className={imgCss} src={img} alt={path} />
-        <section
-          className={sectionCss(theme)}
-          dangerouslySetInnerHTML={{ __html: marked(post) }}
+        <img
+          className={imgCss}
+          src={img}
+          alt={path}
+          onLoad={() => setIsLoading(false)}
         />
+        {isLoading ? (
+          <LoadingSpinner />
+        ) : (
+          <section
+            className={sectionCss(theme)}
+            dangerouslySetInnerHTML={{ __html: marked(post) }}
+          />
+        )}
       </article>
-      <ThisIsMe />
+      {!isLoading && <ThisIsMe />}
     </RouteContainer>
   );
 }

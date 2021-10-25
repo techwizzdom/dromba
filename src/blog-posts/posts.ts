@@ -1,5 +1,14 @@
 export const Posts = [
   {
+    title: 'Position Absolute and Relative — The Simplest Guide',
+    subtitle: 'Simple properties that can seem hard',
+    path: 'position-absolute-relative-the-simplest-guide',
+    img: 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jmoe6qiwmx4pmf1kujx5.jpg',
+    thumbnail: 'https://i.imgur.com/uc21JTK.jpg',
+    postDate: new Date('25 Oct 2021'),
+    tags: ['#css', '#webdev', '#beginners', '#tutorial'],
+  },
+  {
     title: '11 Reasons Why Software Engineering Isn’t a Stressful Job',
     subtitle: 'Very unpopular opinion',
     path: '11-reasons-why-software-engineering-isnt-a-stressful-job',
