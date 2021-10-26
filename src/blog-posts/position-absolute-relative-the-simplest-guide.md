@@ -132,7 +132,7 @@ Let's keep it simple.
 
 ---
 
-##The Downsides Of Position Absolute
+## The Downsides Of Position Absolute
 
 Absolutely positioned elements break the DOM flow.
 
