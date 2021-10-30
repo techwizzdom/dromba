@@ -28,26 +28,44 @@ function ThisIsMe(props: IThisIsMeProps) {
         <div>
           {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
           <p className={pCss(isMainScreenMode)}>
-            {isMainScreenMode ? 'A ' : 'Dom is a '}Frontend Engineer and Mentor.
+            {isMainScreenMode ? 'A ' : 'Dom is a '}Frontend engineer, mentor,
+            and speaker.
           </p>
           <p className={pCss(isMainScreenMode)}>In a London tech startup.</p>
+          <p className={pCss(isMainScreenMode, true)}>
+            Let's supercharge your career.
+          </p>
         </div>
       </div>
       {isMainScreenMode && (
         <>
           <div className={planWrapperCss}>
-            <img src={IndexDown} className={indexDownCss} alt="index-down" />
-            <H4>Check out my plan</H4>
-            <img src={IndexDown} className={indexDownCss} alt="index-down" />
+            <div className={emojiWrapper}>
+              <img src={IndexDown} className={indexDownCss} alt="index-down" />
+            </div>
+            <H4>Book a career/code mentoring</H4>
+            <div className={emojiWrapper}>
+              <img src={IndexDown} className={indexDownCss} alt="index-down" />
+            </div>
           </div>
-          <a
-            className={hrefCss}
-            target="_blank"
-            rel="noopener noreferrer"
-            href={t.link.zeroKnowledgeTo80k}
-          >
-            All The Resources You Need To Become A Frontend Engineer
-          </a>
+          <div className={bookingsCss}>
+            <a
+              className={hrefCss}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={t.link.book60mins}
+            >
+              60 min ($49)
+            </a>
+            <a
+              className={hrefCss}
+              target="_blank"
+              rel="noopener noreferrer"
+              href={t.link.book30mins}
+            >
+              30 min ($29)
+            </a>
+          </div>
         </>
       )}
       <div className={profilesCss(theme, isMainScreenMode)}>
@@ -182,10 +200,20 @@ const indexDownCss = css`
 
 const planWrapperCss = css`
   display: flex;
+  align-items: center;
   margin-bottom: 16px;
+  white-space: nowrap;
 
   h4 {
     margin: 0 4px 0 12px;
+    text-align: center;
+    display: inline;
+  }
+
+  @media (max-width: 512px) {
+    h4 {
+      white-space: initial;
+    }
   }
 
   @media (max-width: 335px) {
@@ -195,8 +223,22 @@ const planWrapperCss = css`
   }
 `;
 
-const pCss = (isMainScreenMode: boolean) => css`
+const emojiWrapper = css`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+const bookingsCss = css`
+  display: flex;
+  justify-content: space-between;
+  max-width: 568px;
+  width: 100%;
+`;
+
+const pCss = (isMainScreenMode: boolean, isBold?: boolean) => css`
   font-size: ${isMainScreenMode ? '16px' : '18px'};
+  ${isBold && 'font-weight: bold;'}
 `;
 
 export default ThisIsMe;
