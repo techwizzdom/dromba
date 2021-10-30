@@ -13,6 +13,7 @@ import { Theme } from '../../styles';
 import IndexDown from '../../assets/images/index-down.png';
 import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
+import { trackEvent } from '../../util/metrics';
 
 interface IThisIsMeProps {
   isMainScreenMode?: boolean;
@@ -54,6 +55,7 @@ function ThisIsMe(props: IThisIsMeProps) {
               target="_blank"
               rel="noopener noreferrer"
               href={t.link.book60mins}
+              onClick={() => trackEvent('Booking', '60 min')}
             >
               60 min ($49)
             </a>
@@ -62,6 +64,7 @@ function ThisIsMe(props: IThisIsMeProps) {
               target="_blank"
               rel="noopener noreferrer"
               href={t.link.book30mins}
+              onClick={() => trackEvent('Booking', '30 min')}
             >
               30 min ($29)
             </a>
