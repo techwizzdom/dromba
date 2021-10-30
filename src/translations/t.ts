@@ -164,6 +164,9 @@ export const t = {
     tiktok: 'https://www.tiktok.com/@javascript_wizz',
     zeroKnowledgeTo80k:
       'https://domagojvidovic.medium.com/all-the-resources-you-need-to-become-a-frontend-engineer-eff27464ab17',
+    book30mins: 'https://calendly.com/domagojvidovic/career-code-mentoring',
+    book60mins:
+      'https://calendly.com/domagojvidovic/career-code-mentoring-full',
   },
   navigation: {
     home: 'Who Am I?',

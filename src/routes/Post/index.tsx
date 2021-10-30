@@ -119,7 +119,7 @@ function Post() {
           />
         )}
       </article>
-      {!isLoading && <ThisIsMe />}
+      {!isLoading && <ThisIsMe isMainScreenMode={true} />}
     </RouteContainer>
   );
 }
