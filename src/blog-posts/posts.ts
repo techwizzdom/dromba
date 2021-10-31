@@ -1,5 +1,14 @@
 export const Posts = [
   {
+    title: 'How To Create Beautiful Link Previews For Every Platform',
+    subtitle: 'Twitter, Facebook, WhatsApp, many more. Cover them all.',
+    path: 'how-to-create-beautiful-link-previews-for-every-platform',
+    img: 'https://i.imgur.com/2yKgiOF.jpg',
+    thumbnail: 'https://i.imgur.com/w5DOjhs.jpg',
+    postDate: new Date('8 Nov 2021'),
+    tags: ['#javascript', '#webdev', '#tutorial'],
+  },
+  {
     title: 'Position Absolute and Relative — The Simplest Guide',
     subtitle: 'Simple properties that can seem hard',
     path: 'position-absolute-relative-the-simplest-guide',
