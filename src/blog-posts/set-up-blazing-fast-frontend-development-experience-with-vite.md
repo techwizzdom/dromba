@@ -1,6 +1,6 @@
 Your production app is huge.
 
-You hit npm run dev to start your development server.
+You hit `npm run dev` to start your development server.
 
 After 1 minute, it's there! You can start your dev journey.
 
