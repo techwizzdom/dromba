@@ -46,6 +46,7 @@ article img {
   max-width: 100%;
   max-height: calc(50vh + 180px);
   align-self: center;
+  margin-bottom: 32px;
 }
 
 article hr {
@@ -65,13 +66,9 @@ article ol {
 }
 
 article figcaption {
-  margin: 4px 0 16px;
+  margin-bottom: 24px;
   align-self: center;
   font-weight: 100;
-}
-
-article figcaption.img {
-  margin-top: 36px;
 }
 
 article pre {
