@@ -9,6 +9,15 @@ export const Posts = [
     tags: ['#javascript', '#webdev', '#tutorial'],
   },
   {
+    title: 'Set Up Blazing Fast Frontend Development Experience With Vite',
+    subtitle: 'Replace create-react-app, VueCLI, Webpack, and much more',
+    img: 'https://i.imgur.com/c5RJXXP.jpg',
+    thumbnail: 'https://i.imgur.com/c5RJXXP.jpg',
+    path: 'set-up-blazing-fast-frontend-development-experience-with-vite',
+    postDate: new Date('1 Nov 2021'),
+    tags: ['#webdev', '#frontend', '#javascript'],
+  },
+  {
     title: 'Position Absolute and Relative — The Simplest Guide',
     subtitle: 'Simple properties that can seem hard',
     path: 'position-absolute-relative-the-simplest-guide',
