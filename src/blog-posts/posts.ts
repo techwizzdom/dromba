@@ -1,5 +1,14 @@
 export const Posts = [
   {
+    title: 'How To Create Beautiful Link Previews For Every Platform',
+    subtitle: 'Twitter, Facebook, WhatsApp, many more. Cover them all.',
+    path: 'how-to-create-beautiful-link-previews-for-every-platform',
+    img: 'https://i.imgur.com/2yKgiOF.jpg',
+    thumbnail: 'https://i.imgur.com/w5DOjhs.jpg',
+    postDate: new Date('8 Nov 2021'),
+    tags: ['#javascript', '#webdev', '#tutorial'],
+  },
+  {
     title: 'Set Up Blazing Fast Frontend Development Experience With Vite',
     subtitle: 'Replace create-react-app, VueCLI, Webpack, and much more',
     img: 'https://i.imgur.com/c5RJXXP.jpg',
