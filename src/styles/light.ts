@@ -11,6 +11,7 @@ export const light = {
   textColorSecondary: colors.darkMoon,
   hyperlinkColor: colors.baseLight,
   hyperlinkBackgroundColor: colors.forestGreen,
+  hyperlinkUnderlineColor: colors.greenNormal,
   themeToggleColor: colors.turqoise,
   themeToggleLine: colors.baseDark,
   timelineConnectionLineColor: colors.darkMoon,

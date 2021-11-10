@@ -4,4 +4,5 @@ export enum Routes {
   Art = '/art',
   Blog = '/blog',
   Post = '/post',
+  Links = '/links',
 }
