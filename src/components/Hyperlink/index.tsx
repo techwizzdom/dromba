@@ -25,23 +25,24 @@ const hyperlinkCss = (
   ${isLarge && 'font-size: 24px;'}
   ${isLarge && 'font-weight: bold;'}
 
-  ${!isUnderline && `color: ${theme.hyperlinkColor};`}
-  ${!isUnderline && `background-color: ${theme.hyperlinkBackgroundColor};`}
+  display: inline;
+  background-image: linear-gradient(
+    transparent 40%,
+    ${theme.hyperlinkUnderlineColor} 94%,
+    transparent 100%
+  );
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: 100% 24px;
+  transform: none;
+  transition: background-size 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s,
+    background-position 0s step-end 0.5s;
 
-  ${isUnderline &&
-  `&:before {
-    content: '';
-    position: absolute;
-    bottom: 4px;
-    left: 0;
-    right: 0;
-    height: 8px;
-    opacity: 0.4;
-    background-color: ${theme.hyperlinkUnderlineColor};
-  }`}
-
-  :hover {
-    opacity: 0.8;
+  &:hover {
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: 100% 8px;
   }
 `;
 
