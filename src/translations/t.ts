@@ -167,11 +167,13 @@ export const t = {
     book30mins: 'https://calendly.com/domagojvidovic/career-code-mentoring',
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
+    teal: 'https://tealhq.co/javascript_wizz',
   },
   navigation: {
     home: 'Who Am I?',
     art: 'Who Art You?',
     blog: 'Blog',
+    links: 'Links',
   },
   profile: {
     twitter: 'Twitter',

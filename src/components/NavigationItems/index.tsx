@@ -75,6 +75,13 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         Buy Me a Croissant
       </a>
+      <Link
+        to={Routes.Links}
+        className={navigationItemCss(theme, isMobile, isSelected(Routes.Links))}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        {t.navigation.links}
+      </Link>
     </>
   );
 };

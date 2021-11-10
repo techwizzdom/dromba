@@ -14,6 +14,7 @@ import IndexDown from '../../assets/images/index-down.png';
 import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { trackEvent } from '../../util/metrics';
+import Hyperlink from '../Hyperlink';
 
 interface IThisIsMeProps {
   isMainScreenMode?: boolean;
@@ -50,24 +51,22 @@ function ThisIsMe(props: IThisIsMeProps) {
             </div>
           </div>
           <div className={bookingsCss}>
-            <a
-              className={hrefCss}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={t.link.book60mins}
+            <Hyperlink
+              isUnderline={true}
+              isLarge={true}
               onClick={() => trackEvent('Booking', '60 min')}
+              href={t.link.book60mins}
             >
               60 min ($49)
-            </a>
-            <a
-              className={hrefCss}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={t.link.book30mins}
+            </Hyperlink>
+            <Hyperlink
+              isUnderline={true}
+              isLarge={true}
               onClick={() => trackEvent('Booking', '30 min')}
+              href={t.link.book30mins}
             >
-              30 min ($29)
-            </a>
+              30 mins ($29)
+            </Hyperlink>
           </div>
         </>
       )}

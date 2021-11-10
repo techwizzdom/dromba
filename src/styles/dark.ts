@@ -12,6 +12,7 @@ export const dark: Theme = {
   textColorSecondary: colors.vanishingGray,
   hyperlinkColor: colors.baseDark,
   hyperlinkBackgroundColor: colors.alienGreen,
+  hyperlinkUnderlineColor: colors.greenNormal,
   themeToggleColor: colors.radioactiveSun,
   themeToggleLine: colors.baseLight,
   timelineConnectionLineColor: colors.vanishingGray,
