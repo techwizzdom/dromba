@@ -36,7 +36,7 @@ const hyperlinkCss = (
   background-position-y: bottom;
   background-size: 100% 24px;
   transform: none;
-  transition: background-size 0.5s cubic-bezier(0.79, 0.01, 0.22, 0.99) 0s,
+  transition: background-size 0.5s ease-in-out,
     background-position 0s step-end 0.5s;
 
   &:hover {
