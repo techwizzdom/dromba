@@ -20,6 +20,16 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
+            isEmail={true}
+            onClick={() => trackEvent('Email', 'Links')}
+            href={t.email.dvidovic}
+          >
+            {t.email.dvidovic}
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Teal', 'Chrome Extension')}
             href={t.link.teal}
           >
