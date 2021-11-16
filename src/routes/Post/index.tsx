@@ -88,7 +88,7 @@ function Post() {
   return (
     <RouteContainer>
       <Helmetiser title={title} description={subtitle} />
-      <article>
+      <article className={articleCss}>
         <h1 className={titleCss}>{title}</h1>
         <h2 className={subtitleCss}>{subtitle}</h2>
         <div className={postInfoCss}>
@@ -123,6 +123,10 @@ function Post() {
     </RouteContainer>
   );
 }
+
+const articleCss = css`
+  margin-bottom: 96px;
+`;
 
 const titleCss = css`
   font-size: 32px;

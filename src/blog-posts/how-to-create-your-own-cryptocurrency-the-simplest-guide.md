@@ -10,6 +10,8 @@ You probably won't create a Bitcoin killer, but you can still make something val
 
 Let's dive in.
 
+---
+
 ## 1. Download and Setup Metamask
 
 Head over to [Metamask.io](https://metamask.io/), download and set up the wallet.
@@ -17,6 +19,8 @@ Head over to [Metamask.io](https://metamask.io/), download and set up the wallet
 After you're done, copy the wallet address.
 
 <img src="https://i.imgur.com/UW1YPKQ.png" alt="Metamask wallet address copy" />
+
+---
 
 ## 2. Send Yourself Some Test Ethereum
 
@@ -28,6 +32,8 @@ Go to [Ropsten Ethereum Faucet](https://faucet.ropsten.be/), paste the wallet ad
 
 You should receive the ETH soon!
 
+---
+
 ## 3. Copy The Only Code You'll Need
 
 Go to [Open Zeppelin](https://openzeppelin.com/contracts/), and copy the code after the page is loaded.
@@ -35,6 +41,8 @@ Go to [Open Zeppelin](https://openzeppelin.com/contracts/), and copy the code af
 <img src="https://i.imgur.com/8bA9siz.png" alt="OpenZeppelin ERC20 Token Code" />
 
 This code will be used to generate the token.
+
+---
 
 ## 4. Open the Remix IDE
 
@@ -50,6 +58,8 @@ Modify elements highlighted with arrows. Those are:
 
 <img src="https://i.imgur.com/SF2cBIg.png" alt="Remix Ethereum Org" />
 
+---
+
 ## 5. Compile the Token
 
 Click on the compile option in the sidebar.
@@ -59,6 +69,8 @@ Make sure that the settings are the same as on the screenshot (and that your com
 Don't forget to select your token at the "Contract" dropdown.
 
 <img src="https://i.imgur.com/ID5oWNj.png" alt="Remix Ethereum Compile Token" />
+
+---
 
 ## 6. Deploy the Token
 
@@ -71,6 +83,8 @@ Also, select your token at the "Contract" dropdown.
 <img src="https://i.imgur.com/19L9XlY.png" alt="Remix Ethereum Deploy Token" />
 
 And now, hit deploy and confirm the transaction on Metamask!
+
+---
 
 ## 7. Import the Token To Your Wallet
 
