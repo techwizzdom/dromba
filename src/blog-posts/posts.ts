@@ -1,4 +1,22 @@
 export const Posts = [
+  // {
+  //   title: '',
+  //   subtitle: '',
+  //   path: '',
+  //   img: '',
+  //   thumbnail: '',
+  //   postDate: new Date(''),
+  //   tags: [],
+  // },
+  {
+    title: 'How To Create Your Own Cryptocurrency: The Simplest Guide',
+    subtitle: 'Creating A Cryptocurrency Without Any Coding Skills',
+    path: 'how-to-create-your-own-cryptocurrency-the-simplest-guide',
+    img: 'https://i.imgur.com/nkEgKzB.jpg',
+    thumbnail: 'https://i.imgur.com/dHucIJ1.jpg',
+    postDate: new Date('17 Nov 2021'),
+    tags: ['#cryptocurrency', '#token', '#bitcoin', '#ethereum'],
+  },
   {
     title: 'How To Create Beautiful Link Previews For Every Platform',
     subtitle: 'Twitter, Facebook, WhatsApp, many more. Cover them all.',

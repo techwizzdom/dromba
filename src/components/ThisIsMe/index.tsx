@@ -45,7 +45,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             <div className={emojiWrapper}>
               <img src={IndexDown} className={indexDownCss} alt="index-down" />
             </div>
-            <H4>Book a career/code mentoring</H4>
+            <H4>Book a career/code coaching</H4>
             <div className={emojiWrapper}>
               <img src={IndexDown} className={indexDownCss} alt="index-down" />
             </div>
@@ -57,7 +57,7 @@ function ThisIsMe(props: IThisIsMeProps) {
               onClick={() => trackEvent('Booking', '60 min')}
               href={t.link.book60mins}
             >
-              60 min ($49)
+              60 min ($79)
             </Hyperlink>
             <Hyperlink
               isUnderline={true}
@@ -65,7 +65,7 @@ function ThisIsMe(props: IThisIsMeProps) {
               onClick={() => trackEvent('Booking', '30 min')}
               href={t.link.book30mins}
             >
-              30 mins ($29)
+              30 mins ($49)
             </Hyperlink>
           </div>
         </>

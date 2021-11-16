@@ -42,7 +42,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '60 min - Links')}
             href={t.link.book60mins}
           >
-            1-on-1 Mentoring (60 mins, $49)
+            1-on-1 Coaching (60 mins, $79)
           </Hyperlink>
         </H5>
         <H5>
@@ -51,7 +51,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '30 min - Links')}
             href={t.link.book30mins}
           >
-            1-on-1 Mentoring (30 mins, $29)
+            1-on-1 Coaching (30 mins, $49)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
