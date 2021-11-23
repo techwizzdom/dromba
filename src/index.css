@@ -75,6 +75,10 @@ article pre {
   margin: 0;
 }
 
+.react-snow-effect-canvas {
+  z-index: 5 !important;
+}
+
 body {
   height: 100vh;
   font-family: 'Montserrat', monospace, -apple-system, BlinkMacSystemFont,

@@ -43,6 +43,7 @@ const abstractArtWrapperCss = (
   height: ${viewportHeight}px;
   top: 0;
   left: 0;
+  z-index: 99;
 
   opacity: ${isVisible ? 1 : 0};
   transition: opacity 2s ease-in-out;
