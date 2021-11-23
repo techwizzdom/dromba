@@ -27,12 +27,15 @@ function App() {
     isJumping: false,
   });
 
+  const Snow = require('react-snow-effect');
+
   init();
 
   return (
     <ThemeContext.Provider value={theme}>
       <Router>
         <MainContainer>
+          <Snow />
           <Header toggleTheme={toggleTheme} isLogoDiving={isLogoDiving} />
           <Switch>
             <Route exact path="/" component={Me} />

@@ -24,7 +24,7 @@ function Me() {
         title="Personal Website And Blog"
         description="Master Web Dev With Me."
       />
-      <ThisIsMe isMainScreenMode={true} />
+      <ThisIsMe />
       <div className={privacyPolicyCss(isPolicyOpen)}>
         To improve your experience even more, I use cookies for analytics. Find
         out more{' '}
