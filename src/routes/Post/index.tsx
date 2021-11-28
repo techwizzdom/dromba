@@ -87,7 +87,7 @@ function Post() {
   const postDateYear = postDateLabel?.split(' ')[3];
   return (
     <RouteContainer>
-      <Helmetiser title={title} description={subtitle} />
+      <Helmetiser title={title} description={subtitle} image={img} />
       <article className={articleCss}>
         <h1 className={titleCss}>{title}</h1>
         <h2 className={subtitleCss}>{subtitle}</h2>
