@@ -9,6 +9,15 @@ export const Posts = [
   //   tags: [],
   // },
   {
+    title: 'Stop Using Margins For Spacing Between Components',
+    subtitle: 'Layout Guide For 2022',
+    path: 'stop-using-margins-for-spacing-between-components',
+    img: 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kqsd1x1pr5l88y1lvbtq.jpg',
+    thumbnail: 'https://i.imgur.com/8MI9d89.jpg',
+    postDate: new Date('29 Nov 2021'),
+    tags: ['#webdev', '#tutorial', '#css', '#html'],
+  },
+  {
     title: 'How To Create Your Own Cryptocurrency: The Simplest Guide',
     subtitle: 'Creating A Cryptocurrency Without Any Coding Skills',
     path: 'how-to-create-your-own-cryptocurrency-the-simplest-guide',
