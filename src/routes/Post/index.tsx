@@ -11,6 +11,8 @@ import { trackEvent } from '../../util/metrics';
 import Helmetiser from '../../components/core/Helmetiser';
 import ThisIsMe from '../../components/ThisIsMe';
 import LoadingSpinner from '../../components/LoadingSpinner';
+import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
+import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -85,6 +87,7 @@ function Post() {
   }
   const postDateMonth = postDateLabel?.split(' ')[1];
   const postDateYear = postDateLabel?.split(' ')[3];
+
   return (
     <RouteContainer>
       <Helmetiser title={title} description={subtitle} image={img} />
@@ -119,13 +122,54 @@ function Post() {
           />
         )}
       </article>
+      {!isLoading && (
+        <div className={sharingOptionsCss}>
+          <span className={shareMeTextCss}>SHARE ME!</span>
+          <div className={sharingIconsCss}>
+            <a
+              className="twitter-share-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://twitter.com/intent/tweet?text="${title}" by @domagojvidovicc is a must-read article! 🚀`}
+            >
+              <Twitter />
+            </a>
+            <a
+              href={`https://www.linkedin.com/sharing/share-offsite?mini=true&url=${document.URL}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedIn />
+            </a>
+          </div>
+        </div>
+      )}
       {!isLoading && <ThisIsMe isMainScreenMode={true} />}
     </RouteContainer>
   );
 }
 
 const articleCss = css`
+  margin-bottom: 24px;
+`;
+
+const shareMeTextCss = css`
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 6px;
+`;
+
+const sharingOptionsCss = css`
+  display: flex;
+  align-items: center;
+  gap: 16px;
   margin-bottom: 96px;
+`;
+
+const sharingIconsCss = css`
+  display: flex;
+  align-items: center;
+  gap: 16px;
 `;
 
 const titleCss = css`

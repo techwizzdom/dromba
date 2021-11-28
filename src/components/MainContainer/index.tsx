@@ -41,7 +41,7 @@ const MainContainer: React.FC<IMainContainerProps> = (
 ) => {
   const { children } = props;
 
-  const [isArtVisible, setIsArtVisible] = useState<boolean>(true);
+  const [isArtVisible, setIsArtVisible] = useState<boolean>(false);
   const artStartTime = Date.now();
 
   const theme = React.useContext(ThemeContext);
