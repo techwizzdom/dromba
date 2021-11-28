@@ -22,7 +22,7 @@ function Me() {
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
         title="Personal Website And Blog"
-        description="Master Web Dev With Me."
+        description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
       />
       <ThisIsMe />
       <div className={privacyPolicyCss(isPolicyOpen)}>

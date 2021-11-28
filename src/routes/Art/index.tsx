@@ -79,7 +79,10 @@ function Art(props: IArtProps) {
 
   return (
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
-      <Helmetiser title="Who Art You?" description="Master Web Dev With Me." />
+      <Helmetiser
+        title="Who Art You?"
+        description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
+      />
       {isArtEnabled ? (
         <AbstractArt
           isRandomArtEnabled={true}

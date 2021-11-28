@@ -21,7 +21,10 @@ function Blog() {
 
   return (
     <RouteContainer>
-      <Helmetiser title="Blog" description="Master Web Dev With Me." />
+      <Helmetiser
+        title="Blog"
+        description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
+      />
       <H1>{t.blog.title}</H1>
 
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
