@@ -4,15 +4,17 @@ interface IHelmetiserProps {
   title?: string;
   description?: string;
   image?: string;
+  url?: string;
 }
 
 const DEFAULT_TITLE = 'Personal Website And Blog';
 const DEFAULT_DESCRIPTION =
   'Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas.';
 const DEFAULT_IMAGE = 'https://i.imgur.com/63zrOmd.png';
+const DEFAULT_URL = 'https://domagojvidovic.com';
 
 function Helmetiser(props: IHelmetiserProps) {
-  const { title, description, image } = props;
+  const { title, description, image, url } = props;
 
   const updatedTitle = `${title || DEFAULT_TITLE} — Domagoj Vidovic`;
   document.title = updatedTitle;
@@ -39,6 +41,10 @@ function Helmetiser(props: IHelmetiserProps) {
   document
     .querySelector('[name="twitter:image"]')
     ?.setAttribute('content', image || DEFAULT_IMAGE);
+
+  document
+    .querySelector('[property="og:url"]')
+    ?.setAttribute('content', url || DEFAULT_URL);
 
   return <></>;
 }

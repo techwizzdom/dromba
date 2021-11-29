@@ -24,6 +24,7 @@ function Blog() {
       <Helmetiser
         title="Blog"
         description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
+        url="https://www.domagojvidovic.com/blog"
       />
       <H1>{t.blog.title}</H1>
 

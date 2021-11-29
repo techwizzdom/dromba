@@ -90,7 +90,12 @@ function Post() {
 
   return (
     <RouteContainer>
-      <Helmetiser title={title} description={subtitle} image={img} />
+      <Helmetiser
+        title={title}
+        description={subtitle}
+        image={img}
+        url={`https://www.domagojvidovic.com/post/${path}`}
+      />
       <article className={articleCss}>
         <h1 className={titleCss}>{title}</h1>
         <h2 className={subtitleCss}>{subtitle}</h2>

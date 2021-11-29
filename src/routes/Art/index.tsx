@@ -24,34 +24,6 @@ interface IArtProps {
   setIsLogoDiving: Dispatch<SetStateAction<ILogoDiving>>;
 }
 
-const artCss = (isArtEnabled: boolean) => css`
-  display: block;
-
-  ${isArtEnabled ? 'overflow: hidden;' : ''};
-  ${isArtEnabled ? 'opacity: 0;' : ''};
-  transition: opacity 0.5s ease-in-out;
-
-  ${isArtEnabled ? 'pointer-events: none;' : ''};
-`;
-
-const artButtonCss = (theme: Theme) => css`
-  display: block;
-
-  margin: 0 8px 0 auto;
-  padding: 2px;
-  border-radius: 2px;
-
-  font-size: 20px;
-  color: ${theme.hyperlinkColor};
-
-  background-color: ${theme.hyperlinkBackgroundColor};
-
-  :hover {
-    cursor: pointer;
-    opacity: 0.8;
-  }
-`;
-
 function Art(props: IArtProps) {
   const { setIsLogoDiving } = props;
 
@@ -82,6 +54,7 @@ function Art(props: IArtProps) {
       <Helmetiser
         title="Who Art You?"
         description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
+        url="https://www.domagojvidovic.com/art"
       />
       {isArtEnabled ? (
         <AbstractArt
@@ -119,5 +92,33 @@ function Art(props: IArtProps) {
     </RouteContainer>
   );
 }
+
+const artCss = (isArtEnabled: boolean) => css`
+  display: block;
+
+  ${isArtEnabled ? 'overflow: hidden;' : ''};
+  ${isArtEnabled ? 'opacity: 0;' : ''};
+  transition: opacity 0.5s ease-in-out;
+
+  ${isArtEnabled ? 'pointer-events: none;' : ''};
+`;
+
+const artButtonCss = (theme: Theme) => css`
+  display: block;
+
+  margin: 0 8px 0 auto;
+  padding: 2px;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: ${theme.hyperlinkColor};
+
+  background-color: ${theme.hyperlinkBackgroundColor};
+
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+`;
 
 export default Art;

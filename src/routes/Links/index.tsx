@@ -14,7 +14,11 @@ import ThisIsMe from '../../components/ThisIsMe';
 function Links() {
   return (
     <RouteContainer isPureCenteringEnabled={true}>
-      <Helmetiser title="Links" description="Find out about my great offers." />
+      <Helmetiser
+        title="Links"
+        description="Find out about my great offers."
+        url="https://www.domagojvidovic.com/links"
+      />
       <ThisIsMe />
       <div className={linksContainerCss}>
         <H5>
