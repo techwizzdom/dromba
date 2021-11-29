@@ -30,7 +30,7 @@ function Post() {
   const readingTime = require('reading-time/lib/reading-time');
 
   const poster = require(`../../blog-posts/${postPath}.md`);
-  const { title, subtitle, img, path, postDate, tags } =
+  const { title, subtitle, img, previewImg, path, postDate, tags } =
     posts.find((post) => post.path === postPath) || {};
 
   const theme = React.useContext(ThemeContext);
@@ -93,8 +93,8 @@ function Post() {
       <Helmetiser
         title={title}
         description={subtitle}
-        image={img}
         url={`https://www.domagojvidovic.com/post/${path}`}
+        image={previewImg || img}
       />
       <article className={articleCss}>
         <h1 className={titleCss}>{title}</h1>
