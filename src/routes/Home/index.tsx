@@ -21,6 +21,7 @@ function Home() {
       <Helmetiser
         title="Who Am I?"
         description="Frontend Engineer in a London tech-startup?"
+        url="https://www.domagojvidovic.com/about"
       />
       <H1>{t.home.title}</H1>
       <H1>{t.home.subtitle}</H1>

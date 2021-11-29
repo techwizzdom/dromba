@@ -23,6 +23,7 @@ function Me() {
       <Helmetiser
         title="Personal Website And Blog"
         description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
+        url="https://www.domagojvidovic.com"
       />
       <ThisIsMe />
       <div className={privacyPolicyCss(isPolicyOpen)}>

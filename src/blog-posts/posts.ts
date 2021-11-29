@@ -13,6 +13,7 @@ export const Posts = [
     subtitle: 'Layout Guide For 2022',
     path: 'stop-using-margins-for-spacing-between-components',
     img: 'https://dev-to-uploads.s3.amazonaws.com/uploads/articles/kqsd1x1pr5l88y1lvbtq.jpg',
+    previewImg: 'https://i.imgur.com/8dqHRx8.jpg',
     thumbnail: 'https://i.imgur.com/8MI9d89.jpg',
     postDate: new Date('29 Nov 2021'),
     tags: ['#webdev', '#tutorial', '#css', '#html'],
