@@ -34,15 +34,6 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Teal', 'Chrome Extension')}
-            href={t.link.teal}
-          >
-            Teal Chrome Extension
-          </Hyperlink>
-        </H5>
-        <H5>
-          <Hyperlink
-            isUnderline={true}
             onClick={() => trackEvent('Booking', '60 min - Links')}
             href={t.link.book60mins}
           >
