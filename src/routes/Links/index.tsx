@@ -52,8 +52,13 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Booking', '30 min - Links')}
-            href={t.link.book30mins}
+            onClick={() =>
+              trackEvent(
+                'Booking',
+                'All Resources You Need To Become a FE Engineer',
+              )
+            }
+            href={t.link.zeroKnowledgeTo80k}
           >
             All The Resources You Need To Become A Frontend Engineer
           </Hyperlink>
