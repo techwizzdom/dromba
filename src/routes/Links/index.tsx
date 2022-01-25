@@ -26,6 +26,16 @@ function Links() {
             isUnderline={true}
             isEmail={true}
             onClick={() => trackEvent('Email', 'Links')}
+            href={t.link.aiCamp}
+          >
+            AI Camp - Summer Program (Register)
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
+            isEmail={true}
+            onClick={() => trackEvent('Email', 'Links')}
             href={t.email.dvidovic}
           >
             {t.email.dvidovic}
