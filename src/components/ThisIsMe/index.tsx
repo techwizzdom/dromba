@@ -78,10 +78,10 @@ function ThisIsMe(props: IThisIsMeProps) {
           <a target="_blank" rel="noopener noreferrer" href={t.link.twitter}>
             <Twitter />
           </a>
+          <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
+            <TikTok />
+          </a>
         </div>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
-          <TikTok />
-        </a>
         <a target="_blank" rel="noopener noreferrer" href={t.link.medium}>
           <Medium />
         </a>
