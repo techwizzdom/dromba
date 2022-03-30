@@ -168,7 +168,8 @@ export const t = {
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
     teal: 'https://tealhq.co/javascript_wizz',
-    aiCamp: 'https://ai-camp.org/partner/javascript_wizz',
+    aiCamp:
+      'https://flatlogic.com/?utm_source=tiktok&utm_medium=javascriptwizz&utm_campaign=tktk&utm_id=paid_promotion3&utm_term=onemorecampaign&utm_content=flatlogic',
   },
   navigation: {
     home: 'Who Am I?',
