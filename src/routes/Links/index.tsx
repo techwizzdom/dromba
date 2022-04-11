@@ -27,7 +27,7 @@ function Links() {
             onClick={() => trackEvent('AI Camp', 'Register')}
             href={t.link.aiCamp}
           >
-            Flatlogic
+            Flatlogic survey
           </Hyperlink>
         </H5>
         <H5>
