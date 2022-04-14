@@ -24,7 +24,16 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('AI Camp', 'Register')}
+            onClick={() => trackEvent('Trendpop', 'Careers')}
+            href={t.link.trendpop}
+          >
+            Trendpop careers
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Flatlogic', 'Survey')}
             href={t.link.aiCamp}
           >
             Flatlogic survey
