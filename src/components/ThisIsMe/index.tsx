@@ -71,15 +71,17 @@ function ThisIsMe(props: IThisIsMeProps) {
         </>
       )}
       <div className={profilesCss(theme, isMainScreenMode)}>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
-          <DevTo className={devToIconCss} />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.twitter}>
-          <Twitter />
-        </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
-          <TikTok />
-        </a>
+        <div className="link-wrappers">
+          <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
+            <DevTo className={devToIconCss} />
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href={t.link.twitter}>
+            <Twitter />
+          </a>
+          <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
+            <TikTok />
+          </a>
+        </div>
         <a target="_blank" rel="noopener noreferrer" href={t.link.medium}>
           <Medium />
         </a>
