@@ -170,7 +170,6 @@ export const t = {
     teal: 'https://tealhq.co/javascript_wizz',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
-    trendpop: 'https://trendpop.social/careers?ref=dvidovic91',
   },
   navigation: {
     home: 'Who Am I?',
