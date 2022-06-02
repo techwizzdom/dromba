@@ -170,6 +170,7 @@ export const t = {
     teal: 'https://tealhq.co/javascript_wizz',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
+    rapyd: 'https://www.hackthegalaxy.dev/',
   },
   navigation: {
     home: 'Who Am I?',
