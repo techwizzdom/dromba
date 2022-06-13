@@ -57,7 +57,18 @@ function ThisIsMe(props: IThisIsMeProps) {
               onClick={() => trackEvent('Booking', '60 min')}
               href={t.link.book60mins}
             >
-              60 min ($119)
+              60 min (
+              <span
+                style={{
+                  textDecoration: 'line-through',
+                  marginRight: '8px',
+                  fontSize: '18px',
+                  fontWeight: 400,
+                }}
+              >
+                $149
+              </span>
+              $119)
             </Hyperlink>
             <Hyperlink
               isUnderline={true}
@@ -65,7 +76,18 @@ function ThisIsMe(props: IThisIsMeProps) {
               onClick={() => trackEvent('Booking', '30 min')}
               href={t.link.book30mins}
             >
-              30 mins ($79)
+              30 mins (
+              <span
+                style={{
+                  textDecoration: 'line-through',
+                  marginRight: '8px',
+                  fontSize: '18px',
+                  fontWeight: 400,
+                }}
+              >
+                $99
+              </span>
+              $79)
             </Hyperlink>
           </div>
         </>
