@@ -170,7 +170,7 @@ export const t = {
     teal: 'https://tealhq.co/javascript_wizz',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
-    rapyd: 'https://www.hackthegalaxy.dev/',
+    rapyd: 'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
   },
   navigation: {
     home: 'Who Am I?',
