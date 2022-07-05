@@ -33,6 +33,24 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('SlashData', 'Survey')}
+            href={t.link.slashDataSurvey}
+          >
+            SlashData Survey
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Notyai', 'Website')}
+            href={t.link.notyai}
+          >
+            Noty.ai
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
             isEmail={true}
             onClick={() => trackEvent('Email', 'Links')}
             href={t.email.dvidovic}
