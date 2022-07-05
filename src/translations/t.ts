@@ -170,7 +170,10 @@ export const t = {
     teal: 'https://tealhq.co/javascript_wizz',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
-    rapyd: 'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
+    rapyd:
+      'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
+    notyai: 'https://noty.ai/',
+    slashDataSurvey: 'https://developereconomics.net?member_id=javascript_wizz',
   },
   navigation: {
     home: 'Who Am I?',
