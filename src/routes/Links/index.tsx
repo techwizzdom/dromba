@@ -24,6 +24,15 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Bamblue', 'Referal')}
+            href={t.link.bamblue}
+          >
+            Anti blue-light glasses (Bamblue)
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Rapyd', 'Hack the galaxy')}
             href={t.link.rapyd}
           >

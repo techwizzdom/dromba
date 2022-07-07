@@ -174,6 +174,7 @@ export const t = {
       'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
     notyai: 'https://noty.ai/',
     slashDataSurvey: 'https://developereconomics.net?member_id=javascript_wizz',
+    bamblue: 'https://bamblueglasses.com/?ref=LxX0mVWrjCJrF',
   },
   navigation: {
     home: 'Who Am I?',
