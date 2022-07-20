@@ -160,6 +160,8 @@ export const t = {
     github: 'https://github.com/dromba',
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
+    instagram: 'https://www.instagram.com/javascript_wizz/',
+    youtube: 'https://www.youtube.com/channel/UCmeAMLFE5efMtjp5-83D1CQ',
     buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
     tiktok: 'https://www.tiktok.com/@javascript_wizz',
     zeroKnowledgeTo80k:
@@ -189,6 +191,7 @@ export const t = {
     github: 'GitHub',
     medium: 'Medium',
     tiktok: 'TikTok',
+    instagram: 'Instagram',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',
