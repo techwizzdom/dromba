@@ -7,6 +7,8 @@ import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
 import { ReactComponent as TikTok } from '../../assets/icons/tiktok.svg';
 import { ReactComponent as Medium } from '../../assets/icons/medium.svg';
 import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
+import { ReactComponent as Instagram } from '../../assets/icons/instagram.svg';
+import { ReactComponent as YouTube } from '../../assets/icons/youtube.svg';
 import { t } from '../../translations/t';
 import { Media } from '../../enums/Media';
 import { Theme } from '../../styles';
@@ -93,14 +95,20 @@ function ThisIsMe(props: IThisIsMeProps) {
         </>
       )}
       <div className={profilesCss(theme, isMainScreenMode)}>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
-          <DevTo className={devToIconCss} />
+        <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
+          <TikTok />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href={t.link.instagram}>
+          <Instagram />
         </a>
         <a target="_blank" rel="noopener noreferrer" href={t.link.twitter}>
           <Twitter />
         </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
-          <TikTok />
+        <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
+          <DevTo className={devToIconCss} />
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href={t.link.youtube}>
+          <YouTube />
         </a>
         <a target="_blank" rel="noopener noreferrer" href={t.link.medium}>
           <Medium />
@@ -121,6 +129,7 @@ function ThisIsMe(props: IThisIsMeProps) {
 const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: ${isMainScreenMode ? '64px' : '0'};
 
@@ -156,6 +165,7 @@ const hrefCss = css`
 
 const devToIconCss = css`
   width: 54px;
+  margin: 0 4px !important;
 `;
 
 const linkedInWrapperCss = css`
