@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { css } from 'emotion';
-import { H5 } from '../core/Heading';
+import { H4 } from '../core/Heading';
 import { Theme } from '../../styles';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Media } from '../../enums/Media';
@@ -25,7 +25,7 @@ const ServiceCard: React.FC<IServiceCardProps> = (props: IServiceCardProps) => {
       href={href}
     >
       {children}
-      <H5>{title}</H5>
+      <H4>{title}</H4>
       <p>{descriptionTop}</p>
       <p>{descriptionBottom}</p>
     </a>
