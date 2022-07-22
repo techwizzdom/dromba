@@ -33,18 +33,23 @@ function ThisIsMe(props: IThisIsMeProps) {
         <img className={logoMeCss} src={logoMe} alt="logo-me" />
         <div>
           {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
-          <p className={pCss(isMainScreenMode)}>
-            Senior frontend engineer @ London tech startup.
-            <br />
-            Content creator. Mentor. Speaker.
+          <p className={pCss(isMainScreenMode)} style={{ maxWidth: '450px' }}>
+            Senior frontend engineer. Content creator. Mentor. Speaker.
           </p>
           <p className={pCss(isMainScreenMode, true)}>
             {isMainScreenMode ? (
               "LET'S SUPERCHARGE YOUR CAREER."
             ) : (
-              <Link to={Routes.Services} className={hyperlinkCss(theme)}>
-                I offer fabulous services, check them out here
-              </Link>
+              <>
+                {'HIRE ME:'}
+                <Link
+                  to={Routes.Services}
+                  className={hyperlinkCss(theme)}
+                  style={{ marginLeft: '4px' }}
+                >
+                  click here
+                </Link>
+              </>
             )}
           </p>
         </div>
