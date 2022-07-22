@@ -55,7 +55,7 @@ function Services() {
       <div className={servicesCardGridCss}>
         <ServiceCard
           title="Mentoring"
-          descriptionTop="We can get you your first job, or supercharge your carrer."
+          descriptionTop="We can get you your first job, or supercharge your career."
           descriptionBottom="Anything you wish."
           href={t.link.book30mins}
         >
