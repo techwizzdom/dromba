@@ -11,7 +11,7 @@ import ThemeToggle from '../ThemeToggle';
 import IconButton from '../IconButton';
 import NavigationItems from '../NavigationItems';
 
-import Logodrobmba from '../../assets/images/logodrombahires.png';
+import Logodrobmba from '../../assets/images/wizz-transparent-bg.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
 import { useDevice } from '../../hooks/useDevice';
 

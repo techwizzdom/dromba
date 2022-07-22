@@ -177,12 +177,15 @@ export const t = {
     notyai: 'https://noty.ai/',
     slashDataSurvey: 'https://developereconomics.net?member_id=javascript_wizz',
     bamblue: 'https://bamblueglasses.com/?ref=LxX0mVWrjCJrF',
+    letsCreateAwesomeStuff:
+      'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
   },
   navigation: {
     home: 'Who Am I?',
     art: 'Who Art You?',
     blog: 'Blog',
     links: 'Links',
+    services: 'Services',
   },
   profile: {
     twitter: 'Twitter',

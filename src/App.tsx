@@ -9,7 +9,6 @@ import Header from './components/Header';
 import { ThemeContext } from './context/ThemeContext';
 import MainContainer from './components/MainContainer';
 
-import Home from './routes/Home';
 import Blog from './routes/Blog';
 import Art from './routes/Art';
 
@@ -18,6 +17,7 @@ import { ILogoDiving } from './components/HeaderDesktop';
 import Me from './routes/Me';
 import Post from './routes/Post';
 import Links from './routes/Links';
+import Services from './routes/Services';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -39,7 +39,7 @@ function App() {
           <Header toggleTheme={toggleTheme} isLogoDiving={isLogoDiving} />
           <Switch>
             <Route exact path="/" component={Me} />
-            <Route path="/about" component={Home} />
+            <Route path="/services" component={Services} />
             <Route path="/blog" component={Blog} />
             <Route path="/links" component={Links} />
             <Route path="/post/:id" component={Post} />

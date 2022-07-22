@@ -13,7 +13,7 @@ export interface IHyperlinkProps {
   onClick?: () => void;
 }
 
-const hyperlinkCss = (
+export const hyperlinkCss = (
   theme: Theme,
   isUnderline?: boolean,
   isLarge?: boolean,

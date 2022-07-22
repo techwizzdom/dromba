@@ -11,4 +11,7 @@ export const colors = {
   gradientDark: 'linear-gradient(90deg, #181818 0%, #181818 100%)',
   greenMedian: '#7cfea8',
   greenNormal: '#4caf5099',
+  gradientYellow: 'linear-gradient(90deg, #efc01a 0%, #efdf1a 100%)',
+  yellowMedian: '#f0cf1c',
+  orangeNormal: '#ff8e1c',
 };

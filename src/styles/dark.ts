@@ -20,4 +20,5 @@ export const dark: Theme = {
     primary: colors.baseLight,
   },
   buyMeACroissantBackgroundColor: colors.alienGreen,
+  serviceCardLogoColor: colors.baseLight,
 };

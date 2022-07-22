@@ -9,7 +9,7 @@ import MainNavigation from '../MainNavigation';
 
 import { Media } from '../../enums/Media';
 
-import Logodrobmba from '../../assets/images/logodrombahires.png';
+import Logodrobmba from '../../assets/images/wizz-transparent-bg.png';
 import { DeviceType } from '../../enums/DeviceType';
 import { useDevice } from '../../hooks/useDevice';
 

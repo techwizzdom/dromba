@@ -1,5 +1,5 @@
 import React from 'react';
-import logoMe from '../../assets/images/me.jpg';
+import logoMe from '../../assets/images/wizz.png';
 import { H3, H4 } from '../../components/core/Heading';
 
 import { ReactComponent as DevTo } from '../../assets/icons/devto.svg';
@@ -16,7 +16,9 @@ import IndexDown from '../../assets/images/index-down.png';
 import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { trackEvent } from '../../util/metrics';
-import Hyperlink from '../Hyperlink';
+import Hyperlink, { hyperlinkCss } from '../Hyperlink';
+import { Routes } from '../../routes/Routes';
+import { Link } from 'react-router-dom';
 
 interface IThisIsMeProps {
   isMainScreenMode?: boolean;
@@ -32,12 +34,18 @@ function ThisIsMe(props: IThisIsMeProps) {
         <div>
           {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
           <p className={pCss(isMainScreenMode)}>
-            {isMainScreenMode ? 'A ' : 'Dom is a '}Frontend engineer, mentor,
-            and speaker.
+            Senior frontend engineer @ London tech startup.
+            <br />
+            Content creator. Mentor. Speaker.
           </p>
-          <p className={pCss(isMainScreenMode)}>In a London tech startup.</p>
           <p className={pCss(isMainScreenMode, true)}>
-            Let's supercharge your career.
+            {isMainScreenMode ? (
+              "LET'S SUPERCHARGE YOUR CAREER."
+            ) : (
+              <Link to={Routes.Services} className={hyperlinkCss(theme)}>
+                I offer fabulous services, check them out here
+              </Link>
+            )}
           </p>
         </div>
       </div>
@@ -197,7 +205,7 @@ const logoMeCss = css`
   height: 164px;
   margin-right: 32px;
   border-radius: 50%;
-  border: 2px solid green;
+  border: 2px solid yellow;
 
   @media ${Media.Mobile} {
     height: 96px;
