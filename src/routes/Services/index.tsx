@@ -6,7 +6,7 @@ import { css } from 'emotion';
 
 import Hyperlink from '../../components/Hyperlink';
 import Helmetiser from '../../components/core/Helmetiser';
-import { H1, H3 } from '../../components/core/Heading';
+import { H1, H5 } from '../../components/core/Heading';
 import { ReactComponent as Mentoring } from '../../assets/icons/mentoring.svg';
 import { ReactComponent as SocialMediaManager } from '../../assets/icons/social-media-manager.svg';
 import { ReactComponent as ContentCreation } from '../../assets/icons/content-creation.svg';
@@ -37,8 +37,8 @@ function Services() {
       />
       <H1>Together, we can create anything.</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H3>Click on a service to book a call.</H3>
-      <H3>
+      <H5>Click on a service to book a call.</H5>
+      <H5>
         {' '}
         Or drop me an email at{' '}
         <Hyperlink
@@ -50,7 +50,7 @@ function Services() {
           {t.email.dvidovic}
         </Hyperlink>
         .
-      </H3>
+      </H5>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={servicesCardGridCss}>
         <ServiceCard
