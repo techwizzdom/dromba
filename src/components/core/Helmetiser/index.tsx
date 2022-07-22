@@ -9,8 +9,8 @@ interface IHelmetiserProps {
 
 const DEFAULT_TITLE = 'Personal Website And Blog';
 const DEFAULT_DESCRIPTION =
-  'Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas.';
-const DEFAULT_IMAGE = 'https://i.imgur.com/63zrOmd.png';
+  'Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff.';
+const DEFAULT_IMAGE = 'https://i.imgur.com/4zqQXe9.png';
 const DEFAULT_URL = 'https://domagojvidovic.com';
 
 function Helmetiser(props: IHelmetiserProps) {
