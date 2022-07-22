@@ -32,7 +32,7 @@ function Services() {
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
         title="Personal Website And Blog"
-        description="Frontend Engineer, mentor, and speaker in a London tech startup. Sharing my thoughts and ideas."
+        description="Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff."
         url="https://www.domagojvidovic.com"
       />
       <H1>Together, we can create anything.</H1>
