@@ -23,6 +23,7 @@ const mainContainerCss = (theme: Theme) => css`
   transition-property: color;
   transition-duration: 1s;
   transition-timing-function: ease;
+  padding-bottom: 128px;
 `;
 
 const appCss = (isArtVisible: boolean) => css`

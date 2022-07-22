@@ -47,11 +47,15 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
   return (
     <>
       <Link
-        to={Routes.Home}
-        className={navigationItemCss(theme, isMobile, isSelected(Routes.Home))}
+        to={Routes.Services}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.Services),
+        )}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        {t.navigation.home}
+        {t.navigation.services}
       </Link>
       <Link
         to={Routes.Art}

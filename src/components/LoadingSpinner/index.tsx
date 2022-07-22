@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { css } from 'emotion';
 
-import Logodrobmba from '../../assets/images/logodrombahires.png';
+import Logodrobmba from '../../assets/images/wizz-transparent-bg.png';
 
 const loadingSpinnerCss = css`
   width: 40px;
