@@ -36,7 +36,7 @@ const serviceCardCss = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px solid black;
+  border: 4px solid ${theme.textColor};
   border-radius: 16px;
   padding: 16px;
   gap: 8px;
