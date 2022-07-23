@@ -31,7 +31,7 @@ function Services() {
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
-        title="Personal Website And Blog"
+        title="JavaScript Wizz"
         description="Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff."
         url="https://www.domagojvidovic.com"
       />
