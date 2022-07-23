@@ -168,6 +168,7 @@ const testimonialsGridCss = css`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 16px;
+  align-items: center;
 
   @media ${Media.Mobile} {
     grid-template-columns: 1fr;
