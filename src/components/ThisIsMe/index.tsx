@@ -46,6 +46,9 @@ function ThisIsMe(props: IThisIsMeProps) {
                   to={Routes.Services}
                   className={hyperlinkCss(theme)}
                   style={{ marginLeft: '4px' }}
+                  onClick={() =>
+                    trackEvent('This is me', 'click here (services)')
+                  }
                 >
                   click here
                 </Link>
