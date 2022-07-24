@@ -4,6 +4,7 @@ import { H4 } from '../core/Heading';
 import { Theme } from '../../styles';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Media } from '../../enums/Media';
+import { trackEvent } from '../../util/metrics';
 
 interface IServiceCardProps {
   title: string;
@@ -23,6 +24,7 @@ const ServiceCard: React.FC<IServiceCardProps> = (props: IServiceCardProps) => {
       rel="noopener noreferrer"
       className={serviceCardCss(theme)}
       href={href}
+      onClick={() => trackEvent('Service Click', title)}
     >
       {children}
       <H4>{title}</H4>
