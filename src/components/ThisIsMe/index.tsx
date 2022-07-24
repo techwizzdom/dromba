@@ -111,22 +111,52 @@ function ThisIsMe(props: IThisIsMeProps) {
         </>
       )}
       <div className={profilesCss(theme, isMainScreenMode)}>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.tiktok}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={t.link.tiktok}
+          onClick={() => trackEvent('Social network icon click', 'TikTok')}
+        >
           <TikTok />
         </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.instagram}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={t.link.instagram}
+          onClick={() => trackEvent('Social network icon click', 'Instagram')}
+        >
           <Instagram />
         </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.twitter}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={t.link.twitter}
+          onClick={() => trackEvent('Social network icon click', 'Twitter')}
+        >
           <Twitter />
         </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.devto}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={t.link.devto}
+          onClick={() => trackEvent('Social network icon click', 'DevTo')}
+        >
           <DevTo className={devToIconCss} />
         </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.youtube}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={t.link.youtube}
+          onClick={() => trackEvent('Social network icon click', 'YouTube')}
+        >
           <YouTube />
         </a>
-        <a target="_blank" rel="noopener noreferrer" href={t.link.medium}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={t.link.medium}
+          onClick={() => trackEvent('Social network icon click', 'Medium')}
+        >
           <Medium />
         </a>
         <a
@@ -134,6 +164,7 @@ function ThisIsMe(props: IThisIsMeProps) {
           target="_blank"
           rel="noopener noreferrer"
           href={t.link.linkedIn}
+          onClick={() => trackEvent('Social network icon click', 'LinkedIn')}
         >
           <LinkedIn />
         </a>
