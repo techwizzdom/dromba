@@ -11,6 +11,7 @@ import { ReactComponent as Mentoring } from '../../assets/icons/mentoring.svg';
 import { ReactComponent as SocialMediaManager } from '../../assets/icons/social-media-manager.svg';
 import { ReactComponent as ContentCreation } from '../../assets/icons/content-creation.svg';
 import { ReactComponent as BrandCollaboration } from '../../assets/icons/brand-collaboration.svg';
+import { ReactComponent as Consultancy } from '../../assets/icons/consultancy.svg';
 import ServiceCard from '../../components/ServiceCard';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
@@ -20,6 +21,8 @@ import { trackEvent } from '../../util/metrics';
 import { testimonials } from '../../testimonials';
 import { Theme } from '../../styles';
 import { ThemeContext } from '../../context/ThemeContext';
+import Paragraph from '../../components/core/Paragraph';
+import { ParagraphSize } from '../../enums/ParagraphSize';
 
 function Services() {
   const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(
@@ -90,6 +93,14 @@ function Services() {
         >
           <SocialMediaManager />
         </ServiceCard>
+        <ServiceCard
+          title="Consultancy"
+          descriptionTop="Your app has problems? You need to architect it?"
+          descriptionBottom="Just name it. We'll sort it out."
+          href={t.link.letsCreateAwesomeStuff}
+        >
+          <Consultancy />
+        </ServiceCard>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
 
@@ -105,13 +116,35 @@ function Services() {
               className={testimonialTextImgCss}
               alt="person-giving-testimonial"
             />
-            <h5>Dani Grant</h5>
+            <H5>Dani Grant</H5>
             <Hyperlink href={t.link.jam}>Jam</Hyperlink>
           </div>
-          <p>
+          <p className={testimonialTextQuoteCss}>
             "We loved working with Dom, he was super quick, creative, reliable,
             and the video he created with us was just outstanding. Thank you,
             Dom!"
+          </p>
+        </div>
+        <div className={testimonialTextCss(theme)}>
+          <div className={testimonialTextContentCss}>
+            <img
+              src="https://i.imgur.com/31Gfu7B.jpg"
+              className={testimonialTextImgCss}
+              alt="person-giving-testimonial"
+            />
+            <H5>Ante Simac</H5>
+            <Paragraph size={ParagraphSize.Medium}>Student</Paragraph>
+          </div>
+          <p className={testimonialTextQuoteCss}>
+            "As someone without a formal background in coding having Dom as a
+            coach is invaluable.
+            <br />
+            <br />
+            Content that previously seemed unbearably intricate Dom dissected in
+            easy-to-understand chunks.
+            <br />
+            <br />
+            Patient, diligent and knows his stuff. Highly recommended!"
           </p>
         </div>
         {testimonials.map((testimonial) => (
@@ -151,10 +184,19 @@ const testimonialTextCss = (theme: Theme) => css`
   gap: 16px;
 `;
 
+const testimonialTextQuoteCss = css`
+  font-size: 12px;
+
+  @media ${Media.Mobile} {
+    font-size: 16px;
+  }
+`;
+
 const testimonialTextContentCss = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 4px;
 `;
 

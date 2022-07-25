@@ -41,17 +41,18 @@ function ThisIsMe(props: IThisIsMeProps) {
               "LET'S SUPERCHARGE YOUR CAREER."
             ) : (
               <>
-                {'HIRE ME:'}
+                I offer fabulous services,
                 <Link
                   to={Routes.Services}
                   className={hyperlinkCss(theme)}
-                  style={{ marginLeft: '4px' }}
+                  style={{ margin: '0 4px' }}
                   onClick={() =>
                     trackEvent('This is me', 'click here (services)')
                   }
                 >
                   click here
                 </Link>
+                to see them
               </>
             )}
           </p>
