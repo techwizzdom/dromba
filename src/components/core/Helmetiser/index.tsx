@@ -10,7 +10,7 @@ interface IHelmetiserProps {
 const DEFAULT_TITLE = 'JavaScript Wizz';
 const DEFAULT_DESCRIPTION =
   "Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff.";
-const DEFAULT_IMAGE = 'https://i.imgur.com/5Spkm5M.png';
+const DEFAULT_IMAGE = 'https://i.imgur.com/lvEdL9Q.png';
 const DEFAULT_URL = 'https://domagojvidovic.com';
 
 function Helmetiser(props: IHelmetiserProps) {
