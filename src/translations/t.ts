@@ -161,7 +161,7 @@ export const t = {
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
     instagram: 'https://www.instagram.com/javascript_wizz/',
-    youtube: 'https://www.youtube.com/channel/UCmeAMLFE5efMtjp5-83D1CQ',
+    youtube: 'https://www.youtube.com/c/JavaScriptWizz',
     buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
     tiktok: 'https://www.tiktok.com/@javascript_wizz',
     zeroKnowledgeTo80k:
