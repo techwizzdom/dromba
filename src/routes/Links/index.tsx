@@ -24,6 +24,15 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Recrooit', 'Referal')}
+            href={t.link.recrooit}
+          >
+            Recrooit
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Bamblue', 'Referal')}
             href={t.link.bamblue}
           >
@@ -37,24 +46,6 @@ function Links() {
             href={t.link.rapyd}
           >
             Hack The Galaxy
-          </Hyperlink>
-        </H5>
-        <H5>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('SlashData', 'Survey')}
-            href={t.link.slashDataSurvey}
-          >
-            SlashData Survey
-          </Hyperlink>
-        </H5>
-        <H5>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Notyai', 'Website')}
-            href={t.link.notyai}
-          >
-            Noty.ai
           </Hyperlink>
         </H5>
         <H5>

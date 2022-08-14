@@ -180,6 +180,7 @@ export const t = {
     bamblue: 'https://bamblueglasses.com/?ref=LxX0mVWrjCJrF',
     letsCreateAwesomeStuff:
       'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
+    recrooit: 'https://www.recrooit.com/',
   },
   navigation: {
     home: 'Who Am I?',
