@@ -18,11 +18,12 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { Media } from '../../enums/Media';
 import { t } from '../../translations/t';
 import { trackEvent } from '../../util/metrics';
-import { testimonials } from '../../testimonials';
-import { Theme } from '../../styles';
-import { ThemeContext } from '../../context/ThemeContext';
-import Paragraph from '../../components/core/Paragraph';
-import { ParagraphSize } from '../../enums/ParagraphSize';
+import {
+  testimonialImages,
+  testimonialsFromPeople,
+} from '../../testimonials/index';
+import TestimonialCard from '../../components/TestimonialCard';
+import TestimonialScreenshot from '../../components/TestimonialScreenshot';
 
 function Services() {
   const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(
@@ -33,8 +34,6 @@ function Services() {
     localStorage.setItem('isPolicyViewedDrommer', 'true');
     setIsPolicyOpen(false);
   };
-
-  const theme = React.useContext(ThemeContext);
 
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
@@ -109,51 +108,19 @@ function Services() {
       <H5>Thanks for these wonderful words :)</H5>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={testimonialsGridCss}>
-        <div className={testimonialTextCss(theme)}>
-          <div className={testimonialTextContentCss}>
-            <img
-              src="https://i.imgur.com/g1eQfaG.jpg"
-              className={testimonialTextImgCss}
-              alt="person-giving-testimonial"
-            />
-            <H5>Dani Grant</H5>
-            <Hyperlink href={t.link.jam}>Jam</Hyperlink>
-          </div>
-          <p className={testimonialTextQuoteCss}>
-            "We loved working with Dom, he was super quick, creative, reliable,
-            and the video he created with us was just outstanding. Thank you,
-            Dom!"
-          </p>
-        </div>
-        <div className={testimonialTextCss(theme)}>
-          <div className={testimonialTextContentCss}>
-            <img
-              src="https://i.imgur.com/31Gfu7B.jpg"
-              className={testimonialTextImgCss}
-              alt="person-giving-testimonial"
-            />
-            <H5>Ante Simac</H5>
-            <Paragraph size={ParagraphSize.Medium}>Student</Paragraph>
-          </div>
-          <p className={testimonialTextQuoteCss}>
-            "As someone without a formal background in coding having Dom as a
-            coach is invaluable.
-            <br />
-            <br />
-            Content that previously seemed unbearably intricate Dom dissected in
-            easy-to-understand chunks.
-            <br />
-            <br />
-            Patient, diligent and knows his stuff. Highly recommended!"
-          </p>
-        </div>
-        {testimonials.map((testimonial) => (
-          <img
-            src={testimonial}
-            loading="lazy"
-            alt="testimonial"
-            className={testimonialImageCss(theme)}
+        {testimonialsFromPeople.map((testimonial) => (
+          <TestimonialCard
+            avatar={testimonial.avatar}
+            href={testimonial.href}
+            companyName={testimonial.companyName}
+            name={testimonial.name}
+            quote1={testimonial.quote1}
+            quote2={testimonial.quote2}
+            quote3={testimonial.quote3}
           />
+        ))}
+        {testimonialImages.map((testimonialImage) => (
+          <TestimonialScreenshot screenshot={testimonialImage} />
         ))}
       </div>
       <div className={privacyPolicyCss(isPolicyOpen)}>
@@ -166,45 +133,6 @@ function Services() {
     </RouteContainer>
   );
 }
-
-const testimonialTextImgCss = css`
-  width: 96px;
-  height: 96px;
-  border: 2px solid yellow;
-  border-radius: 50%;
-`;
-
-const testimonialTextCss = (theme: Theme) => css`
-  width: 100%;
-  border: 4px solid ${theme.textColor};
-  border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-`;
-
-const testimonialTextQuoteCss = css`
-  font-size: 12px;
-
-  @media ${Media.Mobile} {
-    font-size: 16px;
-  }
-`;
-
-const testimonialTextContentCss = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 4px;
-`;
-
-const testimonialImageCss = (theme: Theme) => css`
-  width: 100%;
-  border: 4px solid ${theme.textColor};
-  border-radius: 16px;
-`;
 
 const testimonialsGridCss = css`
   display: grid;

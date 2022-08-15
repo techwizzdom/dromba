@@ -200,17 +200,6 @@ const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   }
 `;
 
-const hrefCss = css`
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  text-decoration: underline;
-
-  @media ${Media.Mobile} {
-    font-size: 20px;
-  }
-`;
-
 const devToIconCss = css`
   width: 54px;
   margin: 0 4px !important;
