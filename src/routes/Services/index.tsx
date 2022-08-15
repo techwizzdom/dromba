@@ -18,12 +18,7 @@ import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { Media } from '../../enums/Media';
 import { t } from '../../translations/t';
 import { trackEvent } from '../../util/metrics';
-import {
-  testimonialImages,
-  testimonialsFromPeople,
-} from '../../testimonials/index';
-import TestimonialCard from '../../components/TestimonialCard';
-import TestimonialScreenshot from '../../components/TestimonialScreenshot';
+import TestimonialsGrid from '../../components/TestimonialsGrid';
 
 function Services() {
   const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(
@@ -107,22 +102,7 @@ function Services() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H5>Thanks for these wonderful words :)</H5>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <div className={testimonialsGridCss}>
-        {testimonialsFromPeople.map((testimonial) => (
-          <TestimonialCard
-            avatar={testimonial.avatar}
-            href={testimonial.href}
-            companyName={testimonial.companyName}
-            name={testimonial.name}
-            quote1={testimonial.quote1}
-            quote2={testimonial.quote2}
-            quote3={testimonial.quote3}
-          />
-        ))}
-        {testimonialImages.map((testimonialImage) => (
-          <TestimonialScreenshot screenshot={testimonialImage} />
-        ))}
-      </div>
+      <TestimonialsGrid />
       <div className={privacyPolicyCss(isPolicyOpen)}>
         To improve your experience even more, I use cookies for analytics. Find
         out more{' '}
@@ -133,17 +113,6 @@ function Services() {
     </RouteContainer>
   );
 }
-
-const testimonialsGridCss = css`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
-  align-items: center;
-
-  @media ${Media.Mobile} {
-    grid-template-columns: 1fr;
-  }
-`;
 
 const servicesCardGridCss = css`
   display: grid;
