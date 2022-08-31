@@ -30,6 +30,16 @@ export const testimonialsFromPeople: Array<IPersonTestimonial> = [
     quote3: 'Patient, diligent and knows his stuff. Highly recommended!',
   },
   {
+    avatar: 'https://i.imgur.com/SezXyii.jpg',
+    name: 'Andy Didorosi, Head of Marketing',
+    companyName: 'Status Hero',
+    href: t.link.statusHero,
+    quote1: 'Dom is great!',
+    quote2:
+      'He came up with a whole concept for our ad, filmed it, and edited it in the time it takes most people to respond to the first email.',
+    quote3: 'Five stars.',
+  },
+  {
     avatar: 'https://i.imgur.com/6EEfqS2.png',
     name: 'Pamela Hong, CEO',
     companyName: 'Bamblue Glasses',

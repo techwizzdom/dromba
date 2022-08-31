@@ -32,6 +32,7 @@ const TestimonialsGrid: React.FC = () => {
         {testimonials.map((testimonial) => {
           return testimonial.name ? (
             <TestimonialCard
+              key={testimonial.avatar}
               avatar={testimonial.avatar}
               href={testimonial.href}
               companyName={testimonial.companyName}
@@ -41,7 +42,10 @@ const TestimonialsGrid: React.FC = () => {
               quote3={testimonial.quote3}
             />
           ) : (
-            <TestimonialScreenshot screenshot={testimonial.screenshot} />
+            <TestimonialScreenshot
+              key={testimonial.screenshot}
+              screenshot={testimonial.screenshot}
+            />
           );
         })}
       </>
