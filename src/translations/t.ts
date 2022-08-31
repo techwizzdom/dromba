@@ -181,6 +181,7 @@ export const t = {
     letsCreateAwesomeStuff:
       'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
     recrooit: 'https://www.recrooit.com/',
+    statusHero: 'https://statushero.com/',
   },
   navigation: {
     home: 'Who Am I?',
