@@ -7,6 +7,8 @@ import { ParagraphSize } from '../../enums/ParagraphSize';
 import { css } from 'emotion';
 import { Media } from '../../enums/Media';
 import Hyperlink from '../Hyperlink';
+import VerticalSpacing from '../VerticalSpacing';
+import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 
 interface ITestimonialCardProps {
   avatar: string;
@@ -34,6 +36,7 @@ const TestimonialCard: React.FC<ITestimonialCardProps> = (
           alt={`${name} giving a testimonial`}
         />
         <H5>{name}</H5>
+        <VerticalSpacing height={VerticalSpacingHeight.XSmall} />
         {href ? (
           <Hyperlink href={href}>{companyName}</Hyperlink>
         ) : (
@@ -88,11 +91,7 @@ const testimonialTextQuoteCss = css`
 `;
 
 const testimonialTextContentCss = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
-  gap: 4px;
 `;
 
 export default TestimonialCard;
