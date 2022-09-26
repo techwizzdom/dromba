@@ -24,6 +24,15 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('E-Pal', 'Referal')}
+            href={t.link.epal}
+          >
+            E-Pal
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Recrooit', 'Referal')}
             href={t.link.recrooit}
           >

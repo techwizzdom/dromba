@@ -182,6 +182,7 @@ export const t = {
       'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
     recrooit: 'https://www.recrooit.com/',
     statusHero: 'https://statushero.com/',
+    epal: 'https://go.epal.gg/3dFj72r',
   },
   navigation: {
     home: 'Who Am I?',
