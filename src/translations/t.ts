@@ -183,6 +183,7 @@ export const t = {
     recrooit: 'https://www.recrooit.com/',
     statusHero: 'https://statushero.com/',
     epal: 'https://go.epal.gg/3dFj72r',
+    locofy: 'https://www.locofy.ai/',
   },
   navigation: {
     home: 'Who Am I?',

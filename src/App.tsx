@@ -18,6 +18,7 @@ import Me from './routes/Me';
 import Post from './routes/Post';
 import Links from './routes/Links';
 import Services from './routes/Services';
+import Pricing from './routes/Pricing';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -43,6 +44,7 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/links" component={Links} />
             <Route path="/post/:id" component={Post} />
+            <Route path="/pricing/:id" component={Pricing} />
             <Route
               path="/art"
               render={(props) => (
