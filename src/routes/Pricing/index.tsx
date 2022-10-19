@@ -100,7 +100,7 @@ function Pricing() {
           <H3>${megaPrice}</H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
-              <strong>1 Reel or IG post</strong>
+              <strong>1 Reel</strong>
             </PricingBlockItem>
             <PricingBlockItem>
               <strong>1 TikTok video</strong>
