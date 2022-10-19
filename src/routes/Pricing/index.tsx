@@ -15,37 +15,33 @@ function Pricing() {
   const theme = React.useContext(ThemeContext);
 
   const id = window.location.pathname.split('/')[2];
+  const formattedId = id.toString();
   let standardPrice = 0;
   let premiumPrice = 0;
   let megaPrice = 0;
   let wrongId = false;
 
-  switch (id) {
-    case PricingBundle.Cheap:
-      standardPrice = 700;
-      premiumPrice = 1200;
-      megaPrice = 1800;
-      break;
-    case PricingBundle.Medium:
-      standardPrice = 900;
-      premiumPrice = 1400;
-      megaPrice = 2000;
-      break;
-    case PricingBundle.Expensive:
-      standardPrice = 1200;
-      premiumPrice = 1600;
-      megaPrice = 2400;
-      break;
-    case PricingBundle.Dom:
-      standardPrice = 1500;
-      premiumPrice = 2000;
-      megaPrice = 2900;
-      break;
-    default:
-      wrongId = true;
-      standardPrice = 5000;
-      premiumPrice = 8000;
-      megaPrice = 14000;
+  if (formattedId.includes(PricingBundle.Cheap)) {
+    standardPrice = 700;
+    premiumPrice = 1200;
+    megaPrice = 1800;
+  } else if (formattedId.includes(PricingBundle.Medium)) {
+    standardPrice = 900;
+    premiumPrice = 1400;
+    megaPrice = 2000;
+  } else if (formattedId.includes(PricingBundle.Expensive)) {
+    standardPrice = 1200;
+    premiumPrice = 1600;
+    megaPrice = 2400;
+  } else if (formattedId.includes(PricingBundle.Dom)) {
+    standardPrice = 1500;
+    premiumPrice = 2000;
+    megaPrice = 2900;
+  } else {
+    wrongId = true;
+    standardPrice = 5000;
+    premiumPrice = 8000;
+    megaPrice = 14000;
   }
 
   return (
