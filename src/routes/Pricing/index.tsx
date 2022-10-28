@@ -64,7 +64,9 @@ function Pricing() {
           <H3>Standard</H3>
           <H3>${standardPrice}</H3>
           <div className={pricingItemDescriptionCss}>
-            <PricingBlockItem>1 Reel, IG post, or TT video</PricingBlockItem>
+            <PricingBlockItem>
+              1 IG story, IG post, or TikTok video
+            </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for 1 month
@@ -79,10 +81,10 @@ function Pricing() {
           <H3>${premiumPrice}</H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
-              <strong>1 Reel</strong>
+              <strong>1 IG Reel</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              <strong>1 TikTok video</strong>
+              1 IG story, IG post, or TikTok video
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
