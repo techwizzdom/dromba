@@ -55,7 +55,7 @@ function Pricing() {
         <>
           <H1>In one day, everyone will know what you do.</H1>
           <VerticalSpacing height={VerticalSpacingHeight.Medium} />
-          <H3>180k+ engaged tech followers across platforms.</H3>
+          <H3>200k+ engaged tech followers across platforms.</H3>
         </>
       )}
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
