@@ -38,18 +38,6 @@ function Me() {
     testimonialsFromPeople[2],
   ];
 
-  function CSSstring(string: string) {
-    const css_json = `{"${string.replace(/; /g, '", "')}"}`;
-
-    const obj = JSON.parse(css_json);
-
-    const keyValues = Object.keys(obj).map((key) => {
-      var camelCased = key.replace(/-[a-z]/g, (g) => g[1].toUpperCase());
-      return { [camelCased]: obj[key] };
-    });
-    return Object.assign({}, ...keyValues);
-  }
-
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
@@ -58,7 +46,11 @@ function Me() {
         url="https://www.domagojvidovic.com"
       />
       <div className={meContentCss}>
-        <img className={logoMeCss} src="https://i.imgur.com/YI0X9tD.png" />
+        <img
+          className={logoMeCss}
+          src="https://i.imgur.com/YI0X9tD.png"
+          alt="Dom standing and smiling"
+        />
         <div className={meTextContentCss}>
           <H2>
             Hey{' '}
@@ -225,16 +217,6 @@ const contentExamplesCss = css`
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
   }
-`;
-
-const iphoneContentCss = css`
-  position: relative;
-`;
-
-const iphoneCss = css`
-  position: absolute;
-  top: 0;
-  left: 0;
 `;
 
 const letsWorkButton = (theme: Theme) => css`

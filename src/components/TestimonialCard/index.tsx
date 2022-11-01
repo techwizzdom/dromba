@@ -5,7 +5,6 @@ import { H5 } from '../core/Heading';
 import Paragraph from '../core/Paragraph';
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { css } from 'emotion';
-import { Media } from '../../enums/Media';
 import Hyperlink from '../Hyperlink';
 import VerticalSpacing from '../VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';

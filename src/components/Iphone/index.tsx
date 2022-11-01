@@ -37,9 +37,21 @@ export function Iphone(props: IProps) {
         height={height || undefined}
         src={video}
       />
-      <img src={iphoneup} className={iphoneupCss} />
-      <img src={iphonedown} className={iphonedownCss} />
-      <img src={playIcon} className={playIconCss(isVideoPlaying)} />
+      <img
+        src={iphoneup}
+        className={iphoneupCss}
+        alt="Top part of iPhone mockup"
+      />
+      <img
+        src={iphonedown}
+        className={iphonedownCss}
+        alt="Bottom part of iPhone mockup"
+      />
+      <img
+        src={playIcon}
+        className={playIconCss(isVideoPlaying)}
+        alt="Play button"
+      />
     </div>
   );
 }
