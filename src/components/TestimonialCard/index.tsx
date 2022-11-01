@@ -29,22 +29,8 @@ const TestimonialCard: React.FC<ITestimonialCardProps> = (
 
   return (
     <div className={testimonialTextCss(theme)}>
-      <div className={testimonialTextContentCss}>
-        <img
-          src={avatar}
-          className={testimonialTextImgCss}
-          alt={`${name} giving a testimonial`}
-        />
-        <H5>{name}</H5>
-        <VerticalSpacing height={VerticalSpacingHeight.XSmall} />
-        {href ? (
-          <Hyperlink href={href}>{companyName}</Hyperlink>
-        ) : (
-          <Paragraph size={ParagraphSize.Medium}>{companyName}</Paragraph>
-        )}
-      </div>
-      <p className={testimonialTextQuoteCss}>
-        {quote1}
+      <p>
+        "{quote1}
         {quote2 && (
           <>
             <br />
@@ -59,7 +45,24 @@ const TestimonialCard: React.FC<ITestimonialCardProps> = (
             {quote3}
           </>
         )}
+        "
       </p>
+      <div className={testimonialTextContentCss}>
+        <img
+          src={avatar}
+          className={testimonialTextImgCss}
+          alt={`${name} giving a testimonial`}
+        />
+        <div className={testimonialTextInfoCss}>
+          <H5>{name}</H5>
+          <VerticalSpacing height={VerticalSpacingHeight.XSmall} />
+          {href ? (
+            <Hyperlink href={href}>{companyName}</Hyperlink>
+          ) : (
+            <Paragraph size={ParagraphSize.Medium}>{companyName}</Paragraph>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
@@ -78,20 +81,22 @@ const testimonialTextCss = (theme: Theme) => css`
   border-radius: 16px;
   padding: 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 16px;
 `;
 
-const testimonialTextQuoteCss = css`
-  font-size: 12px;
-
-  @media ${Media.Mobile} {
-    font-size: 16px;
-  }
+const testimonialTextContentCss = css`
+  display: flex;
+  gap: 16px;
+  align-items: center;
 `;
 
-const testimonialTextContentCss = css`
-  text-align: center;
+const testimonialTextInfoCss = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 `;
 
 export default TestimonialCard;
