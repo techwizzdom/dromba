@@ -71,9 +71,9 @@ function Links() {
             isUnderline={true}
             isEmail={true}
             onClick={() => trackEvent('Email', 'Links')}
-            href={t.email.dvidovic}
+            href={t.email.javascriptwizz}
           >
-            {t.email.dvidovic}
+            {t.email.javascriptwizz}
           </Hyperlink>
         </H5>
         <H5>

@@ -29,6 +29,7 @@ export const t = {
   email: {
     dpatrick: 'patrick.domv@gmail.com',
     dvidovic: 'dvidovic91@gmail.com',
+    javascriptwizz: 'dom@javascriptwizz.com',
   },
   home: {
     title: 'Frontend Engineer.',
@@ -161,7 +162,7 @@ export const t = {
     linkedIn: 'https://www.linkedin.com/in/dvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
     instagram: 'https://www.instagram.com/javascript_wizz/',
-    youtube: 'https://www.youtube.com/c/JavaScriptWizz',
+    youtube: 'https://www.youtube.com/@javascript_wizz',
     buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
     tiktok: 'https://www.tiktok.com/@javascript_wizz',
     zeroKnowledgeTo80k:
@@ -184,6 +185,7 @@ export const t = {
     statusHero: 'https://statushero.com/',
     epal: 'https://go.epal.gg/3dFj72r',
     locofy: 'https://www.locofy.ai/',
+    workWithMeForm: 'https://forms.gle/DiWUnuNsj46b7Riu7',
   },
   navigation: {
     home: 'Who Am I?',

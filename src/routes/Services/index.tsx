@@ -44,12 +44,12 @@ function Services() {
         {' '}
         Or drop me an email at{' '}
         <Hyperlink
-          href={t.email.dvidovic}
+          href={t.email.javascriptwizz}
           isUnderline={true}
           isEmail={true}
           onClick={() => trackEvent('Email', 'Links')}
         >
-          {t.email.dvidovic}
+          {t.email.javascriptwizz}
         </Hyperlink>
         .
       </H5>
