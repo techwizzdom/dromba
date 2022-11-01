@@ -184,7 +184,7 @@ const meContentCss = css`
   display: flex;
 
   @media ${Media.Mobile} {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     gap: 32px;
   }
