@@ -7,13 +7,15 @@ import playIcon from '../../assets/images/play-icon.png';
 
 interface IProps {
   video: string;
+  cover: string;
   height?: number;
 }
 
 export function Iphone(props: IProps) {
-  const { video, height } = props;
+  const { video, cover, height } = props;
 
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const onVideoClick = () => {
@@ -21,6 +23,7 @@ export function Iphone(props: IProps) {
       if (videoRef.current.paused) {
         videoRef.current.play();
         setIsVideoPlaying(true);
+        setHasStarted(true);
       } else {
         videoRef.current.pause();
         setIsVideoPlaying(false);
@@ -48,6 +51,11 @@ export function Iphone(props: IProps) {
         alt="Bottom part of iPhone mockup"
       />
       <img
+        src={cover}
+        className={iphoneCoverCss(hasStarted)}
+        alt="Cover of iPhone mockup"
+      />
+      <img
         src={playIcon}
         className={playIconCss(isVideoPlaying)}
         alt="Play button"
@@ -73,12 +81,26 @@ const iphoneVideoCss = css`
 const iphoneupCss = css`
   position: absolute;
   width: 340px;
+  z-index: 3;
 `;
 
 const iphonedownCss = css`
   position: absolute;
   width: 340px;
   bottom: 0;
+  z-index: 3;
+`;
+
+const iphoneCoverCss = (hasStarted: boolean) => css`
+  position: absolute;
+  width: 320px;
+  height: 568px;
+  top: 20px;
+  left: 10px;
+  border-radius: 24px;
+  z-index: 1;
+  cursor: pointer;
+  ${hasStarted && 'display: none;'}
 `;
 
 const playIconCss = (isVideoPlaying: boolean) => css`
@@ -92,4 +114,5 @@ const playIconCss = (isVideoPlaying: boolean) => css`
   border-radius: 50%;
   padding: 12px;
   width: 72px;
+  z-index: 2;
 `;

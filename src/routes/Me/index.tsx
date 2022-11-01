@@ -79,12 +79,31 @@ function Me() {
       <H2>These 6 videos combined got 20M+ views.</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={contentExamplesCss}>
-        <Iphone video="https://i.imgur.com/XAhiYs6.mp4" height={570} />
-        <Iphone video="https://i.imgur.com/ihujSIB.mp4" />
-        <Iphone video="https://i.imgur.com/Owo7QpG.mp4" />
-        <Iphone video="https://i.imgur.com/qXFnKSD.mp4" />
-        <Iphone video="https://i.imgur.com/rH4nFgI.mp4" />
-        <Iphone video="https://i.imgur.com/vjKd8fb.mp4" />
+        <Iphone
+          video="https://i.imgur.com/XAhiYs6.mp4"
+          cover="https://i.imgur.com/aAlfbzd.png"
+          height={570}
+        />
+        <Iphone
+          video="https://i.imgur.com/ihujSIB.mp4"
+          cover="https://i.imgur.com/UyXVYLv.png"
+        />
+        <Iphone
+          video="https://i.imgur.com/Owo7QpG.mp4"
+          cover="https://i.imgur.com/U6URS5S.png"
+        />
+        <Iphone
+          video="https://i.imgur.com/qXFnKSD.mp4"
+          cover="https://i.imgur.com/u1JWWAf.png"
+        />
+        <Iphone
+          video="https://i.imgur.com/rH4nFgI.mp4"
+          cover="https://i.imgur.com/bgMlqOC.png"
+        />
+        <Iphone
+          video="https://i.imgur.com/vjKd8fb.mp4"
+          cover="https://i.imgur.com/dnrUUxs.png"
+        />
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>Apparently, people love to work with me!</H2>
