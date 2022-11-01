@@ -76,6 +76,17 @@ function Me() {
         </div>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
+      <H2>These 6 videos combined got 20M+ views.</H2>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <div className={contentExamplesCss}>
+        <Iphone video="https://i.imgur.com/XAhiYs6.mp4" height={570} />
+        <Iphone video="https://i.imgur.com/ihujSIB.mp4" />
+        <Iphone video="https://i.imgur.com/Owo7QpG.mp4" />
+        <Iphone video="https://i.imgur.com/qXFnKSD.mp4" />
+        <Iphone video="https://i.imgur.com/rH4nFgI.mp4" />
+        <Iphone video="https://i.imgur.com/vjKd8fb.mp4" />
+      </div>
+      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>Apparently, people love to work with me!</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={testimonialsCss}>
@@ -91,17 +102,6 @@ function Me() {
             quote3={testimonial.quote3}
           />
         ))}
-      </div>
-      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
-      <H2>These 6 videos combined got 20M+ views.</H2>
-      <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <div className={contentExamplesCss}>
-        <Iphone video="https://i.imgur.com/qXFnKSD.mp4" />
-        <Iphone video="https://i.imgur.com/RgIZ3Ma.mp4" />
-        <Iphone video="https://i.imgur.com/S0586aa.mp4" />
-        <Iphone video="https://i.imgur.com/i5ARy4D.mp4" height={570} />
-        <Iphone video="https://i.imgur.com/rH4nFgI.mp4" />
-        <Iphone video="https://i.imgur.com/vjKd8fb.mp4" />
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>I charge way less than your local TV station.</H2>
@@ -120,8 +120,14 @@ function Me() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Let's do it!
+          Click here
         </a>
+        <H5 alignCenter>
+          or drop me an email at{' '}
+          <Hyperlink href={t.email.javascriptwizz} isEmail={true}>
+            {t.email.javascriptwizz}
+          </Hyperlink>
+        </H5>
       </div>
 
       <div className={privacyPolicyCss(isPolicyOpen)}>
@@ -239,7 +245,9 @@ const letsWorkButton = (theme: Theme) => css`
 const contactCss = css`
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
+  gap: 16px;
 `;
 
 export default Me;
