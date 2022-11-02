@@ -156,10 +156,10 @@ export const t = {
     bachelorStudies:
       'https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing',
     sourceCode: 'https://github.com/dromba/dromba',
-    twitter: 'https://twitter.com/domagojvidovicc',
+    twitter: 'https://twitter.com/javascript_wizz',
     devto: 'https://dev.to/domagojvidovic',
     github: 'https://github.com/dromba',
-    linkedIn: 'https://www.linkedin.com/in/dvidovic/',
+    linkedIn: 'https://www.linkedin.com/in/domagojvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
     instagram: 'https://www.instagram.com/javascript_wizz/',
     youtube: 'https://www.youtube.com/@javascript_wizz',
