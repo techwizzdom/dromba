@@ -53,7 +53,7 @@ function Art(props: IArtProps) {
     <RouteContainer isNormalizeHeaderHeightEnabled={true}>
       <Helmetiser
         title="Who Art You?"
-        description="Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff."
+        description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
         url="https://www.domagojvidovic.com/art"
       />
       {isArtEnabled ? (

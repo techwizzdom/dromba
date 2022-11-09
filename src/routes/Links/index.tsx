@@ -42,24 +42,6 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Recrooit', 'Referal')}
-            href={t.link.recrooit}
-          >
-            Recrooit
-          </Hyperlink>
-        </H5>
-        <H5>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Bamblue', 'Referal')}
-            href={t.link.bamblue}
-          >
-            Anti blue-light glasses (Bamblue)
-          </Hyperlink>
-        </H5>
-        <H5>
-          <Hyperlink
-            isUnderline={true}
             onClick={() => trackEvent('Rapyd', 'Hack the galaxy')}
             href={t.link.rapyd}
           >
@@ -79,10 +61,32 @@ function Links() {
         <H5>
           <Hyperlink
             isUnderline={true}
+            onClick={() =>
+              trackEvent('Booking', '45 min - Links - social media mentoring')
+            }
+            href={t.link.book45minsSocials}
+          >
+            Social Media Mentoring (45 mins,{' '}
+            <span
+              style={{
+                textDecoration: 'line-through',
+                marginRight: '4px',
+                fontSize: '14px',
+                fontWeight: 400,
+              }}
+            >
+              $199
+            </span>
+            $149)
+          </Hyperlink>
+        </H5>
+        <H5>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Booking', '60 min - Links')}
             href={t.link.book60mins}
           >
-            1-on-1 Coaching (60 mins,{' '}
+            Tech Mentoring (60 mins,{' '}
             <span
               style={{
                 textDecoration: 'line-through',
@@ -102,7 +106,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '30 min - Links')}
             href={t.link.book30mins}
           >
-            1-on-1 Coaching (30 mins,{' '}
+            Tech Mentoring (30 mins,{' '}
             <span
               style={{
                 textDecoration: 'line-through',
@@ -114,20 +118,6 @@ function Links() {
               $99
             </span>
             $79)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() =>
-              trackEvent(
-                'Booking',
-                'All Resources You Need To Become a FE Engineer',
-              )
-            }
-            href={t.link.zeroKnowledgeTo80k}
-          >
-            All The Resources You Need To Become A Frontend Engineer
           </Hyperlink>
         </H5>
       </div>

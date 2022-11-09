@@ -42,7 +42,7 @@ function Me() {
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
         title="JavaScript Wizz"
-        description="Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff."
+        description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
         url="https://www.domagojvidovic.com"
       />
       <div className={meContentCss}>
@@ -68,11 +68,18 @@ function Me() {
             <H4>I make viral tech content.</H4>
           </div>
           <div className={statsCss}>
-            <H3 isMegaBold={true}>200k+ followers</H3>
+            <H3 isMegaBold={true}>220k+ followers</H3>
             <H3 isMegaBold={true}>5M+ likes</H3>
             <H3 isMegaBold={true}>75M+ views</H3>
           </div>
-          <SocialProfiles showTopFourOnly={true} />
+          <a
+            className={letsWorkButton(theme, true)}
+            href={t.link.workWithMeForm}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LET'S GO!
+          </a>
         </div>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
@@ -139,7 +146,7 @@ function Me() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Click here
+          LET'S GO!
         </a>
         <H5 alignCenter>
           or drop me an email at{' '}
@@ -147,6 +154,8 @@ function Me() {
             {t.email.javascriptwizz}
           </Hyperlink>
         </H5>
+        <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+        <SocialProfiles showTopFourOnly={true} />
       </div>
 
       <div className={privacyPolicyCss(isPolicyOpen)}>
@@ -196,6 +205,11 @@ const fireEmojiCss = css`
   height: 56px;
   width: 56px;
   margin-bottom: -4px;
+
+  @media ${Media.Mobile} {
+    height: 40px;
+    width: 40px;
+  }
 `;
 
 const statsCss = css`
@@ -244,8 +258,9 @@ const contentExamplesCss = css`
   }
 `;
 
-const letsWorkButton = (theme: Theme) => css`
+const letsWorkButton = (theme: Theme, alignLeftDesktop?: boolean) => css`
   display: block;
+  ${alignLeftDesktop ? 'align-self: baseline;' : ''}
 
   padding: 8px;
   border-radius: 2px;
@@ -258,6 +273,10 @@ const letsWorkButton = (theme: Theme) => css`
   :hover {
     cursor: pointer;
     opacity: 0.8;
+  }
+
+  @media ${Media.Mobile} {
+    align-self: center;
   }
 `;
 

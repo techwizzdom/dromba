@@ -168,6 +168,8 @@ export const t = {
     zeroKnowledgeTo80k:
       'https://domagojvidovic.medium.com/all-the-resources-you-need-to-become-a-frontend-engineer-eff27464ab17',
     book30mins: 'https://calendly.com/domagojvidovic/career-code-mentoring',
+    book45minsSocials:
+      'https://calendly.com/domagojvidovic/social-media-mentoring',
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
     teal: 'https://tealhq.co/javascript_wizz',

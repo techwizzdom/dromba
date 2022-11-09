@@ -34,7 +34,7 @@ function Services() {
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
         title="JavaScript Wizz"
-        description="Senior frontend engineer. Content creator. Mentor. Speaker. Let's create awesome stuff."
+        description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
         url="https://www.domagojvidovic.com"
       />
       <H1>Together, we can create anything.</H1>
@@ -56,12 +56,12 @@ function Services() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={servicesCardGridCss}>
         <ServiceCard
-          title="Mentoring"
-          descriptionTop="We can get you your first job, or supercharge your career."
-          descriptionBottom="Anything you wish."
-          href={t.link.book30mins}
+          title="Social Media Mentoring"
+          descriptionTop="Monetize. Grow. Build a brand."
+          descriptionBottom="Let's radically improve your social media presence."
+          href={t.link.book45minsSocials}
         >
-          <Mentoring />
+          <SocialMediaManager />
         </ServiceCard>
         <ServiceCard
           title="Brand Collaboration"
@@ -80,12 +80,12 @@ function Services() {
           <ContentCreation />
         </ServiceCard>
         <ServiceCard
-          title="Social Media Manager"
-          descriptionTop="I will create your social media accounts."
-          descriptionBottom="And grow them from 0 to infinity."
-          href={t.link.letsCreateAwesomeStuff}
+          title="Tech Mentoring"
+          descriptionTop="We can get you your first job, or supercharge your career."
+          descriptionBottom="Anything you wish."
+          href={t.link.book30mins}
         >
-          <SocialMediaManager />
+          <Mentoring />
         </ServiceCard>
         <ServiceCard
           title="Consultancy"
