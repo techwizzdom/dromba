@@ -34,7 +34,8 @@ function ThisIsMe(props: IThisIsMeProps) {
         <div>
           {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
           <p className={pCss(isMainScreenMode)} style={{ maxWidth: '450px' }}>
-            Senior frontend engineer. Content creator. Mentor. Speaker.
+            Senior frontend engineer turned into tech content creator and
+            influencer. I make viral tech content.
           </p>
           <p className={pCss(isMainScreenMode, true)}>
             {isMainScreenMode ? (

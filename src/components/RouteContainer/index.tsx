@@ -2,7 +2,7 @@ import React from 'react';
 import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
-import BuyMeACroissant from '../BuyMeACroissant';
+// import BuyMeACroissant from '../BuyMeACroissant';
 
 interface IRouteContainerProps {
   children: React.ReactNode;
@@ -15,7 +15,7 @@ const routeContainerCss = (
   isNormalizeHeaderHeightEnabled: boolean,
   isPureCenteringEnabled: boolean,
 ) => css`
-  padding: 64px ${isPureCenteringEnabled ? '0 0' : '16px 32px 192px'};
+  padding: 64px ${isPureCenteringEnabled ? '8px 0' : '16px 32px 192px'};
   margin: 0 auto;
 
   max-width: 1072px;
@@ -53,7 +53,7 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
       onClick={() => onClick && onClick()}
     >
       {children}
-      <BuyMeACroissant />
+      {/* <BuyMeACroissant /> */}
     </div>
   );
 };
