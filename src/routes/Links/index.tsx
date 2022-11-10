@@ -21,7 +21,7 @@ function Links() {
       />
       <ThisIsMe />
       <div className={linksContainerCss}>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Otta', 'Click')}
@@ -30,7 +30,7 @@ function Links() {
             Otta
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Locofy', 'Click')}
@@ -39,7 +39,7 @@ function Links() {
             Locofy.ai
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('E-Pal', 'Referal')}
@@ -48,7 +48,7 @@ function Links() {
             E-Pal
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Rapyd', 'Hack the galaxy')}
@@ -57,7 +57,7 @@ function Links() {
             Hack The Galaxy
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             isEmail={true}
@@ -67,7 +67,7 @@ function Links() {
             {t.email.javascriptwizz}
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() =>
@@ -89,7 +89,7 @@ function Links() {
             $149)
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Booking', '60 min - Links')}
@@ -109,7 +109,7 @@ function Links() {
             $119)
           </Hyperlink>
         </H5>
-        <H5>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Booking', '30 min - Links')}
