@@ -87,6 +87,10 @@ function Me() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={contentExamplesCss}>
         <Iphone
+          video="https://i.imgur.com/2KjbSR8.mp4"
+          cover="https://i.imgur.com/KQ2FcFV.jpg"
+        />
+        <Iphone
           video="https://i.imgur.com/XAhiYs6.mp4"
           cover="https://i.imgur.com/aAlfbzd.png"
           height={570}
@@ -102,10 +106,6 @@ function Me() {
         <Iphone
           video="https://i.imgur.com/qXFnKSD.mp4"
           cover="https://i.imgur.com/u1JWWAf.png"
-        />
-        <Iphone
-          video="https://i.imgur.com/rH4nFgI.mp4"
-          cover="https://i.imgur.com/bgMlqOC.png"
         />
         <Iphone
           video="https://i.imgur.com/vjKd8fb.mp4"
