@@ -39,7 +39,7 @@ function Services() {
       />
       <H1>Together, we can create anything.</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H5>Click on a service to book a call.</H5>
+      <H5>Click on a service for further action.</H5>
       <H5>
         {' '}
         Or drop me an email at{' '}
@@ -67,7 +67,7 @@ function Services() {
           title="Brand Collaboration"
           descriptionTop="Let's market your incredible product."
           descriptionBottom="I will share it with my massive tech following."
-          href={t.link.letsCreateAwesomeStuff}
+          href={t.link.workWithMeForm}
         >
           <BrandCollaboration />
         </ServiceCard>
@@ -75,7 +75,7 @@ function Services() {
           title="Content Creation"
           descriptionTop="I can create any content you want."
           descriptionBottom="Feel free to do anything you like with it, it's all yours."
-          href={t.link.letsCreateAwesomeStuff}
+          href={t.link.workWithMeForm}
         >
           <ContentCreation />
         </ServiceCard>
@@ -91,7 +91,7 @@ function Services() {
           title="Consultancy"
           descriptionTop="Your app has problems? You need to architect it?"
           descriptionBottom="Just name it. We'll sort it out."
-          href={t.link.letsCreateAwesomeStuff}
+          href={t.link.workWithMeForm}
         >
           <Consultancy />
         </ServiceCard>
