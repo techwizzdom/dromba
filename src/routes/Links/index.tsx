@@ -24,6 +24,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Buy me a croissant', 'Links page')}
+            href={t.link.buyMeACroissant}
+          >
+            Buy me a croissant - I love them!
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Otta', 'Click')}
             href={t.link.otta}
           >
