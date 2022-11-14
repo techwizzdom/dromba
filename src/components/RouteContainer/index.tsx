@@ -1,8 +1,10 @@
+/* eslint-disable no-restricted-globals */
 import React from 'react';
 import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
-// import BuyMeACroissant from '../BuyMeACroissant';
+import { Routes } from '../../routes/Routes';
+import BuyMeACroissant from '../BuyMeACroissant';
 
 interface IRouteContainerProps {
   children: React.ReactNode;
@@ -53,7 +55,7 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
       onClick={() => onClick && onClick()}
     >
       {children}
-      {/* <BuyMeACroissant /> */}
+      {location.pathname !== Routes.Me && <BuyMeACroissant />}
     </div>
   );
 };
