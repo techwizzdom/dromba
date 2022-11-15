@@ -36,7 +36,7 @@ function Links() {
             onClick={() => trackEvent('GoIT', 'Click')}
             href={t.link.goit}
           >
-            GoIT
+            GoIT FREE demo course
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
