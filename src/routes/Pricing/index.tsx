@@ -22,21 +22,21 @@ function Pricing() {
   let wrongId = false;
 
   if (formattedId.includes(PricingBundle.Cheap)) {
-    standardPrice = 700;
-    premiumPrice = 1200;
-    megaPrice = 1800;
-  } else if (formattedId.includes(PricingBundle.Medium)) {
     standardPrice = 900;
     premiumPrice = 1400;
-    megaPrice = 2000;
-  } else if (formattedId.includes(PricingBundle.Expensive)) {
-    standardPrice = 1200;
+    megaPrice = 1900;
+  } else if (formattedId.includes(PricingBundle.Medium)) {
+    standardPrice = 1100;
     premiumPrice = 1600;
     megaPrice = 2400;
+  } else if (formattedId.includes(PricingBundle.Expensive)) {
+    standardPrice = 1200;
+    premiumPrice = 1900;
+    megaPrice = 2800;
   } else if (formattedId.includes(PricingBundle.Dom)) {
-    standardPrice = 1500;
-    premiumPrice = 2000;
-    megaPrice = 2900;
+    standardPrice = 1800;
+    premiumPrice = 2400;
+    megaPrice = 3300;
   } else {
     wrongId = true;
     standardPrice = 5000;
@@ -69,7 +69,7 @@ function Pricing() {
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
-              That link on my website and linked with my bio for 1 month
+              That link on my website and linked with my bio for 2 weeks
             </PricingBlockItem>
             <PricingBlockItem>
               Full ownership of the created content
@@ -89,7 +89,7 @@ function Pricing() {
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
-              <strong>2 months</strong>
+              <strong>1 month</strong>
             </PricingBlockItem>
             <PricingBlockItem>I create content all by myself</PricingBlockItem>
             <PricingBlockItem>
@@ -122,7 +122,7 @@ function Pricing() {
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
-              <strong>3 months</strong>
+              <strong>2 months</strong>
             </PricingBlockItem>
             <PricingBlockItem>I create content all by myself</PricingBlockItem>
             <PricingBlockItem>
