@@ -1,20 +1,37 @@
 import { css } from 'emotion';
 import * as React from 'react';
 import { Media } from '../../enums/Media';
-import { testimonialImages, testimonialsFromPeople } from '../../testimonials';
+import {
+  IPersonTestimonial,
+  testimonialImages,
+  testimonialsFromPeople,
+} from '../../testimonials';
 import TestimonialCard from '../TestimonialCard';
 import TestimonialScreenshot from '../TestimonialScreenshot';
 
-const TestimonialsGrid: React.FC = () => {
-  const mappedTestimonialImages = testimonialImages.map((image) => {
-    return {
-      screenshot: image,
-    };
-  });
+interface ITestimonialsGridProps {
+  customTestimonials?: IPersonTestimonial[];
+}
 
-  const allTestimonials = (testimonialsFromPeople as Array<any>).concat(
-    mappedTestimonialImages,
-  );
+const TestimonialsGrid: React.FC<ITestimonialsGridProps> = (
+  props: ITestimonialsGridProps,
+) => {
+  const { customTestimonials = null } = props;
+
+  let allTestimonials;
+  if (customTestimonials) {
+    allTestimonials = customTestimonials;
+  } else {
+    const mappedTestimonialImages = testimonialImages.map((image) => {
+      return {
+        screenshot: image,
+      };
+    });
+
+    allTestimonials = (testimonialsFromPeople as Array<any>).concat(
+      mappedTestimonialImages,
+    );
+  }
 
   const testimonialsColumnOne = allTestimonials.filter(
     (_testimonials, i) => i % 3 === 0,

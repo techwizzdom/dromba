@@ -1,6 +1,6 @@
 import { t } from '../translations/t';
 
-interface IPersonTestimonial {
+export interface IPersonTestimonial {
   avatar: string;
   name: string;
   companyName: string;
@@ -49,6 +49,38 @@ export const testimonialsFromPeople: Array<IPersonTestimonial> = [
     quote2:
       'Very efficient and professional! I would love to consider him again if we launch another influencer campaign.',
     quote3: 'One of the best!',
+  },
+  {
+    avatar: 'https://i.imgur.com/Vtx4pyC.png',
+    name: 'Olivia Bell, Social Media Strategist',
+    companyName: 'Practicum',
+    href: t.link.practicum,
+    quote1:
+      'Highly suggest having Dom as part of your team! I worked with Dom on content creation for our TikTok channel launch, he blew us out of the water with the content he came up with (with many videos going viral). ',
+    quote2:
+      'He is extremely knowledgeable in tech world and his content around coding is helping to change many peoples career paths and lives.',
+    quote3: 'We really appreciate and love Dom’s work!',
+  },
+  {
+    avatar: 'https://i.imgur.com/6Cp9xCL.jpg',
+    name: 'Diandra Sovailescu, Marketing Manager',
+    companyName: 'Otta',
+    href: t.link.ottaPublic,
+    quote1:
+      'Dom was very proactive at every stage of our partnership, delivering way before deadline while being very responsive to constructive feedback.',
+    quote2:
+      'Dom went above and beyond to ensure that our mission was communicated in the best way possible to his community, and we saw amazing results from our campaign.',
+    quote3: "Couldn't recommend him more!",
+  },
+  {
+    avatar: 'https://i.imgur.com/7A8wXZP.jpg',
+    name: 'Abhishek Mishra, Head of Growth',
+    companyName: 'Locofy.ai',
+    href: t.link.locofy,
+    quote1:
+      "It was a pleasure working with Domagoj. He's very collaborative and suggests amazing ideas. ",
+    quote2:
+      'Pretty sure that his audience loves the way he shares cool tips and tools. Would love to work again!',
   },
 ];
 
