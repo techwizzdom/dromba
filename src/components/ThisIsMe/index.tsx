@@ -74,6 +74,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             <Hyperlink
               isUnderline={true}
               isLarge={true}
+              alignCenter={true}
               onClick={() => trackEvent('Booking', '60 min')}
               href={t.link.book60mins}
             >
@@ -93,6 +94,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             <Hyperlink
               isUnderline={true}
               isLarge={true}
+              alignCenter={true}
               onClick={() => trackEvent('Booking', '30 min')}
               href={t.link.book30mins}
             >

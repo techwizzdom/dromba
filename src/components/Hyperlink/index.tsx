@@ -10,6 +10,7 @@ export interface IHyperlinkProps {
   isEmail?: boolean;
   isUnderline?: boolean;
   isLarge?: boolean;
+  alignCenter?: boolean;
   onClick?: () => void;
 }
 
@@ -17,6 +18,7 @@ export const hyperlinkCss = (
   theme: Theme,
   isUnderline?: boolean,
   isLarge?: boolean,
+  alignCenter?: boolean,
 ) => css`
   position: relative;
   padding: 2px;
@@ -24,6 +26,7 @@ export const hyperlinkCss = (
 
   ${isLarge && 'font-size: 24px;'}
   ${isLarge && 'font-weight: bold;'}
+  ${alignCenter && 'text-align: center;'}
 
   display: inline;
   background-image: linear-gradient(
@@ -47,13 +50,21 @@ export const hyperlinkCss = (
 `;
 
 const Hyperlink: React.FC<IHyperlinkProps> = (props: IHyperlinkProps) => {
-  const { children, href, isEmail, isUnderline, isLarge, onClick } = props;
+  const {
+    children,
+    href,
+    isEmail,
+    isUnderline,
+    isLarge,
+    alignCenter,
+    onClick,
+  } = props;
 
   const theme = React.useContext(ThemeContext);
 
   return (
     <a
-      className={hyperlinkCss(theme, isUnderline, isLarge)}
+      className={hyperlinkCss(theme, isUnderline, isLarge, alignCenter)}
       href={isEmail ? `mailto:${href}` : href}
       target="_blank"
       rel="noopener noreferrer"
