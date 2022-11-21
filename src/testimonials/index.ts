@@ -8,7 +8,6 @@ export interface IPersonTestimonial {
   href?: string;
   quote2?: string;
   quote3?: string;
-  // screenshot?: string;
 }
 
 export const testimonialsFromPeople: Array<IPersonTestimonial> = [
