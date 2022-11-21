@@ -189,7 +189,9 @@ export const t = {
     locofy: 'https://www.locofy.ai/',
     workWithMeForm: 'https://forms.gle/DiWUnuNsj46b7Riu7',
     otta: 'https://otta.com/dom',
-    goit: 'https://i.goit.global/oT1A'
+    goit: 'https://i.goit.global/oT1A',
+    practicum: 'https://practicum.com/',
+    ottaPublic: 'https://otta.com/',
   },
   navigation: {
     home: 'Who Am I?',

@@ -12,13 +12,13 @@ import fireEmoji from '../../assets/images/fire-emoji.png';
 import { Media } from '../../enums/Media';
 import { H2, H3, H4, H5 } from '../../components/core/Heading';
 import { SocialProfiles } from '../../components/SocialProfiles';
-import TestimonialCard from '../../components/TestimonialCard';
 import { Iphone } from '../../components/Iphone';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { Theme } from '../../styles';
 import { ThemeContext } from '../../context/ThemeContext';
 import { t } from '../../translations/t';
+import TestimonialsGrid from '../../components/TestimonialsGrid';
 
 function Me() {
   const [isPolicyOpen, setIsPolicyOpen] = useState<boolean>(
@@ -33,9 +33,12 @@ function Me() {
   };
 
   const testimonials = [
+    testimonialsFromPeople[4],
+    testimonialsFromPeople[2],
+    testimonialsFromPeople[5],
     testimonialsFromPeople[0],
     testimonialsFromPeople[3],
-    testimonialsFromPeople[2],
+    testimonialsFromPeople[6],
   ];
 
   return (
@@ -115,20 +118,7 @@ function Me() {
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>Apparently, people love to work with me!</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <div className={testimonialsCss}>
-        {testimonials.map((testimonial) => (
-          <TestimonialCard
-            key={testimonial.avatar}
-            avatar={testimonial.avatar}
-            href={testimonial.href}
-            companyName={testimonial.companyName}
-            name={testimonial.name}
-            quote1={testimonial.quote1}
-            quote2={testimonial.quote2}
-            quote3={testimonial.quote3}
-          />
-        ))}
-      </div>
+      <TestimonialsGrid customTestimonials={testimonials} />
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>I charge way less than your local TV station.</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -234,17 +224,6 @@ const meTextContentCss = css`
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-`;
-
-const testimonialsCss = css`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: flex-start;
-  gap: 16px;
-
-  @media ${Media.Mobile} {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `;
 
 const contentExamplesCss = css`
