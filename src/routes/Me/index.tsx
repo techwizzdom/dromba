@@ -71,9 +71,9 @@ function Me() {
             <H4>I make viral tech content.</H4>
           </div>
           <div className={statsCss}>
-            <H3 isMegaBold={true}>220k+ followers</H3>
-            <H3 isMegaBold={true}>5M+ likes</H3>
-            <H3 isMegaBold={true}>75M+ views</H3>
+            <H3 isMegaBold={true}>250k+ followers</H3>
+            <H3 isMegaBold={true}>6M+ likes</H3>
+            <H3 isMegaBold={true}>80M+ views</H3>
           </div>
           <a
             className={letsWorkButton(theme, true)}
