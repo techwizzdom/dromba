@@ -9,6 +9,16 @@ export const Posts = [
   //   tags: [],
   // },
   {
+    title: 'Coding is hard',
+    subtitle: "And that's a good thing.",
+    path: 'coding-is-hard',
+    img: 'https://i.imgur.com/NIUippO.jpg',
+    previewImg: 'https://i.imgur.com/nsRREAh.jpg',
+    thumbnail: 'https://i.imgur.com/nsRREAh.jpg',
+    postDate: new Date('06 Dec 2022'),
+    tags: ['#coding', '#career'],
+  },
+  {
     title: 'Stop Using Margins For Spacing Between Components',
     subtitle: 'Layout Guide For 2022',
     path: 'stop-using-margins-for-spacing-between-components',
