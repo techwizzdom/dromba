@@ -12,7 +12,7 @@ import Helmetiser from '../../components/core/Helmetiser';
 import ThisIsMe from '../../components/ThisIsMe';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
-import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
+// import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -135,17 +135,17 @@ function Post() {
               className="twitter-share-button"
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://twitter.com/intent/tweet?text="${title}" by @domagojvidovicc is a must-read article! 🚀`}
+              href={`https://twitter.com/intent/tweet?text="${title}" by @javascript_wizz is a must-read article! 🚀 ${document.URL}`}
             >
               <Twitter />
             </a>
-            <a
+            {/* <a
               href={`https://www.linkedin.com/sharing/share-offsite?mini=true&url=${document.URL}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <LinkedIn />
-            </a>
+            </a> */}
           </div>
         </div>
       )}
