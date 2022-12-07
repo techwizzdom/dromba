@@ -11,7 +11,7 @@ export const t = {
     actionButton: 'Dive in',
   },
   blog: {
-    title: 'Master Web Development With Me.',
+    title: 'Utilise the full power of tech.',
     findMoreArticles: 'Find way more articles on ',
   },
   company: {
