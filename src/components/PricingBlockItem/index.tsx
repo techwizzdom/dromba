@@ -3,16 +3,21 @@ import React from 'react';
 
 interface IPricingBlockItemProps {
   children: React.ReactNode;
+  isError?: boolean;
 }
 
 function PricingBlockItem(props: IPricingBlockItemProps) {
-  const { children } = props;
+  const { children, isError = false } = props;
 
   return (
     <div className={pricingBlockItemCss}>
       <img
         className={pricingBlockItemCheckIconCss}
-        src="https://i.imgur.com/1EYxCMd.png"
+        src={
+          isError
+            ? 'https://i.imgur.com/HZEWBOD.png'
+            : 'https://i.imgur.com/UL8xQoy.png'
+        }
         alt="check"
       />
       <span className={pricingBlockItemTextCss}>{children}</span>
