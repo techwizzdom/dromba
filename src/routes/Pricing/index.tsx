@@ -68,7 +68,7 @@ function Pricing() {
               </span>
             </div>
           </H3>
-          <VerticalSpacing height={VerticalSpacingHeight.Giant} />
+          <VerticalSpacing height={VerticalSpacingHeight.Large} />
           <H1>Let's make everyone know you in one day.</H1>
         </>
       )}
