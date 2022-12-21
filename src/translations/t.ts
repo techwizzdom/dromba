@@ -209,6 +209,11 @@ export const t = {
     tiktok: 'TikTok',
     instagram: 'Instagram',
   },
+  socials: {
+    followers: '330k',
+    likes: '9M',
+    views: '100M',
+  },
   study: {
     master: 'Master of Science in Information and Communication Technology',
     exchange: 'Hochschule für Telekomunikation in Leipzig',

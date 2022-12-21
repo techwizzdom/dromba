@@ -53,9 +53,23 @@ function Pricing() {
         </>
       ) : (
         <>
-          <H1>In one day, everyone will know what you do.</H1>
+          <H1>Last 90 days.</H1>
           <VerticalSpacing height={VerticalSpacingHeight.Medium} />
-          <H3>200k+ engaged tech followers across platforms.</H3>
+          <H3>
+            <div className={statsCss}>
+              <span className={statCss(theme)}>
+                86M <br></br> views
+              </span>
+              <span className={statCss(theme)}>
+                6M <br></br> likes
+              </span>
+              <span className={statCss(theme)}>
+                1.3M <br></br> saves
+              </span>
+            </div>
+          </H3>
+          <VerticalSpacing height={VerticalSpacingHeight.Giant} />
+          <H1>Let's make everyone know you in one day.</H1>
         </>
       )}
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -65,14 +79,14 @@ function Pricing() {
           <H3>${standardPrice}</H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
-              1 IG story, IG post, or TikTok video
+              1 IG story, IG post, <strong>or</strong> TikTok video
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
-              That link on my website and linked with my bio for 2 weeks
+              That link on my website and linked with my bio for 2 days
             </PricingBlockItem>
-            <PricingBlockItem>
-              Full ownership of the created content
+            <PricingBlockItem isError>
+              Ownership of the created content
             </PricingBlockItem>
           </div>
         </div>
@@ -84,16 +98,16 @@ function Pricing() {
               <strong>1 IG Reel</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              1 IG story, IG post, or TikTok video
+              1 IG story, IG post, <strong>or</strong> TikTok video
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
-              <strong>1 month</strong>
+              <strong>5 days</strong>
             </PricingBlockItem>
             <PricingBlockItem>I create content all by myself</PricingBlockItem>
-            <PricingBlockItem>
-              Full ownership of the created content
+            <PricingBlockItem isError>
+              Ownership of the created content
             </PricingBlockItem>
           </div>
         </div>
@@ -102,7 +116,7 @@ function Pricing() {
           <H3>${megaPrice}</H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
-              <strong>1 Reel</strong>
+              <strong>1 IG Reel</strong>
             </PricingBlockItem>
             <PricingBlockItem>
               <strong>1 TikTok video</strong>
@@ -122,11 +136,10 @@ function Pricing() {
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
-              <strong>2 months</strong>
+              <strong>10 days</strong>
             </PricingBlockItem>
-            <PricingBlockItem>I create content all by myself</PricingBlockItem>
             <PricingBlockItem>
-              Full ownership of the created content
+              Full ownership of the created content for 3 months
             </PricingBlockItem>
           </div>
         </div>
@@ -165,6 +178,32 @@ const pricingItemDescriptionCss = css`
   display: flex;
   flex-direction: column;
   gap: 4px;
+`;
+
+const statsCss = css`
+  display: flex;
+  gap: 64px;
+
+  @media ${Media.Mobile} {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+`;
+
+const statCss = (theme: Theme) => css`
+  background-color: ${theme.hyperlinkUnderlineColor};
+  border-radius: 50%;
+  width: 156px;
+  height: 156px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  @media ${Media.Mobile} {
+    width: 116px;
+    height: 116px;
+  }
 `;
 
 export default Pricing;
