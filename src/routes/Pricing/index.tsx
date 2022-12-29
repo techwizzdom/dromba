@@ -79,7 +79,8 @@ function Pricing() {
           <H3>${standardPrice}</H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
-              1 IG story, IG post, <strong>or</strong> TikTok video
+              1 IG story, 1 IG "regular" post (not Reel), <strong>or</strong> 1
+              TikTok video
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
@@ -98,7 +99,7 @@ function Pricing() {
               <strong>1 IG Reel</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              1 IG story, IG post, <strong>or</strong> TikTok video
+              1 IG story, 1 IG post, <strong>or</strong> 1 TikTok video
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
