@@ -24,19 +24,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Buy me a croissant', 'Links page')}
-            href={t.link.buyMeACroissant}
+            onClick={() => trackEvent('Scribe', 'Click')}
+            href={t.link.scribe}
           >
-            Buy me a croissant - I love them!
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('GoIT', 'Click')}
-            href={t.link.goit}
-          >
-            GoIT FREE demo course
+            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -55,15 +46,6 @@ function Links() {
             href={t.link.locofy}
           >
             Locofy.ai
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('E-Pal', 'Referal')}
-            href={t.link.epal}
-          >
-            E-Pal
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -93,18 +75,7 @@ function Links() {
             }
             href={t.link.book45minsSocials}
           >
-            Social Media Mentoring (45 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $199
-            </span>
-            $149)
+            Social Media Consulting (60 mins, $259)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -113,18 +84,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '60 min - Links')}
             href={t.link.book60mins}
           >
-            Tech Mentoring (60 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $149
-            </span>
-            $119)
+            Tech Mentoring (60 mins, $129)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -133,18 +93,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '30 min - Links')}
             href={t.link.book30mins}
           >
-            Tech Mentoring (30 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $99
-            </span>
-            $79)
+            Tech Mentoring (30 mins, $79)
           </Hyperlink>
         </H5>
       </div>

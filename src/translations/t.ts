@@ -192,6 +192,7 @@ export const t = {
     goit: 'https://i.goit.global/oT1A',
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
+    scribe: 'https://scribehow.com/',
   },
   navigation: {
     home: 'Who Am I?',
