@@ -193,6 +193,7 @@ export const t = {
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribehow.com/',
+    zeroToMastery: 'https://zerotomastery.io/',
   },
   navigation: {
     home: 'Who Am I?',
