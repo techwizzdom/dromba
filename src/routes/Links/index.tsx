@@ -24,10 +24,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Zero To Mastery', 'Click')}
-            href={t.link.zeroToMastery}
+            onClick={() => trackEvent('Codedamn', 'Click')}
+            href={t.link.codedamn}
           >
-            Zero To Mastery
+            codedamn
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -46,15 +46,6 @@ function Links() {
             href={t.link.otta}
           >
             Otta
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Locofy', 'Click')}
-            href={t.link.locofy}
-          >
-            Locofy.ai
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

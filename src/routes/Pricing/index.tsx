@@ -34,9 +34,9 @@ function Pricing() {
     premiumPrice = 1900;
     megaPrice = 2800;
   } else if (formattedId.includes(PricingBundle.Dom)) {
-    standardPrice = 1800;
-    premiumPrice = 2400;
-    megaPrice = 3300;
+    standardPrice = 1700;
+    premiumPrice = 2600;
+    megaPrice = 3500;
   } else {
     wrongId = true;
     standardPrice = 5000;

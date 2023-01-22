@@ -194,6 +194,7 @@ export const t = {
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribehow.com/',
     zeroToMastery: 'https://links.zerotomastery.io/javascriptwizz',
+    codedamn: 'https://cdm.sh/domagoj',
   },
   navigation: {
     home: 'Who Am I?',
