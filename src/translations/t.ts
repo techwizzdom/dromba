@@ -195,6 +195,7 @@ export const t = {
     scribe: 'https://scribehow.com/',
     zeroToMastery: 'https://links.zerotomastery.io/javascriptwizz',
     codedamn: 'https://cdm.sh/domagoj',
+    kickresume: 'https://www.kickresume.com/',
   },
   navigation: {
     home: 'Who Am I?',
