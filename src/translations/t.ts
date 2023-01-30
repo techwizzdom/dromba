@@ -196,6 +196,8 @@ export const t = {
     zeroToMastery: 'https://links.zerotomastery.io/javascriptwizz',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
+    treblle:
+      'https://www.treblle.com/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=HomePg&utm_id=DomInfl+2023',
   },
   navigation: {
     home: 'Who Am I?',
