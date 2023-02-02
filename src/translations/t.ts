@@ -198,6 +198,7 @@ export const t = {
     kickresume: 'https://www.kickresume.com/',
     treblle:
       'https://www.treblle.com/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=HomePg&utm_id=DomInfl+2023',
+    sourcegraph: 'https://srcgr.ph/ufo4R',
   },
   navigation: {
     home: 'Who Am I?',

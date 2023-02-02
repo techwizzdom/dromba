@@ -24,37 +24,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Sourcegraph', 'Click')}
+            href={t.link.sourcegraph}
+          >
+            Sourcegraph
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Treblle', 'Click')}
             href={t.link.treblle}
           >
             Treblle
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Kickresume', 'Click')}
-            href={t.link.kickresume}
-          >
-            Kickresume
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Scribe', 'Click')}
-            href={t.link.scribe}
-          >
-            Scribe
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Otta', 'Click')}
-            href={t.link.otta}
-          >
-            Otta
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
