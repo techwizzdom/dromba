@@ -202,6 +202,7 @@ export const t = {
     careerist:
       'https://www.careerist.com/qa?utm_source=influencer&utm_campaign=luda10&utm_medium=careerist',
     kodezi: 'https://kodezi.com/',
+    pmpmastermind: 'https://pmpmastermind.com/',
   },
   navigation: {
     home: 'Who Am I?',
