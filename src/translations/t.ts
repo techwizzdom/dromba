@@ -203,6 +203,8 @@ export const t = {
       'https://www.careerist.com/qa?utm_source=influencer&utm_campaign=luda10&utm_medium=careerist',
     kodezi: 'https://kodezi.com/',
     pmpmastermind: 'https://pmpmastermind.com/',
+    hopscotch:
+      'https://app.gohopscotch.com/register?utm_campaign=Influencer Marketing_javascriptwizz&utm_source=influencermarketing_social&utm_medium=social post&utm_content=jsw_reel_tt_1',
   },
   navigation: {
     home: 'Who Am I?',
