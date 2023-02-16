@@ -205,6 +205,8 @@ export const t = {
     pmpmastermind: 'https://pmpmastermind.com/',
     hopscotch:
       'https://app.gohopscotch.com/register?utm_campaign=Influencer Marketing_javascriptwizz&utm_source=influencermarketing_social&utm_medium=social post&utm_content=jsw_reel_tt_1',
+    appsmith:
+      'https://appsmith.com?utm_source=&utm_medium=social&utm_content=website&utm_campaign=dom',
   },
   navigation: {
     home: 'Who Am I?',

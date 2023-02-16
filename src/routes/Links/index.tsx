@@ -24,19 +24,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Hopscotch', 'Click')}
-            href={t.link.hopscotch}
+            onClick={() => trackEvent('Appsmith', 'Click')}
+            href={t.link.appsmith}
           >
-            Hopscotch
+            Appsmith
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('PMP mastermind', 'Click')}
-            href={t.link.pmpmastermind}
+            onClick={() => trackEvent('Hopscotch', 'Click')}
+            href={t.link.hopscotch}
           >
-            PMP mastermind
+            Hopscotch
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
