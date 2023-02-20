@@ -1,6 +1,6 @@
 import { css } from 'emotion';
 import React from 'react';
-import { H1, H3 } from '../../components/core/Heading';
+import { H1, H2, H3 } from '../../components/core/Heading';
 import PricingBlockItem from '../../components/PricingBlockItem';
 import RouteContainer from '../../components/RouteContainer';
 import TestimonialsGrid from '../../components/TestimonialsGrid';
@@ -19,33 +19,35 @@ function Pricing() {
   let standardPrice = 0;
   let premiumPrice = 0;
   let megaPrice = 0;
+  let magicalPrice = 0;
   let wrongId = false;
 
-  if (formattedId.includes(PricingBundle.Cheap)) {
-    standardPrice = 900;
-    premiumPrice = 1400;
-    megaPrice = 1900;
-  } else if (formattedId.includes(PricingBundle.Medium)) {
+  if (formattedId.includes(PricingBundle.Medium)) {
     standardPrice = 1100;
     premiumPrice = 1600;
-    megaPrice = 2400;
+    megaPrice = 2800;
+    magicalPrice = 4300;
   } else if (formattedId.includes(PricingBundle.Expensive)) {
     standardPrice = 1200;
     premiumPrice = 1900;
-    megaPrice = 2800;
+    megaPrice = 3400;
+    magicalPrice = 5900;
   } else if (formattedId.includes(PricingBundle.AboveExpensive)) {
     standardPrice = 1400;
     premiumPrice = 2300;
-    megaPrice = 3100;
+    megaPrice = 3900;
+    magicalPrice = 6300;
   } else if (formattedId.includes(PricingBundle.Dom)) {
     standardPrice = 1700;
     premiumPrice = 2600;
-    megaPrice = 3500;
+    megaPrice = 4300;
+    magicalPrice = 7300;
   } else {
     wrongId = true;
     standardPrice = 5000;
     premiumPrice = 8000;
     megaPrice = 14000;
+    magicalPrice = 23000;
   }
 
   return (
@@ -77,51 +79,64 @@ function Pricing() {
         </>
       )}
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <div className={topPricingCss}>
+        <div className={pricingItemCss(theme)}>
+          <div className={topPricingNamePriceCss}>
+            <H2>Magical reach</H2>
+            <H2>${magicalPrice}</H2>
+          </div>
+          <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+          <div className={topPricingItemsCss}>
+            <PricingBlockItem>
+              <strong>2 Instagram Reels</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>2 TikTok videos</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 YouTube long-form mention</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>2 YouTube shorts</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>2 LinkedIn posts</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>2 Instagram stories</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>2 TikTok stories</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>CTA to any link you provide</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>
+                Link on my website and linked with my bio for 20 days
+              </strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>
+                Full ownership of the created content for 3 months
+              </strong>
+            </PricingBlockItem>
+          </div>
+        </div>
+      </div>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <H1>Don't worry, there are other packages too.</H1>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={pricingWrapperCss}>
-        <div className={pricingItemCss(theme)}>
-          <H3>Standard</H3>
-          <H3>${standardPrice}</H3>
-          <div className={pricingItemDescriptionCss}>
-            <PricingBlockItem>
-              1 IG story, 1 IG "regular" post (not Reel), <strong>or</strong> 1
-              TikTok video
-            </PricingBlockItem>
-            <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
-            <PricingBlockItem>
-              That link on my website and linked with my bio for 2 days
-            </PricingBlockItem>
-            <PricingBlockItem isError>
-              Ownership of the created content
-            </PricingBlockItem>
-          </div>
-        </div>
-        <div className={pricingItemCss(theme)}>
-          <H3>Premium</H3>
-          <H3>${premiumPrice}</H3>
-          <div className={pricingItemDescriptionCss}>
-            <PricingBlockItem>
-              <strong>1 IG Reel</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              1 IG story, 1 IG post, <strong>or</strong> 1 TikTok video
-            </PricingBlockItem>
-            <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
-            <PricingBlockItem>
-              That link on my website and linked with my bio for{' '}
-              <strong>5 days</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>I create content all by myself</PricingBlockItem>
-            <PricingBlockItem isError>
-              Ownership of the created content
-            </PricingBlockItem>
-          </div>
-        </div>
         <div className={pricingItemCss(theme)}>
           <H3>Mega reach</H3>
           <H3>${megaPrice}</H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
-              <strong>1 IG Reel</strong>
+              <strong>1 Instagram Reel</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 YouTube long-form mention</strong>
             </PricingBlockItem>
             <PricingBlockItem>
               <strong>1 TikTok video</strong>
@@ -130,7 +145,7 @@ function Pricing() {
               <strong>1 YouTube short</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              <strong>1 Instagram post</strong>
+              <strong>1 LinkedIn post</strong>
             </PricingBlockItem>
             <PricingBlockItem>
               <strong>1 Instagram story</strong>
@@ -148,6 +163,43 @@ function Pricing() {
             </PricingBlockItem>
           </div>
         </div>
+        <div className={pricingItemCss(theme)}>
+          <H3>Premium</H3>
+          <H3>${premiumPrice}</H3>
+          <div className={pricingItemDescriptionCss}>
+            <PricingBlockItem>
+              <strong>1 Instagram Reel</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              1 Instagram story <strong>or</strong> 1 TikTok video
+            </PricingBlockItem>
+            <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
+            <PricingBlockItem>
+              That link on my website and linked with my bio for{' '}
+              <strong>5 days</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>I create content all by myself</PricingBlockItem>
+            <PricingBlockItem isError>
+              Ownership of the created content
+            </PricingBlockItem>
+          </div>
+        </div>
+        <div className={pricingItemCss(theme)}>
+          <H3>Standard</H3>
+          <H3>${standardPrice}</H3>
+          <div className={pricingItemDescriptionCss}>
+            <PricingBlockItem>
+              1 Instagram story <strong>or</strong> 1 TikTok video
+            </PricingBlockItem>
+            <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
+            <PricingBlockItem>
+              That link on my website and linked with my bio for 2 days
+            </PricingBlockItem>
+            <PricingBlockItem isError>
+              Ownership of the created content
+            </PricingBlockItem>
+          </div>
+        </div>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Xlarge} />
       <H1>People love to work with me!</H1>
@@ -156,6 +208,31 @@ function Pricing() {
     </RouteContainer>
   );
 }
+
+const topPricingCss = css`
+  padding: 0 64px;
+
+  @media ${Media.Mobile} {
+    padding: 0;
+  }
+`;
+
+const topPricingNamePriceCss = css`
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+`;
+
+const topPricingItemsCss = css`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 64px;
+  row-gap: 4px;
+
+  @media ${Media.Mobile} {
+    grid-template-columns: 1fr;
+  }
+`;
 
 const pricingWrapperCss = css`
   display: grid;
@@ -176,6 +253,7 @@ const pricingItemCss = (theme: Theme) => css`
   flex-direction: column;
   align-items: center;
   gap: 4px;
+}
 `;
 
 const pricingItemDescriptionCss = css`
