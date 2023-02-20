@@ -207,6 +207,8 @@ export const t = {
       'https://app.gohopscotch.com/register?utm_campaign=Influencer Marketing_javascriptwizz&utm_source=influencermarketing_social&utm_medium=social post&utm_content=jsw_reel_tt_1',
     appsmith:
       'https://appsmith.com?utm_source=&utm_medium=social&utm_content=website&utm_campaign=dom',
+    jamCustom:
+      'https://jam.dev?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_javascriptwizz_2023_02',
   },
   navigation: {
     home: 'Who Am I?',
