@@ -25,7 +25,7 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Jam', 'Click')}
-            href={t.link.jam}
+            href={t.link.jamCustom}
           >
             Jam
           </Hyperlink>
