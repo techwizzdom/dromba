@@ -221,6 +221,12 @@ const topPricingNamePriceCss = css`
   display: flex;
   justify-content: center;
   gap: 32px;
+
+  @media ${Media.Mobile} {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
 `;
 
 const topPricingItemsCss = css`
