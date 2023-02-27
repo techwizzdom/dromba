@@ -51,7 +51,7 @@ function Me() {
       <div className={meContentCss}>
         <img
           className={logoMeCss}
-          src="https://i.imgur.com/YI0X9tD.png"
+          src="https://i.imgur.com/o7M8EtZ.jpg"
           alt="Dom standing and smiling"
         />
         <div className={meTextContentCss}>
