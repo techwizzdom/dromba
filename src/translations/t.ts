@@ -209,6 +209,7 @@ export const t = {
       'https://appsmith.com?utm_source=&utm_medium=social&utm_content=website&utm_campaign=dom',
     jamCustom:
       'https://jam.dev?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_javascriptwizz_2023_02',
+    justJoinIt: 'https://bit.ly/41t2uL9',
   },
   navigation: {
     home: 'Who Am I?',

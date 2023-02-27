@@ -24,28 +24,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Just Join IT', 'Discord')}
+            href={t.link.justJoinIt}
+          >
+            Just Join IT (Discord)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Scribe', 'Click')}
             href={t.link.scribe}
           >
             Scribe
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Jam', 'Click')}
-            href={t.link.jamCustom}
-          >
-            Jam
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Appsmith', 'Click')}
-            href={t.link.appsmith}
-          >
-            Appsmith
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
