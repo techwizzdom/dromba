@@ -18,6 +18,7 @@ interface IHeadingProps {
   isHoverable?: boolean;
   alignCenter?: boolean;
   isMegaBold?: boolean;
+  isThin?: boolean;
 }
 
 interface IHProps {
@@ -25,6 +26,7 @@ interface IHProps {
   isHoverable?: boolean;
   alignCenter?: boolean;
   isMegaBold?: boolean;
+  isThin?: boolean;
 }
 
 const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
@@ -34,6 +36,7 @@ const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
     isHoverable = false,
     alignCenter,
     isMegaBold,
+    isThin,
     children,
   } = props;
 
@@ -43,7 +46,7 @@ const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
     tag,
     {
       className: cx(
-        headingCss(size, theme, isHoverable, alignCenter, isMegaBold),
+        headingCss(size, theme, isHoverable, alignCenter, isMegaBold, isThin),
         'heading',
       ),
     },
@@ -58,6 +61,7 @@ export const H1: React.FC<IHProps> = (props: IHProps) => (
     isHoverable={props.isHoverable}
     alignCenter={props.alignCenter}
     isMegaBold={props.isMegaBold}
+    isThin={props.isThin}
   >
     {props.children}
   </Heading>
@@ -70,6 +74,7 @@ export const H2: React.FC<IHProps> = (props: IHProps) => (
     isHoverable={props.isHoverable}
     alignCenter={props.alignCenter}
     isMegaBold={props.isMegaBold}
+    isThin={props.isThin}
   >
     {props.children}
   </Heading>
@@ -82,6 +87,7 @@ export const H3: React.FC<IHProps> = (props: IHProps) => (
     isHoverable={props.isHoverable}
     alignCenter={props.alignCenter}
     isMegaBold={props.isMegaBold}
+    isThin={props.isThin}
   >
     {props.children}
   </Heading>
@@ -94,6 +100,7 @@ export const H4: React.FC<IHProps> = (props: IHProps) => (
     isHoverable={props.isHoverable}
     alignCenter={props.alignCenter}
     isMegaBold={props.isMegaBold}
+    isThin={props.isThin}
   >
     {props.children}
   </Heading>
@@ -106,6 +113,7 @@ export const H5: React.FC<IHProps> = (props: IHProps) => (
     isHoverable={props.isHoverable}
     alignCenter={props.alignCenter}
     isMegaBold={props.isMegaBold}
+    isThin={props.isThin}
   >
     {props.children}
   </Heading>
@@ -118,6 +126,7 @@ export const H6: React.FC<IHProps> = (props: IHProps) => (
     isHoverable={props.isHoverable}
     alignCenter={props.alignCenter}
     isMegaBold={props.isMegaBold}
+    isThin={props.isThin}
   >
     {props.children}
   </Heading>
@@ -129,6 +138,7 @@ export const headingCss = (
   isHoverable?: boolean,
   alignCenter?: boolean,
   isMegaBold?: boolean,
+  isThin?: boolean,
 ) => css`
   font-size: ${size};
   position: relative;
@@ -138,4 +148,6 @@ export const headingCss = (
   ${isHoverable ? underlineOnHover(theme) : null}
 
   ${isMegaBold ? 'font-weight: 900;' : null}
+
+  ${isThin ? 'font-weight: 500;' : null}
 `;

@@ -123,8 +123,12 @@ function Me() {
       <H2>I charge way less than your local TV station.</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H5>
-        Starting at $200 for a UGC video, and $1200 for a promo post on my
-        social media.
+        Starting at:
+        <ul>
+          <li>$220 for a UGC video</li>
+          <li>$300 for an hour of consulting</li>
+          <li>$1200 for a promo post on my social media</li>
+        </ul>
       </H5>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>Do you want me to make viral tech content for you?</H2>

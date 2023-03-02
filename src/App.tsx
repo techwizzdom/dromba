@@ -19,6 +19,7 @@ import Post from './routes/Post';
 import Links from './routes/Links';
 import Services from './routes/Services';
 import Pricing from './routes/Pricing';
+import BreakIntoTech from './routes/BreakIntoTech';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -42,6 +43,7 @@ function App() {
             <Route exact path="/" component={Me} />
             <Route path="/services" component={Services} />
             <Route path="/blog" component={Blog} />
+            <Route path="/break-into-tech-course" component={BreakIntoTech} />
             <Route path="/links" component={Links} />
             <Route path="/post/:id" component={Post} />
             <Route path="/pricing/:id" component={Pricing} />

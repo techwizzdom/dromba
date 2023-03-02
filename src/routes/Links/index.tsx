@@ -75,7 +75,7 @@ function Links() {
             }
             href={t.link.book45minsSocials}
           >
-            Social Media Consulting (60 mins, $259)
+            Social Media Consulting (60 mins, $299)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
