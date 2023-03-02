@@ -71,14 +71,17 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         {t.navigation.blog}
       </Link>
-      <a
-        className={navigationItemCss(theme, isMobile, false)}
-        href={t.link.buyMeACroissant}
-        target="_blank"
-        rel="noopener noreferrer"
+      {/* <Link
+        to={Routes.BreakIntoTech}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.BreakIntoTech),
+        )}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        Buy Me a Croissant
-      </a>
+        Break into tech
+      </Link> */}
       <Link
         to={Routes.Links}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Links))}
