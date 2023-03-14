@@ -211,6 +211,7 @@ export const t = {
       'https://jam.dev?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_javascriptwizz_2023_02',
     justJoinIt: 'https://bit.ly/41t2uL9',
     edrawmax: 'http://bit.ly/3ZuWJLc',
+    ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
   },
   navigation: {
     home: 'Who Am I?',
