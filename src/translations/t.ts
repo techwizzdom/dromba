@@ -212,6 +212,7 @@ export const t = {
     justJoinIt: 'https://bit.ly/41t2uL9',
     edrawmax: 'http://bit.ly/3ZuWJLc',
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
+    motoko: 'https://forms.gle/ESsv7BuUWJt9ZrHD7',
   },
   navigation: {
     home: 'Who Am I?',
@@ -230,9 +231,9 @@ export const t = {
     instagram: 'Instagram',
   },
   socials: {
-    followers: '450k',
-    likes: '12M',
-    views: '150M',
+    followers: '500k',
+    likes: '14M',
+    views: '180M',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',
