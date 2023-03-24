@@ -27,7 +27,7 @@ function Links() {
             onClick={() => trackEvent('Motoko', 'Click')}
             href={t.link.motoko}
           >
-            Motoko
+            FREE Bootcamp (Motoko)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
