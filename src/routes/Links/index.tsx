@@ -24,19 +24,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Motoko', 'Click')}
-            href={t.link.motoko}
+            onClick={() => trackEvent('Scribe', 'Click')}
+            href={t.link.scribe}
           >
-            FREE Bootcamp (Motoko)
+            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Ruul', 'Click')}
-            href={t.link.ruul}
+            onClick={() => trackEvent('Motoko', 'Click')}
+            href={t.link.motoko}
           >
-            Ruul
+            FREE Bootcamp (Motoko)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
