@@ -78,7 +78,7 @@ function Pricing() {
           <H1>Let's make everyone know you in one day.</H1>
         </>
       )}
-      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      {/* <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={topPricingCss}>
         <div className={pricingItemCss(theme)}>
           <div className={topPricingNamePriceCss}>
@@ -125,7 +125,7 @@ function Pricing() {
         </div>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H1>Don't worry, there are other packages too.</H1>
+      <H1>Don't worry, there are other packages too.</H1> */}
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={pricingWrapperCss}>
         <div className={pricingItemCss(theme)}>
