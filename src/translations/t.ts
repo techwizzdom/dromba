@@ -30,6 +30,7 @@ export const t = {
     dpatrick: 'patrick.domv@gmail.com',
     dvidovic: 'dvidovic91@gmail.com',
     javascriptwizz: 'dom@javascriptwizz.com',
+    techwizzdom: 'dom@techwizzdom.com',
   },
   home: {
     title: 'Frontend Engineer.',
