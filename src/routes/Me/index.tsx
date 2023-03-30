@@ -44,7 +44,7 @@ function Me() {
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
-        title="JavaScript Wizz"
+        title="Tech Wizzdom"
         description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
         url="https://www.domagojvidovic.com"
       />

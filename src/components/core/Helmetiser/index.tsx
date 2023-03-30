@@ -7,7 +7,7 @@ interface IHelmetiserProps {
   url?: string;
 }
 
-const DEFAULT_TITLE = 'JavaScript Wizz';
+const DEFAULT_TITLE = 'Tech Wizzdom';
 const DEFAULT_DESCRIPTION =
   'Senior frontend engineer turned into tech content creator and influencer. I make viral tech content.';
 const DEFAULT_IMAGE = 'https://i.imgur.com/lvEdL9Q.png';
