@@ -1,6 +1,6 @@
 import { css } from 'emotion';
 import React from 'react';
-import { H1, H2, H3 } from '../../components/core/Heading';
+import { H1, H3 } from '../../components/core/Heading';
 import PricingBlockItem from '../../components/PricingBlockItem';
 import RouteContainer from '../../components/RouteContainer';
 import TestimonialsGrid from '../../components/TestimonialsGrid';
@@ -19,35 +19,35 @@ function Pricing() {
   let standardPrice = 0;
   let premiumPrice = 0;
   let megaPrice = 0;
-  let magicalPrice = 0;
+  // let magicalPrice = 0;
   let wrongId = false;
 
   if (formattedId.includes(PricingBundle.Medium)) {
     standardPrice = 1100;
     premiumPrice = 1600;
     megaPrice = 2800;
-    magicalPrice = 4300;
+    // magicalPrice = 4300;
   } else if (formattedId.includes(PricingBundle.Expensive)) {
     standardPrice = 1200;
     premiumPrice = 1900;
     megaPrice = 3400;
-    magicalPrice = 5900;
+    // magicalPrice = 5900;
   } else if (formattedId.includes(PricingBundle.AboveExpensive)) {
     standardPrice = 1400;
     premiumPrice = 2300;
     megaPrice = 3900;
-    magicalPrice = 6300;
+    // magicalPrice = 6300;
   } else if (formattedId.includes(PricingBundle.Dom)) {
     standardPrice = 1700;
     premiumPrice = 2600;
     megaPrice = 4300;
-    magicalPrice = 7300;
+    // magicalPrice = 7300;
   } else {
     wrongId = true;
     standardPrice = 5000;
     premiumPrice = 8000;
     megaPrice = 14000;
-    magicalPrice = 23000;
+    // magicalPrice = 23000;
   }
 
   return (
@@ -209,36 +209,36 @@ function Pricing() {
   );
 }
 
-const topPricingCss = css`
-  padding: 0 64px;
+// const topPricingCss = css`
+//   padding: 0 64px;
 
-  @media ${Media.Mobile} {
-    padding: 0;
-  }
-`;
+//   @media ${Media.Mobile} {
+//     padding: 0;
+//   }
+// `;
 
-const topPricingNamePriceCss = css`
-  display: flex;
-  justify-content: center;
-  gap: 32px;
+// const topPricingNamePriceCss = css`
+//   display: flex;
+//   justify-content: center;
+//   gap: 32px;
 
-  @media ${Media.Mobile} {
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
-`;
+//   @media ${Media.Mobile} {
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 4px;
+//   }
+// `;
 
-const topPricingItemsCss = css`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 64px;
-  row-gap: 4px;
+// const topPricingItemsCss = css`
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr);
+//   column-gap: 64px;
+//   row-gap: 4px;
 
-  @media ${Media.Mobile} {
-    grid-template-columns: 1fr;
-  }
-`;
+//   @media ${Media.Mobile} {
+//     grid-template-columns: 1fr;
+//   }
+// `;
 
 const pricingWrapperCss = css`
   display: grid;
