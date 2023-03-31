@@ -82,9 +82,9 @@ function BreakIntoTech() {
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Small} />
       <Paragraph size={ParagraphSize.Large}>
-        Also, I'm @javascript_wizz on socials, with half a million followers
-        across platforms. I've received a massive number of compliments about my
-        simple explanations.
+        Also, I'm @tech_wizzdom on socials, with half a million followers across
+        platforms. I've received a massive number of compliments about my simple
+        explanations.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Small} />
       <Paragraph size={ParagraphSize.Large}>
