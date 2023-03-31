@@ -37,26 +37,6 @@ function ThisIsMe(props: IThisIsMeProps) {
             Senior frontend engineer turned into tech content creator and
             influencer. I make viral tech content.
           </p>
-          <p className={pCss(isMainScreenMode, true)}>
-            {isMainScreenMode ? (
-              "LET'S SUPERCHARGE YOUR CAREER."
-            ) : (
-              <>
-                I offer fabulous services,
-                <Link
-                  to={Routes.Services}
-                  className={hyperlinkCss(theme)}
-                  style={{ margin: '0 4px' }}
-                  onClick={() =>
-                    trackEvent('This is me', 'click here (services)')
-                  }
-                >
-                  click here
-                </Link>
-                to see them
-              </>
-            )}
-          </p>
         </div>
       </div>
       {isMainScreenMode && (
