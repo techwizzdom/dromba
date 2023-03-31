@@ -5,6 +5,6 @@ export enum Routes {
   Blog = '/blog',
   Post = '/post',
   Links = '/links',
-  BreakIntoTech = '0-knowledge-to-frontend-engineering-job',
+  BreakIntoTech = 'break-into-tech',
   Services = '/services',
 }

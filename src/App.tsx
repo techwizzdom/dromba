@@ -43,10 +43,7 @@ function App() {
             <Route exact path="/" component={Me} />
             <Route path="/services" component={Services} />
             <Route path="/blog" component={Blog} />
-            <Route
-              path="/0-knowledge-to-frontend-engineering-job"
-              component={BreakIntoTech}
-            />
+            <Route path="/break-into-tech" component={BreakIntoTech} />
             <Route path="/links" component={Links} />
             <Route path="/post/:id" component={Post} />
             <Route path="/pricing/:id" component={Pricing} />
