@@ -10,6 +10,7 @@ import { t } from '../../translations/t';
 import { trackEvent } from '../../util/metrics';
 import { H5 } from '../../components/core/Heading';
 import ThisIsMe from '../../components/ThisIsMe';
+import { Routes } from '../Routes';
 
 function Links() {
   return (
@@ -21,6 +22,16 @@ function Links() {
       />
       <ThisIsMe />
       <div className={linksContainerCss}>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            isLarge
+            onClick={() => trackEvent('Scribe', 'Click')}
+            route={Routes.BreakIntoTech}
+          >
+            BREAK INTO TECH
+          </Hyperlink>
+        </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
@@ -75,7 +86,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '60 min - Links')}
             href={t.link.book60mins}
           >
-            Tech Mentoring (60 mins, $129)
+            Tech Mentoring (60 mins, $249)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -84,7 +95,7 @@ function Links() {
             onClick={() => trackEvent('Booking', '30 min - Links')}
             href={t.link.book30mins}
           >
-            Tech Mentoring (30 mins, $79)
+            Tech Mentoring (30 mins, $149)
           </Hyperlink>
         </H5>
       </div>

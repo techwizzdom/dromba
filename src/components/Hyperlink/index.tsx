@@ -3,14 +3,16 @@ import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
+import { Link } from 'react-router-dom';
 
 export interface IHyperlinkProps {
   children: React.ReactNode;
-  href: string;
+  href?: string;
   isEmail?: boolean;
   isUnderline?: boolean;
   isLarge?: boolean;
   alignCenter?: boolean;
+  route?: string;
   onClick?: () => void;
 }
 
@@ -58,20 +60,32 @@ const Hyperlink: React.FC<IHyperlinkProps> = (props: IHyperlinkProps) => {
     isLarge,
     alignCenter,
     onClick,
+    route,
   } = props;
 
   const theme = React.useContext(ThemeContext);
 
   return (
-    <a
-      className={hyperlinkCss(theme, isUnderline, isLarge, alignCenter)}
-      href={isEmail ? `mailto:${href}` : href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => onClick && onClick()}
-    >
-      {children}
-    </a>
+    <>
+      {route ? (
+        <Link
+          to={route}
+          className={hyperlinkCss(theme, isUnderline, isLarge, alignCenter)}
+        >
+          {children}
+        </Link>
+      ) : (
+        <a
+          className={hyperlinkCss(theme, isUnderline, isLarge, alignCenter)}
+          href={isEmail ? `mailto:${href}` : href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => onClick && onClick()}
+        >
+          {children}
+        </a>
+      )}
+    </>
   );
 };
 
