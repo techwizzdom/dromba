@@ -214,6 +214,8 @@ export const t = {
     edrawmax: 'http://bit.ly/3ZuWJLc',
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
     motoko: 'https://forms.gle/ESsv7BuUWJt9ZrHD7',
+    zeroKnowledgeToJob:
+      'https://techwizzom.gumroad.com/l/0-knowledge-to-frontend-engineering-job',
   },
   navigation: {
     home: 'Who Am I?',

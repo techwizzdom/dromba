@@ -6,14 +6,21 @@ import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import Paragraph from '../../components/core/Paragraph';
 import { ParagraphSize } from '../../enums/ParagraphSize';
+import { Theme } from '../../styles';
+import { css } from 'emotion';
+import { Media } from '../../enums/Media';
+import { ThemeContext } from '../../context/ThemeContext';
+import { t } from '../../translations/t';
 
 function BreakIntoTech() {
+  const theme = React.useContext(ThemeContext);
+
   return (
     <RouteContainer isPureCenteringEnabled={true}>
       <Helmetiser
         title="Break Into Tech Course"
         description="The only course you'll need. Break into tech in a most efficient way."
-        url="https://www.domagojvidovic.com/break-into-tech-course"
+        url="https://www.domagojvidovic.com/0-knowledge-to-frontend-engineering-job"
       />
       <H1>
         Courses these days are too long. Too detailed. Filled with too much
@@ -22,10 +29,19 @@ function BreakIntoTech() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3 isThin>
         There's no reason to learn complex JavaScript concepts that even Senior
-        developers struggle with. Nobody will ask about them on interviews - so
-        what's the point of trying to understand something you won't understand
-        and need at the moment? Waste of time and energy.
+        developers struggle with. Nobody will ask you about them on interviews -
+        so what's the point of trying to understand something you don't need to
+        understand at the moment? Waste of time and energy.
       </H3>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <a
+        className={letsWorkButton(theme, true)}
+        href={t.link.zeroKnowledgeToJob}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LEARN ONLY WHAT YOU NEED
+      </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H1>
         Your main goal when starting learning to code should be getting a job.
@@ -35,6 +51,15 @@ function BreakIntoTech() {
         No, not learning. Not making 259358 side projects. Not solving countless
         Leetcode challenges.
       </H3>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <a
+        className={letsWorkButton(theme, true)}
+        href={t.link.zeroKnowledgeToJob}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        START EARNING BIG
+      </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H1>Let me explain.</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -44,6 +69,15 @@ function BreakIntoTech() {
         experienced engineers 8 hours per day; when you'll be working on massive
         real projects. Everything before - is just a preparation.
       </H3>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <a
+        className={letsWorkButton(theme, true)}
+        href={t.link.zeroKnowledgeToJob}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GET THE JOB
+      </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H1>Don't waste time preparing, when you can already earn big.</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -53,11 +87,30 @@ function BreakIntoTech() {
         concepts, you could have already had a job, learn for real, and earn
         big.
       </H3>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <a
+        className={letsWorkButton(theme, true)}
+        href={t.link.zeroKnowledgeToJob}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GO TO THE COURSE
+      </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H1>
         And that's exactly what this course is about. Learn only the things you
-        need in a most effiecient way. Get the job fast, and start earning fast.
+        need in the most effiecient way. Get the job fast, and start earning
+        fast.
       </H1>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <a
+        className={letsWorkButton(theme, true)}
+        href={t.link.zeroKnowledgeToJob}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LET'S GO
+      </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H1>FAQ</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -141,5 +194,27 @@ function BreakIntoTech() {
     </RouteContainer>
   );
 }
+
+const letsWorkButton = (theme: Theme, alignLeftDesktop?: boolean) => css`
+  display: inline;
+  ${alignLeftDesktop ? 'align-self: baseline;' : ''}
+
+  padding: 8px;
+  border-radius: 2px;
+
+  font-size: 24px;
+  color: ${theme.hyperlinkColor};
+
+  background-color: ${theme.hyperlinkBackgroundColor};
+
+  :hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  @media ${Media.Mobile} {
+    align-self: center;
+  }
+`;
 
 export default BreakIntoTech;
