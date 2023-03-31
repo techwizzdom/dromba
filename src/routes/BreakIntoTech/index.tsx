@@ -162,6 +162,25 @@ function BreakIntoTech() {
         to send with your apps to anyone.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <H3>How long will it take me to finish it?</H3>
+      <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+      <Paragraph size={ParagraphSize.Large}>
+        There are 120 video lessons in total. If you study 3 times per week and
+        watch 5 lessons every time, it will take you around 2 months.
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Small} />
+      <Paragraph size={ParagraphSize.Large}>
+        Of course, I totally recommend not just watching - but practising and
+        playing around with the code after every lesson. Practice is what will
+        get you the job.
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Small} />
+      <Paragraph size={ParagraphSize.Large}>
+        And in the end, it all depends on you. If work fast you'll finish it in
+        a month. On the other side, it can take you 6 months too. Nevertheless,
+        it's efficient!
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>Will I create some projects?</H3>
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
       <Paragraph size={ParagraphSize.Large}>
