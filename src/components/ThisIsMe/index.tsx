@@ -16,9 +16,7 @@ import IndexDown from '../../assets/images/index-down.png';
 import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { trackEvent } from '../../util/metrics';
-import Hyperlink, { hyperlinkCss } from '../Hyperlink';
-import { Routes } from '../../routes/Routes';
-import { Link } from 'react-router-dom';
+import Hyperlink from '../Hyperlink';
 
 interface IThisIsMeProps {
   isMainScreenMode?: boolean;
