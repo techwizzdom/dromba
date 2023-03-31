@@ -58,20 +58,6 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         {t.navigation.services}
       </Link>
       <Link
-        to={Routes.Art}
-        className={navigationItemCss(theme, isMobile, isSelected(Routes.Art))}
-        onClick={() => onNavigationItemClick && onNavigationItemClick()}
-      >
-        {t.navigation.art}
-      </Link>
-      <Link
-        to={Routes.Blog}
-        className={navigationItemCss(theme, isMobile, isSelected(Routes.Blog))}
-        onClick={() => onNavigationItemClick && onNavigationItemClick()}
-      >
-        {t.navigation.blog}
-      </Link>
-      {/* <Link
         to={Routes.BreakIntoTech}
         className={navigationItemCss(
           theme,
@@ -81,7 +67,21 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
         Break into tech
+      </Link>
+      {/* <Link
+        to={Routes.Art}
+        className={navigationItemCss(theme, isMobile, isSelected(Routes.Art))}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        {t.navigation.art}
       </Link> */}
+      <Link
+        to={Routes.Blog}
+        className={navigationItemCss(theme, isMobile, isSelected(Routes.Blog))}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        {t.navigation.blog}
+      </Link>
       <Link
         to={Routes.Links}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Links))}
