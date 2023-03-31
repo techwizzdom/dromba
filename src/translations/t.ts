@@ -30,6 +30,7 @@ export const t = {
     dpatrick: 'patrick.domv@gmail.com',
     dvidovic: 'dvidovic91@gmail.com',
     javascriptwizz: 'dom@javascriptwizz.com',
+    techwizzdom: 'dom@techwizzdom.com',
   },
   home: {
     title: 'Frontend Engineer.',
@@ -210,6 +211,9 @@ export const t = {
     jamCustom:
       'https://jam.dev?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_javascriptwizz_2023_02',
     justJoinIt: 'https://bit.ly/41t2uL9',
+    edrawmax: 'http://bit.ly/3ZuWJLc',
+    ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
+    motoko: 'https://forms.gle/ESsv7BuUWJt9ZrHD7',
   },
   navigation: {
     home: 'Who Am I?',
@@ -228,9 +232,9 @@ export const t = {
     instagram: 'Instagram',
   },
   socials: {
-    followers: '450k',
-    likes: '12M',
-    views: '150M',
+    followers: '500k',
+    likes: '14M',
+    views: '180M',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',

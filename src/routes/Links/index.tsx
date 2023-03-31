@@ -24,28 +24,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Jam', 'Discord')}
-            href={t.link.justJoinIt}
-          >
-            Just Join IT (Discord)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Jam', 'Click')}
-            href={t.link.jamCustom}
-          >
-            Jam
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
             onClick={() => trackEvent('Scribe', 'Click')}
             href={t.link.scribe}
           >
             Scribe
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Motoko', 'Click')}
+            href={t.link.motoko}
+          >
+            FREE Bootcamp (Motoko)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -62,9 +53,9 @@ function Links() {
             isUnderline={true}
             isEmail={true}
             onClick={() => trackEvent('Email', 'Links')}
-            href={t.email.javascriptwizz}
+            href={t.email.techwizzdom}
           >
-            {t.email.javascriptwizz}
+            {t.email.techwizzdom}
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

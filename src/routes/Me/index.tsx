@@ -44,7 +44,7 @@ function Me() {
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
-        title="JavaScript Wizz"
+        title="Tech Wizzdom"
         description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
         url="https://www.domagojvidovic.com"
       />
@@ -144,8 +144,8 @@ function Me() {
         </a>
         <H5 alignCenter>
           or drop me an email at{' '}
-          <Hyperlink href={t.email.javascriptwizz} isEmail={true}>
-            {t.email.javascriptwizz}
+          <Hyperlink href={t.email.techwizzdom} isEmail={true}>
+            {t.email.techwizzdom}
           </Hyperlink>
         </H5>
         <VerticalSpacing height={VerticalSpacingHeight.Medium} />
