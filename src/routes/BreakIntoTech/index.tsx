@@ -1,7 +1,7 @@
 import React from 'react';
 import RouteContainer from '../../components/RouteContainer';
 import Helmetiser from '../../components/core/Helmetiser';
-import { H1, H3 } from '../../components/core/Heading';
+import { H2, H3 } from '../../components/core/Heading';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import Paragraph from '../../components/core/Paragraph';
@@ -22,17 +22,17 @@ function BreakIntoTech() {
         description="The only course you'll need. Break into tech in a most efficient way."
         url="https://www.domagojvidovic.com/break-into-tech"
       />
-      <H1>
+      <H2>
         Courses these days are too long. Too detailed. Filled with too much
         useless information.
-      </H1>
+      </H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H3 isThin>
+      <Paragraph size={ParagraphSize.Large}>
         There's no reason to learn complex JavaScript concepts that even Senior
         developers struggle with. Nobody will ask you about them on interviews -
         so what's the point of trying to understand something you don't need to
         understand at the moment? Waste of time and energy.
-      </H3>
+      </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
@@ -43,14 +43,14 @@ function BreakIntoTech() {
         LEARN ONLY WHAT YOU NEED
       </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
-      <H1>
+      <H2>
         Your main goal when starting learning to code should be getting a job.
-      </H1>
+      </H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H3 isThin>
+      <Paragraph size={ParagraphSize.Large}>
         No, not learning. Not making 259358 side projects. Not solving countless
         Leetcode challenges.
-      </H3>
+      </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
@@ -61,14 +61,14 @@ function BreakIntoTech() {
         START EARNING BIG
       </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
-      <H1>Let me explain.</H1>
+      <H2>Let me explain.</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H3 isThin>
+      <Paragraph size={ParagraphSize.Large}>
         The best place to learn is a company. You'll start learning properly
         when you get your first job; when you will be surrounded by other
         experienced engineers 8 hours per day; when you'll be working on massive
         real projects. Everything before - is just a preparation.
-      </H3>
+      </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
@@ -79,14 +79,14 @@ function BreakIntoTech() {
         GET THE JOB
       </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
-      <H1>Don't waste time preparing, when you can already earn big.</H1>
+      <H2>Don't waste time preparing, when you can already earn big.</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H3 isThin>
+      <Paragraph size={ParagraphSize.Large}>
         Focus on important things that will actually need you to get that first
         job. In those extra 6-12 months of learning useless programming
         concepts, you could have already had a job, learn for real, and earn
         big.
-      </H3>
+      </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
@@ -97,11 +97,11 @@ function BreakIntoTech() {
         GO TO THE COURSE
       </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
-      <H1>
+      <H2>
         And that's exactly what this course is about. Learn only the things you
         need in the most effiecient way. Get the job fast, and start earning
         fast.
-      </H1>
+      </H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
@@ -112,7 +112,7 @@ function BreakIntoTech() {
         LET'S GO
       </a>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
-      <H1>FAQ</H1>
+      <H2>FAQ</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>Hey Dom, why does this course exist?</H3>
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
@@ -220,6 +220,7 @@ const letsWorkButton = (theme: Theme, alignLeftDesktop?: boolean) => css`
 
   padding: 8px;
   border-radius: 2px;
+  line-height: 2;
 
   font-size: 24px;
   color: ${theme.hyperlinkColor};

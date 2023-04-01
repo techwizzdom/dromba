@@ -216,6 +216,9 @@ export const t = {
     motoko: 'https://forms.gle/ESsv7BuUWJt9ZrHD7',
     zeroKnowledgeToJob:
       'https://techwizzom.gumroad.com/l/0-knowledge-to-frontend-engineering-job',
+    recoverIt: 'https://bit.ly/3TRj1FD',
+    breakIntoTechEBook:
+      'https://techwizzom.gumroad.com/l/break-into-tech-ebook',
   },
   navigation: {
     home: 'Who Am I?',
