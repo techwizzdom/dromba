@@ -135,7 +135,7 @@ function Post() {
               className="twitter-share-button"
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://twitter.com/intent/tweet?text="${title}" by @javascript_wizz is a must-read article! 🚀 ${document.URL}`}
+              href={`https://twitter.com/intent/tweet?text="${title}" by @tech_wizzdom is a must-read article! 🚀 ${document.URL}`}
             >
               <Twitter />
             </a>

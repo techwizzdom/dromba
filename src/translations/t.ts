@@ -157,15 +157,15 @@ export const t = {
     bachelorStudies:
       'https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing',
     sourceCode: 'https://github.com/dromba/dromba',
-    twitter: 'https://twitter.com/javascript_wizz',
+    twitter: 'https://twitter.com/tech_wizzdom',
     devto: 'https://dev.to/domagojvidovic',
     github: 'https://github.com/dromba',
     linkedIn: 'https://www.linkedin.com/in/domagojvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
-    instagram: 'https://www.instagram.com/javascript_wizz/',
-    youtube: 'https://www.youtube.com/@javascript_wizz',
+    instagram: 'https://www.instagram.com/tech_wizzdom/',
+    youtube: 'https://www.youtube.com/@tech_wizzdom',
     buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
-    tiktok: 'https://www.tiktok.com/@javascript_wizz',
+    tiktok: 'https://www.tiktok.com/@tech_wizzdom',
     zeroKnowledgeTo80k:
       'https://domagojvidovic.medium.com/all-the-resources-you-need-to-become-a-frontend-engineer-eff27464ab17',
     book30mins: 'https://calendly.com/domagojvidovic/career-code-mentoring',
@@ -173,14 +173,14 @@ export const t = {
       'https://calendly.com/domagojvidovic/social-media-mentoring',
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
-    teal: 'https://tealhq.co/javascript_wizz',
+    teal: 'https://tealhq.co/tech_wizzdom',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
     rapyd:
       'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
     notyai: 'https://noty.ai/',
     jam: 'https://jam.dev/',
-    slashDataSurvey: 'https://developereconomics.net?member_id=javascript_wizz',
+    slashDataSurvey: 'https://developereconomics.net?member_id=tech_wizzdom',
     bamblue: 'https://bamblueglasses.com/?ref=LxX0mVWrjCJrF',
     letsCreateAwesomeStuff:
       'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
@@ -219,6 +219,8 @@ export const t = {
     recoverIt: 'https://bit.ly/3TRj1FD',
     breakIntoTechEBook:
       'https://techwizzom.gumroad.com/l/break-into-tech-ebook',
+    ampere:
+      'https://shareasale.com/r.cfm?b=1537902&u=3619435&m=97296&urllink=&afftrack=',
   },
   navigation: {
     home: 'Who Am I?',
