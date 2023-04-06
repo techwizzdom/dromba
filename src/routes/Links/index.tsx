@@ -29,7 +29,7 @@ function Links() {
             onClick={() => trackEvent('Scribe', 'Click')}
             route={Routes.BreakIntoTech}
           >
-            BREAK INTO TECH
+            BREAK INTO TECH (course)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
