@@ -44,28 +44,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Ampere', 'Click')}
-            href={t.link.ampere}
+            onClick={() => trackEvent('Scribe', 'Click')}
+            href={t.link.scribe}
           >
-            Ampere smart gadgets shop
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('RecoverIt', 'Click')}
-            href={t.link.recoverIt}
-          >
-            RecoverIt
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Rapyd', 'Hack the galaxy')}
-            href={t.link.rapyd}
-          >
-            Hack The Galaxy
+            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
