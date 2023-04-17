@@ -221,6 +221,7 @@ export const t = {
       'https://techwizzom.gumroad.com/l/break-into-tech-ebook',
     ampere:
       'https://shareasale.com/r.cfm?b=1537902&u=3619435&m=97296&urllink=&afftrack=',
+    mobileClean: 'https://drfone.wondershare.com/mobile-clean.html',
   },
   navigation: {
     home: 'Who Am I?',

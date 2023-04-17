@@ -44,10 +44,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Scribe', 'Click')}
-            href={t.link.scribe}
+            onClick={() => trackEvent('MobileClean', 'Click')}
+            href={t.link.mobileClean}
           >
-            Scribe
+            MobileClean
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
