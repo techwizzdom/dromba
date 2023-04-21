@@ -44,6 +44,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Treblle', 'Click')}
+            href={t.link.treblle}
+          >
+            Treblle
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('MobileClean', 'Click')}
             href={t.link.mobileClean}
           >
