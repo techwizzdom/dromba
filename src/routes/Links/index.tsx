@@ -44,19 +44,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Treblle', 'Click')}
-            href={t.link.treblle}
+            onClick={() => trackEvent('DemoCreator', 'Click')}
+            href={t.link.demoCreator}
           >
-            Treblle
+            Wondershare DemoCreator
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('MobileClean', 'Click')}
-            href={t.link.mobileClean}
+            onClick={() => trackEvent('Scribe', 'Click')}
+            href={t.link.scribe}
           >
-            MobileClean
+            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -78,24 +78,6 @@ function Links() {
             href={t.link.book45minsSocials}
           >
             Social Media Consulting (60 mins, $299)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Booking', '60 min - Links')}
-            href={t.link.book60mins}
-          >
-            Tech Mentoring (60 mins, $249)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Booking', '30 min - Links')}
-            href={t.link.book30mins}
-          >
-            Tech Mentoring (30 mins, $149)
           </Hyperlink>
         </H5>
       </div>
