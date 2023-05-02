@@ -20,6 +20,7 @@ import Links from './routes/Links';
 import Services from './routes/Services';
 import Pricing from './routes/Pricing';
 import BreakIntoTech from './routes/BreakIntoTech';
+import ContentWizzard from './routes/ContentWizzard';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -44,6 +45,7 @@ function App() {
             <Route path="/services" component={Services} />
             <Route path="/blog" component={Blog} />
             <Route path="/break-into-tech" component={BreakIntoTech} />
+            <Route path="/500k-content-wizzard" component={ContentWizzard} />
             <Route path="/links" component={Links} />
             <Route path="/post/:id" component={Post} />
             <Route path="/pricing/:id" component={Pricing} />

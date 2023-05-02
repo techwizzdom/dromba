@@ -58,6 +58,17 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         {t.navigation.services}
       </Link>
       <Link
+        to={Routes.ContentWizzard}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.ContentWizzard),
+        )}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        $500k Content Wizzard
+      </Link>
+      <Link
         to={Routes.BreakIntoTech}
         className={navigationItemCss(
           theme,

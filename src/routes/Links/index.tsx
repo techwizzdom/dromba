@@ -26,7 +26,17 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             isLarge
-            onClick={() => trackEvent('Scribe', 'Click')}
+            onClick={() => trackEvent('Content wizzard course', 'Click')}
+            route={Routes.ContentWizzard}
+          >
+            Content Wizzard: Become A $500k Creator
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            isLarge
+            onClick={() => trackEvent('Break into tech course', 'Click')}
             route={Routes.BreakIntoTech}
           >
             BREAK INTO TECH (course)
