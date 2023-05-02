@@ -27,7 +27,7 @@ function ContentWizzard() {
       <iframe
         style={{ overflow: 'hidden', width: '100%', aspectRatio: '16/9' }}
         width="100%"
-        src="https://www.youtube.com/watch?v=ByzRM4FQzyw"
+        src="https://www.youtube.com/embed/ByzRM4FQzyw"
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
