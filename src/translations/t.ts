@@ -223,6 +223,7 @@ export const t = {
       'https://shareasale.com/r.cfm?b=1537902&u=3619435&m=97296&urllink=&afftrack=',
     mobileClean: 'https://drfone.wondershare.com/mobile-clean.html',
     demoCreator: 'https://bit.ly/40zsdjk',
+    contentWizzard: 'https://www.techwizzdom.com/500k-content-wizzard',
   },
   navigation: {
     home: 'Who Am I?',
