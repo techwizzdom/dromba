@@ -45,7 +45,7 @@ function ContentWizzard() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
-        href={t.link.contentWizzard}
+        href={t.link.contentWizzardCourse}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -62,7 +62,7 @@ function ContentWizzard() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
-        href={t.link.contentWizzard}
+        href={t.link.contentWizzardCourse}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -82,7 +82,7 @@ function ContentWizzard() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
-        href={t.link.contentWizzard}
+        href={t.link.contentWizzardCourse}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -118,7 +118,7 @@ function ContentWizzard() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
-        href={t.link.contentWizzard}
+        href={t.link.contentWizzardCourse}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -135,7 +135,7 @@ function ContentWizzard() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <a
         className={letsWorkButton(theme, true)}
-        href={t.link.contentWizzard}
+        href={t.link.contentWizzardCourse}
         target="_blank"
         rel="noopener noreferrer"
       >
