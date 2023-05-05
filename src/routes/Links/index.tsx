@@ -57,7 +57,7 @@ function Links() {
             onClick={() => trackEvent('10Web', 'Click')}
             href={t.link.tenWeb}
           >
-            10Web (use WIZZ23 code)
+            10Web Website Generator (use WIZZ23 code)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
