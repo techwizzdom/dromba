@@ -225,6 +225,7 @@ export const t = {
     demoCreator: 'https://bit.ly/40zsdjk',
     contentWizzardCourse:
       'https://techwizzom.gumroad.com/l/500k-content-wizzard',
+    tenWeb: 'https://10web.io/?_from=domagoj92',
   },
   navigation: {
     home: 'Who Am I?',

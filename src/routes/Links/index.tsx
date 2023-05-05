@@ -54,19 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('DemoCreator', 'Click')}
-            href={t.link.demoCreator}
+            onClick={() => trackEvent('10Web', 'Click')}
+            href={t.link.tenWeb}
           >
-            Wondershare DemoCreator
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Scribe', 'Click')}
-            href={t.link.scribe}
-          >
-            Scribe
+            10Web (use WIZZ23 code)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
