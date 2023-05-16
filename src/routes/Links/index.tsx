@@ -54,10 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('10Web', 'Click')}
-            href={t.link.tenWeb}
+            onClick={() => trackEvent('Scribe', 'Click')}
+            href={t.link.scribe}
           >
-            10Web Website Generator (use WIZZ23 code)
+            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

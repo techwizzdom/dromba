@@ -193,7 +193,7 @@ export const t = {
     goit: 'https://i.goit.global/oT1A',
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
-    scribe: 'https://scribehow.com/',
+    scribe: 'https://scribe.how/ai',
     zeroToMastery: 'https://links.zerotomastery.io/javascriptwizz',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
