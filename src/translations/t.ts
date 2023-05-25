@@ -226,6 +226,7 @@ export const t = {
     contentWizzardCourse:
       'https://techwizzom.gumroad.com/l/500k-content-wizzard',
     tenWeb: 'https://10web.io/?_from=domagoj92',
+    edrawMaxAi: 'https://bit.ly/3OyLYoP',
   },
   navigation: {
     home: 'Who Am I?',
