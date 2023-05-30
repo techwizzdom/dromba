@@ -54,6 +54,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Scribe AI', 'Click')}
+            href={t.link.scribe}
+          >
+            Scribe
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('EdrawMax', 'Click')}
             href={t.link.edrawMaxAi}
           >
