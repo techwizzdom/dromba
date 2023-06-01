@@ -227,6 +227,7 @@ export const t = {
       'https://techwizzom.gumroad.com/l/500k-content-wizzard',
     tenWeb: 'https://10web.io/?_from=domagoj92',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
+    brilliant: 'https://brilliant.org/techwizzdom/',
   },
   navigation: {
     home: 'Who Am I?',
