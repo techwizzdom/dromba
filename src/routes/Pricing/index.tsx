@@ -64,13 +64,13 @@ function Pricing() {
           <H3>
             <div className={statsCss}>
               <span className={statCss(theme)}>
-                86M <br></br> views
+                140M <br></br> views
               </span>
               <span className={statCss(theme)}>
-                6M <br></br> likes
+                11M <br></br> likes
               </span>
               <span className={statCss(theme)}>
-                1.3M <br></br> saves
+                2.3M <br></br> saves
               </span>
             </div>
           </H3>
@@ -134,9 +134,6 @@ function Pricing() {
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem>
               <strong>1 Instagram Reel</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              <strong>1 YouTube long-form mention</strong>
             </PricingBlockItem>
             <PricingBlockItem>
               <strong>1 TikTok video</strong>
