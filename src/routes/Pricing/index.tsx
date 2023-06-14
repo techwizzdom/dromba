@@ -10,6 +10,7 @@ import { Media } from '../../enums/Media';
 import { PricingBundle } from '../../enums/PricingBundle';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import { Theme } from '../../styles';
+import { t } from '../../translations/t';
 
 function Pricing() {
   const theme = React.useContext(ThemeContext);
@@ -64,13 +65,13 @@ function Pricing() {
           <H3>
             <div className={statsCss}>
               <span className={statCss(theme)}>
-                140M <br></br> views
+                {t.socials.views} <br></br> views
               </span>
               <span className={statCss(theme)}>
-                11M <br></br> likes
+                {t.socials.likes} <br></br> likes
               </span>
               <span className={statCss(theme)}>
-                2.3M <br></br> saves
+                {t.socials.saves} <br></br> saves
               </span>
             </div>
           </H3>
