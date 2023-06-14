@@ -193,7 +193,7 @@ export const t = {
     goit: 'https://i.goit.global/oT1A',
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
-    scribe: 'https://scribe.how/ai',
+    scribe: 'https://scribe.how/techwizzdom',
     zeroToMastery: 'https://links.zerotomastery.io/javascriptwizz',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
@@ -228,6 +228,7 @@ export const t = {
     tenWeb: 'https://10web.io/?_from=domagoj92',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
+    bearer: 'https://www.bearer.com/',
   },
   navigation: {
     home: 'Who Am I?',

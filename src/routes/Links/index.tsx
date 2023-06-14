@@ -55,9 +55,9 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('Brilliant', 'Click')}
-            href={t.link.brilliant}
+            href={t.link.bearer}
           >
-            Brilliant (Learn computer science)
+            Bearer (App security)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
