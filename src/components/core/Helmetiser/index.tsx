@@ -16,7 +16,7 @@ const DEFAULT_URL = 'https://domagojvidovic.com';
 function Helmetiser(props: IHelmetiserProps) {
   const { title, description, image, url } = props;
 
-  const updatedTitle = `${title || DEFAULT_TITLE} — Domagoj Vidovic`;
+  const updatedTitle = `${title || DEFAULT_TITLE} — Domagoj Lalk Vidovic`;
   document.title = updatedTitle;
   document
     .querySelector('[property="og:title"]')
