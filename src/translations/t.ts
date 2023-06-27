@@ -229,6 +229,7 @@ export const t = {
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
     bearer: 'https://www.bearer.com/',
+    codium: 'https://www.codium.ai/',
   },
   navigation: {
     home: 'Who Am I?',

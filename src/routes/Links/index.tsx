@@ -54,19 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Brilliant', 'Click')}
-            href={t.link.bearer}
+            onClick={() => trackEvent('Codium', 'Click')}
+            href={t.link.codium}
           >
-            Bearer (App security)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Scribe AI', 'Click')}
-            href={t.link.scribe}
-          >
-            Scribe
+            CodiumAI (AI generated tests)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
