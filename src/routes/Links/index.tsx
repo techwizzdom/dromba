@@ -54,6 +54,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('10Web', '10Web')}
+            href={t.link.tenWeb}
+          >
+            10Web (Websites in minutes)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Codium', 'Click')}
             href={t.link.codium}
           >
