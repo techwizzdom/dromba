@@ -46,9 +46,6 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
     children,
   } = props;
 
-  console.log(props);
-  debugger;
-
   return (
     <div
       className={routeContainerCss(
