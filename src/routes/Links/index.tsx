@@ -54,19 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('10Web', '10Web')}
-            href={t.link.tenWeb}
+            onClick={() => trackEvent('Scribe', 'Scribe')}
+            href={t.link.scribe}
           >
-            10Web (Websites in minutes)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Codium', 'Click')}
-            href={t.link.codium}
-          >
-            CodiumAI (AI generated tests)
+            Scribe (Chrome extension for docs/tutorials)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
