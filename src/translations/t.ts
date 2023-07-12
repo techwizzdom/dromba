@@ -230,6 +230,7 @@ export const t = {
     brilliant: 'https://brilliant.org/techwizzdom/',
     bearer: 'https://www.bearer.com/',
     codium: 'https://www.codium.ai/',
+    codejet: 'https://www.codejet.ai/',
   },
   navigation: {
     home: 'Who Am I?',

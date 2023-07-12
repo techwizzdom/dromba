@@ -54,10 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            href={t.link.scribe}
+            onClick={() => trackEvent('Codejet', 'Codejet')}
+            href={t.link.codejet}
           >
-            Scribe (Chrome extension for docs/tutorials)
+            Codejet (Design to code)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
