@@ -54,10 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Codejet', 'Codejet')}
-            href={t.link.codejet}
+            onClick={() => trackEvent('CodeSee', 'CodeSee')}
+            href={t.link.codesee}
           >
-            Codejet (Design to code)
+            CodeSee
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

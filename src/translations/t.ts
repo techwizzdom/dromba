@@ -231,6 +231,7 @@ export const t = {
     bearer: 'https://www.bearer.com/',
     codium: 'https://www.codium.ai/',
     codejet: 'https://www.codejet.ai/',
+    codesee: 'https://www.codesee.io/ai',
   },
   navigation: {
     home: 'Who Am I?',
