@@ -33,12 +33,12 @@ function Me() {
   };
 
   const testimonials = [
-    testimonialsFromPeople[4],
-    testimonialsFromPeople[2],
-    testimonialsFromPeople[5],
     testimonialsFromPeople[0],
-    testimonialsFromPeople[3],
-    testimonialsFromPeople[6],
+    testimonialsFromPeople[1],
+    testimonialsFromPeople[2],
+    testimonialsFromPeople[8],
+    testimonialsFromPeople[4],
+    testimonialsFromPeople[7],
   ];
 
   return (
