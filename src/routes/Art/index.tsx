@@ -56,6 +56,7 @@ function Art(props: IArtProps) {
         description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
         url="https://www.domagojvidovic.com/art"
       />
+      Follow for more tech
       {isArtEnabled ? (
         <AbstractArt
           isRandomArtEnabled={true}
@@ -72,7 +73,6 @@ function Art(props: IArtProps) {
       ) : (
         <></>
       )}
-
       <div className={artCss(isArtEnabled)}>
         <H1>{t.art.title}</H1>
 
