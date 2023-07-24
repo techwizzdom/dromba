@@ -54,10 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            href={t.link.scribe}
+            onClick={() => trackEvent('CodiumPrAgent', 'CodiumPrAgent')}
+            href={t.link.codiumPrAgent}
           >
-            Scribe (Free Chrome extension)
+            Codium PR Agent (AI Code reviews)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
