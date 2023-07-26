@@ -233,6 +233,7 @@ export const t = {
     codiumPrAgent: 'https://www.codium.ai/pr-agent/',
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
+    pieces: 'https://pieces.app/',
   },
   navigation: {
     home: 'Who Am I?',
