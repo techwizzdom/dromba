@@ -54,6 +54,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('ZTM', 'ZTM')}
+            href={t.link.zeroToMastery}
+          >
+            Zero to Mastery (Learn coding)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Scribe', 'Scribe')}
             href={t.link.scribe}
           >
@@ -67,24 +76,6 @@ function Links() {
             href={t.link.pieces}
           >
             Pieces for Developers (Code Snippets)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('CodiumPrAgent', 'CodiumPrAgent')}
-            href={t.link.codiumPrAgent}
-          >
-            Codium PR Agent (AI Code reviews)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('CodeSee', 'CodeSee')}
-            href={t.link.codesee}
-          >
-            CodeSee
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
