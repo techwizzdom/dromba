@@ -34,14 +34,14 @@ function Pricing() {
     megaPrice = 3400;
     // magicalPrice = 5900;
   } else if (formattedId.includes(PricingBundle.AboveExpensive)) {
-    standardPrice = 1400;
-    premiumPrice = 2300;
-    megaPrice = 3900;
+    standardPrice = 2600;
+    premiumPrice = 3900;
+    megaPrice = 6300;
     // magicalPrice = 6300;
   } else if (formattedId.includes(PricingBundle.Dom)) {
-    standardPrice = 1700;
-    premiumPrice = 2600;
-    megaPrice = 4300;
+    standardPrice = 3300;
+    premiumPrice = 4900;
+    megaPrice = 7800;
     // magicalPrice = 7300;
   } else {
     wrongId = true;
@@ -151,13 +151,17 @@ function Pricing() {
             <PricingBlockItem>
               <strong>1 TikTok story</strong>
             </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 Tweet</strong>
+            </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
               <strong>10 days</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              Full ownership of the created content for 3 months
+              Full ownership and ad authorisation of the created content for 3
+              months
             </PricingBlockItem>
           </div>
         </div>
@@ -168,9 +172,8 @@ function Pricing() {
             <PricingBlockItem>
               <strong>1 Instagram Reel</strong>
             </PricingBlockItem>
-            <PricingBlockItem>
-              1 Instagram story <strong>or</strong> 1 TikTok video
-            </PricingBlockItem>
+            <PricingBlockItem>1 Instagram story</PricingBlockItem>
+            <PricingBlockItem>1 TikTok video</PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
@@ -186,12 +189,11 @@ function Pricing() {
           <H3>Standard</H3>
           <H3>${standardPrice}</H3>
           <div className={pricingItemDescriptionCss}>
-            <PricingBlockItem>
-              1 Instagram story <strong>or</strong> 1 TikTok video
-            </PricingBlockItem>
+            <PricingBlockItem>1 Instagram story</PricingBlockItem>
+            <PricingBlockItem>1 TikTok video</PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
-              That link on my website and linked with my bio for 2 days
+              That link on my website and linked with my bio for 3 days
             </PricingBlockItem>
             <PricingBlockItem isError>
               Ownership of the created content
