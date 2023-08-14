@@ -236,6 +236,7 @@ export const t = {
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
     pieces: 'https://pieces.app/',
+    eagle: 'https://en.eagle.cool/',
   },
   navigation: {
     home: 'Who Am I?',

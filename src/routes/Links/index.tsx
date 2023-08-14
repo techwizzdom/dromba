@@ -54,6 +54,16 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Eagle', 'Eagle')}
+            href={t.link.eagle}
+          >
+            Eagle (digital assets king)
+          </Hyperlink>
+        </H5>
+
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('ScribeSF', 'ScribeSF')}
             href={t.link.scribe}
           >
