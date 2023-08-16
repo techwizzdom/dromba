@@ -237,6 +237,7 @@ export const t = {
     codesee: 'https://www.codesee.io/ai',
     pieces: 'https://pieces.app/',
     eagle: 'https://en.eagle.cool/',
+    equals: 'http://equals.1stcollab.com/tech_wizzdom',
   },
   navigation: {
     home: 'Who Am I?',

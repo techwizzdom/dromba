@@ -54,13 +54,21 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Equals', 'Equals')}
+            href={t.link.equals}
+          >
+            Equals (spreadsheets on steroids)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Eagle', 'Eagle')}
             href={t.link.eagle}
           >
             Eagle (digital assets king)
           </Hyperlink>
         </H5>
-
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
@@ -68,15 +76,6 @@ function Links() {
             href={t.link.scribe}
           >
             Scribe
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Jam', 'Jam')}
-            href={t.link.jameNew}
-          >
-            Jam (free Chrome extension for reporting bugs)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
