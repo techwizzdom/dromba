@@ -54,28 +54,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Pieces', 'Pieces')}
+            href={t.link.pieces}
+          >
+            Pieces (FREE AI mentor)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Equals', 'Equals')}
             href={t.link.equals}
           >
             Equals (spreadsheets on steroids)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Eagle', 'Eagle')}
-            href={t.link.eagle}
-          >
-            Eagle (digital assets king)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('ScribeSF', 'ScribeSF')}
-            href={t.link.scribe}
-          >
-            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
