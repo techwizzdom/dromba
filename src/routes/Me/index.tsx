@@ -125,9 +125,8 @@ function Me() {
       <H5>
         Starting at:
         <ul>
-          <li>$300 for a UGC video</li>
           <li>$300 for an hour of consulting</li>
-          <li>$1500 for a promo post on my social media</li>
+          <li>$2600 for a promo post on my social media</li>
         </ul>
       </H5>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
