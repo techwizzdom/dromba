@@ -54,19 +54,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Pieces', 'Pieces')}
-            href={t.link.pieces}
+            onClick={() => trackEvent('Onboard', 'Onboard')}
+            href="https://www.getonboard.dev/"
           >
-            Pieces (FREE AI mentor)
+            Onboard (AI Onboarding)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Equals', 'Equals')}
-            href={t.link.equals}
+            onClick={() => trackEvent('Pieces', 'Pieces')}
+            href={t.link.pieces}
           >
-            Equals (spreadsheets on steroids)
+            Pieces (FREE AI mentor)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
