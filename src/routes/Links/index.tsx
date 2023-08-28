@@ -54,6 +54,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('ScribeSL', 'ScribeSL')}
+            href={t.link.scribe}
+          >
+            Scribe (Free Chrome extension)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Onboard', 'Onboard')}
             href="https://www.getonboard.dev/"
           >
