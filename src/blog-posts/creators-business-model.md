@@ -20,7 +20,7 @@ On TV, there’s no way to skip that 10-minute ad series. But hey, that’s perf
 
 ## Creators actually don’t have an unlimited amount of money
 
-Let me tell you something: creators must live. They must eat, drink, buy clothes. They need to pay for rent, buy equipment, booking shooting places, try expensive experiences/products for adding them to content, and so many other things.
+Let me tell you something: creators must live. They must eat, drink, buy clothes. They need to pay for rent, buy equipment, book shooting places, try expensive experiences/products for adding them to content, and so many other things.
 
 Obviously, money is needed for it.
 
@@ -112,11 +112,11 @@ If you want to earn more, you can either:
 - Work more, or
 - Raise prices.
 
-But there is a limit - day is never longer than 24 hours, and the hourly rate cannot go to infinite.
+But there is a limit - the day is never longer than 24 hours, and the hourly rate cannot go infinite.
 
 Another way to increase income is by hiring people, but then, you’re evolving into an agency business model. To earn more money, you need to raise prices and hire people.
 
-It is scalable. But way harder then the other way of earning:
+It is scalable. But way harder than the other way of earning:
 
 ### 2. Selling products:
 
@@ -134,7 +134,7 @@ So, **it’s highly scalable**. I love it.
 
 ## How I currently make money
 
-I’m falling in that group of creators who earn most of their income from promo deals.
+I’m falling into that group of creators who earn most of their income from promo deals.
 
 I do have 3 more things:
 
@@ -144,7 +144,7 @@ I do have 3 more things:
 
 I love all the products, but I probably suck at marketing so I still don’t earn enough to support my (lavish) lifestyle. My plan is to hire marketing peeps who will take care of these things, it’s happening soon.
 
-Ah, the power of marketing. At the moment, I regularly do $30k+ months just from social media, have a course where I teach **everything** I know about it, yet people don’t want to pay $200 to do the same. It’s better to spend $500 for a shopping you don’t need than to invest in yourself.
+Ah, the power of marketing. At the moment, I regularly do $30k+ months just from social media, have a course where I teach **everything** I know about it, yet people don’t want to pay $200 to do the same. Seems like it's better to spend $500 for a shopping you don’t need than to invest in yourself.
 
 Anyways, that’s why I still do promo brands. Would I love to do less of them? Well, sometimes probably yes. But I need the money to invest more into the business, scale, and increase other sources of income.
 
