@@ -1,6 +1,6 @@
 import React from 'react';
 import logoMe from '../../assets/images/wizz.png';
-import { H3, H4 } from '../../components/core/Heading';
+import { H3, H4, H5 } from '../../components/core/Heading';
 
 import { ReactComponent as DevTo } from '../../assets/icons/devto.svg';
 import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
@@ -17,6 +17,7 @@ import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { trackEvent } from '../../util/metrics';
 import Hyperlink from '../Hyperlink';
+import { Routes } from '../../routes/Routes';
 
 interface IThisIsMeProps {
   isMainScreenMode?: boolean;
@@ -38,6 +39,20 @@ function ThisIsMe(props: IThisIsMeProps) {
         </div>
       </div>
       {isMainScreenMode && (
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            isLarge
+            onClick={() =>
+              trackEvent('Content wizzard course', 'Click from blogpost')
+            }
+            route={Routes.ContentWizzard}
+          >
+            Click here to quit your job and live the life of freedom.
+          </Hyperlink>
+        </H5>
+      )}
+      {/* {isMainScreenMode && (
         <>
           <div className={planWrapperCss}>
             <div className={emojiWrapper}>
@@ -91,7 +106,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             </Hyperlink>
           </div>
         </>
-      )}
+      )} */}
       <div className={profilesCss(theme, isMainScreenMode)}>
         <a
           target="_blank"

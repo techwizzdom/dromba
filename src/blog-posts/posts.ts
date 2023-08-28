@@ -9,6 +9,16 @@ export const Posts = [
   //   tags: [],
   // },
   {
+    title: 'BREAKING: Creators don’t post promo deals to annoy you',
+    subtitle: 'They actually need to earn money.',
+    path: 'creators-business-model',
+    img: 'https://i.imgur.com/7hwnQvY.jpg',
+    previewImg: 'https://i.imgur.com/7hwnQvY.jpg',
+    thumbnail: 'https://i.imgur.com/7hwnQvY.jpg',
+    postDate: new Date('28 Aug 2023'),
+    tags: ['#creators', '#socialmedia'],
+  },
+  {
     title: 'Coding is hard',
     subtitle: "And that's a good thing.",
     path: 'coding-is-hard',
