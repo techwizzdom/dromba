@@ -11,12 +11,14 @@ import { css } from 'emotion';
 import { Media } from '../../enums/Media';
 import { ThemeContext } from '../../context/ThemeContext';
 import { t } from '../../translations/t';
+import ScrollToTop from '../../util/scrollToTop';
 
 function ContentWizzard() {
   const theme = React.useContext(ThemeContext);
 
   return (
     <RouteContainer isPureCenteringEnabled={true}>
+      <ScrollToTop />
       <Helmetiser
         title="Content Wizzard: Become A $500k Creator"
         description="Quit your job and become a higlhy paid content creator. "
