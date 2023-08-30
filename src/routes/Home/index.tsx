@@ -201,8 +201,8 @@ function Home() {
         {t.home.paragraph.profiles.pt3}
         <Hyperlink href={t.link.medium}>{t.profile.medium}</Hyperlink>
         {t.home.paragraph.profiles.pt4}
-        <Hyperlink href={t.email.techwizzdom} isEmail={true}>
-          {t.email.techwizzdom}
+        <Hyperlink href={t.email.pr} isEmail={true}>
+          {t.email.pr}
         </Hyperlink>
         {t.home.paragraph.profiles.pt5}
       </H5>

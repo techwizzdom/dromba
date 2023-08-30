@@ -143,8 +143,8 @@ function Me() {
         </a>
         <H5 alignCenter>
           or drop me an email at{' '}
-          <Hyperlink href={t.email.techwizzdom} isEmail={true}>
-            {t.email.techwizzdom}
+          <Hyperlink href={t.email.pr} isEmail={true}>
+            {t.email.pr}
           </Hyperlink>
         </H5>
         <VerticalSpacing height={VerticalSpacingHeight.Medium} />

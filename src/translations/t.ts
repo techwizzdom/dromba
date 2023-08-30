@@ -31,6 +31,7 @@ export const t = {
     dvidovic: 'dvidovic91@gmail.com',
     javascriptwizz: 'dom@javascriptwizz.com',
     techwizzdom: 'dom@techwizzdom.com',
+    pr: 'pr@techwizzdom.com',
   },
   home: {
     title: 'Frontend Engineer.',

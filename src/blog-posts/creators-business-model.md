@@ -144,7 +144,7 @@ I do have 3 more things:
 
 I love all the products, but I probably suck at marketing so I still don’t earn enough to support my (lavish) lifestyle. My plan is to hire marketing peeps who will take care of these things, it’s happening soon.
 
-Ah, the power of marketing. At the moment, I regularly do $30k+ months just from social media, have a course where I teach **everything** I know about it, yet people don’t want to pay $200 to do the same. Seems like it's better to spend $500 for a shopping you don’t need than to invest in yourself.
+Ah, the power of marketing. At the moment, I regularly do $30k+ months just from social media, have a [course](https://www.techwizzdom.com/500k-content-wizzard) where I teach **everything** I know about it, yet people don’t want to pay $200 to do the same. Seems like it's better to spend $500 for a shopping you don’t need than to invest in yourself.
 
 Anyways, that’s why I still do promo brands. Would I love to do less of them? Well, sometimes probably yes. But I need the money to invest more into the business, scale, and increase other sources of income.
 
