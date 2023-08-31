@@ -34,9 +34,9 @@ function Pricing() {
     megaPrice = 3400;
     // magicalPrice = 5900;
   } else if (formattedId.includes(PricingBundle.AboveExpensive)) {
-    standardPrice = 2300;
-    premiumPrice = 3300;
-    megaPrice = 5300;
+    standardPrice = 4500;
+    premiumPrice = 6000;
+    megaPrice = 8500;
     // magicalPrice = 6300;
   } else if (formattedId.includes(PricingBundle.Dom)) {
     standardPrice = 3300;
@@ -143,16 +143,16 @@ function Pricing() {
               <strong>1 YouTube short</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              <strong>1 LinkedIn post</strong>
+              <strong>2 Instagram stories (with a clickable link)</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              <strong>1 Instagram story</strong>
+              <strong>1 LinkedIn video post</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 Tweet with video</strong>
             </PricingBlockItem>
             <PricingBlockItem>
               <strong>1 TikTok story</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              <strong>1 Tweet</strong>
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
@@ -160,8 +160,10 @@ function Pricing() {
               <strong>10 days</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              Full ownership and ad authorisation of the created content for 3
-              months
+              <strong>
+                Full ownership and ad authorisation of the created content for 3
+                months
+              </strong>
             </PricingBlockItem>
           </div>
         </div>
@@ -172,14 +174,20 @@ function Pricing() {
             <PricingBlockItem>
               <strong>1 Instagram Reel</strong>
             </PricingBlockItem>
-            <PricingBlockItem>1 Instagram story</PricingBlockItem>
-            <PricingBlockItem>1 TikTok video</PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 Instagram story</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 TikTok video</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 YouTube short</strong>
+            </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
               That link on my website and linked with my bio for{' '}
-              <strong>5 days</strong>
+              <strong>7 days</strong>
             </PricingBlockItem>
-            <PricingBlockItem>I create content all by myself</PricingBlockItem>
             <PricingBlockItem isError>
               Ownership of the created content
             </PricingBlockItem>
@@ -189,11 +197,15 @@ function Pricing() {
           <H3>Standard</H3>
           <H3>${standardPrice}</H3>
           <div className={pricingItemDescriptionCss}>
-            <PricingBlockItem>1 Instagram story</PricingBlockItem>
-            <PricingBlockItem>1 TikTok video</PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 Instagram story</strong>
+            </PricingBlockItem>
+            <PricingBlockItem>
+              <strong>1 Instagram post (not Reel</strong>)
+            </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
-              That link on my website and linked with my bio for 3 days
+              That link on my website and linked with my bio for 5 days
             </PricingBlockItem>
             <PricingBlockItem isError>
               Ownership of the created content
