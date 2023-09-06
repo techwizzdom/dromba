@@ -54,28 +54,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('ScribeSL', 'ScribeSL')}
-            href={t.link.scribe}
+            onClick={() => trackEvent('Storyblok', 'Storyblok')}
+            href={t.link.storyblok}
           >
-            Scribe (Free Chrome extension)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Onboard', 'Onboard')}
-            href="https://www.getonboard.dev/"
-          >
-            Onboard (AI Onboarding)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Pieces', 'Pieces')}
-            href={t.link.pieces}
-          >
-            Pieces (FREE AI mentor)
+            Storyblok (CMS of the future)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
