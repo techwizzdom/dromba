@@ -63,10 +63,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Storyblok', 'Storyblok')}
-            href={t.link.storyblok}
+            onClick={() => trackEvent('Scribe', 'Scribe')}
+            href={t.link.scribe}
           >
-            Storyblok (CMS of the future)
+            Scribe
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
