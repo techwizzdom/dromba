@@ -54,6 +54,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Contra', 'Contra')}
+            href={t.link.contra}
+          >
+            Contra (Freelancing)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Codejet', 'Codejet')}
             href={t.link.codejet}
           >
