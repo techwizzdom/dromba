@@ -52,30 +52,8 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Contra', 'Contra')}
-            href={t.link.contra}
-          >
-            Contra (Freelancing)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Codejet', 'Codejet')}
-            href={t.link.codejet}
-          >
-            Codejet (Design to code)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            href={t.link.scribe}
-          >
-            Scribe
+          <Hyperlink isUnderline={true} href={t.link.ionos}>
+            IONOS (AI Website builder)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
