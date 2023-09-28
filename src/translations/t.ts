@@ -243,6 +243,7 @@ export const t = {
       'https://www.storyblok.com/technologies?utm_source=techwizzdom&utm_medium=sponsor&utm_campaign=DGM_BRA_TWD_TRA&utm_content=Storyblok_TechWizzDom_SEP2023',
     contra: 'https://contra.com/',
     ionos: 'https://www.ionos.com/websites/website-builder',
+    tella: 'https://tella.tv/?via=techwizzdom',
   },
   navigation: {
     home: 'Who Am I?',

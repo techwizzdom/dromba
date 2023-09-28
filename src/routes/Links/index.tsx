@@ -52,8 +52,8 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.ionos}>
-            IONOS (AI Website builder)
+          <Hyperlink isUnderline={true} href={t.link.tella}>
+            Tella (Loom on steroids)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
