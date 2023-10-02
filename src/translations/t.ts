@@ -244,6 +244,7 @@ export const t = {
     contra: 'https://contra.com/',
     ionos: 'https://www.ionos.com/websites/website-builder',
     tella: 'https://tella.tv/?via=techwizzdom',
+    storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
   },
   navigation: {
     home: 'Who Am I?',

@@ -52,6 +52,11 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
+          <Hyperlink isUnderline={true} href={t.link.storyblok}>
+            FREE O'Reilly report
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
           <Hyperlink isUnderline={true} href={t.link.tella}>
             Tella (Loom on steroids)
           </Hyperlink>
