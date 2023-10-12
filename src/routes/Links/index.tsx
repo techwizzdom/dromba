@@ -52,18 +52,13 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
+          <Hyperlink isUnderline={true} href={t.link.basecamp}>
+            Basecamp
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
           <Hyperlink isUnderline={true} href={t.link.jameNewest}>
             Jam (Chrome extension for bugs)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.storyblokOreilly}>
-            FREE O'Reilly report
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.tella}>
-            Tella (Loom on steroids)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

@@ -247,6 +247,7 @@ export const t = {
     ionos: 'https://www.ionos.com/websites/website-builder',
     tella: 'https://tella.tv/?via=techwizzdom',
     storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
+    basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
   },
   navigation: {
     home: 'Who Am I?',
