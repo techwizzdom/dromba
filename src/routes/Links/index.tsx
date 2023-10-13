@@ -52,6 +52,11 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
+          <Hyperlink isUnderline={true} href={t.link.ionos}>
+            IONOS (AI Website Builder)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
           <Hyperlink isUnderline={true} href={t.link.basecamp}>
             Basecamp
           </Hyperlink>
