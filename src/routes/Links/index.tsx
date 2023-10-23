@@ -52,18 +52,8 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.ionos}>
-            IONOS (AI Website Builder)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.basecamp}>
-            Basecamp
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.jameNewest}>
-            Jam (Chrome extension for bugs)
+          <Hyperlink isUnderline={true} href={t.link.tenWebECommerce}>
+            10Web (AI eCommerce website builder)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
