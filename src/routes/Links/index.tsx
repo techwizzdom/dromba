@@ -52,6 +52,11 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
+          <Hyperlink isUnderline={true} href={t.link.scribe}>
+            Scribe (AI docs/tutorials)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
           <Hyperlink isUnderline={true} href={t.link.tenWebECommerce}>
             10Web (AI eCommerce website builder)
           </Hyperlink>
