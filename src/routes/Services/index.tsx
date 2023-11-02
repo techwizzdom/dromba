@@ -35,7 +35,7 @@ function Services() {
       <Helmetiser
         title="Tech Wizzdom"
         description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
-        url="https://www.domagojvidovic.com"
+        url="https://www.techwizzdom.com"
       />
       <H1>Together, we can create anything.</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />

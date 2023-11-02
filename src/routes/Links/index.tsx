@@ -18,7 +18,7 @@ function Links() {
       <Helmetiser
         title="Links"
         description="Find out about my great offers."
-        url="https://www.domagojvidovic.com/links"
+        url="https://www.techwizzdom.com/links"
       />
       <ThisIsMe />
       <div className={linksContainerCss}>

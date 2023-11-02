@@ -1,7 +1,7 @@
 import React from 'react';
 import RouteContainer from '../../components/RouteContainer';
 import Helmetiser from '../../components/core/Helmetiser';
-import { H3, H4 } from '../../components/core/Heading';
+import { H3, H4, H5 } from '../../components/core/Heading';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import Paragraph from '../../components/core/Paragraph';
@@ -12,6 +12,7 @@ import { Media } from '../../enums/Media';
 import { ThemeContext } from '../../context/ThemeContext';
 import { t } from '../../translations/t';
 import ScrollToTop from '../../util/scrollToTop';
+import { ReactComponent as StarIcon } from '../../assets/icons/star.svg';
 
 function ContentWizzard() {
   const theme = React.useContext(ThemeContext);
@@ -22,8 +23,22 @@ function ContentWizzard() {
       <Helmetiser
         title="Content Wizzard: Become A $500k Creator"
         description="Quit your job and become a higlhy paid content creator. "
-        url="https://www.domagojvidovic.com/500k-content-wizzard"
+        url="https://www.techwizzdom.com/500k-content-wizzard"
       />
+      <a
+        href="https://techwizzom.gumroad.com/l/500k-content-wizzard"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+      >
+        <StarIcon />
+        <StarIcon />
+        <StarIcon />
+        <StarIcon />
+        <StarIcon />
+        <Paragraph size={ParagraphSize.Large}>5.0 on Gumroad</Paragraph>
+      </a>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>Watch the trailer:</H3>
       <VerticalSpacing height={VerticalSpacingHeight.Medium} />
       <iframe

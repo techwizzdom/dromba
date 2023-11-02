@@ -93,7 +93,7 @@ function Post() {
       <Helmetiser
         title={title}
         description={subtitle}
-        url={`https://www.domagojvidovic.com/post/${path}`}
+        url={`https://www.techwizzdom.com/post/${path}`}
         image={previewImg || img}
       />
       <article className={articleCss}>

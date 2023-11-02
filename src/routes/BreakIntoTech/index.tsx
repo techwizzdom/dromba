@@ -20,7 +20,7 @@ function BreakIntoTech() {
       <Helmetiser
         title="Break Into Tech Course"
         description="The only course you'll need. Break into tech in a most efficient way."
-        url="https://www.domagojvidovic.com/break-into-tech"
+        url="https://www.techwizzdom.com/break-into-tech"
       />
       <H2>
         Courses these days are too long. Too detailed. Filled with too much

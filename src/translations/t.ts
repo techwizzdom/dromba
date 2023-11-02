@@ -34,8 +34,9 @@ export const t = {
     pr: 'pr@techwizzdom.com',
   },
   home: {
-    title: 'Frontend Engineer.',
-    subtitle: 'In a London Tech-Startup.',
+    title: 'Domagoj Lalk Vidovic.',
+    subtitle:
+      'Tech Content Creator. Entrepreneur. Digital Nomad. CTO & Co-Founder Sparroww Inc.',
     paragraph: {
       achiever:
         "As a 26 years old guy, there's a lot for me to achieve. Many things I don't know; zero of them I can't learn.",
@@ -267,7 +268,7 @@ export const t = {
     instagram: 'Instagram',
   },
   socials: {
-    followers: '700k',
+    followers: '750k',
     likes: '15M',
     views: '230M',
     saves: '2.6M',

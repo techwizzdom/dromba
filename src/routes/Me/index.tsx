@@ -46,7 +46,7 @@ function Me() {
       <Helmetiser
         title="Tech Wizzdom"
         description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
-        url="https://www.domagojvidovic.com"
+        url="https://www.techwizzdom.com"
       />
       <div className={meContentCss}>
         <img

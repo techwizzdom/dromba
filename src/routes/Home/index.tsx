@@ -20,8 +20,8 @@ function Home() {
     <RouteContainer>
       <Helmetiser
         title="Who Am I?"
-        description="Frontend Engineer in a London tech-startup?"
-        url="https://www.domagojvidovic.com/about"
+        description="Tech Content Creator. Entrepreneur. Digital Nomad. CTO & Co-Founder Sparroww Inc."
+        url="https://www.techwizzdom.com/about"
       />
       <H1>{t.home.title}</H1>
       <H1>{t.home.subtitle}</H1>

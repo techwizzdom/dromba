@@ -54,7 +54,7 @@ function Art(props: IArtProps) {
       <Helmetiser
         title="Who Art You?"
         description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
-        url="https://www.domagojvidovic.com/art"
+        url="https://www.techwizzdom.com/art"
       />
       {isArtEnabled ? (
         <AbstractArt
