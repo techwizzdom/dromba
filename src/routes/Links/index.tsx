@@ -57,11 +57,6 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.tenWebECommerce}>
-            10Web (AI eCommerce website builder)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             isEmail={true}
