@@ -52,7 +52,11 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
-          <Hyperlink isUnderline={true} href={t.link.scribe}>
+          <Hyperlink
+            onClick={() => trackEvent('Scribe', 'Scribe')}
+            isUnderline={true}
+            href={t.link.scribe}
+          >
             Scribe (AI docs/tutorials)
           </Hyperlink>
         </H5>
