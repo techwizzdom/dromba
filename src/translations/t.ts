@@ -210,12 +210,8 @@ export const t = {
       'https://app.gohopscotch.com/register?utm_campaign=Influencer Marketing_javascriptwizz&utm_source=influencermarketing_social&utm_medium=social post&utm_content=jsw_reel_tt_1',
     appsmith:
       'https://appsmith.com?utm_source=&utm_medium=social&utm_content=website&utm_campaign=dom',
-    jamCustom:
-      'https://jam.dev?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_javascriptwizz_2023_02',
-    jameNew:
-      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2023_08',
-    jameNewest:
-      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2023_10',
+    jamNewest:
+      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2023_11',
     justJoinIt: 'https://bit.ly/41t2uL9',
     edrawmax: 'http://bit.ly/3ZuWJLc',
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
