@@ -62,11 +62,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('ZTM', 'ZTM')}
+            onClick={() => trackEvent('Treblle', 'Treblle')}
             isUnderline={true}
-            href={t.link.zeroToMastery}
+            href={t.link.treblle}
           >
-            Zero To Mastery
+            FREE API Insights
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

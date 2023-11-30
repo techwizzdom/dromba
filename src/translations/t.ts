@@ -201,6 +201,8 @@ export const t = {
     kickresume: 'https://www.kickresume.com/',
     treblle:
       'https://www.treblle.com/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=HomePg&utm_id=DomInfl+2023',
+    apiInsightsTreblle:
+      'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
     sourcegraph: 'https://srcgr.ph/ufo4R',
     careerist:
       'https://www.careerist.com/qa?utm_source=influencer&utm_campaign=luda10&utm_medium=careerist',
