@@ -55,7 +55,7 @@ function Links() {
           <Hyperlink
             onClick={() => trackEvent('Treblle', 'Treblle')}
             isUnderline={true}
-            href={t.link.treblle}
+            href={t.link.apiInsightsTreblle}
           >
             FREE API Insights
           </Hyperlink>
