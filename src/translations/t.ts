@@ -248,6 +248,7 @@ export const t = {
     storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
     basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
     tenWebECommerce: 'https://10web.io/ai-ecommerce-website-builder/',
+    amplication: 'https://eu1.hubs.ly/H06BpR-0',
   },
   navigation: {
     home: 'Who Am I?',
