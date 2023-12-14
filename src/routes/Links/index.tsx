@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Pieces', 'Pieces')}
+            isUnderline={true}
+            href={t.link.pieces}
+          >
+            Pieces (Free offline ChatGPT)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Amplication', 'Amplication')}
             isUnderline={true}
             href={t.link.amplication}
@@ -67,15 +76,6 @@ function Links() {
             href={t.link.codium}
           >
             CodiumAI (free AI test generator)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            isUnderline={true}
-            href={t.link.scribe}
-          >
-            Scribe (free Chrome extension for Docs/Tutorials)
           </Hyperlink>
         </H5>
 
