@@ -219,7 +219,7 @@ export const t = {
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
     motoko: 'https://forms.gle/ESsv7BuUWJt9ZrHD7',
     zeroKnowledgeToJob:
-      'https://techwizzom.gumroad.com/l/0-knowledge-to-frontend-engineering-job/BLACKFRIDAY50',
+      'https://techwizzom.gumroad.com/l/0-knowledge-to-frontend-engineering-job',
     recoverIt: 'https://bit.ly/3TRj1FD',
     breakIntoTechEBook:
       'https://techwizzom.gumroad.com/l/break-into-tech-ebook',
@@ -228,7 +228,7 @@ export const t = {
     mobileClean: 'https://drfone.wondershare.com/mobile-clean.html',
     demoCreator: 'https://bit.ly/40zsdjk',
     contentWizzardCourse:
-      'https://techwizzom.gumroad.com/l/500k-content-wizzard/BLACKFRIDAY50',
+      'https://techwizzom.gumroad.com/l/500k-content-wizzard',
     tenWeb: 'https://10web.io/?_from=domagoj92',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
