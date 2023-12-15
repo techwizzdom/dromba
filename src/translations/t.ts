@@ -237,7 +237,8 @@ export const t = {
     codiumPrAgent: 'https://www.codium.ai/pr-agent/',
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
-    pieces: 'https://pieces.app/',
+    pieces:
+      'https://pieces.app/?utm_source=tiktok&utm_medium=cpc&utm_campaign=dom-partner-tiktok',
     eagle: 'https://en.eagle.cool/',
     equals: 'http://equals.1stcollab.com/tech_wizzdom',
     storyblok:
