@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('AI&DT School', 'AI&DT School')}
+            isUnderline={true}
+            href={t.link.aidtschool}
+          >
+            Generative AI Programme
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Scribe', 'Scribe')}
             isUnderline={true}
             href={t.link.scribe}
@@ -67,15 +76,6 @@ function Links() {
             href={t.link.pieces}
           >
             Pieces (Free offline ChatGPT)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Amplication', 'Amplication')}
-            isUnderline={true}
-            href={t.link.amplication}
-          >
-            Amplication (become a 20x developer)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
