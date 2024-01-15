@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Jam', 'Jam')}
+            isUnderline={true}
+            href={t.link.jamNewest}
+          >
+            Jam (free Chrome extension for bugs)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('AI&DT School', 'AI&DT School')}
             isUnderline={true}
             href={t.link.aidtschool}
