@@ -62,20 +62,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('AI&DT School', 'AI&DT School')}
+            onClick={() => trackEvent('Treblle', 'Treblle')}
             isUnderline={true}
-            href={t.link.aidtschool}
+            href={t.link.treblle}
           >
-            Generative AI Programme
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            isUnderline={true}
-            href={t.link.scribe}
-          >
-            Scribe (free Chrome extension for docs)
+            Treblle
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

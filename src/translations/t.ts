@@ -200,7 +200,7 @@ export const t = {
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
     treblle:
-      'https://www.treblle.com/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=HomePg&utm_id=DomInfl+2023',
+      'https://www.treblle.com/?utm_source=WizDomInflu&utm_medium=ShortVid',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
     sourcegraph: 'https://srcgr.ph/ufo4R',
