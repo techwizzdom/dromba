@@ -228,7 +228,7 @@ export const t = {
     mobileClean: 'https://drfone.wondershare.com/mobile-clean.html',
     demoCreator: 'https://bit.ly/40zsdjk',
     contentWizzardCourse:
-      'https://techwizzom.gumroad.com/l/500k-content-wizzard',
+      'https://techwizzom.gumroad.com/l/500k-content-wizzard/EXAMPLE30',
     tenWeb: 'https://10web.io/?_from=domagoj92',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
