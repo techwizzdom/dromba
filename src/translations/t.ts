@@ -200,8 +200,7 @@ export const t = {
       'https://links.zerotomastery.io/mlcareerpath_techwizzdom_jan24',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
-    treblle:
-      'https://www.treblle.com/?utm_source=WizDomInflu&utm_medium=ShortVid',
+    treblle: 'https://getaspen.io/?utm_source=Dom&utm_medium=Insta',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
     sourcegraph: 'https://srcgr.ph/ufo4R',
