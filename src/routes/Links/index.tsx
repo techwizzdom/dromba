@@ -55,7 +55,7 @@ function Links() {
           <Hyperlink
             onClick={() => trackEvent('edX Reel', 'edX Reel')}
             isUnderline={true}
-            href={t.link.treblle}
+            href={t.link.edxIgReel}
           >
             edX (Courses)
           </Hyperlink>
