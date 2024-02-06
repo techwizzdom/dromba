@@ -196,6 +196,7 @@ export const t = {
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
+    edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     zeroToMastery:
       'https://links.zerotomastery.io/mlcareerpath_techwizzdom_jan24',
     codedamn: 'https://cdm.sh/domagoj',

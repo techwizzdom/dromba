@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('edX Reel', 'edX Reel')}
+            isUnderline={true}
+            href={t.link.treblle}
+          >
+            edX (Courses)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Treblle Aspen', 'Treblle Aspen')}
             isUnderline={true}
             href={t.link.treblle}
