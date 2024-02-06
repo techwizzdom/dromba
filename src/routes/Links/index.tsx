@@ -57,7 +57,7 @@ function Links() {
             isUnderline={true}
             href={t.link.edxIgReel}
           >
-            edX (Courses)
+            edX (Harvard courses)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
