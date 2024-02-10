@@ -26,6 +26,16 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             isLarge
+            onClick={() => trackEvent('TRC newsletter', 'TRC newsletter')}
+            href={t.link.theRichCreatorNewsletter}
+          >
+            The Rich Creator newsletter
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            isLarge
             onClick={() => trackEvent('Content wizzard course', 'Click')}
             route={Routes.ContentWizzard}
           >
