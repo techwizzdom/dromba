@@ -63,20 +63,20 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('edX TikTok', 'edX TikTok')}
+            isUnderline={true}
+            href={t.link.edxTikTok}
+          >
+            edX (Harvard courses)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Scribe', 'Scribe')}
             isUnderline={true}
             href={t.link.scribe}
           >
             Scribe (free Chrome extension for docs/tutorials)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('edX Reel', 'edX Reel')}
-            isUnderline={true}
-            href={t.link.edxIgReel}
-          >
-            edX (Harvard courses)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

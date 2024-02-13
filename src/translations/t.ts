@@ -197,6 +197,7 @@ export const t = {
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
+    edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
     zeroToMastery:
       'https://links.zerotomastery.io/mlcareerpath_techwizzdom_jan24',
     codedamn: 'https://cdm.sh/domagoj',
