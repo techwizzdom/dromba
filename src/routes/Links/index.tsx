@@ -63,6 +63,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('10Web', '10Web')}
+            isUnderline={true}
+            href={t.link.tenWeb}
+          >
+            10Web (AI website builder)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('edX TikTok', 'edX TikTok')}
             isUnderline={true}
             href={t.link.edxTikTok}
@@ -77,15 +86,6 @@ function Links() {
             href={t.link.scribe}
           >
             Scribe (free Chrome extension for docs/tutorials)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Treblle Aspen', 'Treblle Aspen')}
-            isUnderline={true}
-            href={t.link.treblle}
-          >
-            Treblle (Test APIs)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
