@@ -216,7 +216,7 @@ export const t = {
     appsmith:
       'https://appsmith.com?utm_source=&utm_medium=social&utm_content=website&utm_campaign=dom',
     jamNewest:
-      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_01',
+      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_02',
     justJoinIt: 'https://bit.ly/41t2uL9',
     edrawmax: 'http://bit.ly/3ZuWJLc',
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
