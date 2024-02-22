@@ -63,6 +63,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Pulseway', 'Pulseway')}
+            isUnderline={true}
+            href={t.link.pulseway}
+          >
+            Pulseway (automate everything)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Jam', 'Jam')}
             isUnderline={true}
             href={t.link.jamNewest}
@@ -81,29 +90,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('edX TikTok', 'edX TikTok')}
-            isUnderline={true}
-            href={t.link.edxTikTok}
-          >
-            edX (Harvard courses)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
             onClick={() => trackEvent('Scribe', 'Scribe')}
             isUnderline={true}
             href={t.link.scribe}
           >
             Scribe (free Chrome extension for docs/tutorials)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Pieces', 'Pieces')}
-            isUnderline={true}
-            href={t.link.pieces}
-          >
-            Pieces (Free offline ChatGPT)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
