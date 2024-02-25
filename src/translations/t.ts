@@ -212,6 +212,7 @@ export const t = {
     pmpmastermind: 'https://pmpmastermind.com/',
     theRichCreatorSkool: 'https://www.skool.com/the-rich-creator-3097/about',
     theRichCreatorStripe: 'https://buy.stripe.com/fZeeYi0eG9i86o86op',
+    pulseway: 'https://www.pulseway.com/v2/land/tech-wiz',
     hopscotch:
       'https://app.gohopscotch.com/register?utm_campaign=Influencer Marketing_javascriptwizz&utm_source=influencermarketing_social&utm_medium=social post&utm_content=jsw_reel_tt_1',
     appsmith:
