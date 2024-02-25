@@ -7,6 +7,7 @@ export const light = {
   gradientBackground: colors.gradientYellow,
   gradientMedian: colors.yellowMedian,
   border: colors.baseDark,
+  darkGreen: colors.darkGreen,
   textColor: colors.baseDark,
   textColorSecondary: colors.darkMoon,
   hyperlinkColor: colors.baseLight,

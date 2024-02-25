@@ -33,8 +33,9 @@ function ThisIsMe(props: IThisIsMeProps) {
         <div>
           {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
           <p className={pCss(isMainScreenMode)} style={{ maxWidth: '450px' }}>
-            Senior frontend engineer turned into tech content creator and
-            influencer. I make viral tech content.
+            A 9-5 senior frontend engineer turned into tech content creator,
+            influencer and tech startup founder. I make viral technology
+            content.
           </p>
         </div>
       </div>

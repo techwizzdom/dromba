@@ -45,7 +45,7 @@ function Me() {
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
         title="Tech Wizzdom"
-        description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
+        description="A 9-5 senior frontend engineer turned into tech content creator, influencer and tech startup founder. I make viral technology content."
         url="https://www.techwizzdom.com"
       />
       <div className={meContentCss}>
@@ -66,7 +66,8 @@ function Me() {
           </H2>
           <div>
             <H4>
-              A senior frontend engineer turned into tech content creator.
+              A 9-5 senior frontend engineer turned into tech content creator,
+              influencer and tech startup founder.
             </H4>
             <H4>I make viral tech content.</H4>
           </div>

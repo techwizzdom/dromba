@@ -9,7 +9,7 @@ interface IHelmetiserProps {
 
 const DEFAULT_TITLE = 'Tech Wizzdom';
 const DEFAULT_DESCRIPTION =
-  'Senior frontend engineer turned into tech content creator and influencer. I make viral tech content.';
+  'A 9-5 senior frontend engineer turned into tech content creator, influencer and tech startup founder. I make viral technology content.';
 const DEFAULT_IMAGE = 'https://i.imgur.com/lvEdL9Q.png';
 const DEFAULT_URL = 'https://techwizzdom.com';
 
