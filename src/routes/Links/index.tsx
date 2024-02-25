@@ -36,10 +36,10 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             isLarge
-            onClick={() => trackEvent('Content wizzard course', 'Click')}
-            route={Routes.ContentWizzard}
+            onClick={() => trackEvent('TRC community', 'TRC community')}
+            route={Routes.TheRichCreator}
           >
-            Content Wizzard: Become A $500k Creator
+            The Rich Creator community
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

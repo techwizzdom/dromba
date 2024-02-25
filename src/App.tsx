@@ -21,6 +21,8 @@ import Services from './routes/Services';
 import Pricing from './routes/Pricing';
 import BreakIntoTech from './routes/BreakIntoTech';
 import ContentWizzard from './routes/ContentWizzard';
+import TheRichCreator from './routes/TheRichCreator';
+import CourseOutline from './routes/CourseOutline';
 
 function App() {
   const [theme, toggleTheme] = useTheme();
@@ -46,6 +48,8 @@ function App() {
             <Route path="/blog" component={Blog} />
             <Route path="/break-into-tech" component={BreakIntoTech} />
             <Route path="/500k-content-wizzard" component={ContentWizzard} />
+            <Route path="/the-rich-creator" component={TheRichCreator} />
+            <Route path="/course-outline" component={CourseOutline} />
             <Route path="/links" component={Links} />
             <Route path="/post/:id" component={Post} />
             <Route path="/pricing/:id" component={Pricing} />
