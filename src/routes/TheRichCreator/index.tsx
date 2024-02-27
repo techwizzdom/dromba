@@ -1,7 +1,7 @@
 import React from 'react';
 import RouteContainer from '../../components/RouteContainer';
 import Helmetiser from '../../components/core/Helmetiser';
-import { H3, H4, H5 } from '../../components/core/Heading';
+import { H1, H3, H4 } from '../../components/core/Heading';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
 import Paragraph from '../../components/core/Paragraph';
@@ -27,6 +27,12 @@ function TheRichCreator() {
         description="Join 'The Rich Creator' community to transform your passion into a thriving career as a content creator or influencer. Our expert-guided platform offers comprehensive strategies and tools to help you succeed with minimal followers. Start your journey towards financial independence and quit your 9-5 job. Discover the art of impactful content creation and social media mastery with us. Ideal for aspiring creators ready to make a mark with almost zero followers."
         url="https://www.techwizzdom.com/the-rich-creator"
       />
+      <H1>
+        This is the{' '}
+        <span style={{ margin: '0 8px', fontFamily: 'Rock Salt' }}>ONLY</span>{' '}
+        thing you need to start earning money with content and escape your 9-5.
+      </H1>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>Watch the trailer:</H3>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <iframe
