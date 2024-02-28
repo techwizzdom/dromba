@@ -3,16 +3,22 @@ import React from 'react';
 
 interface IPricingBlockItemProps {
   children: React.ReactNode;
+  isError?: boolean;
+  large?: boolean;
 }
 
 function PricingBlockItem(props: IPricingBlockItemProps) {
-  const { children } = props;
+  const { children, large = false, isError = false } = props;
 
   return (
-    <div className={pricingBlockItemCss}>
+    <div className={pricingBlockItemCss(large)}>
       <img
         className={pricingBlockItemCheckIconCss}
-        src="https://i.imgur.com/1EYxCMd.png"
+        src={
+          isError
+            ? 'https://i.imgur.com/HZEWBOD.png'
+            : 'https://i.imgur.com/UL8xQoy.png'
+        }
         alt="check"
       />
       <span className={pricingBlockItemTextCss}>{children}</span>
@@ -20,11 +26,12 @@ function PricingBlockItem(props: IPricingBlockItemProps) {
   );
 }
 
-const pricingBlockItemCss = css`
+const pricingBlockItemCss = (large?: boolean) => css`
   display: grid;
   grid-template-columns: 24px auto;
   gap: 16px;
   align-items: flex-start;
+  font-size: ${large ? '18px' : '16px'};
 `;
 
 const pricingBlockItemCheckIconCss = css`

@@ -10,6 +10,7 @@ import { t } from '../../translations/t';
 import { trackEvent } from '../../util/metrics';
 import { H5 } from '../../components/core/Heading';
 import ThisIsMe from '../../components/ThisIsMe';
+import { Routes } from '../Routes';
 
 function Links() {
   return (
@@ -17,62 +18,83 @@ function Links() {
       <Helmetiser
         title="Links"
         description="Find out about my great offers."
-        url="https://www.domagojvidovic.com/links"
+        url="https://www.techwizzdom.com/links"
       />
       <ThisIsMe />
       <div className={linksContainerCss}>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Buy me a croissant', 'Links page')}
-            href={t.link.buyMeACroissant}
+            isLarge
+            onClick={() => trackEvent('TRC newsletter', 'TRC newsletter')}
+            href={t.link.theRichCreatorNewsletter}
           >
-            Buy me a croissant - I love them!
+            The Rich Creator newsletter
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('GoIT', 'Click')}
-            href={t.link.goit}
+            isLarge
+            onClick={() => trackEvent('TRC community', 'TRC community')}
+            route={Routes.TheRichCreator}
           >
-            GoIT FREE demo course
+            The Rich Creator community
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Otta', 'Click')}
-            href={t.link.otta}
+            isLarge
+            onClick={() => trackEvent('Break into tech course', 'Click')}
+            route={Routes.BreakIntoTech}
           >
-            Otta
+            BREAK INTO TECH (course)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Locofy', 'Click')}
-            href={t.link.locofy}
+            onClick={() => trackEvent('Break into tech eBook', 'Click')}
+            href={t.link.breakIntoTechEBook}
           >
-            Locofy.ai
+            My FREE eBook (how to break into tech)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Scribe', 'Scribe')}
             isUnderline={true}
-            onClick={() => trackEvent('E-Pal', 'Referal')}
-            href={t.link.epal}
+            href={t.link.scribe}
           >
-            E-Pal
+            Scribe (free Chrome extension for docs/tutorials)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Pulseway', 'Pulseway')}
             isUnderline={true}
-            onClick={() => trackEvent('Rapyd', 'Hack the galaxy')}
-            href={t.link.rapyd}
+            href={t.link.pulseway}
           >
-            Hack The Galaxy
+            Pulseway (automate everything)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            onClick={() => trackEvent('Jam', 'Jam')}
+            isUnderline={true}
+            href={t.link.jamNewest}
+          >
+            Jam (free debugging Chrome extension)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            onClick={() => trackEvent('10Web', '10Web')}
+            isUnderline={true}
+            href={t.link.tenWeb}
+          >
+            10Web (AI website builder)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -80,9 +102,9 @@ function Links() {
             isUnderline={true}
             isEmail={true}
             onClick={() => trackEvent('Email', 'Links')}
-            href={t.email.javascriptwizz}
+            href={t.email.techwizzdom}
           >
-            {t.email.javascriptwizz}
+            {t.email.techwizzdom}
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -93,58 +115,7 @@ function Links() {
             }
             href={t.link.book45minsSocials}
           >
-            Social Media Mentoring (45 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $199
-            </span>
-            $149)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Booking', '60 min - Links')}
-            href={t.link.book60mins}
-          >
-            Tech Mentoring (60 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $149
-            </span>
-            $119)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Booking', '30 min - Links')}
-            href={t.link.book30mins}
-          >
-            Tech Mentoring (30 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $99
-            </span>
-            $79)
+            Social Media Consulting (60 mins, $299)
           </Hyperlink>
         </H5>
       </div>
