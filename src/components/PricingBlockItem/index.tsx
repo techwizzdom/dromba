@@ -4,13 +4,14 @@ import React from 'react';
 interface IPricingBlockItemProps {
   children: React.ReactNode;
   isError?: boolean;
+  large?: boolean;
 }
 
 function PricingBlockItem(props: IPricingBlockItemProps) {
-  const { children, isError = false } = props;
+  const { children, large = false, isError = false } = props;
 
   return (
-    <div className={pricingBlockItemCss}>
+    <div className={pricingBlockItemCss(large)}>
       <img
         className={pricingBlockItemCheckIconCss}
         src={
@@ -25,11 +26,12 @@ function PricingBlockItem(props: IPricingBlockItemProps) {
   );
 }
 
-const pricingBlockItemCss = css`
+const pricingBlockItemCss = (large?: boolean) => css`
   display: grid;
   grid-template-columns: 24px auto;
   gap: 16px;
   align-items: flex-start;
+  font-size: ${large ? '18px' : '16px'};
 `;
 
 const pricingBlockItemCheckIconCss = css`

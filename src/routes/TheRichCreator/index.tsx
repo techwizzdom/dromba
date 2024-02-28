@@ -12,24 +12,34 @@ import { Media } from '../../enums/Media';
 import { ThemeContext } from '../../context/ThemeContext';
 import { t } from '../../translations/t';
 import ScrollToTop from '../../util/scrollToTop';
-import { ReactComponent as StarIcon } from '../../assets/icons/star.svg';
 import { Link } from 'react-router-dom';
 import { Routes } from '../Routes';
+import PricingBlockItem from '../../components/PricingBlockItem';
 
 function TheRichCreator() {
   const theme = React.useContext(ThemeContext);
+  const smoothScrollToPricing = () => {
+    const pricingElement = document.getElementById('trc-pricing');
+    if (pricingElement) {
+      pricingElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <RouteContainer isPureCenteringEnabled={true}>
       <ScrollToTop />
       <Helmetiser
         title="The Rich Creator"
-        description="Join 'The Rich Creator' community to transform your passion into a thriving career as a content creator or influencer. Our expert-guided platform offers comprehensive strategies and tools to help you succeed with minimal followers. Start your journey towards financial independence and quit your 9-5 job. Discover the art of impactful content creation and social media mastery with us. Ideal for aspiring creators ready to make a mark with almost zero followers."
+        description="How to become a content creator? Join 'The Rich Creator' community to transform your passion into a thriving career as a content creator or influencer. Our expert-guided platform offers comprehensive strategies and tools to help you succeed with minimal followers. Start your journey towards financial independence and quit your 9-5 job. Discover the art of impactful content creation and social media mastery with us. Ideal for aspiring creators ready to make a mark with almost zero followers."
         url="https://www.techwizzdom.com/the-rich-creator"
       />
       <H1>
         This is the{' '}
-        <span style={{ margin: '0 8px', fontFamily: 'Rock Salt' }}>ONLY</span>{' '}
+        <span
+          style={{ margin: '0 8px', fontFamily: 'Rock Salt', color: '#228a00' }}
+        >
+          ONLY
+        </span>{' '}
         thing you need to start earning money with content and escape your 9-5.
       </H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -45,6 +55,14 @@ function TheRichCreator() {
         allowFullScreen
       ></iframe>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <div className={actionCSS}>
+        <button
+          className={letsWorkButton(theme, true)}
+          onClick={smoothScrollToPricing}
+        >
+          Join me!
+        </button>
+      </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
         A few years ago, I was just a random dude, having a 9-5 coding job in
@@ -54,17 +72,18 @@ function TheRichCreator() {
       <Paragraph size={ParagraphSize.Large}>
         I'm still that random dude, but I work just for myself, have $50k+
         months, own a tech startup, have one of the largest tech socials, a
-        clothing brand... Life is amazing.
+        clothing brand... And that's all possible with cash flow generated
+        through content. Life is amazing.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        I'll keep it short. There was so much I learned (and still learn) on
-        this journey, and I was looking for was to share it with other people
-        and help them.
+        I'll keep it short. There was so much I learned (and I'm still learning)
+        on this journey, and I was looking for ways to share it with other
+        people and help them.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        As many others, I launched a course which was a mega-pack of all the
+        Like many others, I launched a course that was a mega-pack of all the
         possible knowledge I have.{' '}
         <a
           href="https://techwizzom.gumroad.com/l/500k-content-wizzard"
@@ -77,26 +96,26 @@ function TheRichCreator() {
         </a>
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H4>But I know I can do better.</H4>
+      <H4>But for those who want, I can do even better.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        Course is great, but it's still just a course:
+        The course is great, and you might do everything alone. But what if:
         <ul>
-          <li>What if you get stuck?</li>
-          <li>What if you have some questions?</li>
-          <li>What if it seems impossible, and you lose motivation?</li>
+          <li>you get stuck?</li>
+          <li>you have some questions?</li>
+          <li>it seems impossible, and you lose motivation?</li>
           <li>... and so on</li>
         </ul>
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H4>To address these problems, I converted a course to a community.</H4>
+      <H4>To address these problems, I added a community option.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        It's basically the same course + more materials +
+        It's basically the same course +
         <ul>
-          <li>Me, engaging and answering questions</li>
-          <li>Me, holding live sessions</li>
-          <li>A group of likeminded people going towards the same goal</li>
+          <li>Tech Wizzdom, engaging and answering questions</li>
+          <li>Tech Wizzdom, holding live sessions</li>
+          <li>A group of like-minded people going towards the same goal</li>
           <li>A place to share your wins, strategies, problems</li>
           <li>... and much more</li>
         </ul>
@@ -106,41 +125,32 @@ function TheRichCreator() {
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        Yes, course materials were great there, but the community was the thing
-        that gave me peace of mind to quit my job - just because I knew that I
-        can ask whatever I was and get solutions to any of my problems.
+        Yes, the course materials were great there, but the community was the
+        thing that gave me peace of mind to quit my job - just because I knew
+        that I could ask whatever I wanted and get solutions to any of my
+        problems.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={actionCSS}>
-        <a
+        <button
           className={letsWorkButton(theme, true)}
-          href={t.link.theRichCreatorSkool}
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={smoothScrollToPricing}
         >
-          Check out community
-        </a>
-        <a
-          className={letsWorkButton(theme, true, true)}
-          href={t.link.theRichCreatorStripe}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get access
-        </a>
+          Join me!
+        </button>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <H4>Also, this is a practical community.</H4>
+      <H4>Also, here we learn by doing.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        Meaning, as soon as you're in, you get a detailed onboarding guide. You
-        don't watch content for 2 months and do nothing, you start immediately.
-        After you're done with onboarding, you have:
+        Meaning, that as soon as you're in, you get a detailed onboarding guide.
+        You don't watch content for 2 months and do nothing - you start
+        immediately. After you're done with onboarding, you have:
         <ul>
           <li>All the socials optimized for win</li>
           <li>
-            Active strategy for creating/posting content 3-7x a week (in a most
-            efficient way)
+            Active strategy for creating/posting content 3-7x a week (in the
+            most efficient way)
           </li>
           <li>
             Automated system that reaches out to 500-1000 brands a month,
@@ -154,8 +164,8 @@ function TheRichCreator() {
       <H4>30-day refund period without any reason.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
-        If you don't like the community, you can get the full value back. I
-        don't want to take your money if you're not happy.
+        If you don't like it, you can get the full value back. I don't want to
+        take your money if you're not happy.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
@@ -170,24 +180,14 @@ function TheRichCreator() {
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={actionCSS}>
-        <a
+        <button
           className={letsWorkButton(theme, true)}
-          href={t.link.theRichCreatorSkool}
-          target="_blank"
-          rel="noopener noreferrer"
+          onClick={smoothScrollToPricing}
         >
-          Check out community
-        </a>
-        <a
-          className={letsWorkButton(theme, true, true)}
-          href={t.link.theRichCreatorStripe}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get access
-        </a>
+          Join me!
+        </button>
       </div>
-      <VerticalSpacing height={VerticalSpacingHeight.Giant} />
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>FAQ</H3>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>What do I get here?</H4>
@@ -203,20 +203,79 @@ function TheRichCreator() {
             editing, negotiating, ...)
           </li>
           <li>Onboarding plan to know exactly what to do</li>
-          <li>Group of likeminded people pushing you toward to same goal</li>
+          <li>
+            Group of likeminded people pushing you toward to same goal
+            <span
+              style={{
+                fontFamily: 'Rock Salt',
+                color: '#228a00',
+                marginLeft: '16px',
+              }}
+            >
+              community only
+            </span>
+          </li>
           <li>
             Ability to ask any questions related to your problems, and get
-            answers
+            answers{' '}
+            <span
+              style={{
+                fontFamily: 'Rock Salt',
+                color: '#228a00',
+                marginLeft: '16px',
+              }}
+            >
+              community only
+            </span>
           </li>
-          <li>Me (Tech Wizzdom), answering, engaging, holding live sessions</li>
+          <li>
+            Me (Tech Wizzdom), answering, engaging, holding live sessions
+            <span
+              style={{
+                fontFamily: 'Rock Salt',
+                color: '#228a00',
+                marginLeft: '16px',
+              }}
+            >
+              community only
+            </span>
+          </li>
         </ul>
         This is all evolving and updating all the time.
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <H4>I am confused. Is this a course or a community?</H4>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <Paragraph size={ParagraphSize.Large}>
+        Both! It originally started as a course, but I added a community option.
+        I understand that some people don't want to be in a community, so I left
+        the course as a standalone option.
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Small} />
+      <Paragraph size={ParagraphSize.Large}>
+        The course is on Gumroad, and the community (+ course) is on Skool.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Is there a refund?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <Paragraph size={ParagraphSize.Large}>
         Of course! You can get a full refund within 30 days without any reason.
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <H4>I still have some questions. Where should I ask them?</H4>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <Paragraph size={ParagraphSize.Large}>
+        Just drop me an email directly at dom@techwizzdom.com. Ask me anything
+        :)
+      </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <H4>Why do I need to pay on Stripe to get community access?</H4>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <Paragraph size={ParagraphSize.Large}>
+        Ask Skool developers :) unfortunately, they still don't have an option
+        of a one-time payment for access - only monthly subscriptions. All the
+        creators there have the same problem and need to figure out workarounds.
+        I made mine with Stripe. You pay once, and you get access forever.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Why is it cool to be a content creator?</H4>
@@ -246,7 +305,7 @@ function TheRichCreator() {
         my passion for teaching, I can assure you that you'll get everything you
         need to become a successful content creator. Of course, everything I'm
         teaching here isn't related to tech at all - that's just my niche. It's
-        applicable for everything.
+        applicable to everything.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Small} />
       <Paragraph size={ParagraphSize.Large}>
@@ -301,23 +360,89 @@ function TheRichCreator() {
         lose anything :)
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <div className={actionCSS}>
-        <a
-          className={letsWorkButton(theme, true)}
-          href={t.link.theRichCreatorSkool}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Check out community
-        </a>
-        <a
-          className={letsWorkButton(theme, true, true)}
-          href={t.link.theRichCreatorStripe}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get access
-        </a>
+      <div id="trc-pricing" className={pricingWrapperCss}>
+        <div className={pricingItemCss(theme)}>
+          <H3>Community + course</H3>
+          <H3>$497</H3>
+          <div className={pricingItemDescriptionCss}>
+            <PricingBlockItem large>
+              Full content creation course
+            </PricingBlockItem>
+            <PricingBlockItem large>Full monetization course</PricingBlockItem>
+            <PricingBlockItem large>
+              Real life examples of Tech Wizzdom working (writing scripts,
+              shooting, editing, negotiating, ...)
+            </PricingBlockItem>
+            <PricingBlockItem large>
+              Onboarding guide (start immediately)
+            </PricingBlockItem>
+            <PricingBlockItem large>
+              <strong>
+                Tech Wizzdom engaging, answering questions, solving your
+                specific problems
+              </strong>
+            </PricingBlockItem>
+            <PricingBlockItem large>
+              <strong>
+                Tech Wizzdom holding QA sessions (we jump on a call - and you
+                can ask anything!)
+              </strong>
+            </PricingBlockItem>
+            <PricingBlockItem large>
+              <strong>
+                A group of likeminded people pushing you towards the same goal
+              </strong>
+            </PricingBlockItem>
+          </div>
+          <div className={actionCSS}>
+            <a
+              href={t.link.theRichCreatorSkool}
+              className={letsWorkButton(theme, true)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check it out
+            </a>
+            <a
+              href={t.link.theRichCreatorStripe}
+              className={letsWorkButton(theme, true, true)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get access
+            </a>
+          </div>
+        </div>
+        <div className={pricingItemCss(theme)}>
+          <H3>Course only</H3>
+          <H3>$223</H3>
+          <div className={pricingItemDescriptionCss}>
+            <PricingBlockItem large>
+              Full content creation course
+            </PricingBlockItem>
+            <PricingBlockItem large>Full monetization course</PricingBlockItem>
+            <PricingBlockItem large>
+              Real life examples of Tech Wizzdom working (writing scripts,
+              shooting, editing, negotiating, ...)
+            </PricingBlockItem>
+            <PricingBlockItem large>
+              Onboarding guide (start immediately)
+            </PricingBlockItem>
+            <PricingBlockItem large isError>
+              You're all alone here
+            </PricingBlockItem>
+          </div>
+          <div className={actionCSS}>
+            <a
+              href={t.link.contentWizzardCourse}
+              className={letsWorkButton(theme, true, true)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buy course
+            </a>
+          </div>
+        </div>
       </div>
     </RouteContainer>
   );
@@ -328,8 +453,10 @@ const linkCss = css`
 `;
 
 const actionCSS = css`
+  margin-top: 16px;
   display: flex;
   justify-content: space-evenly;
+  width: 100%;
   gap: 16px;
 
   @media ${Media.Mobile} {
@@ -346,7 +473,7 @@ const letsWorkButton = (
   ${alignLeftDesktop ? 'align-self: baseline;' : ''}
 
   padding: 8px;
-  border-radius: 2px;
+  border-radius: 16px;
   line-height: 2;
   font-weight: 600;
 
@@ -365,6 +492,35 @@ const letsWorkButton = (
   @media ${Media.Mobile} {
     align-self: center;
   }
+`;
+
+const pricingItemDescriptionCss = css`
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
+const pricingWrapperCss = css`
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: flex-start;
+
+  @media ${Media.Mobile} {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const pricingItemCss = (theme: Theme) => css`
+  border: 4px solid ${theme.textColor};
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 `;
 
 export default TheRichCreator;
