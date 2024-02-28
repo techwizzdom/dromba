@@ -64,25 +64,25 @@ function TheRichCreator() {
         </button>
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         A few years ago, I was just a random dude, having a 9-5 coding job in
         Croatia for $1k a month.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         I'm still that random dude, but I work just for myself, have $50k+
         months, own a tech startup, have one of the largest tech socials, a
         clothing brand... And that's all possible with cash flow generated
         through content. Life is amazing.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         I'll keep it short. There was so much I learned (and I'm still learning)
         on this journey, and I was looking for ways to share it with other
         people and help them.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Like many others, I launched a course that was a mega-pack of all the
         possible knowledge I have.{' '}
         <a
@@ -98,7 +98,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>But for those who want, I can do even better.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         The course is great, and you might do everything alone. But what if:
         <ul>
           <li>you get stuck?</li>
@@ -110,7 +110,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>To address these problems, I added a community option.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         It's basically the same course +
         <ul>
           <li>Tech Wizzdom, engaging and answering questions</li>
@@ -124,7 +124,7 @@ function TheRichCreator() {
         support was invaluable.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Yes, the course materials were great there, but the community was the
         thing that gave me peace of mind to quit my job - just because I knew
         that I could ask whatever I wanted and get solutions to any of my
@@ -142,7 +142,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Also, here we learn by doing.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Meaning, that as soon as you're in, you get a detailed onboarding guide.
         You don't watch content for 2 months and do nothing - you start
         immediately. After you're done with onboarding, you have:
@@ -163,19 +163,19 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>30-day refund period without any reason.</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         If you don't like it, you can get the full value back. I don't want to
         take your money if you're not happy.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         This is a community of people who are on missions to quit their jobs and
         start living the life they want. It's a community of people who are
         ready to work hard and make serious money by working for themselves.
         It's a community of people who are ready to help each other.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         And if you don't see yourself here, feel free to go :)
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -192,7 +192,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>What do I get here?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Everything you need to help you become a successful, rich content
         creator:
         <ul>
@@ -246,32 +246,32 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>I am confused. Is this a course or a community?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Both! It originally started as a course, but I added a community option.
         I understand that some people don't want to be in a community, so I left
         the course as a standalone option.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Small} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         The course is on Gumroad, and the community (+ course) is on Skool.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Is there a refund?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Of course! You can get a full refund within 30 days without any reason.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>I still have some questions. Where should I ask them?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Just drop me an email directly at dom@techwizzdom.com. Ask me anything
         :)
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Why do I need to pay on Stripe to get community access?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Ask Skool developers :) unfortunately, they still don't have an option
         of a one-time payment for access - only monthly subscriptions. All the
         creators there have the same problem and need to figure out workarounds.
@@ -280,7 +280,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Why is it cool to be a content creator?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         There are so many reasons:
         <ul>
           <li>You have all the money you need</li>
@@ -297,7 +297,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Why should I trust you?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         I was a Senior Developer before (now CTO & Co-founder of my own
         startup), so my logical brain is quite developed. On the other hand, I'm
         extremely creative - which made me one of the strongest tech accounts on
@@ -308,7 +308,7 @@ function TheRichCreator() {
         applicable to everything.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Small} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         I'm in a network of extremely successful content creators, I have
         mentors, I have so much wizzdom based on my own experience. In the
         simplest way possible, I want you to embody the knowledge - and make it
@@ -317,7 +317,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>You're cool! What will I learn?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         Well, basically EVERYTHING you need to become a top content creator:
         <ul>
           <li>Growing to wild numbers on socials</li>
@@ -328,7 +328,7 @@ function TheRichCreator() {
         </ul>
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Small} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         You can check out the full{' '}
         <Link
           className={linkCss}
@@ -344,7 +344,7 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H4>Why should I pay for this?</H4>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         This community is nothing more than an INVESTMENT IN YOURSELF. In life,
         mentors are cheat codes, and the knowledge from this community can
         radically transform your life. You can't even imagine the difference
@@ -355,7 +355,7 @@ function TheRichCreator() {
         Matrix". And wow, it's gorgeous.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <Paragraph size={ParagraphSize.Large}>
+      <Paragraph size={ParagraphSize.XMedium}>
         But I mean, you get a full refund if you don't like it. So, you can't
         lose anything :)
       </Paragraph>
