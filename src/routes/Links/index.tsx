@@ -67,7 +67,7 @@ function Links() {
             isUnderline={true}
             href={t.link.bigDevSoon}
           >
-            BigDevSoon (tons of free portfolio projects)
+            BigDevSoon (tons of free portfolio projects - use code BIGDEVSOON50)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
