@@ -362,8 +362,25 @@ function TheRichCreator() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div id="trc-pricing" className={pricingWrapperCss}>
         <div className={pricingItemCss(theme)}>
+          <span
+            style={{
+              fontFamily: 'Rock Salt',
+              position: 'absolute',
+              right: '10px',
+              fontSize: '14px',
+              fontWeight: 700,
+              textAlign: 'center',
+              top: '92px',
+              color: '#228a00',
+              transform: 'rotate(-5deg)',
+            }}
+          >
+            Code: JUSTLAUNCHED
+          </span>
           <H3>Community + course</H3>
-          <H3>$497</H3>
+          <H3>
+            <span style={{ textDecoration: 'line-through' }}>$497</span> $377
+          </H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem large>
               Full content creation course
@@ -514,6 +531,7 @@ const pricingWrapperCss = css`
 `;
 
 const pricingItemCss = (theme: Theme) => css`
+  position: relative;
   border: 4px solid ${theme.textColor};
   border-radius: 16px;
   padding: 16px;
