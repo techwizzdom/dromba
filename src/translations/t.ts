@@ -192,6 +192,7 @@ export const t = {
     epal: 'https://go.epal.gg/3dFj72r',
     locofy: 'https://www.locofy.ai/',
     workWithMeForm: 'https://forms.gle/DiWUnuNsj46b7Riu7',
+    dailyDotDev: 'https://daily.dev/',
     otta: 'https://otta.com/dom',
     goit: 'https://i.goit.global/oT1A',
     practicum: 'https://practicum.com/',

@@ -63,38 +63,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('ZTM', 'ZTM')}
+            onClick={() => trackEvent('dailyDotDev', 'dailyDotDev')}
             isUnderline={true}
-            href={t.link.zeroToMastery}
+            href={t.link.dailyDotDev}
           >
-            Zero to Mastery (best coding courses)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('BigDevSoon', 'BigDevSoon')}
-            isUnderline={true}
-            href={t.link.bigDevSoon}
-          >
-            BigDevSoon (tons of free portfolio projects - use code BIGDEVSOON50)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            isUnderline={true}
-            href={t.link.scribe}
-          >
-            Scribe (free Chrome extension for docs/tutorials)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Pulseway', 'Pulseway')}
-            isUnderline={true}
-            href={t.link.pulseway}
-          >
-            Pulseway (automate everything)
+            daily.dev (free devs news)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
