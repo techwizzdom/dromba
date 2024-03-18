@@ -63,11 +63,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('dailyDotDev', 'dailyDotDev')}
+            onClick={() => trackEvent('jam', 'jam')}
             isUnderline={true}
-            href={t.link.dailyDotDev}
+            href={t.link.jamNewest}
           >
-            daily.dev (free devs news)
+            Jam (bug ticket creator)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
