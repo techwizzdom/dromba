@@ -63,6 +63,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('appsmith', 'appsmith')}
+            isUnderline={true}
+            href={t.link.appsmith}
+          >
+            Appsmith (open-source internal tools builder)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('jam', 'jam')}
             isUnderline={true}
             href={t.link.jamNewest}
