@@ -432,7 +432,9 @@ function TheRichCreator() {
         </div>
         <div className={pricingItemCss(theme)}>
           <H3>Course only</H3>
-          <H3>$223</H3>
+          <H3>
+            <span style={{ textDecoration: 'line-through' }}>$223</span> $197
+          </H3>
           <div className={pricingItemDescriptionCss}>
             <PricingBlockItem large>
               Full content creation course
