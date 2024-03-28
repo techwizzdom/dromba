@@ -200,7 +200,7 @@ export const t = {
     scribe: 'https://scribe.how/techwizzdom',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
-    zeroToMastery: 'https://links.zerotomastery.io/techwizzdom_feb24',
+    zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_march24',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
     treblle: 'https://getaspen.io/?utm_source=Dom&utm_medium=Insta',

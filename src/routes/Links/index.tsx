@@ -63,20 +63,20 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('ztm', '`tm`')}
+            isUnderline={true}
+            href={t.link.zeroToMastery}
+          >
+            Zero To Mastery (break into tech)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Scribe', 'Scribe')}
             isUnderline={true}
             href={t.link.scribe}
           >
             Scribe (free Chrome extension for docs/tutorials)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('appsmith', 'appsmith')}
-            isUnderline={true}
-            href={t.link.appsmith}
-          >
-            Appsmith (open-source internal tools builder)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
