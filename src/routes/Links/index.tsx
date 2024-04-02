@@ -45,16 +45,6 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            isLarge
-            onClick={() => trackEvent('Break into tech course', 'Click')}
-            route={Routes.BreakIntoTech}
-          >
-            BREAK INTO TECH (course)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
             onClick={() => trackEvent('Break into tech eBook', 'Click')}
             href={t.link.breakIntoTechEBook}
           >
@@ -63,11 +53,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('ztm', '`tm`')}
+            onClick={() => trackEvent('CourseCareers', 'CourseCareers')}
             isUnderline={true}
-            href={t.link.zeroToMastery}
+            href={t.link.courseCareers}
           >
-            Zero To Mastery (break into tech)
+            Learn software development (start for free)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

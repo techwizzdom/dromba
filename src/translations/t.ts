@@ -201,6 +201,8 @@ export const t = {
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
     zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_march24',
+    courseCareers:
+      'https://coursecareers.com/a/techwizz?course=software-dev-fundamentals',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
     treblle: 'https://getaspen.io/?utm_source=Dom&utm_medium=Insta',
