@@ -242,8 +242,7 @@ export const t = {
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
     bearer: 'https://www.bearer.com/',
-    codium: 'https://www.codium.ai/',
-    codiumPrAgent: 'https://www.codium.ai/pr-agent/',
+    codium: 'https://www.codium.ai/products/coding-agent/',
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
     aidtschool:

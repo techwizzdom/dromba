@@ -53,20 +53,20 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Codiumate', 'Codiumate')}
+            isUnderline={true}
+            href={t.link.codium}
+          >
+            Codiumate (AI software engineer)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('CourseCareers', 'CourseCareers')}
             isUnderline={true}
             href={t.link.courseCareers}
           >
             Learn software development (start for free)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            isUnderline={true}
-            href={t.link.scribe}
-          >
-            Scribe (free Chrome extension for docs/tutorials)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
