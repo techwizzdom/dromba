@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Scribe', 'Scribe')}
+            isUnderline={true}
+            href={t.link.scribe}
+          >
+            Scribe (free Chrome extension for docs)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Codiumate', 'Codiumate')}
             isUnderline={true}
             href={t.link.codium}
