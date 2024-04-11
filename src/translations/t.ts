@@ -199,7 +199,7 @@ export const t = {
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
     sequence: 'https://go.getsequence.io/DOMA',
-    wixStudio: 'https://www.wix.com/studio/developers'
+    wixStudio: 'https://www.wix.com/studio/developers',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
     zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_march24',
