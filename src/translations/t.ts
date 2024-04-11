@@ -198,6 +198,7 @@ export const t = {
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
+    sequence: 'https://go.getsequence.io/DOMA',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
     zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_march24',
