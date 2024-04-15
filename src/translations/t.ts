@@ -240,7 +240,8 @@ export const t = {
     demoCreator: 'https://bit.ly/40zsdjk',
     contentWizzardCourse:
       'https://techwizzom.gumroad.com/l/500k-content-wizzard',
-    tenWeb: 'https://10web.io/ai-website-builder/?_from=techwizzdom',
+    tenWeb:
+      'https://my.10web.io/setup-onboarding/start-ai-website-building?utm_source=Instagram&utm_medium=DM&utm_campaign=tech_wizzdom',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
     bearer: 'https://www.bearer.com/',
