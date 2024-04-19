@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Sequence', 'Sequence')}
+            isUnderline={true}
+            href={t.link.sequence}
+          >
+            Sequence (automate your finances)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('10Web', '10Web')}
             isUnderline={true}
             href={t.link.tenWeb}
@@ -67,33 +76,6 @@ function Links() {
             href={t.link.wixStudio}
           >
             Wix Studio
-          </Hyperlink>
-        </H5>
-        {/* <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Sequence', 'Sequence')}
-            isUnderline={true}
-            href={t.link.sequence}
-          >
-            Sequence (automate your finances)
-          </Hyperlink>
-        </H5> */}
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Scribe', 'Scribe')}
-            isUnderline={true}
-            href={t.link.scribe}
-          >
-            Scribe (free Chrome extension for docs)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Codiumate', 'Codiumate')}
-            isUnderline={true}
-            href={t.link.codium}
-          >
-            Codiumate (AI software engineer)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
