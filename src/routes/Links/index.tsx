@@ -53,38 +53,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Sequence', 'Sequence')}
-            isUnderline={true}
-            href={t.link.sequence}
-          >
-            Sequence (automate your finances)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('10Web', '10Web')}
-            isUnderline={true}
-            href={t.link.tenWeb}
-          >
-            10Web (AI website builder)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
             onClick={() => trackEvent('Wix Studio', 'Wix Studio')}
             isUnderline={true}
             href={t.link.wixStudio}
           >
             Wix Studio
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('CourseCareers', 'CourseCareers')}
-            isUnderline={true}
-            href={t.link.courseCareers}
-          >
-            Learn software development (start for free)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
