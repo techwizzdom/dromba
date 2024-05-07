@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Kickresume', 'Kickresume')}
+            isUnderline={true}
+            href={t.link.kickresume}
+          >
+            Kickresume
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Wix Studio', 'Wix Studio')}
             isUnderline={true}
             href={t.link.wixStudio}
