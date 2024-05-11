@@ -62,11 +62,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Wix Studio', 'Wix Studio')}
+            onClick={() => trackEvent('Creati', 'Creati')}
             isUnderline={true}
-            href={t.link.wixStudio}
+            href={t.link.creati}
           >
-            Wix Studio
+            Creati (AI image editor)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

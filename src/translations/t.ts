@@ -208,6 +208,7 @@ export const t = {
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
     treblle: 'https://getaspen.io/?utm_source=Dom&utm_medium=Insta',
+    creati: 'https://noxl.ink/aGlMR1',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
     sourcegraph: 'https://srcgr.ph/ufo4R',
