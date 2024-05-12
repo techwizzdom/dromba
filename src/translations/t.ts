@@ -158,6 +158,8 @@ export const t = {
       'https://www.hft-leipzig.de/de/studierende/gesellschaft-und-informatik.html',
     bachelorStudies:
       'https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing',
+    contentCreationForDevelopers:
+      'https://techwizzom.gumroad.com/l/content-creation-for-developers',
     sourceCode: 'https://github.com/dromba/dromba',
     twitter: 'https://twitter.com/tech_wizzdom',
     devto: 'https://dev.to/domagojvidovic',

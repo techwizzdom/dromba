@@ -8,6 +8,7 @@ export enum Routes {
   BreakIntoTech = '/break-into-tech',
   ContentWizzard = '/500k-content-wizzard',
   TheRichCreator = '/the-rich-creator',
+  ContentCreationForDevs = '/content-creation-for-developers',
   Services = '/services',
   CourseOutline = '/course-outline',
 }

@@ -68,6 +68,17 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         The Rich Creator
       </Link>
+      <Link
+        to={Routes.ContentCreationForDevs}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.ContentCreationForDevs),
+        )}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        Content Creation For Devs
+      </Link>
       {/* <Link
         to={Routes.BreakIntoTech}
         className={navigationItemCss(
