@@ -130,7 +130,7 @@ function TheRichCreator() {
       <Paragraph size={ParagraphSize.XMedium}>
         That was 60 videos in total for $6000. And it took me 6 days in a month
         to do it. $1000 per day, and that was just the start. Devs who can also
-        create content and way more needed than devs who are just... Devs.
+        create content are way more needed than devs who are just... Devs.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>But how do you mean that I don't need followers?</H3>
