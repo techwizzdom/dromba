@@ -177,14 +177,6 @@ function TheRichCreator() {
         watching, you have the system for yourself.
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
-      <div className={actionCSS}>
-        <button
-          className={letsWorkButton(theme, true)}
-          onClick={smoothScrollToPricing}
-        >
-          Join me!
-        </button>
-      </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>How do I know that this is for me?</H3>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -206,6 +198,15 @@ function TheRichCreator() {
         for you. This will make you the core system needed to achieve this
         result efficiently.
       </Paragraph>
+      <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <div className={actionCSS}>
+        <button
+          className={letsWorkButton(theme, true)}
+          onClick={smoothScrollToPricing}
+        >
+          Join me!
+        </button>
+      </div>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H3>
         If this works so perfectly, why do you share it? Why don't you just do
