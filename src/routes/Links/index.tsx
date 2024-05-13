@@ -53,6 +53,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Filmora', 'Filmora')}
+            isUnderline={true}
+            href={t.link.filmora}
+          >
+            Filmora (video editor)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Kickresume', 'Kickresume')}
             isUnderline={true}
             href={t.link.kickresume}

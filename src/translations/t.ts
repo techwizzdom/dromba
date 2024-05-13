@@ -219,6 +219,7 @@ export const t = {
     kodezi: 'https://kodezi.com/',
     pmpmastermind: 'https://pmpmastermind.com/',
     theRichCreatorSkool: 'https://www.skool.com/the-rich-creator-3097/about',
+    filmora: 'https://bit.ly/3QE1Wyj',
     theRichCreatorStripe: 'https://buy.stripe.com/fZeeYi0eG9i86o86op',
     pulseway: 'https://www.pulseway.com/v2/land/tech-wiz',
     hopscotch:
