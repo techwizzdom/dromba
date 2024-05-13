@@ -286,9 +286,9 @@ export const t = {
   },
   socials: {
     followers: '750k',
-    likes: '15M',
-    views: '230M',
-    saves: '2.6M',
+    likes: '7.7M',
+    views: '130M',
+    saves: '1.3M',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',
