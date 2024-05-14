@@ -9,6 +9,18 @@ export const Posts = [
   //   tags: [],
   // },
   {
+    title: '15 ways to make side money as a developer',
+    subtitle: 'How to get extra cash for your programming skills',
+    path: '15-ways-to-make-side-money-as-a-developer',
+    img: 'https://gxdihcirmcsiuoncjmhr.supabase.co/storage/v1/object/public/sparroww-public/15waystomake.jpg',
+    thumbnail:
+      'https://gxdihcirmcsiuoncjmhr.supabase.co/storage/v1/object/public/sparroww-public/15waystomake.jpg',
+    previewImg:
+      'https://gxdihcirmcsiuoncjmhr.supabase.co/storage/v1/object/public/sparroww-public/15waystomake.jpg',
+    postDate: new Date('14 May 2024'),
+    tags: [],
+  },
+  {
     title: 'BREAKING: Creators don’t post promo deals to annoy you',
     subtitle: 'They actually need to earn money.',
     path: 'creators-business-model',
