@@ -133,6 +133,6 @@ And you always have the opportunity to make it, except in one case: if you don't
 
 ---
 
-If you're interested in doing [tech content creation](<(https://www.techwizzdom.com/content-creation-for-developers)>), I can definitely help you here. **It's a massive opportunity** in the market because so many tech brands need content, **and only developers can make it.**
+If you're interested in doing [tech content creation](https://www.techwizzdom.com/content-creation-for-developers), I can definitely help you here. **It's a massive opportunity** in the market because so many tech brands need content, **and only developers can make it.**
 
 They pay pretty sick money. If you're interested in learning more, [check out here](https://www.techwizzdom.com/content-creation-for-developers).
