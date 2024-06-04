@@ -227,7 +227,7 @@ export const t = {
     appsmith:
       'https://www.appsmith.com/?utm_source=TechWizzdom&utm_medium=social',
     jamNewest:
-      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_03',
+      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_05',
     justJoinIt: 'https://bit.ly/41t2uL9',
     edrawmax: 'http://bit.ly/3ZuWJLc',
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
@@ -266,7 +266,7 @@ export const t = {
     storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
     basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
     tenWebECommerce: 'https://10web.io/ai-ecommerce-website-builder/',
-    amplication: 'https://eu1.hubs.ly/H06BpR-0',
+    amplication: 'https://eu1.hubs.ly/H09rFvn0',
   },
   navigation: {
     home: 'Who Am I?',

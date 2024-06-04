@@ -36,10 +36,15 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             isLarge
-            onClick={() => trackEvent('TRC community', 'TRC community')}
-            route={Routes.TheRichCreator}
+            onClick={() =>
+              trackEvent(
+                'Content creation for devs',
+                'Content creation for devs',
+              )
+            }
+            route={Routes.ContentCreationForDevs}
           >
-            The Rich Creator community
+            Content creation for developers
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -53,29 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Filmora', 'Filmora')}
+            onClick={() => trackEvent('Amplication', 'Amplication')}
             isUnderline={true}
-            href={t.link.filmora}
+            href={t.link.amplication}
           >
-            Filmora (video editor)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Kickresume', 'Kickresume')}
-            isUnderline={true}
-            href={t.link.kickresume}
-          >
-            Kickresume
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Creati', 'Creati')}
-            isUnderline={true}
-            href={t.link.creati}
-          >
-            Creati (AI image editor)
+            Amplication (AI backend generator)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
