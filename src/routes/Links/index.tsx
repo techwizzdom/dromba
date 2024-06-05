@@ -58,6 +58,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('ZTM', 'ZTM')}
+            isUnderline={true}
+            href={t.link.zeroToMastery}
+          >
+            Zero To Mastery (10x your LLM skills)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Amplication', 'Amplication')}
             isUnderline={true}
             href={t.link.amplication}

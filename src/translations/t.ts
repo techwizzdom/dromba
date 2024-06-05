@@ -204,7 +204,7 @@ export const t = {
     wixStudio: 'https://www.wix.com/studio/developers',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
-    zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_march24',
+    zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_june24',
     courseCareers:
       'https://coursecareers.com/a/techwizz?course=software-dev-fundamentals',
     codedamn: 'https://cdm.sh/domagoj',
