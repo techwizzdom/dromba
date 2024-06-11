@@ -34,9 +34,9 @@ function Pricing() {
     megaPrice = 6800;
     // magicalPrice = 5900;
   } else if (formattedId.includes(PricingBundle.AboveExpensive)) {
-    standardPrice = 4500;
-    premiumPrice = 6000;
-    megaPrice = 8500;
+    standardPrice = 2500;
+    premiumPrice = 3700;
+    megaPrice = 5900;
     // magicalPrice = 6300;
   } else if (formattedId.includes(PricingBundle.Dom)) {
     standardPrice = 3300;
