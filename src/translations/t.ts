@@ -206,6 +206,7 @@ export const t = {
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
     zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_june24',
     expertsExchange: 'https://bit.ly/45aacfz',
+    tripleten: 'https://get.tripleten.com/ComputerClan',
     courseCareers:
       'https://coursecareers.com/a/techwizz?course=software-dev-fundamentals',
     codedamn: 'https://cdm.sh/domagoj',

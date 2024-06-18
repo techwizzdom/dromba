@@ -58,29 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('EE', 'EE')}
+            onClick={() => trackEvent('TripleTen', 'TripleTen')}
             isUnderline={true}
-            href={t.link.expertsExchange}
+            href={t.link.tripleten}
           >
-            Experts Exchange (dream StackOverflow)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('ZTM', 'ZTM')}
-            isUnderline={true}
-            href={t.link.zeroToMastery}
-          >
-            Zero To Mastery (10x your LLM skills)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Amplication', 'Amplication')}
-            isUnderline={true}
-            href={t.link.amplication}
-          >
-            Amplication (AI backend generator)
+            TripleTen
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
