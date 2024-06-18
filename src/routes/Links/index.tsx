@@ -62,7 +62,7 @@ function Links() {
             isUnderline={true}
             href={t.link.tripleten}
           >
-            TripleTen
+            TripleTen (get a job or refund)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
