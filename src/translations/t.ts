@@ -212,7 +212,8 @@ export const t = {
       'https://coursecareers.com/a/techwizz?course=software-dev-fundamentals',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
-    treblle: 'https://getaspen.io/?utm_source=Dom&utm_medium=Insta',
+    treblle:
+      'https://treblle.com/product/alfred?utm_source=tiktok&utm_medium=domagoj&utm_campaign=alfred_ai',
     creati: 'https://noxl.ink/aGlMR1',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
