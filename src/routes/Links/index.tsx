@@ -58,11 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Treblle', 'Treblle')}
+            onClick={() => trackEvent('Pieces', 'Pieces')}
             isUnderline={true}
-            href={t.link.treblle}
+            href={t.link.pieces}
           >
-            Treblle (free API AI assistant)
+            Pieces (On-device AI with real-time context)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

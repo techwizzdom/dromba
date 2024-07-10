@@ -259,7 +259,7 @@ export const t = {
     aidtschool:
       'https://ai-dt.school/generative-ai/?utm_source=instagram&utm_medium=bloggers&utm_campaign=uforce&utm_content=tech_wizzdom',
     pieces:
-      'https://pieces.app/?utm_source=tiktok&utm_medium=cpc&utm_campaign=dom-partner-tiktok',
+      'https://pieces.app/?utm_source=dom&utm_medium=cpc&utm_campaign=dom-partner',
     eagle: 'https://en.eagle.cool/',
     equals: 'http://equals.1stcollab.com/tech_wizzdom',
     storyblok:
