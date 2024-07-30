@@ -58,20 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Pieces', 'Pieces')}
+            onClick={() => trackEvent('Tango', 'Tango')}
             isUnderline={true}
-            href={t.link.pieces}
+            href={t.link.tango}
           >
-            Pieces (On-device AI with real-time context)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('TripleTen', 'TripleTen')}
-            isUnderline={true}
-            href={t.link.tripleten}
-          >
-            TripleTen (get a job or refund)
+            Tango.us (make docs in minutes, for free)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
