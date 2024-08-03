@@ -4,6 +4,7 @@ import Helmetiser from '../../components/core/Helmetiser';
 import { H1, H3 } from '../../components/core/Heading';
 import VerticalSpacing from '../../components/VerticalSpacing';
 import { VerticalSpacingHeight } from '../../enums/VerticalSpacingHeight';
+import { ReactComponent as StarIcon } from '../../assets/icons/star.svg';
 import Paragraph from '../../components/core/Paragraph';
 import { ParagraphSize } from '../../enums/ParagraphSize';
 import { Theme } from '../../styles';
@@ -238,6 +239,19 @@ function TheRichCreator() {
         :)
       </Paragraph>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
+      <a
+        href={t.link.contentCreationForDevelopers}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+      >
+        <StarIcon />
+        <StarIcon />
+        <StarIcon />
+        <StarIcon />
+        <StarIcon />
+        <Paragraph size={ParagraphSize.Large}>5.0 on Gumroad</Paragraph>
+      </a>
       <div id="trc-pricing" className={pricingWrapperCss}>
         <div className={pricingItemCss(theme)}>
           <H3>Course + mentoring</H3>
