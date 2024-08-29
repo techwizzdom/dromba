@@ -58,11 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Storyblok', 'Stroyblok')}
+            onClick={() => trackEvent('Tango', 'Tango')}
             isUnderline={true}
-            href={t.link.storyblok}
+            href={t.link.tango}
           >
-            Storyblok (Magical Headless CMS)
+            Tango (make docs in minytes)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
