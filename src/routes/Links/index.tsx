@@ -62,7 +62,7 @@ function Links() {
             isUnderline={true}
             href={t.link.tango}
           >
-            Tango (make docs in minytes)
+            Tango (make docs in minutes)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
