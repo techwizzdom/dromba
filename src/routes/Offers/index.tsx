@@ -15,70 +15,31 @@ import { t } from '../../translations/t';
 function Pricing() {
   const theme = React.useContext(ThemeContext);
 
-  const id = window.location.pathname.split('/')[2];
-  const formattedId = id.toString();
-  let standardPrice = 0;
-  let premiumPrice = 0;
-  let megaPrice = 0;
-  // let magicalPrice = 0;
-  let wrongId = false;
-
-  if (formattedId.includes(PricingBundle.Medium)) {
-    standardPrice = 1100;
-    premiumPrice = 1600;
-    megaPrice = 2800;
-    // magicalPrice = 4300;
-  } else if (formattedId.includes(PricingBundle.Expensive)) {
-    standardPrice = 3300;
-    premiumPrice = 4900;
-    megaPrice = 6800;
-    // magicalPrice = 5900;
-  } else if (formattedId.includes(PricingBundle.AboveExpensive)) {
-    standardPrice = 2500;
-    premiumPrice = 3700;
-    megaPrice = 5900;
-    // magicalPrice = 6300;
-  } else if (formattedId.includes(PricingBundle.Dom)) {
-    standardPrice = 3300;
-    premiumPrice = 4900;
-    megaPrice = 7800;
-    // magicalPrice = 7300;
-  } else {
-    wrongId = true;
-    standardPrice = 5000;
-    premiumPrice = 8000;
-    megaPrice = 14000;
-    // magicalPrice = 23000;
-  }
+  const standardPrice = 3300;
+  const premiumPrice = 4900;
+  const megaPrice = 7800;
 
   return (
     <RouteContainer isPureCenteringEnabled={true}>
-      {wrongId ? (
-        <>
-          <H1>You messed up the URL. Special price for you now.</H1>
-          <VerticalSpacing height={VerticalSpacingHeight.Medium} />
-        </>
-      ) : (
-        <>
-          <H1>Last 90 days.</H1>
-          <VerticalSpacing height={VerticalSpacingHeight.Medium} />
-          <H3>
-            <div className={statsCss}>
-              <span className={statCss(theme)}>
-                {t.socials.views} <br></br> views
-              </span>
-              <span className={statCss(theme)}>
-                {t.socials.likes} <br></br> likes
-              </span>
-              <span className={statCss(theme)}>
-                {t.socials.saves} <br></br> saves
-              </span>
-            </div>
-          </H3>
-          <VerticalSpacing height={VerticalSpacingHeight.Large} />
-          <H1>Let's make everyone know you in one day.</H1>
-        </>
-      )}
+      <>
+        <H1>Last 90 days.</H1>
+        <VerticalSpacing height={VerticalSpacingHeight.Medium} />
+        <H3>
+          <div className={statsCss}>
+            <span className={statCss(theme)}>
+              {t.socials.views} <br></br> views
+            </span>
+            <span className={statCss(theme)}>
+              {t.socials.likes} <br></br> likes
+            </span>
+            <span className={statCss(theme)}>
+              {t.socials.saves} <br></br> saves
+            </span>
+          </div>
+        </H3>
+        <VerticalSpacing height={VerticalSpacingHeight.Large} />
+        <H1>Let's make everyone know you in one day.</H1>
+      </>
       {/* <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={topPricingCss}>
         <div className={pricingItemCss(theme)}>
