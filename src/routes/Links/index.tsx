@@ -58,11 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Tango', 'Tango')}
+            onClick={() => trackEvent('PR Agent Chrome', 'PR Agent Chrome')}
             isUnderline={true}
-            href={t.link.tango}
+            href={t.link.codium}
           >
-            Tango (make docs in minutes)
+            PR Agent (Free Chrome extension)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
