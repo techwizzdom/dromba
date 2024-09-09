@@ -58,6 +58,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('ChatLLM', 'ChatLLM')}
+            isUnderline={true}
+            href={t.link.abacus}
+          >
+            ChatLLM (ChatGPT on steroids)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('PR Agent Chrome', 'PR Agent Chrome')}
             isUnderline={true}
             href={t.link.codium}

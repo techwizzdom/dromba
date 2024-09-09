@@ -254,6 +254,7 @@ export const t = {
     brilliant: 'https://brilliant.org/techwizzdom/',
     bearer: 'https://www.bearer.com/',
     codium: 'https://codium.ai/pr-ext',
+    abacus: 'https://chatllm.abacus.ai/',
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
     aidtschool:
