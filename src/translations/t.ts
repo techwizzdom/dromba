@@ -291,10 +291,10 @@ export const t = {
     instagram: 'Instagram',
   },
   socials: {
-    followers: '750k',
-    likes: '7.7M',
-    views: '130M',
-    saves: '1.3M',
+    followers: '800k',
+    likes: '2.3M',
+    views: '90M',
+    saves: '600k',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',
