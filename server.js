@@ -5129,3 +5129,25 @@ var choice=getRandomElementFromList("NotAnArray")
 console.log(choice)
 
 do_ABsolutelyNothingAndBreakEverything()   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function isTrue(variable) {
+  if (variable=== true) {
+ return true
+  } else if (variable  ==false) {
+    return false
+  } else 
+  {return false} 
+}
