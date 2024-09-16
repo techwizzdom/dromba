@@ -58,6 +58,24 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Infobip-Nokia', 'Infobip-Nokia')}
+            isUnderline={true}
+            href={t.link.infobipNokia}
+          >
+            Infobip - Nokia partnership
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            onClick={() => trackEvent('Shift', 'Shift')}
+            isUnderline={true}
+            href={t.link.infobipShift}
+          >
+            Infobip Shift 2024
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('10Web', '10Web')}
             isUnderline={true}
             href={t.link.tenWeb}

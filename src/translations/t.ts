@@ -156,6 +156,9 @@ export const t = {
       'https://www.fer.unizg.hr/en/study_programs/graduate_study/information_and_communication_technology',
     exchangeStudies:
       'https://www.hft-leipzig.de/de/studierende/gesellschaft-und-informatik.html',
+    infobipShift: 'https://shift.infobip.com/',
+    infobipNokia:
+      'https://www.infobip.com/news/infobip-and-nokia-partner-to-enable-developers-to-build-wider-array-of-telco-network-powered-applications-faster',
     bachelorStudies:
       'https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing',
     contentCreationForDevelopers:
