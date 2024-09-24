@@ -58,38 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Infobip-Nokia', 'Infobip-Nokia')}
+            onClick={() => trackEvent('ZTM', 'ZTM')}
             isUnderline={true}
-            href={t.link.infobipNokia}
+            href={t.link.zeroToMastery}
           >
-            Infobip - Nokia partnership
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Shift', 'Shift')}
-            isUnderline={true}
-            href={t.link.infobipShift}
-          >
-            Infobip Shift 2024
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('10Web', '10Web')}
-            isUnderline={true}
-            href={t.link.tenWeb}
-          >
-            10Web (build & deploy websites in minutes!)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('ChatLLM', 'ChatLLM')}
-            isUnderline={true}
-            href={t.link.abacus}
-          >
-            ChatLLM (ChatGPT on steroids)
+            Get a job in tech - Zero To Mastery
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

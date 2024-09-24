@@ -207,7 +207,8 @@ export const t = {
     wixStudio: 'https://www.wix.com/studio/developers',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
-    zeroToMastery: 'https://links.zerotomastery.io/tech_wizzdom_july24',
+    zeroToMastery:
+      'https://links.zerotomastery.io/webdevcareerpath_techwizzdom',
     expertsExchange: 'https://bit.ly/45aacfz',
     tripleten:
       'https://tripleten.com/special/free-career-consultation/?utm_source=influencers&utm_medium=instagram&utm_campaign=tech_wizzdom&utm_content=reels',
