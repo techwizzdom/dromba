@@ -58,6 +58,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('invideo', 'invideo')}
+            isUnderline={true}
+            href={t.link.invideo}
+          >
+            Invideo (text to video)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('ZTM', 'ZTM')}
             isUnderline={true}
             href={t.link.zeroToMastery}

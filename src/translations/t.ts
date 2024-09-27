@@ -200,6 +200,7 @@ export const t = {
     dailyDotDev: 'https://daily.dev/',
     otta: 'https://otta.com/dom',
     goit: 'https://i.goit.global/oT1A',
+    invideo: 'https://invideo.io/i/Techwizzdom',
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
