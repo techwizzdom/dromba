@@ -58,6 +58,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('tango', 'tango')}
+            isUnderline={true}
+            href={t.link.tango}
+          >
+            Tango.us (free Chrome extension for docs)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('invideo', 'invideo')}
             isUnderline={true}
             href={t.link.invideo}
