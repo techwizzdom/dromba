@@ -208,6 +208,7 @@ export const t = {
     wixStudio: 'https://www.wix.com/studio/developers',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
+    alty: 'https://bit.ly/3ztqJQx',
     zeroToMastery:
       'https://links.zerotomastery.io/webdevcareerpath_techwizzdom',
     expertsExchange: 'https://bit.ly/45aacfz',
