@@ -204,6 +204,7 @@ export const t = {
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
+    flow: 'https://www.flowvoice.ai/',
     sequence: 'https://go.getsequence.io/DOMA',
     wixStudio: 'https://www.wix.com/studio/developers',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',

@@ -58,6 +58,15 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
+            onClick={() => trackEvent('Flow', 'Flow')}
+            isUnderline={true}
+            href={t.link.flow}
+          >
+            Flow (speak instead of type)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
             onClick={() => trackEvent('Alty', 'Alty')}
             isUnderline={true}
             href={t.link.alty}
