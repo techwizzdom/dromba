@@ -205,6 +205,7 @@ export const t = {
     ottaPublic: 'https://otta.com/',
     scribe: 'https://scribe.how/techwizzdom',
     flow: 'https://www.flowvoice.ai/',
+    akool: 'https://akool.com/?via=domagoj',
     sequence: 'https://go.getsequence.io/DOMA',
     wixStudio: 'https://www.wix.com/studio/developers',
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',

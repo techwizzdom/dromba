@@ -58,47 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Flow', 'Flow')}
+            onClick={() => trackEvent('Akool', 'Akool')}
             isUnderline={true}
-            href={t.link.flow}
+            href={t.link.akool}
           >
-            Flow (speak instead of type)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('Alty', 'Alty')}
-            isUnderline={true}
-            href={t.link.alty}
-          >
-            Alty (top mobile/web dev services)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('tango', 'tango')}
-            isUnderline={true}
-            href={t.link.tango}
-          >
-            Tango.us (free Chrome extension for docs)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('invideo', 'invideo')}
-            isUnderline={true}
-            href={t.link.invideo}
-          >
-            Invideo (text to video)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            onClick={() => trackEvent('ZTM', 'ZTM')}
-            isUnderline={true}
-            href={t.link.zeroToMastery}
-          >
-            Get a job in tech - Zero To Mastery
+            Akool (change your language)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
