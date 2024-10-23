@@ -221,7 +221,7 @@ export const t = {
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
     treblle:
-      'https://treblle.com/product/alfred?utm_source=tiktok&utm_medium=domagoj&utm_campaign=alfred_ai',
+      'https://next.treblle.com/?utm_source=instagram&utm_medium=domagoj&utm_campaign=v3_launch',
     creati: 'https://noxl.ink/aGlMR1',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
@@ -239,7 +239,7 @@ export const t = {
     appsmith:
       'https://www.appsmith.com/?utm_source=TechWizzdom&utm_medium=social',
     jamNewest:
-      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_05',
+      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_10',
     justJoinIt: 'https://bit.ly/41t2uL9',
     edrawmax: 'http://bit.ly/3ZuWJLc',
     ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
