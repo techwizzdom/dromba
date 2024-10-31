@@ -58,11 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Treblle', 'Trebble')}
+            onClick={() => trackEvent('Tango', 'Tango')}
             isUnderline={true}
-            href={t.link.treblle}
+            href={t.link.tango}
           >
-            Treblle (API Pro)
+            Tango.us
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
