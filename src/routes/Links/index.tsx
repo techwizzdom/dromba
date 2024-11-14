@@ -58,11 +58,11 @@ function Links() {
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
-            onClick={() => trackEvent('Tango', 'Tango')}
+            onClick={() => trackEvent('Jam.dev', 'Jam.dev')}
             isUnderline={true}
-            href={t.link.tango}
+            href={t.link.jamNewest}
           >
-            Tango.us
+            Jam
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
