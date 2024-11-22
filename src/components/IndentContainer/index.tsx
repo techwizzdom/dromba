@@ -20,6 +20,13 @@ const IndentContainer: React.FC<IIndentContainerProps> = (
 ) => {
   const { children } = props;
 
+  React.useEffect(() => {
+    const nonexistentElement = document.getElementById('nonexistent-element');
+    if (nonexistentElement) {
+      nonexistentElement.style.color = 'blue';
+    }
+  }, []);
+
   return <div className={indentContainerCss}>{children}</div>;
 };
 
