@@ -51,6 +51,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Pinata', 'Pinata')}
+            href={t.link.pinata}
+          >
+            Pinata (The Best Storage?)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             isEmail={true}
             onClick={() => trackEvent('Email', 'Links')}
             href={t.email.techwizzdom}

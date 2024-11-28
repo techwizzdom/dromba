@@ -151,6 +151,8 @@ export const t = {
       'https://www.sparroww.com/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     orbitalWitness: 'https://www.orbitalwitness.com/',
     infinum: 'https://infinum.com/',
+    pinata:
+      'https://pinata.cloud/?utm_source=linktree&utm_medium=website&utm_campaign=twd_november',
     productive: 'https://www.productive.io/',
     loopCommunity: 'https://loopcommunity.com/',
     a1: 'https://www.a1.hr/',
