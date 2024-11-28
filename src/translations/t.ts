@@ -143,6 +143,12 @@ export const t = {
     },
   },
   link: {
+    secondBrain:
+      'https://www.thesecondbrain.io/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
+    ragapi:
+      'https://www.ragapi.tech/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
+    sparroww:
+      'https://www.sparroww.com/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     orbitalWitness: 'https://www.orbitalwitness.com/',
     infinum: 'https://infinum.com/',
     productive: 'https://www.productive.io/',
