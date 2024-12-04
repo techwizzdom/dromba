@@ -229,7 +229,7 @@ export const t = {
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
     treblle:
-      'https://next.treblle.com/?utm_source=instagram&utm_medium=domagoj&utm_campaign=v3_launch',
+      'https://next.treblle.com/?utm_source=instagram&utm_medium=domagoj&utm_campaign=aspen_collections',
     creati: 'https://noxl.ink/aGlMR1',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
