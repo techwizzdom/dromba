@@ -3,13 +3,16 @@ import { css } from 'emotion';
 
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
+import { Link } from 'react-router-dom';
 
 export interface IHyperlinkProps {
   children: React.ReactNode;
-  href: string;
+  href?: string;
   isEmail?: boolean;
   isUnderline?: boolean;
   isLarge?: boolean;
+  alignCenter?: boolean;
+  route?: string;
   onClick?: () => void;
 }
 
@@ -17,6 +20,7 @@ export const hyperlinkCss = (
   theme: Theme,
   isUnderline?: boolean,
   isLarge?: boolean,
+  alignCenter?: boolean,
 ) => css`
   position: relative;
   padding: 2px;
@@ -24,6 +28,7 @@ export const hyperlinkCss = (
 
   ${isLarge && 'font-size: 24px;'}
   ${isLarge && 'font-weight: bold;'}
+  ${alignCenter && 'text-align: center;'}
 
   display: inline;
   background-image: linear-gradient(
@@ -47,20 +52,40 @@ export const hyperlinkCss = (
 `;
 
 const Hyperlink: React.FC<IHyperlinkProps> = (props: IHyperlinkProps) => {
-  const { children, href, isEmail, isUnderline, isLarge, onClick } = props;
+  const {
+    children,
+    href,
+    isEmail,
+    isUnderline,
+    isLarge,
+    alignCenter,
+    onClick,
+    route,
+  } = props;
 
   const theme = React.useContext(ThemeContext);
 
   return (
-    <a
-      className={hyperlinkCss(theme, isUnderline, isLarge)}
-      href={isEmail ? `mailto:${href}` : href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={() => onClick && onClick()}
-    >
-      {children}
-    </a>
+    <>
+      {route ? (
+        <Link
+          to={route}
+          className={hyperlinkCss(theme, isUnderline, isLarge, alignCenter)}
+        >
+          {children}
+        </Link>
+      ) : (
+        <a
+          className={hyperlinkCss(theme, isUnderline, isLarge, alignCenter)}
+          href={isEmail ? `mailto:${href}` : href}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => onClick && onClick()}
+        >
+          {children}
+        </a>
+      )}
+    </>
   );
 };
 
