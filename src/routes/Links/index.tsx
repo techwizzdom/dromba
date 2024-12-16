@@ -51,10 +51,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Treblle', 'Treblle')}
-            href={t.link.treblle}
+            onClick={() => trackEvent('Tango', 'Tango')}
+            href={t.link.tango}
           >
-            Aspen (Build awesome APIs)
+            Tango (free Chrome extension)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
