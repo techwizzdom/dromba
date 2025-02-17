@@ -228,7 +228,8 @@ export const t = {
       'https://coursecareers.com/a/techwizz?course=software-dev-fundamentals',
     codedamn: 'https://cdm.sh/domagoj',
     kickresume: 'https://www.kickresume.com/',
-    treblle: 'https://getaspen.io/?utm_source=shorts&utm_medium=domagoj&utm_campaign=aspen_collections',
+    treblle:
+      'https://getaspen.io/?utm_source=shorts&utm_medium=domagoj&utm_campaign=aspen_collections',
     creati: 'https://noxl.ink/aGlMR1',
     apiInsightsTreblle:
       'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
@@ -288,6 +289,10 @@ export const t = {
     basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
     tenWebECommerce: 'https://10web.io/ai-ecommerce-website-builder/',
     amplication: 'https://eu1.hubs.ly/H09rFvn0',
+    echoApi1: 'https://www.echoapi.jp/?utm_source=67b18144',
+    echoApi2: 'https://www.echoapi.jp/plugin/vscode?utm_source=67b18144',
+    echoApi3:
+      'https://marketplace.visualstudio.com/items?itemName=EchoAPI.echoapi-for-vscode&ssr=false#review-details',
   },
   navigation: {
     home: 'Who Am I?',

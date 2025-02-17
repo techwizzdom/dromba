@@ -51,10 +51,35 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Tango', 'Tango')}
-            href={t.link.tango}
+            onClick={() => trackEvent('EchoAPI Client', 'EchoAPI Client')}
+            href={t.link.echoApi1}
           >
-            Tango (free Chrome extension)
+            EchoAPI Client
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() =>
+              trackEvent('EchoAPI for VS Code', 'EchoAPI for VS Code')
+            }
+            href={t.link.echoApi2}
+          >
+            EchoAPI for VS Code
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() =>
+              trackEvent(
+                'EchoAPI VS Code Extension',
+                'EchoAPI VS Code Extension',
+              )
+            }
+            href={t.link.echoApi3}
+          >
+            EchoAPI VS Code Extension
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
