@@ -289,8 +289,8 @@ export const t = {
     basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
     tenWebECommerce: 'https://10web.io/ai-ecommerce-website-builder/',
     amplication: 'https://eu1.hubs.ly/H09rFvn0',
-    echoApi1: 'https://www.echoapi.jp/?utm_source=67b18144',
-    echoApi2: 'https://www.echoapi.jp/plugin/vscode?utm_source=67b18144',
+    echoApi1: 'https://www.echoapi.com/?utm_source=67b18144',
+    echoApi2: 'https://www.echoapi.com/plugin/vscode?utm_source=67b18144',
     echoApi3:
       'https://marketplace.visualstudio.com/items?itemName=EchoAPI.echoapi-for-vscode&ssr=false#review-details',
   },
