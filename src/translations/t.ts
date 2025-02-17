@@ -11,7 +11,7 @@ export const t = {
     actionButton: 'Dive in',
   },
   blog: {
-    title: 'Master Web Development With Me.',
+    title: 'Utilise the full power of tech.',
     findMoreArticles: 'Find way more articles on ',
   },
   company: {
@@ -30,10 +30,13 @@ export const t = {
     dpatrick: 'patrick.domv@gmail.com',
     dvidovic: 'dvidovic91@gmail.com',
     javascriptwizz: 'dom@javascriptwizz.com',
+    techwizzdom: 'dom@techwizzdom.com',
+    pr: 'pr@techwizzdom.com',
   },
   home: {
-    title: 'Frontend Engineer.',
-    subtitle: 'In a London Tech-Startup.',
+    title: 'Domagoj Lalk Vidovic.',
+    subtitle:
+      'Tech Content Creator. Entrepreneur. Digital Nomad. CTO & Co-Founder Sparroww Inc.',
     paragraph: {
       achiever:
         "As a 26 years old guy, there's a lot for me to achieve. Many things I don't know; zero of them I can't learn.",
@@ -140,8 +143,16 @@ export const t = {
     },
   },
   link: {
+    secondBrain:
+      'https://www.thesecondbrain.io/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
+    ragapi:
+      'https://www.ragapi.tech/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
+    sparroww:
+      'https://www.sparroww.com/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     orbitalWitness: 'https://www.orbitalwitness.com/',
     infinum: 'https://infinum.com/',
+    pinata:
+      'https://pinata.cloud/?utm_source=linktree&utm_medium=website&utm_campaign=twd_november',
     productive: 'https://www.productive.io/',
     loopCommunity: 'https://loopcommunity.com/',
     a1: 'https://www.a1.hr/',
@@ -153,18 +164,23 @@ export const t = {
       'https://www.fer.unizg.hr/en/study_programs/graduate_study/information_and_communication_technology',
     exchangeStudies:
       'https://www.hft-leipzig.de/de/studierende/gesellschaft-und-informatik.html',
+    infobipShift: 'https://shift.infobip.com/',
+    infobipNokia:
+      'https://www.infobip.com/news/infobip-and-nokia-partner-to-enable-developers-to-build-wider-array-of-telco-network-powered-applications-faster',
     bachelorStudies:
       'https://www.fer.unizg.hr/en/study_programs/undergraduate_study/fer3/computing',
+    contentCreationForDevelopers:
+      'https://techwizzom.gumroad.com/l/content-creation-for-developers',
     sourceCode: 'https://github.com/dromba/dromba',
-    twitter: 'https://twitter.com/javascript_wizz',
+    twitter: 'https://twitter.com/tech_wizzdom',
     devto: 'https://dev.to/domagojvidovic',
     github: 'https://github.com/dromba',
     linkedIn: 'https://www.linkedin.com/in/domagojvidovic/',
     medium: 'https://domagojvidovic.medium.com/',
-    instagram: 'https://www.instagram.com/javascript_wizz/',
-    youtube: 'https://www.youtube.com/@javascript_wizz',
+    instagram: 'https://www.instagram.com/tech_wizzdom/',
+    youtube: 'https://www.youtube.com/@tech_wizzdom',
     buyMeACroissant: 'https://www.buymeacoffee.com/domagojvidovic',
-    tiktok: 'https://www.tiktok.com/@javascript_wizz',
+    tiktok: 'https://www.tiktok.com/@tech_wizzdom',
     zeroKnowledgeTo80k:
       'https://domagojvidovic.medium.com/all-the-resources-you-need-to-become-a-frontend-engineer-eff27464ab17',
     book30mins: 'https://calendly.com/domagojvidovic/career-code-mentoring',
@@ -172,26 +188,111 @@ export const t = {
       'https://calendly.com/domagojvidovic/social-media-mentoring',
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
-    teal: 'https://tealhq.co/javascript_wizz',
+    teal: 'https://tealhq.co/tech_wizzdom',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
     rapyd:
       'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
     notyai: 'https://noty.ai/',
     jam: 'https://jam.dev/',
-    slashDataSurvey: 'https://developereconomics.net?member_id=javascript_wizz',
+    slashDataSurvey: 'https://developereconomics.net?member_id=tech_wizzdom',
     bamblue: 'https://bamblueglasses.com/?ref=LxX0mVWrjCJrF',
     letsCreateAwesomeStuff:
       'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
     recrooit: 'https://www.recrooit.com/',
     statusHero: 'https://statushero.com/',
+    bigDevSoon: 'https://bigdevsoon.me/',
     epal: 'https://go.epal.gg/3dFj72r',
     locofy: 'https://www.locofy.ai/',
     workWithMeForm: 'https://forms.gle/DiWUnuNsj46b7Riu7',
+    dailyDotDev: 'https://daily.dev/',
     otta: 'https://otta.com/dom',
     goit: 'https://i.goit.global/oT1A',
+    invideo: 'https://invideo.io/i/Techwizzdom',
     practicum: 'https://practicum.com/',
     ottaPublic: 'https://otta.com/',
+    scribe: 'https://scribe.how/techwizzdom',
+    flow: 'https://www.flowvoice.ai/',
+    akool: 'https://akool.com/?via=domagoj',
+    sequence: 'https://go.getsequence.io/DOMA',
+    wixStudio: 'https://www.wix.com/studio/developers',
+    edxIgReel: 'http://edxcreator.sjv.io/213WZG',
+    edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
+    alty: 'https://bit.ly/3ztqJQx',
+    zeroToMastery:
+      'https://links.zerotomastery.io/webdevcareerpath_techwizzdom',
+    expertsExchange: 'https://bit.ly/45aacfz',
+    tripleten:
+      'https://tripleten.com/special/free-career-consultation/?utm_source=influencers&utm_medium=instagram&utm_campaign=tech_wizzdom&utm_content=reels',
+    courseCareers:
+      'https://coursecareers.com/a/techwizz?course=software-dev-fundamentals',
+    codedamn: 'https://cdm.sh/domagoj',
+    kickresume: 'https://www.kickresume.com/',
+    treblle:
+      'https://getaspen.io/?utm_source=shorts&utm_medium=domagoj&utm_campaign=aspen_collections',
+    creati: 'https://noxl.ink/aGlMR1',
+    apiInsightsTreblle:
+      'https://apiinsights.io/?utm_source=DomWizz&utm_medium=Influ&utm_campaign=ApiInsights&utm_id=DomInfl+2023',
+    sourcegraph: 'https://srcgr.ph/ufo4R',
+    careerist:
+      'https://www.careerist.com/qa?utm_source=influencer&utm_campaign=luda10&utm_medium=careerist',
+    kodezi: 'https://kodezi.com/',
+    pmpmastermind: 'https://pmpmastermind.com/',
+    theRichCreatorSkool: 'https://www.skool.com/the-rich-creator-3097/about',
+    filmora: 'https://bit.ly/3QE1Wyj',
+    theRichCreatorStripe: 'https://buy.stripe.com/fZeeYi0eG9i86o86op',
+    pulseway: 'https://www.pulseway.com/v2/land/tech-wiz',
+    hopscotch:
+      'https://app.gohopscotch.com/register?utm_campaign=Influencer Marketing_javascriptwizz&utm_source=influencermarketing_social&utm_medium=social post&utm_content=jsw_reel_tt_1',
+    appsmith:
+      'https://www.appsmith.com/?utm_source=TechWizzdom&utm_medium=social',
+    jamNewest:
+      'https://jam.dev/?utm_source=tiktok&utm_medium=paid&utm_campaign=tiktok_sponsorship_techwizzdom_2024_11',
+    justJoinIt: 'https://bit.ly/41t2uL9',
+    edrawmax: 'http://bit.ly/3ZuWJLc',
+    ruul: 'https://ruul.io/invoice?utm_medium=collabration&utm_source=domogoj&utm_campaign=javascriptwizz',
+    motoko: 'https://forms.gle/ESsv7BuUWJt9ZrHD7',
+    theRichCreatorNewsletter: 'https://stats.sender.net/forms/bDDqKb/view',
+    zeroKnowledgeToJob:
+      'https://techwizzom.gumroad.com/l/0-knowledge-to-frontend-engineering-job',
+    recoverIt: 'https://bit.ly/3TRj1FD',
+    breakIntoTechEBook:
+      'https://techwizzom.gumroad.com/l/break-into-tech-ebook',
+    ampere:
+      'https://shareasale.com/r.cfm?b=1537902&u=3619435&m=97296&urllink=&afftrack=',
+    mobileClean: 'https://drfone.wondershare.com/mobile-clean.html',
+    demoCreator: 'https://bit.ly/40zsdjk',
+    contentWizzardCourse:
+      'https://techwizzom.gumroad.com/l/500k-content-wizzard',
+    tenWeb:
+      'https://my.10web.io/setup-onboarding/start-ai-website-building?utm_source=Instagram&utm_medium=DM&utm_campaign=tech_wizzdom',
+    edrawMaxAi: 'https://bit.ly/3OyLYoP',
+    brilliant: 'https://brilliant.org/techwizzdom/',
+    bearer: 'https://www.bearer.com/',
+    codium: 'https://codium.ai/pr-ext',
+    abacus: 'https://chatllm.abacus.ai/',
+    codejet: 'https://www.codejet.ai/',
+    codesee: 'https://www.codesee.io/ai',
+    aidtschool:
+      'https://ai-dt.school/generative-ai/?utm_source=instagram&utm_medium=bloggers&utm_campaign=uforce&utm_content=tech_wizzdom',
+    pieces:
+      'https://pieces.app/?utm_source=dom&utm_medium=cpc&utm_campaign=dom-partner',
+    tango: 'https://www.tango.us/',
+    eagle: 'https://en.eagle.cool/',
+    equals: 'http://equals.1stcollab.com/tech_wizzdom',
+    storyblok:
+      'https://www.storyblok.com/technologies?utm_source=influencers&utm_medium=socialmedia&utm_campaign=DGM_DEV_TWD_TRA&utm_content=techWizzDom',
+    contra: 'https://contra.com/',
+    ionos: 'https://www.ionos.com/websites/website-builder',
+    tella: 'https://tella.tv/?via=techwizzdom',
+    storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
+    basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
+    tenWebECommerce: 'https://10web.io/ai-ecommerce-website-builder/',
+    amplication: 'https://eu1.hubs.ly/H09rFvn0',
+    echoApi1: 'https://www.echoapi.com/?utm_source=67b18144',
+    echoApi2: 'https://www.echoapi.com/plugin/vscode?utm_source=67b18144',
+    echoApi3:
+      'https://marketplace.visualstudio.com/items?itemName=EchoAPI.echoapi-for-vscode&ssr=false#review-details',
   },
   navigation: {
     home: 'Who Am I?',
@@ -208,6 +309,12 @@ export const t = {
     medium: 'Medium',
     tiktok: 'TikTok',
     instagram: 'Instagram',
+  },
+  socials: {
+    followers: '800k',
+    likes: '2.3M',
+    views: '90M',
+    saves: '600k',
   },
   study: {
     master: 'Master of Science in Information and Communication Technology',
