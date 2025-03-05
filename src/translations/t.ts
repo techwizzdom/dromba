@@ -197,7 +197,7 @@ export const t = {
     jam: 'https://jam.dev/',
     slashDataSurvey: 'https://developereconomics.net?member_id=tech_wizzdom',
     nebius:
-      'https://nebius.com/?utm_medium=cpc&utm_source=nebius_roadshow_ldn&utm_campaign=techwizzdom',
+      'https://nebius.com/?utm_medium=referral&utm_campaign=nark-interview&utm_source=techwisdom',
     bamblue: 'https://bamblueglasses.com/?ref=LxX0mVWrjCJrF',
     letsCreateAwesomeStuff:
       'https://calendly.com/domagojvidovic/lets-create-awesome-stuff',
