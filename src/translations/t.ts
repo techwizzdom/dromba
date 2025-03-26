@@ -158,6 +158,7 @@ export const t = {
     a1: 'https://www.a1.hr/',
     tomato: 'https://www.tomato.com.hr/',
     asseco: 'https://asseco.com/',
+    fireflies: 'https://fireflies.ai/',
     pbzMobileBankingApp:
       'https://play.google.com/store/apps/details?id=hr.asseco.android.intesa.isbd.pbz&hl=en',
     masterStudies:

@@ -51,19 +51,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Tango.ai', 'Tango.ai')}
-            href={t.link.tango}
+            onClick={() => trackEvent('Fireflies.ai', 'Fireflies.ai')}
+            href={t.link.fireflies}
           >
-            Tango.ai (free Chrome extension)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Nebius', 'Nebius')}
-            href={t.link.nebius}
-          >
-            Nebius
+            Fireflies.ai
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
