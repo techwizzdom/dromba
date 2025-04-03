@@ -51,6 +51,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('PippitAI', 'PippitAI')}
+            href={t.link.pippit}
+          >
+            Pippit AI (Marketing on autopilot)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Fireflies.ai', 'Fireflies.ai')}
             href={t.link.fireflies}
           >
