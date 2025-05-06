@@ -160,6 +160,7 @@ export const t = {
     asseco: 'https://asseco.com/',
     fireflies: 'https://fireflies.ai/',
     pippit: 'capcutcreator.pxf.io/Z6B7GW',
+    notta: 'https://notta.onelink.me/HOdi/techwizzdom',
     pbzMobileBankingApp:
       'https://play.google.com/store/apps/details?id=hr.asseco.android.intesa.isbd.pbz&hl=en',
     masterStudies:

@@ -33,15 +33,6 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Ragapi', 'Ragapi')}
-            href={t.link.ragapi}
-          >
-            Ragapi (add RAG API to your app in 5 mins)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
             onClick={() => trackEvent('Sparroww', 'Sparroww')}
             href={t.link.sparroww}
           >
@@ -51,19 +42,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('PippitAI', 'PippitAI')}
-            href={t.link.pippit}
+            onClick={() => trackEvent('Notta', 'Notta')}
+            href={t.link.notta}
           >
-            Pippit AI (Marketing on autopilot)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Fireflies.ai', 'Fireflies.ai')}
-            href={t.link.fireflies}
-          >
-            Fireflies.ai
+            Notta.ai (AI-powered meetings)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
