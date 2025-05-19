@@ -159,7 +159,7 @@ export const t = {
     tomato: 'https://www.tomato.com.hr/',
     asseco: 'https://asseco.com/',
     fireflies: 'https://fireflies.ai/',
-    pippit: 'http://capcutcreator.pxf.io/vP0PaN',
+    pippit: 'https://capcutcreator.pxf.io/vP0PaN',
     notta: 'https://notta.onelink.me/HOdi/techwizzdom',
     pbzMobileBankingApp:
       'https://play.google.com/store/apps/details?id=hr.asseco.android.intesa.isbd.pbz&hl=en',
