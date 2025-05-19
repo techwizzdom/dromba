@@ -42,10 +42,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Notta', 'Notta')}
-            href={t.link.notta}
+            onClick={() => trackEvent('Pippit', 'Pippit')}
+            href={t.link.pippit}
           >
-            Notta.ai (AI-powered meetings)
+            Pippit AI (Image to video)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
