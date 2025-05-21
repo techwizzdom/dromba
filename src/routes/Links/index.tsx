@@ -42,6 +42,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Gamma', 'Gamma')}
+            href={t.link.gamma}
+          >
+            Gamma (AI presentations)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Pippit', 'Pippit')}
             href={t.link.pippit}
           >

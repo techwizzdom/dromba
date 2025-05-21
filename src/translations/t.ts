@@ -192,6 +192,7 @@ export const t = {
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
     teal: 'https://tealhq.co/tech_wizzdom',
+    gamma: 'https://try.gamma.app/3gbs8yq8fw3r',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
     rapyd:
