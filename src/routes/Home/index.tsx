@@ -20,8 +20,8 @@ function Home() {
     <RouteContainer>
       <Helmetiser
         title="Who Am I?"
-        description="Frontend Engineer in a London tech-startup?"
-        url="https://www.domagojvidovic.com/about"
+        description="Tech Content Creator. Entrepreneur. Digital Nomad. CTO & Co-Founder Sparroww Inc."
+        url="https://www.techwizzdom.com/about"
       />
       <H1>{t.home.title}</H1>
       <H1>{t.home.subtitle}</H1>
@@ -201,8 +201,8 @@ function Home() {
         {t.home.paragraph.profiles.pt3}
         <Hyperlink href={t.link.medium}>{t.profile.medium}</Hyperlink>
         {t.home.paragraph.profiles.pt4}
-        <Hyperlink href={t.email.javascriptwizz} isEmail={true}>
-          {t.email.javascriptwizz}
+        <Hyperlink href={t.email.pr} isEmail={true}>
+          {t.email.pr}
         </Hyperlink>
         {t.home.paragraph.profiles.pt5}
       </H5>

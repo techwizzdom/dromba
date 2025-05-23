@@ -12,7 +12,7 @@ import Helmetiser from '../../components/core/Helmetiser';
 import ThisIsMe from '../../components/ThisIsMe';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
-import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
+// import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
 
 function Post() {
   const [post, setPost] = useState('');
@@ -57,8 +57,13 @@ function Post() {
   require('prismjs/components/prism-yaml');
   require('prismjs/components/prism-toml');
 
+  const renderer = new marked.Renderer();
+  renderer.link = function (href, title, text) {
+    return `<a href="${href}" target="_blank" rel="noopener noreferrer" title="${title}">${text}</a>`;
+  };
+
   marked.setOptions({
-    renderer: new marked.Renderer(),
+    renderer,
     highlight: function (code, lang) {
       Prism.hooks.add('before-highlight', function (env) {
         env.code = (env.element as HTMLElement).innerText;
@@ -93,7 +98,7 @@ function Post() {
       <Helmetiser
         title={title}
         description={subtitle}
-        url={`https://www.domagojvidovic.com/post/${path}`}
+        url={`https://www.techwizzdom.com/post/${path}`}
         image={previewImg || img}
       />
       <article className={articleCss}>
@@ -129,23 +134,26 @@ function Post() {
       </article>
       {!isLoading && (
         <div className={sharingOptionsCss}>
-          <span className={shareMeTextCss}>SHARE ME!</span>
+          <span className={shareMeTextCss}>
+            Do you find this post useful? Share it with a friend who will think
+            the same :)
+          </span>
           <div className={sharingIconsCss}>
-            <a
+            {/* <a
               className="twitter-share-button"
               target="_blank"
               rel="noopener noreferrer"
-              href={`https://twitter.com/intent/tweet?text="${title}" by @domagojvidovicc is a must-read article! 🚀`}
+              href={`https://twitter.com/intent/tweet?text="${title}" by @tech_wizzdom is a must-read article! 🚀 ${document.URL}`}
             >
               <Twitter />
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href={`https://www.linkedin.com/sharing/share-offsite?mini=true&url=${document.URL}`}
               target="_blank"
               rel="noopener noreferrer"
             >
               <LinkedIn />
-            </a>
+            </a> */}
           </div>
         </div>
       )}
