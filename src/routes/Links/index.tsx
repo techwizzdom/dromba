@@ -42,6 +42,13 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Metagpt', 'Metagpt')}
+            href={t.link.metagpt}
+          >
+            Metagpt (AI tech company)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
             onClick={() => trackEvent('Gamma', 'Gamma')}
             href={t.link.gamma}
           >
