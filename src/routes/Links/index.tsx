@@ -49,6 +49,8 @@ function Links() {
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Gamma', 'Gamma')}
             href={t.link.gamma}
           >
