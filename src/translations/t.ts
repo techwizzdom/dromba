@@ -194,6 +194,7 @@ export const t = {
     teal: 'https://tealhq.co/tech_wizzdom',
     gamma: 'https://try.gamma.app/3gbs8yq8fw3r',
     metagpt: 'https://tinyurl.com/3hmsk9bu',
+    capcut: 'https://capcut-yt.onelink.me/W3Oy/techwizzdom',
     aiCamp:
       'https://docs.google.com/forms/d/e/1FAIpQLSdYzMn_FEzPxrVx0yK0MEylVx7LajcLc3eekNW94h64Ga8zAw/viewform',
     rapyd:
