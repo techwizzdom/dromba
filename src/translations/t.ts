@@ -227,6 +227,7 @@ export const t = {
     edxIgReel: 'http://edxcreator.sjv.io/213WZG',
     edxTikTok: 'http://edxcreator.sjv.io/eKGKND',
     alty: 'https://bit.ly/3ztqJQx',
+    tari: 'https://www.tari.com/?utm_medium=TikTok&utm_campaign=tech_wizzdom',
     zeroToMastery:
       'https://links.zerotomastery.io/webdevcareerpath_techwizzdom',
     expertsExchange: 'https://bit.ly/45aacfz',
