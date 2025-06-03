@@ -42,46 +42,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Tari', 'Tari')}
-            href={t.link.tari}
+            onClick={() => trackEvent('Jam', 'Jam')}
+            href={t.link.jamNewest}
           >
-            Tari (make money in the background)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Capcut', 'Capcut')}
-            href={t.link.capcut}
-          >
-            Capcut (1-click captions)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Metagpt', 'Metagpt')}
-            href={t.link.metagpt}
-          >
-            Metagpt (AI tech company)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Gamma', 'Gamma')}
-            href={t.link.gamma}
-          >
-            Gamma (AI presentations)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Pippit', 'Pippit')}
-            href={t.link.pippit}
-          >
-            Pippit AI (Image to video)
+            Jam (Report bugs in seconds)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
