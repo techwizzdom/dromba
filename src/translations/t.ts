@@ -201,6 +201,7 @@ export const t = {
       'https://hackthegalaxy.dev/?utm_source=influencer&utm_medium=refferal&utm_campaign=HtG_BraveBison_NA_%7Cen_all_tiktok_awa_organic%7CDomagoj&utm_content=profilelink_NA_BBHTG-DOMTT001_2022-06-16',
     notyai: 'https://noty.ai/',
     jam: 'https://jam.dev/',
+    plaud: 'https://bit.ly/4dB4HKW',
     slashDataSurvey: 'https://developereconomics.net?member_id=tech_wizzdom',
     nebius:
       'https://nebius.com/?utm_medium=referral&utm_campaign=nark-interview&utm_source=techwisdom',

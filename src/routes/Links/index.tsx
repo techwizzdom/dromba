@@ -42,6 +42,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Plaud', 'Plaud')}
+            href={t.link.plaud}
+          >
+            Plaud (AI meeting pro)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Jam', 'Jam')}
             href={t.link.jamNewest}
           >
