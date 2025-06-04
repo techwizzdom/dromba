@@ -6,6 +6,7 @@ export const colors = {
   vanishingGray: '#d4d4d6',
   darkMoon: '#59595c',
   alienGreen: '#a2ff9e',
+  darkGreen: '#228a00',
   forestGreen: '#000000a6',
   gradientGreen: 'linear-gradient(90deg, #99fd67 0%, #58ffe4 100%)',
   gradientDark: 'linear-gradient(90deg, #181818 0%, #181818 100%)',
