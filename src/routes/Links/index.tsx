@@ -45,7 +45,7 @@ function Links() {
             onClick={() => trackEvent('Krisp', 'Krisp')}
             href={t.link.krisp}
           >
-            Krisp (AI meeting pro)
+            Krisp.ai (AI meeting assistant)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
