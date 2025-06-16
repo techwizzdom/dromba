@@ -143,6 +143,8 @@ export const t = {
     },
   },
   link: {
+    krisp:
+      'https://krisp.ai/?utm_source=instagram&utm_medium=influencer&utm_campaign=techwizzdom',
     secondBrain:
       'https://www.thesecondbrain.io/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     ragapi:
