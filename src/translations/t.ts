@@ -143,6 +143,8 @@ export const t = {
     },
   },
   link: {
+    producthunt:
+      'https://www.producthunt.com/products/second-brain-9?launch=second-brain-11',
     krisp:
       'https://krisp.ai/?utm_source=instagram&utm_medium=influencer&utm_campaign=techwizzdom',
     secondBrain:
