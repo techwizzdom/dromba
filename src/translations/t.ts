@@ -162,7 +162,8 @@ export const t = {
     a1: 'https://www.a1.hr/',
     tomato: 'https://www.tomato.com.hr/',
     asseco: 'https://asseco.com/',
-    fireflies: 'https://fireflies.ai/',
+    fireflies:
+      'https://fireflies.ai/?utm_source=Domagoj&utm_medium=Instagram&utm_campaign=TTF%20Influencer',
     pippit: 'https://capcutcreator.pxf.io/vP0PaN',
     notta: 'https://notta.onelink.me/HOdi/techwizzdom',
     pbzMobileBankingApp:
