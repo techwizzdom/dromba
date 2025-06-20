@@ -106,7 +106,7 @@ const iphoneCoverCss = (hasStarted: boolean) => css`
 const playIconCss = (isVideoPlaying: boolean) => css`
   position: absolute;
   opacity: ${isVideoPlaying ? '0' : '0.9'};
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 72px;

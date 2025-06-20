@@ -1,4 +1,4 @@
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 export const initGoogleAnalytics = () => {
   ReactGA.initialize('UA-177550269-1');
