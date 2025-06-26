@@ -33,15 +33,6 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Fireflies', 'Fireflies')}
-            href={t.link.fireflies}
-          >
-            Fireflies.ai (Talk to a live meeting)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
             onClick={() => trackEvent('Sparroww', 'Sparroww')}
             href={t.link.sparroww}
           >
@@ -51,19 +42,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Product Hunt', 'Product Hunt')}
-            href={t.link.producthunt}
+            onClick={() => trackEvent('Mysite.ai', 'Mysite.ai')}
+            href={t.link.mysiteai}
           >
-            Product Hunt (Second Brain)
+            Product Hunt (mysite.ai)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Krisp', 'Krisp')}
-            href={t.link.krisp}
+            onClick={() => trackEvent('Fireflies', 'Fireflies')}
+            href={t.link.fireflies}
           >
-            Krisp.ai
+            Fireflies.ai (Talk to a live meeting)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

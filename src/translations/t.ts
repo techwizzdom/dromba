@@ -143,6 +143,7 @@ export const t = {
     },
   },
   link: {
+    mysiteai: 'https://www.producthunt.com/products/mysite-ai',
     producthunt:
       'https://www.producthunt.com/products/second-brain-9?launch=second-brain-11',
     krisp:
