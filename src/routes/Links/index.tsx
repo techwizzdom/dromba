@@ -42,19 +42,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Mysite.ai', 'Mysite.ai')}
-            href={t.link.mysiteai}
+            onClick={() => trackEvent('Devin', 'Devin')}
+            href={t.link.devin}
           >
-            Product Hunt (mysite.ai)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Fireflies', 'Fireflies')}
-            href={t.link.fireflies}
-          >
-            Fireflies.ai (Talk to a live meeting)
+            Devin (AI software engineer)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
