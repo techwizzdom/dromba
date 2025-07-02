@@ -57,7 +57,7 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         {t.navigation.services}
       </Link> */}
-      <Link
+      {/* <Link
         to={Routes.TheRichCreator}
         className={navigationItemCss(
           theme,
@@ -78,7 +78,7 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
         Content Creation For Devs
-      </Link>
+      </Link> */}
       {/* <Link
         to={Routes.BreakIntoTech}
         className={navigationItemCss(
