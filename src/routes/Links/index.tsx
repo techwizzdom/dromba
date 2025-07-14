@@ -42,10 +42,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Devin', 'Devin')}
-            href={t.link.devin}
+            onClick={() => trackEvent('Storyblok', 'Storyblok')}
+            href={t.link.storyblok}
           >
-            Devin (AI software engineer)
+            Storyblok (Headless CMS with 1 click)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

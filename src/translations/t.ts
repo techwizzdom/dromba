@@ -298,7 +298,7 @@ export const t = {
     eagle: 'https://en.eagle.cool/',
     equals: 'http://equals.1stcollab.com/tech_wizzdom',
     storyblok:
-      'https://www.storyblok.com/technologies?utm_source=influencers&utm_medium=socialmedia&utm_campaign=DGM_DEV_TWD_TRA&utm_content=techWizzDom',
+      'https://www.storyblok.com/lp/blueprints?utm_source=dev_influencers&utm_medium=socialmedia&utm_campaign=DEV_GEN_AWA_7019W0000009XQBQA2&utm_term=TechWizzDom',
     contra: 'https://contra.com/',
     ionos: 'https://www.ionos.com/websites/website-builder',
     tella: 'https://tella.tv/?via=techwizzdom',
