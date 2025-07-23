@@ -297,6 +297,7 @@ export const t = {
     tango: 'https://www.tango.us/',
     eagle: 'https://en.eagle.cool/',
     equals: 'http://equals.1stcollab.com/tech_wizzdom',
+    lovart: 'https://www.lovart.ai/',
     storyblok:
       'https://www.storyblok.com/lp/blueprints?utm_source=dev_influencers&utm_medium=socialmedia&utm_campaign=DEV_GEN_AWA_7019W0000009XQBQA2&utm_term=TechWizzDom',
     contra: 'https://contra.com/',
