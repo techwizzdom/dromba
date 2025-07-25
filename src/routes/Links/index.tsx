@@ -11,12 +11,6 @@ import { trackEvent } from '../../util/metrics';
 import { H5 } from '../../components/core/Heading';
 import ThisIsMe from '../../components/ThisIsMe';
 
-const handleFile = () => {
-  console.log('clicked');
-  const path = require('path');
-  const root = path.dirname(require.main.filename);
-};
-
 function Links() {
   return (
     <RouteContainer isPureCenteringEnabled={true}>
