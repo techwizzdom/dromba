@@ -11,6 +11,12 @@ import { trackEvent } from '../../util/metrics';
 import { H5 } from '../../components/core/Heading';
 import ThisIsMe from '../../components/ThisIsMe';
 
+const handleFile = () => {
+  console.log('clicked');
+  const path = require('path');
+  const root = path.dirname(require.main.filename);
+};
+
 function Links() {
   return (
     <RouteContainer isPureCenteringEnabled={true}>
@@ -37,6 +43,15 @@ function Links() {
             href={t.link.sparroww}
           >
             Sparroww (Digital Hollywood)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Fish Audio', 'Fish Audio')}
+            href={t.link.fishaudio}
+          >
+            Fish Audio (The best text to speech)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>

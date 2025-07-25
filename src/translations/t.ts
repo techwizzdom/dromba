@@ -303,6 +303,7 @@ export const t = {
     contra: 'https://contra.com/',
     ionos: 'https://www.ionos.com/websites/website-builder',
     tella: 'https://tella.tv/?via=techwizzdom',
+    fishaudio: 'https://s.fish.audio/techwizzdom',
     storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
     basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
     tenWebECommerce: 'https://10web.io/ai-ecommerce-website-builder/',
