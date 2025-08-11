@@ -298,8 +298,7 @@ export const t = {
     eagle: 'https://en.eagle.cool/',
     equals: 'http://equals.1stcollab.com/tech_wizzdom',
     lovart: 'https://www.lovart.ai/',
-    storyblok:
-      'https://www.storyblok.com/lp/blueprints?utm_source=dev_influencers&utm_medium=socialmedia&utm_campaign=DEV_GEN_AWA_7019W0000009XQBQA2&utm_term=TechWizzDom',
+    storyblok: 'https://www.storyblok.com/lp/developers',
     contra: 'https://contra.com/',
     ionos: 'https://www.ionos.com/websites/website-builder',
     tella: 'https://tella.tv/?via=techwizzdom',

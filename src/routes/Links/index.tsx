@@ -42,19 +42,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Fish Audio', 'Fish Audio')}
-            href={t.link.fishaudio}
+            onClick={() => trackEvent('Storyblok', 'Storyblok')}
+            href={t.link.storyblok}
           >
-            Fish Audio (The best text to speech)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Lovart', 'Lovart')}
-            href={t.link.lovart}
-          >
-            Lovart (AI design agent)
+            Storyblok (Headless CMS)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
