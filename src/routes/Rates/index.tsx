@@ -107,13 +107,7 @@ function Pricing() {
               <strong>2 Instagram stories (with a clickable link)</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              <strong>1 LinkedIn video post</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              <strong>1 Tweet with video</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              <strong>1 TikTok story</strong>
+              <strong>60-90s integration in a long-form YouTube video</strong>
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
