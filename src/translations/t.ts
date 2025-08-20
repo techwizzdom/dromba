@@ -151,6 +151,7 @@ export const t = {
       'https://krisp.ai/?utm_source=instagram&utm_medium=influencer&utm_campaign=techwizzdom',
     secondBrain:
       'https://www.thesecondbrain.io/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
+    devibe: 'https://devibe.network/',
     ragapi:
       'https://www.ragapi.tech/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     sparroww:
