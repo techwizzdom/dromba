@@ -42,6 +42,23 @@ const Heading: React.FC<IHeadingProps> = (props: IHeadingProps) => {
 
   const theme = React.useContext(ThemeContext);
 
+  const checkIfElementIsVertical = () => {
+    return React.isValidElement(children) && children.type === 'span';
+  };
+
+  if (checkIfElementIsVertical()) {
+    return (
+      <span
+        className={cx(
+          headingCss(size, theme, isHoverable, alignCenter, isMegaBold, isThin),
+          'heading',
+        )}
+      >
+        {children}
+      </span>
+    );
+  }
+
   return React.createElement(
     tag,
     {
