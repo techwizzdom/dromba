@@ -145,6 +145,7 @@ export const t = {
   link: {
     devin: 'https://devin.ai/',
     mysiteai: 'https://www.producthunt.com/products/mysite-ai',
+    warpCode: 'https://go.warp.dev/techwizz',
     producthunt:
       'https://www.producthunt.com/products/second-brain-9?launch=second-brain-11',
     krisp:
