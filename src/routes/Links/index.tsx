@@ -51,19 +51,19 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Warp Code', 'Warp Code')}
-            href={t.link.warpCode}
+            onClick={() => trackEvent('Decodo', 'Decodo')}
+            href={t.link.decodo}
           >
-            Warp Code (The best coding agent)
+            Decodo (Perfect proxy + way more)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Limitless AI', 'Limitless AI')}
-            href={t.link.limitless}
+            onClick={() => trackEvent('Warp Code', 'Warp Code')}
+            href={t.link.warpCode}
           >
-            Limitless AI
+            Warp Code (The best coding agent)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
