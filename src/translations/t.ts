@@ -147,6 +147,7 @@ export const t = {
     mysiteai: 'https://www.producthunt.com/products/mysite-ai',
     limitless: 'https://limitless.1stcollab.com/tech_wizzdom_tt',
     decodo: 'https://visit.decodo.com/POZbdQ',
+    enlead: 'https://enlead.co/',
     warpCode: 'https://go.warp.dev/techwizz',
     producthunt:
       'https://www.producthunt.com/products/second-brain-9?launch=second-brain-11',

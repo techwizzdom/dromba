@@ -42,6 +42,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Enlead', 'Enlead')}
+            href={t.link.enlead}
+          >
+            Enlead (Bulk find influencer emails)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Sparroww', 'Sparroww')}
             href={t.link.sparroww}
           >
