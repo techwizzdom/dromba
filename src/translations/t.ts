@@ -148,6 +148,7 @@ export const t = {
     limitless: 'https://limitless.1stcollab.com/tech_wizzdom_tt',
     decodo: 'https://visit.decodo.com/POZbdQ',
     enlead: 'https://enlead.co/',
+    jamMcp: 'https://jam.dev/docs/debug-a-jam/mcp',
     warpCode: 'https://go.warp.dev/techwizz',
     producthunt:
       'https://www.producthunt.com/products/second-brain-9?launch=second-brain-11',
