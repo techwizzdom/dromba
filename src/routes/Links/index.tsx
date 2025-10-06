@@ -54,7 +54,7 @@ function Links() {
             onClick={() => trackEvent('Jam MCP', 'Jam MCP')}
             href={t.link.jamMcp}
           >
-            Jam MCP (Jam MCP)
+            Jam MCP (Paste link and AI fixes it)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
