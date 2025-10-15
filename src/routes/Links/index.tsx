@@ -51,10 +51,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Jam MCP', 'Jam MCP')}
-            href={t.link.jamMcp}
+            onClick={() =>
+              trackEvent(
+                'Vibe for WordPress by 10Web',
+                'Vibe for WordPress by 10Web',
+              )
+            }
+            href={t.link.tenWeb}
           >
-            Jam MCP (Paste link and AI fixes it)
+            Vibe for WordPress by 10Web
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
@@ -75,24 +80,7 @@ function Links() {
             Sparroww (Digital Hollywood)
           </Hyperlink>
         </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Decodo', 'Decodo')}
-            href={t.link.decodo}
-          >
-            Decodo (Perfect proxy + way more)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Warp Code', 'Warp Code')}
-            href={t.link.warpCode}
-          >
-            Warp Code (The best coding agent)
-          </Hyperlink>
-        </H5>
+
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}

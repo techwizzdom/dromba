@@ -288,7 +288,7 @@ export const t = {
     contentWizzardCourse:
       'https://techwizzom.gumroad.com/l/500k-content-wizzard',
     tenWeb:
-      'https://my.10web.io/setup-onboarding/start-ai-website-building?utm_source=Instagram&utm_medium=DM&utm_campaign=tech_wizzdom',
+      'https://10web.io/?utm_source=Instagram&utm_medium=Influencer&utm_campaign=techwizzdom',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
     bearer: 'https://www.bearer.com/',
