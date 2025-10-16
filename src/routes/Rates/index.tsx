@@ -120,6 +120,9 @@ function Pricing() {
                 months
               </strong>
             </PricingBlockItem>
+            <PricingBlockItem bonus>
+              <strong>+$2500 for a dedicated YouTube long-form</strong>
+            </PricingBlockItem>
           </div>
         </div>
         <div className={pricingItemCss(theme)}>
@@ -145,6 +148,9 @@ function Pricing() {
             </PricingBlockItem>
             <PricingBlockItem isError>
               Ownership of the created content
+            </PricingBlockItem>
+            <PricingBlockItem bonus>
+              <strong>+$2500 for a dedicated YouTube long-form</strong>
             </PricingBlockItem>
           </div>
         </div>

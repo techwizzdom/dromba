@@ -107,13 +107,7 @@ function Pricing() {
               <strong>2 Instagram stories (with a clickable link)</strong>
             </PricingBlockItem>
             <PricingBlockItem>
-              <strong>1 LinkedIn video post</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              <strong>1 Tweet with video</strong>
-            </PricingBlockItem>
-            <PricingBlockItem>
-              <strong>1 TikTok story</strong>
+              <strong>60-90s integration in a long-form YouTube video</strong>
             </PricingBlockItem>
             <PricingBlockItem>CTA to any link you provide</PricingBlockItem>
             <PricingBlockItem>
@@ -125,6 +119,9 @@ function Pricing() {
                 Full ownership and ad authorisation of the created content for 3
                 months
               </strong>
+            </PricingBlockItem>
+            <PricingBlockItem bonus>
+              <strong>+$2900 for a dedicated YouTube long-form</strong>
             </PricingBlockItem>
           </div>
         </div>
@@ -151,6 +148,9 @@ function Pricing() {
             </PricingBlockItem>
             <PricingBlockItem isError>
               Ownership of the created content
+            </PricingBlockItem>
+            <PricingBlockItem bonus>
+              <strong>+$2900 for a dedicated YouTube long-form</strong>
             </PricingBlockItem>
           </div>
         </div>
