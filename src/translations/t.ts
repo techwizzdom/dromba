@@ -291,6 +291,7 @@ export const t = {
       'https://10web.io/?utm_source=Instagram&utm_medium=Influencer&utm_campaign=techwizzdom',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
+    replit: 'https://replit.com/refer/dom121',
     bearer: 'https://www.bearer.com/',
     codium: 'https://codium.ai/pr-ext',
     abacus: 'https://chatllm.abacus.ai/',
