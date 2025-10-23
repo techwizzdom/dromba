@@ -51,26 +51,27 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() =>
+              trackEvent(
+                'Warp (Agentic Development Environment)',
+                'Warp (Agentic Development Environment)',
+              )
+            }
+            href={t.link.warpCode}
+          >
+            Warp (Agentic Development Environment)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() => trackEvent('Replit', 'Replit')}
             href={t.link.replit}
           >
             Replit (Vibe code on a phone!)
           </Hyperlink>
         </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() =>
-              trackEvent(
-                'Vibe for WordPress by 10Web',
-                'Vibe for WordPress by 10Web',
-              )
-            }
-            href={t.link.tenWeb}
-          >
-            Vibe for WordPress by 10Web
-          </Hyperlink>
-        </H5>
+
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
