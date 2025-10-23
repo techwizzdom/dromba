@@ -17,134 +17,79 @@ function Links() {
       <Helmetiser
         title="Links"
         description="Find out about my great offers."
-        url="https://www.domagojvidovic.com/links"
+        url="https://www.techwizzdom.com/links"
       />
       <ThisIsMe />
       <div className={linksContainerCss}>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Buy me a croissant', 'Links page')}
-            href={t.link.buyMeACroissant}
+            onClick={() => trackEvent('Second Brain', 'Second Brain')}
+            href={t.link.secondBrain}
           >
-            Buy me a croissant - I love them!
+            Second Brain (the smartest AI)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('GoIT', 'Click')}
-            href={t.link.goit}
+            onClick={() => trackEvent('Devibe', 'Devibe')}
+            href={t.link.devibe}
           >
-            GoIT FREE demo course
+            DeVibe (Connecting devs and vibe coders)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Otta', 'Click')}
-            href={t.link.otta}
+            onClick={() => trackEvent('Enlead', 'Enlead')}
+            href={t.link.enlead}
           >
-            Otta
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Locofy', 'Click')}
-            href={t.link.locofy}
-          >
-            Locofy.ai
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('E-Pal', 'Referal')}
-            href={t.link.epal}
-          >
-            E-Pal
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Rapyd', 'Hack the galaxy')}
-            href={t.link.rapyd}
-          >
-            Hack The Galaxy
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            isEmail={true}
-            onClick={() => trackEvent('Email', 'Links')}
-            href={t.email.javascriptwizz}
-          >
-            {t.email.javascriptwizz}
+            Enlead (Bulk find influencer emails)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() =>
-              trackEvent('Booking', '45 min - Links - social media mentoring')
+              trackEvent(
+                'Warp (Agentic Development Environment)',
+                'Warp (Agentic Development Environment)',
+              )
             }
-            href={t.link.book45minsSocials}
+            href={t.link.warpCode}
           >
-            Social Media Mentoring (45 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $199
-            </span>
-            $149)
+            Warp (Agentic Development Environment)
           </Hyperlink>
         </H5>
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Booking', '60 min - Links')}
-            href={t.link.book60mins}
+            onClick={() => trackEvent('Replit', 'Replit')}
+            href={t.link.replit}
           >
-            Tech Mentoring (60 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $149
-            </span>
-            $119)
+            Replit (Vibe code on a phone!)
           </Hyperlink>
         </H5>
+
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Booking', '30 min - Links')}
-            href={t.link.book30mins}
+            onClick={() => trackEvent('Sparroww', 'Sparroww')}
+            href={t.link.sparroww}
           >
-            Tech Mentoring (30 mins,{' '}
-            <span
-              style={{
-                textDecoration: 'line-through',
-                marginRight: '4px',
-                fontSize: '14px',
-                fontWeight: 400,
-              }}
-            >
-              $99
-            </span>
-            $79)
+            Sparroww (Digital Hollywood)
+          </Hyperlink>
+        </H5>
+
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            isEmail={true}
+            onClick={() => trackEvent('Email', 'Links')}
+            href={t.email.techwizzdom}
+          >
+            {t.email.techwizzdom}
           </Hyperlink>
         </H5>
       </div>

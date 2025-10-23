@@ -7,16 +7,16 @@ interface IHelmetiserProps {
   url?: string;
 }
 
-const DEFAULT_TITLE = 'JavaScript Wizz';
+const DEFAULT_TITLE = 'Tech Wizzdom';
 const DEFAULT_DESCRIPTION =
-  'Senior frontend engineer turned into tech content creator and influencer. I make viral tech content.';
-const DEFAULT_IMAGE = 'https://i.imgur.com/lvEdL9Q.png';
-const DEFAULT_URL = 'https://domagojvidovic.com';
+  'A 9-5 senior frontend engineer turned into tech content creator, influencer and tech startup founder. I make viral technology content.';
+const DEFAULT_IMAGE = 'https://i.imgur.com/BsBbxEn.png';
+const DEFAULT_URL = 'https://techwizzdom.com';
 
 function Helmetiser(props: IHelmetiserProps) {
   const { title, description, image, url } = props;
 
-  const updatedTitle = `${title || DEFAULT_TITLE} — Domagoj Vidovic`;
+  const updatedTitle = `${title || DEFAULT_TITLE} — Domagoj Lalk Vidovic`;
   document.title = updatedTitle;
   document
     .querySelector('[property="og:title"]')

@@ -4,7 +4,7 @@ import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
 import { Routes } from '../../routes/Routes';
-import BuyMeACroissant from '../BuyMeACroissant';
+// import BuyMeACroissant from '../BuyMeACroissant';
 
 interface IRouteContainerProps {
   children: React.ReactNode;
@@ -55,7 +55,7 @@ const RouteContainer: React.FC<IRouteContainerProps> = (
       onClick={() => onClick && onClick()}
     >
       {children}
-      {location.pathname !== Routes.Me && <BuyMeACroissant />}
+      {/* {location.pathname !== Routes.Me && <BuyMeACroissant />} */}
     </div>
   );
 };

@@ -46,7 +46,7 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
 
   return (
     <>
-      <Link
+      {/* <Link
         to={Routes.Services}
         className={navigationItemCss(
           theme,
@@ -56,14 +56,47 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
         {t.navigation.services}
+      </Link> */}
+      {/* <Link
+        to={Routes.TheRichCreator}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.TheRichCreator),
+        )}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        The Rich Creator
       </Link>
       <Link
+        to={Routes.ContentCreationForDevs}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.ContentCreationForDevs),
+        )}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        Content Creation For Devs
+      </Link> */}
+      {/* <Link
+        to={Routes.BreakIntoTech}
+        className={navigationItemCss(
+          theme,
+          isMobile,
+          isSelected(Routes.BreakIntoTech),
+        )}
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        Break into tech
+      </Link> */}
+      {/* <Link
         to={Routes.Art}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Art))}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
         {t.navigation.art}
-      </Link>
+      </Link> */}
       <Link
         to={Routes.Blog}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Blog))}
@@ -71,14 +104,6 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         {t.navigation.blog}
       </Link>
-      <a
-        className={navigationItemCss(theme, isMobile, false)}
-        href={t.link.buyMeACroissant}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Buy Me a Croissant
-      </a>
       <Link
         to={Routes.Links}
         className={navigationItemCss(theme, isMobile, isSelected(Routes.Links))}
