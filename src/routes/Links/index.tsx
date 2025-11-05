@@ -53,22 +53,13 @@ function Links() {
             isUnderline={true}
             onClick={() =>
               trackEvent(
-                'Warp (Agentic Development Environment)',
-                'Warp (Agentic Development Environment)',
+                'Granola (perfect meeting assistant)',
+                'Granola (perfect meeting assistant)',
               )
             }
-            href={t.link.warpCode}
+            href={t.link.granola}
           >
-            Warp (Agentic Development Environment)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Replit', 'Replit')}
-            href={t.link.replit}
-          >
-            Replit (Vibe code on a phone!)
+            Granola (perfect meeting assistant)
           </Hyperlink>
         </H5>
 

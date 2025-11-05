@@ -150,6 +150,8 @@ export const t = {
     enlead: 'https://enlead.co/',
     jamMcp: 'https://jam.dev/docs/debug-a-jam/mcp',
     warpCode: 'https://go.warp.dev/techwizz',
+    granola:
+      'https://granola.ai/?utm_source=Influencer&utm_medium=TikTok&utm_content=33',
     producthunt:
       'https://www.producthunt.com/products/second-brain-9?launch=second-brain-11',
     krisp:
