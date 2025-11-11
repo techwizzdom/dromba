@@ -51,6 +51,15 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
+            onClick={() => trackEvent('Hume', 'Hume')}
+            href={t.link.hume}
+          >
+            Hume (Best human-like text-to-speech)
+          </Hyperlink>
+        </H5>
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
             onClick={() =>
               trackEvent(
                 'Granola (perfect meeting assistant)',

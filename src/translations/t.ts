@@ -150,6 +150,7 @@ export const t = {
     enlead: 'https://enlead.co/',
     jamMcp: 'https://jam.dev/docs/debug-a-jam/mcp',
     warpCode: 'https://go.warp.dev/techwizz',
+    hume: 'https://try.hume.ai/techwizzdom',
     granola:
       'https://granola.ai/?utm_source=Influencer&utm_medium=TikTok&utm_content=33',
     producthunt:
