@@ -48,27 +48,14 @@ function Links() {
             Enlead (Bulk find influencer emails)
           </Hyperlink>
         </H5>
+
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Hume', 'Hume')}
-            href={t.link.hume}
+            onClick={() => trackEvent('Skywork', 'Skywork')}
+            href={t.link.skywork}
           >
-            Hume (Best human-like text-to-speech)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() =>
-              trackEvent(
-                'Granola (perfect meeting assistant)',
-                'Granola (perfect meeting assistant)',
-              )
-            }
-            href={t.link.granola}
-          >
-            Granola (perfect meeting assistant)
+            Skywork (AI for EVERYTHING)
           </Hyperlink>
         </H5>
 

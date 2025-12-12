@@ -144,6 +144,7 @@ export const t = {
   },
   link: {
     devin: 'https://devin.ai/',
+    skywork: 'https://skywork.ai/p/KD6C8c',
     mysiteai: 'https://www.producthunt.com/products/mysite-ai',
     limitless: 'https://limitless.1stcollab.com/tech_wizzdom_tt',
     decodo: 'https://visit.decodo.com/POZbdQ',
