@@ -52,10 +52,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Skywork', 'Skywork')}
-            href={t.link.skywork}
+            onClick={() => trackEvent('Manus.AI', 'Manus.AI')}
+            href={t.link.manus}
           >
-            Skywork (AI for EVERYTHING)
+            Manus.AI (Become a 10x founder)
           </Hyperlink>
         </H5>
 

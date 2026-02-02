@@ -206,6 +206,7 @@ export const t = {
     book30mins: 'https://calendly.com/domagojvidovic/career-code-mentoring',
     book45minsSocials:
       'https://calendly.com/domagojvidovic/social-media-mentoring',
+    manus: 'https://manus.im/redeem?c=TWDM0136',
     book60mins:
       'https://calendly.com/domagojvidovic/career-code-mentoring-full',
     teal: 'https://tealhq.co/tech_wizzdom',
