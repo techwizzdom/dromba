@@ -25,35 +25,62 @@ export interface ILogoDiving {
 
 const headerDesktopCss = css`
   position: sticky;
-  top: 14px;
-  z-index: 20;
+  top: 12px;
+  z-index: 30;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 18px;
 
-  padding: 10px 14px;
+  padding: 10px 18px;
   margin: 0 auto;
-  max-width: 1180px;
-  min-height: 64px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(14px);
-  box-shadow: 0 14px 35px rgba(8, 15, 45, 0.16);
+  max-width: 1280px;
+  min-height: 72px;
+  border-radius: 2px;
+  border: 2px solid rgba(255, 212, 0, 0.75);
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.96) 0%, rgba(15, 15, 15, 0.96) 100%);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.44);
+  text-transform: uppercase;
 
   @media ${Media.Tablet} {
-    max-width: 1080px;
+    max-width: 1160px;
     top: 10px;
   }
 `;
 
+const brandCss = css`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 230px;
+`;
+
 const logoLinkCss = css`
-  height: 42px;
-  width: 42px;
+  height: 44px;
+  width: 44px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
+  border: 1px solid rgba(255, 212, 0, 0.5);
+`;
+
+const brandTextCss = css`
+  display: flex;
+  flex-direction: column;
+  color: #fff2a0;
+  line-height: 1;
+
+  strong {
+    font-size: 18px;
+    letter-spacing: 0.08em;
+  }
+
+  span {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    color: rgba(255, 212, 0, 0.76);
+    margin-top: 6px;
+  }
 `;
 
 const logoCss = (
@@ -91,13 +118,19 @@ const HeaderDesktop: React.FC<IHeaderDesktopProps> = (
 
   return (
     <div className={headerDesktopCss}>
-      <Link to={Routes.Me} className={logoLinkCss}>
-        <img
-          src={Logodrobmba}
-          className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
-          alt="domagoj-vidovic-head-logo"
-        />
-      </Link>
+      <div className={brandCss}>
+        <Link to={Routes.Me} className={logoLinkCss}>
+          <img
+            src={Logodrobmba}
+            className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
+            alt="domagoj-vidovic-head-logo"
+          />
+        </Link>
+        <div className={brandTextCss}>
+          <strong>Tech Wizzdom</strong>
+          <span>Creator Studio</span>
+        </div>
+      </div>
       <MainNavigation />
       <ThemeToggle toggleTheme={toggleTheme} />
     </div>

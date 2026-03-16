@@ -21,8 +21,9 @@ const mainContainerCss = (theme: Theme) => css`
   background: ${theme.gradientBackground};
   color: ${theme.textColor};
 
-  transition: color 0.6s ease, background 0.6s ease;
-  padding-bottom: 96px;
+  transition: color 0.4s ease, background 0.4s ease;
+  padding-bottom: 84px;
+  overflow-x: hidden;
 
   &::before,
   &::after {
@@ -30,33 +31,33 @@ const mainContainerCss = (theme: Theme) => css`
     position: fixed;
     pointer-events: none;
     z-index: -1;
-    filter: blur(72px);
-    opacity: ${theme.isDark ? 0.5 : 0.68};
+    filter: blur(80px);
+    opacity: 0.5;
   }
 
   &::before {
-    width: 440px;
-    height: 440px;
-    left: -120px;
-    top: -100px;
+    width: 420px;
+    height: 420px;
+    left: -80px;
+    top: -120px;
     border-radius: 50%;
     background: radial-gradient(
       circle,
-      rgba(74, 216, 255, 0.58) 0%,
-      rgba(74, 216, 255, 0) 70%
+      rgba(255, 212, 0, 0.58) 0%,
+      rgba(255, 212, 0, 0) 70%
     );
   }
 
   &::after {
-    width: 520px;
-    height: 520px;
-    right: -140px;
-    top: -80px;
+    width: 500px;
+    height: 500px;
+    right: -120px;
+    top: -60px;
     border-radius: 50%;
     background: radial-gradient(
       circle,
-      rgba(111, 92, 255, 0.48) 0%,
-      rgba(111, 92, 255, 0) 68%
+      rgba(255, 212, 0, 0.32) 0%,
+      rgba(255, 212, 0, 0) 68%
     );
   }
 `;

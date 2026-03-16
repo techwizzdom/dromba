@@ -82,8 +82,9 @@ function Me() {
         structuredData={structuredData}
       />
       <main className={pageCss(theme)}>
-        <section className={heroSectionCss(theme)}>
-          <div className={meTextContentCss}>
+        <section className={heroShellCss}>
+          <article className={heroTextCss}>
+            <span className={eyebrowCss}>Professional Tech Content Creator</span>
             <H1>
               Hey{' '}
               <img
@@ -100,18 +101,21 @@ function Me() {
               </H4>
               <H4>I make viral tech content.</H4>
             </div>
-            <div className={statsCss}>
-              <span className={statChipCss(theme)}>
-                <H3 isMegaBold={true}>{t.socials.followers}+ followers</H3>
-              </span>
-              <span className={statChipCss(theme)}>
-                <H3 isMegaBold={true}>{t.socials.likes}+ likes</H3>
-              </span>
-              <span className={statChipCss(theme)}>
-                <H3 isMegaBold={true}>{t.socials.views}+ views</H3>
-              </span>
+            <div className={statsGridCss}>
+              <div className={statBlockCss}>
+                <H3 isMegaBold={true}>{t.socials.followers}+</H3>
+                <p>followers</p>
+              </div>
+              <div className={statBlockCss}>
+                <H3 isMegaBold={true}>{t.socials.likes}+</H3>
+                <p>likes</p>
+              </div>
+              <div className={statBlockCss}>
+                <H3 isMegaBold={true}>{t.socials.views}+</H3>
+                <p>views</p>
+              </div>
             </div>
-            <div className={heroActionsCss}>
+            <div className={actionRowCss}>
               <a
                 className={letsWorkButton(theme)}
                 href={t.link.workWithMeForm}
@@ -128,19 +132,23 @@ function Me() {
               </H5>
             </div>
             <SocialProfiles showTopFourOnly={true} />
-          </div>
-          <div className={heroImageShellCss(theme)}>
+          </article>
+
+          <aside className={heroVisualCss}>
             <img
               className={logoMeCss}
               src="https://i.imgur.com/o7M8EtZ.jpg"
               alt="Dom standing and smiling"
               loading="eager"
             />
-          </div>
+          </aside>
         </section>
 
-        <section className={contentSectionCss(theme)}>
-          <H2>These 6 videos combined got 20M+ views.</H2>
+        <section className={techSectionCss}>
+          <div className={sectionTitleCss}>
+            <span>Showreel</span>
+            <H2>These 6 videos combined got 20M+ views.</H2>
+          </div>
           <div className={contentExamplesCss}>
             <Iphone
               video="https://i.imgur.com/9prWR8s.mp4"
@@ -170,40 +178,46 @@ function Me() {
           </div>
         </section>
 
-        <section className={contentSectionCss(theme)}>
-          <H2>Apparently, people love to work with me!</H2>
+        <section className={techSectionCss}>
+          <div className={sectionTitleCss}>
+            <span>Client feedback</span>
+            <H2>Apparently, people love to work with me!</H2>
+          </div>
           <TestimonialsGrid customTestimonials={testimonials} />
         </section>
 
-        <section className={pricingSectionCss(theme)}>
-          <H2>I charge way less than your local TV station.</H2>
-          <H5>Starting at:</H5>
-          <ul>
-            <li>$300 for an hour of consulting</li>
-            <li>$4500 for a promo post on my social media</li>
-          </ul>
+        <section className={splitOfferCss}>
+          <div className={offerBoxCss}>
+            <span>Rates</span>
+            <H2>I charge way less than your local TV station.</H2>
+            <H5>Starting at:</H5>
+            <ul>
+              <li>$300 for an hour of consulting</li>
+              <li>$4500 for a promo post on my social media</li>
+            </ul>
+          </div>
+          <div className={offerBoxCss}>
+            <span>Collaboration</span>
+            <H2>Do you want me to make viral tech content for you?</H2>
+            <a
+              className={letsWorkButton(theme)}
+              href={t.link.workWithMeForm}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LET&apos;S GO!
+            </a>
+            <H5>
+              or drop me an email at{' '}
+              <Hyperlink href={t.email.pr} isEmail={true}>
+                {t.email.pr}
+              </Hyperlink>
+            </H5>
+            <SocialProfiles showTopFourOnly={true} />
+          </div>
         </section>
 
-        <section className={ctaSectionCss(theme)}>
-          <H2>Do you want me to make viral tech content for you?</H2>
-          <a
-            className={letsWorkButton(theme)}
-            href={t.link.workWithMeForm}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LET&apos;S GO!
-          </a>
-          <H5 alignCenter>
-            or drop me an email at{' '}
-            <Hyperlink href={t.email.pr} isEmail={true}>
-              {t.email.pr}
-            </Hyperlink>
-          </H5>
-          <SocialProfiles showTopFourOnly={true} />
-        </section>
-
-        <div className={privacyPolicyCss(isPolicyOpen, theme)}>
+        <div className={privacyPolicyCss(isPolicyOpen)}>
           To improve your experience even more, I use cookies for analytics.
           Find out more{' '}
           <Hyperlink href="https://www.freeprivacypolicy.com/live/00b087ad-a4a1-4885-8265-15beceb176df">
@@ -218,66 +232,52 @@ function Me() {
 const pageCss = (theme: Theme) => css`
   display: flex;
   flex-direction: column;
-  gap: 34px;
+  gap: 24px;
   color: ${theme.textColor};
 `;
 
-const heroSectionCss = (theme: Theme) => css`
+const heroShellCss = css`
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
-  gap: 26px;
-  align-items: stretch;
-  border-radius: 28px;
-  border: 1px solid ${theme.isDark ? 'rgba(238, 241, 255, 0.22)' : 'rgba(16, 18, 49, 0.12)'};
-  background: ${theme.isDark
-    ? 'linear-gradient(135deg, rgba(14, 18, 42, 0.74) 0%, rgba(18, 22, 50, 0.74) 100%)'
-    : 'linear-gradient(135deg, rgba(255, 255, 255, 0.84) 0%, rgba(246, 248, 255, 0.84) 100%)'};
-  box-shadow: 0 24px 50px rgba(8, 14, 42, 0.16);
-  padding: 34px;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+  gap: 12px;
+  border: 2px solid rgba(255, 212, 0, 0.65);
+  background: linear-gradient(180deg, rgba(8, 8, 8, 0.98) 0%, rgba(15, 15, 15, 0.98) 100%);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
+  padding: 14px;
 
   @media ${Media.Mobile} {
     grid-template-columns: 1fr;
-    padding: 18px;
-    gap: 18px;
+    gap: 10px;
+    padding: 10px;
   }
 `;
 
-const privacyPolicyCss = (isPolicyOpen: boolean, theme: Theme) => css`
-  display: ${isPolicyOpen ? 'block' : 'none'};
-  width: 340px;
-  position: fixed;
-  bottom: 24px;
-  left: calc(50vw - 170px);
-  padding: 14px 18px;
-  font-size: 12px;
-  text-align: center;
-  line-height: 1.45;
-  z-index: 30;
-  box-shadow: 0 18px 42px rgba(7, 14, 44, 0.3);
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.34)' : 'rgba(16, 20, 48, 0.28)'};
-  background: ${theme.isDark
-    ? 'rgba(15, 19, 47, 0.9)'
-    : 'rgba(255, 255, 255, 0.92)'};
-  border-radius: 12px;
+const heroTextCss = css`
+  border: 1px solid rgba(255, 212, 0, 0.5);
+  background: rgba(10, 10, 10, 0.92);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+
+  @media ${Media.Mobile} {
+    padding: 16px;
+  }
 `;
 
 const logoMeCss = css`
   display: block;
   width: 100%;
-  max-height: 560px;
+  height: 100%;
+  max-height: 650px;
   object-fit: cover;
-  border-radius: 26px;
-
-  @media ${Media.Mobile} {
-    max-height: 420px;
-  }
 `;
 
 const fireEmojiCss = css`
-  height: 52px;
-  width: 52px;
-  margin-bottom: -6px;
+  height: 46px;
+  width: 46px;
+  margin-bottom: -4px;
 
   @media ${Media.Mobile} {
     height: 36px;
@@ -285,28 +285,15 @@ const fireEmojiCss = css`
   }
 `;
 
-const statsCss = css`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-`;
-
-const statChipCss = (theme: Theme) => css`
-  border-radius: 999px;
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.24)' : 'rgba(17, 20, 56, 0.14)'};
-  background: ${theme.isDark
-    ? 'rgba(255, 255, 255, 0.06)'
-    : 'rgba(255, 255, 255, 0.78)'};
-  padding: 8px 14px;
-`;
-
-const heroActionsCss = css`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
+const eyebrowCss = css`
+  width: fit-content;
+  border: 1px solid rgba(255, 212, 0, 0.6);
+  background: rgba(255, 212, 0, 0.14);
+  padding: 6px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #ffd400;
 `;
 
 const heroSubtitleCss = css`
@@ -315,78 +302,103 @@ const heroSubtitleCss = css`
   gap: 8px;
 `;
 
-const heroImageShellCss = (theme: Theme) => css`
-  border-radius: 28px;
-  padding: 10px;
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.24)' : 'rgba(17, 20, 56, 0.12)'};
-  background: ${theme.isDark
-    ? 'rgba(255, 255, 255, 0.04)'
-    : 'rgba(255, 255, 255, 0.62)'};
+const statsGridCss = css`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 `;
 
-const meTextContentCss = css`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
-`;
+const statBlockCss = css`
+  min-width: 132px;
+  border: 1px solid rgba(255, 212, 0, 0.62);
+  background: rgba(255, 212, 0, 0.08);
+  padding: 10px 12px;
 
-const contentSectionCss = (theme: Theme) => css`
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  border-radius: 28px;
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.18)' : 'rgba(16, 18, 49, 0.1)'};
-  background: ${theme.isDark
-    ? 'rgba(16, 20, 44, 0.56)'
-    : 'rgba(255, 255, 255, 0.72)'};
-  padding: 28px;
-
-  @media ${Media.Mobile} {
-    padding: 16px;
+  p {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+    color: rgba(255, 242, 160, 0.8);
+    margin-top: 5px;
   }
 `;
 
-const pricingSectionCss = (theme: Theme) => css`
-  border-radius: 28px;
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.18)' : 'rgba(16, 18, 49, 0.1)'};
-  background: ${theme.isDark
-    ? 'rgba(16, 20, 44, 0.56)'
-    : 'rgba(255, 255, 255, 0.72)'};
-  padding: 28px;
+const actionRowCss = css`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+`;
+
+const heroVisualCss = css`
+  border: 1px solid rgba(255, 212, 0, 0.6);
+  background: rgba(10, 10, 10, 0.92);
+  min-height: 440px;
+  padding: 10px;
+`;
+
+const techSectionCss = css`
   display: flex;
   flex-direction: column;
   gap: 14px;
+  border: 1px solid rgba(255, 212, 0, 0.52);
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.96) 0%, rgba(15, 15, 15, 0.96) 100%);
+  padding: 20px 16px;
+
+  @media ${Media.Mobile} {
+    padding: 14px 8px;
+  }
+`;
+
+const sectionTitleCss = css`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px 4px 6px;
+
+  span {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 11px;
+    color: rgba(255, 212, 0, 0.78);
+  }
+`;
+
+const splitOfferCss = css`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+
+  @media ${Media.Mobile} {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const offerBoxCss = css`
+  border: 1px solid rgba(255, 212, 0, 0.52);
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.96) 0%, rgba(15, 15, 15, 0.96) 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  span {
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 11px;
+    color: rgba(255, 212, 0, 0.78);
+  }
 
   ul {
     padding-left: 22px;
-    font-size: 20px;
-    line-height: 1.85;
+    line-height: 1.9;
   }
-`;
-
-const ctaSectionCss = (theme: Theme) => css`
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  align-items: center;
-  text-align: center;
-  border-radius: 28px;
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.24)' : 'rgba(16, 18, 49, 0.12)'};
-  background: ${theme.isDark
-    ? 'linear-gradient(135deg, rgba(111, 92, 255, 0.22) 0%, rgba(74, 216, 255, 0.16) 100%)'
-    : 'linear-gradient(135deg, rgba(111, 92, 255, 0.1) 0%, rgba(74, 216, 255, 0.12) 100%)'};
-  padding: 30px 20px;
 `;
 
 const contentExamplesCss = css`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 10px;
   justify-items: center;
 
   @media ${Media.Mobile} {
@@ -399,27 +411,46 @@ const letsWorkButton = (theme: Theme) => css`
   justify-content: center;
   align-items: center;
 
-  min-width: 184px;
+  min-width: 196px;
   padding: 12px 24px;
-  border-radius: 999px;
-  border: 1px solid
-    ${theme.isDark ? 'rgba(238, 241, 255, 0.36)' : 'rgba(16, 20, 48, 0.18)'};
+  border-radius: 2px;
+  border: 1px solid rgba(255, 212, 0, 0.9);
 
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   color: ${theme.hyperlinkColor};
 
-  background: ${theme.isDark
-    ? 'linear-gradient(135deg, #3c4db3 0%, #6f5cff 100%)'
-    : 'linear-gradient(135deg, #e7ebff 0%, #d5e8ff 100%)'};
-  box-shadow: 0 16px 35px rgba(16, 22, 61, 0.2);
+  background: linear-gradient(180deg, #ffd400 0%, #f0c700 100%);
+  box-shadow: 0 10px 26px rgba(255, 212, 0, 0.3);
   transition: transform 0.2s ease, opacity 0.2s ease;
 
   :hover {
     cursor: pointer;
-    transform: translateY(-1px);
-    opacity: 0.92;
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+`;
+
+const privacyPolicyCss = (isPolicyOpen: boolean) => css`
+  display: ${isPolicyOpen ? 'block' : 'none'};
+  width: 320px;
+  position: fixed;
+  bottom: 24px;
+  left: calc(50vw - 160px);
+  padding: 12px 16px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.45;
+  z-index: 32;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
+  border: 1px solid rgba(255, 212, 0, 0.65);
+  background: rgba(9, 9, 9, 0.94);
+  color: #fff6c8;
+
+  @media ${Media.Mobile} {
+    width: calc(100vw - 28px);
+    left: 14px;
   }
 `;
 

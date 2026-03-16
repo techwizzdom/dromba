@@ -24,13 +24,12 @@ interface IHeaderMobileProps {
 const headerMobileCss = css`
   position: sticky;
   top: 8px;
-  z-index: 25;
+  z-index: 35;
   padding: 0;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 14px 30px rgba(7, 14, 45, 0.18);
+  border-radius: 2px;
+  border: 2px solid rgba(255, 212, 0, 0.75);
+  background: rgba(8, 8, 8, 0.96);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.36);
 `;
 
 const topBarCss = css`
@@ -46,6 +45,7 @@ const logoLinkCss = css`
   width: 40px;
   border-radius: 50%;
   overflow: hidden;
+  border: 1px solid rgba(255, 212, 0, 0.48);
 `;
 
 const logoCss = (
@@ -76,12 +76,12 @@ const navigationCss = (theme: Theme, isExpanded: boolean) => css`
   top: 56px;
   left: 0;
   z-index: 1;
-  border-radius: 0 0 18px 18px;
+  border-top: 1px solid rgba(255, 212, 0, 0.28);
 
   background: ${isExpanded
     ? theme.isDark
-      ? 'rgba(8, 10, 24, 0.95)'
-      : 'rgba(247, 248, 255, 0.95)'
+      ? 'rgba(7, 7, 7, 0.98)'
+      : 'rgba(12, 12, 12, 0.98)'
     : 'transparent'};
   overflow: hidden;
 

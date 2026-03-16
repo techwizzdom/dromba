@@ -20,11 +20,10 @@ const togglerContainerCss = css`
 
   width: 44px;
   height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 22px rgba(5, 12, 42, 0.2);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 212, 0, 0.7);
+  background: rgba(255, 212, 0, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 212, 0, 0.18);
 
   cursor: pointer;
 `;
@@ -45,7 +44,7 @@ const moonIconCss = (theme: Theme) => css`
   width: ${theme.isDark ? 0 : '20px'};
   height: ${theme.isDark ? 0 : '20px'};
   opacity: ${theme.isDark ? 0 : 1};
-  fill: ${theme.themeToggleLine};
+  fill: #fff2a0;
 
   transform: rotate(${theme.isDark ? '-120deg' : 0}) scale(${theme.isDark ? 0 : 1});
   transition: transform 0.45s ease, width 0.35s ease, height 0.35s ease,

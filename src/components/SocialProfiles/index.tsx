@@ -94,22 +94,19 @@ const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   margin-top: ${isMainScreenMode ? '28px' : '0'};
 
   a {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
+    width: 46px;
+    height: 46px;
+    border-radius: 2px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid
-      ${theme.isDark ? 'rgba(238, 241, 255, 0.28)' : 'rgba(17, 20, 56, 0.14)'};
-    background: ${theme.isDark
-      ? 'rgba(17, 20, 44, 0.46)'
-      : 'rgba(255, 255, 255, 0.72)'};
-    box-shadow: 0 10px 24px rgba(8, 15, 44, 0.14);
+    border: 1px solid rgba(255, 212, 0, 0.7);
+    background: rgba(255, 212, 0, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(255, 212, 0, 0.2);
     transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
@@ -124,8 +121,9 @@ const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   }
 
   a:hover {
-    transform: translateY(-2px);
-    opacity: 0.85;
+    transform: translateY(-1px);
+    opacity: 0.9;
+    background: rgba(255, 212, 0, 0.14);
 
     cursor: pointer;
   }

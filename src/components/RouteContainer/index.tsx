@@ -19,23 +19,23 @@ const routeContainerCss = (
   position: relative;
   z-index: 1;
 
-  padding: 36px ${isPureCenteringEnabled ? '8px 0' : '12px 20px 96px'};
+  padding: 28px ${isPureCenteringEnabled ? '8px 0' : '8px 28px 92px'};
   margin: 0 auto;
 
-  max-width: 1180px;
+  max-width: 1280px;
   width: 100%;
   min-height: ${isNormalizeHeaderHeightEnabled
     ? 'calc(100vh - 48px)'
     : '100vh'};
 
   @media ${Media.Tablet} {
-    padding-left: 24px;
-    padding-right: 24px;
-    max-width: 1080px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1160px;
   }
 
   @media ${Media.Mobile} {
-    padding: 20px 6px 72px;
+    padding: 16px 4px 64px;
   }
 `;
 

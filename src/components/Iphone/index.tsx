@@ -68,15 +68,11 @@ const iphoneContentCss = css`
   position: relative;
   height: 620px;
   width: 352px;
-  border-radius: 36px;
+  border-radius: 2px;
   padding: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(239, 243, 255, 0.72) 100%
-  );
-  box-shadow: 0 18px 45px rgba(7, 15, 42, 0.18);
+  border: 1px solid rgba(255, 212, 0, 0.62);
+  background: linear-gradient(180deg, rgba(12, 12, 12, 1) 0%, rgba(20, 20, 20, 1) 100%);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.34);
   cursor: pointer;
 `;
 
@@ -122,10 +118,10 @@ const playIconCss = (isVideoPlaying: boolean) => css`
   left: 50%;
   transform: translate(-50%, -50%);
   height: 72px;
-  background: linear-gradient(135deg, #6f5cff 0%, #4ad8ff 100%);
+  background: linear-gradient(135deg, #ffd400 0%, #f3c800 100%);
   border-radius: 50%;
   padding: 12px;
   width: 72px;
-  box-shadow: 0 10px 30px rgba(74, 216, 255, 0.38);
+  box-shadow: 0 10px 30px rgba(255, 212, 0, 0.38);
   z-index: 2;
 `;

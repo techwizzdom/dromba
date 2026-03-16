@@ -13,12 +13,11 @@ interface IIconButtonProps {
 
 const iconButtonCss = (padding?: string) => css`
   padding: ${padding || '8px'};
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 2px;
+  border: 1px solid rgba(255, 212, 0, 0.7);
 
-  background-color: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 10px 24px rgba(8, 14, 40, 0.16);
+  background-color: rgba(255, 212, 0, 0.06);
+  box-shadow: inset 0 0 0 1px rgba(255, 212, 0, 0.18);
 
   cursor: pointer;
 `;

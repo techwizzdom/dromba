@@ -7,8 +7,6 @@ import { Theme } from '../../styles';
 import { Routes } from '../../routes/Routes';
 import { Media } from '../../enums/Media';
 
-import { underlineOnHover, underline } from '../../styles/css/textHover';
-
 import { t } from '../../translations/t';
 
 interface INavigationItemsProps {
@@ -26,30 +24,25 @@ const navigationItemCss = (
   justify-content: center;
   position: relative;
 
-  margin: ${isMobile ? '8px 0' : '0 8px 0 0'};
-  padding: ${isMobile ? '14px 18px' : '8px 14px'};
-  border-radius: 999px;
+  margin: ${isMobile ? '8px 0' : '0 6px 0 0'};
+  padding: ${isMobile ? '14px 18px' : '9px 12px'};
+  border-radius: 2px;
   border: 1px solid
     ${isSelected
-      ? theme.isDark
-        ? 'rgba(236, 241, 255, 0.6)'
-        : 'rgba(15, 20, 48, 0.2)'
-      : 'transparent'};
+      ? 'rgba(255, 212, 0, 0.8)'
+      : 'rgba(255, 212, 0, 0.28)'};
   background: ${isSelected
-    ? theme.isDark
-      ? 'rgba(255, 255, 255, 0.12)'
-      : 'rgba(255, 255, 255, 0.74)'
-    : 'transparent'};
+    ? 'rgba(255, 212, 0, 0.14)'
+    : 'rgba(255, 212, 0, 0.04)'};
   font-weight: ${isSelected ? 800 : 700};
 
-  color: ${theme.textColor};
-  transition: background-color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
-
-  ${underlineOnHover(theme)};
-  ${isSelected ? underline(theme) : null}
+  color: ${isSelected ? '#fff2a0' : 'rgba(255, 242, 160, 0.84)'};
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 
   &:hover {
-    opacity: 0.86;
+    color: #fff2a0;
+    border-color: rgba(255, 212, 0, 0.78);
+    background: rgba(255, 212, 0, 0.16);
   }
 
   @media ${Media.Mobile} {

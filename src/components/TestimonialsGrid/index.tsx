@@ -92,7 +92,7 @@ const TestimonialsGrid: React.FC<ITestimonialsGridProps> = (
 const testimonialsGridCss = css`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: 12px;
   align-items: flex-start;
 
   @media ${Media.Tablet} {
@@ -107,7 +107,7 @@ const testimonialsGridCss = css`
 const testimonialsGridMobileCss = css`
   display: none;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 10px;
   align-items: flex-start;
 
   @media ${Media.Mobile} {

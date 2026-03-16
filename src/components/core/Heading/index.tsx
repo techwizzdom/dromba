@@ -142,8 +142,8 @@ export const headingCss = (
 ) => css`
   font-size: ${size};
   position: relative;
-  line-height: 1.24;
-  letter-spacing: -0.02em;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
   color: ${theme.textColor};
 
   ${alignCenter && 'text-align: center;'}
@@ -154,9 +154,9 @@ export const headingCss = (
 
   ${isThin ? 'font-weight: 500;' : null}
 
-  ${!isMegaBold && !isThin ? 'font-weight: 700;' : null}
+  ${!isMegaBold && !isThin ? 'font-weight: 600;' : null}
 
   & + & {
-    margin-top: 8px;
+    margin-top: 6px;
   }
 `;
