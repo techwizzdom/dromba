@@ -1,24 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import marked from 'marked';
 import Prism from 'prismjs';
-import RouteContainer from '../../components/RouteContainer';
 import { Posts } from '../../blog-posts/posts';
 import { css } from 'emotion';
-import { ThemeContext } from '../../context/ThemeContext';
-import { Theme } from '../../styles';
-import { Media } from '../../enums/Media';
 import { trackEvent } from '../../util/metrics';
 import Helmetiser from '../../components/core/Helmetiser';
-import ThisIsMe from '../../components/ThisIsMe';
-import LoadingSpinner from '../../components/LoadingSpinner';
-import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
-// import { ReactComponent as LinkedIn } from '../../assets/icons/linkedin.svg';
 
 function Post() {
   const [post, setPost] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-
-  const posts = Posts;
 
   const getPostPath = () => {
     const pathArr = window.location.pathname.split('/');
@@ -26,14 +16,10 @@ function Post() {
   };
 
   const postPath = getPostPath();
-
   const readingTime = require('reading-time/lib/reading-time');
-
   const poster = require(`../../blog-posts/${postPath}.md`);
   const { title, subtitle, img, previewImg, path, postDate, tags } =
-    posts.find((post) => post.path === postPath) || {};
-
-  const theme = React.useContext(ThemeContext);
+    Posts.find((p) => p.path === postPath) || {};
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,12 +27,9 @@ function Post() {
   }, [title]);
 
   fetch(poster)
-    .then((response) => {
-      return response.text();
-    })
-    .then((text) => {
-      setPost(text);
-    });
+    .then((response) => response.text())
+    .then((text) => setPost(text));
+
   require('prismjs/components/prism-markup-templating');
   require('prismjs/components/prism-css');
   require('prismjs/components/prism-php');
@@ -78,23 +61,20 @@ function Post() {
     },
     breaks: true,
   });
+
   function removeTags(string: string) {
-    return string
-      .replace(/<[^>]*>/g, ' ')
-      .replace(/\s{2,}/g, ' ')
-      .trim();
+    return string.replace(/<[^>]*>/g, ' ').replace(/\s{2,}/g, ' ').trim();
   }
+
   const readingTimeLabel = readingTime(removeTags(marked(post)));
   const postDateLabel = postDate?.toDateString();
   let postDateDay = postDateLabel?.split(' ')[2] || '';
-  if (postDateDay[0] === '0') {
-    postDateDay = postDateDay[1];
-  }
+  if (postDateDay[0] === '0') postDateDay = postDateDay[1];
   const postDateMonth = postDateLabel?.split(' ')[1];
   const postDateYear = postDateLabel?.split(' ')[3];
 
   return (
-    <RouteContainer>
+    <main className={pageCss}>
       <Helmetiser
         title={title}
         description={subtitle}
@@ -102,180 +82,254 @@ function Post() {
         image={previewImg || img}
       />
       <article className={articleCss}>
-        <h1 className={titleCss}>{title}</h1>
-        <h2 className={subtitleCss}>{subtitle}</h2>
-        <div className={postInfoCss}>
-          <div className={postTimeCss}>
-            <p className={dateCss}>
-              {postDateDay} {postDateMonth}
-              {Number(postDateYear) < new Date().getFullYear()
-                ? ` ${postDateYear}`
-                : ''}
-            </p>
-            {' · '}
-            <p className={timeCss}>{readingTimeLabel.text}</p>
+        <div className={articleHeaderCss}>
+          <div className={tagRowCss}>
+            {tags?.map((tag, i) => (
+              <span key={i} className={tagCss}>{tag}</span>
+            ))}
           </div>
-          <p>{tags?.join(', ')}</p>
+          <h1 className={titleCss}>{title}</h1>
+          <p className={subtitleCss}>{subtitle}</p>
+          <div className={metaCss}>
+            <span className={dateCss}>
+              {postDateDay} {postDateMonth}
+              {Number(postDateYear) < new Date().getFullYear() ? ` ${postDateYear}` : ''}
+            </span>
+            <span className={dotCss}>&bull;</span>
+            <span>{readingTimeLabel.text}</span>
+          </div>
         </div>
+
         <img
-          className={imgCss}
+          className={heroCss}
           src={img}
-          alt={path}
+          alt={title || path}
           onLoad={() => setIsLoading(false)}
         />
+
         {isLoading ? (
-          <LoadingSpinner />
+          <div className={loaderCss}>
+            <div className={spinnerCss} />
+          </div>
         ) : (
           <section
-            className={sectionCss(theme)}
+            className={contentCss}
             dangerouslySetInnerHTML={{ __html: marked(post) }}
           />
         )}
       </article>
+
       {!isLoading && (
-        <div className={sharingOptionsCss}>
-          <span className={shareMeTextCss}>
-            Do you find this post useful? Share it with a friend who will think
-            the same :)
-          </span>
-          <div className={sharingIconsCss}>
-            {/* <a
-              className="twitter-share-button"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://twitter.com/intent/tweet?text="${title}" by @tech_wizzdom is a must-read article! 🚀 ${document.URL}`}
-            >
-              <Twitter />
-            </a> */}
-            {/* <a
-              href={`https://www.linkedin.com/sharing/share-offsite?mini=true&url=${document.URL}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <LinkedIn />
-            </a> */}
-          </div>
+        <div className={shareCss}>
+          <p className={shareTextCss}>
+            Do you find this post useful? Share it with a friend who will think the same :)
+          </p>
         </div>
       )}
-      {!isLoading && <ThisIsMe isMainScreenMode={true} />}
-    </RouteContainer>
+    </main>
   );
 }
 
+const pageCss = css`
+  padding: calc(var(--nav-height) + 48px) 32px 120px;
+
+  @media (max-width: 768px) {
+    padding: calc(var(--nav-height) + 32px) 20px 80px;
+  }
+`;
+
 const articleCss = css`
-  margin-bottom: 24px;
+  max-width: 760px;
+  margin: 0 auto;
 `;
 
-const shareMeTextCss = css`
-  font-size: 24px;
-  font-weight: bold;
-  padding-bottom: 6px;
+const articleHeaderCss = css`
+  margin-bottom: 32px;
 `;
 
-const sharingOptionsCss = css`
+const tagRowCss = css`
   display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 96px;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
 `;
 
-const sharingIconsCss = css`
-  display: flex;
-  align-items: center;
-  gap: 16px;
+const tagCss = css`
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent);
+  background: var(--color-accent-dim);
+  padding: 4px 10px;
+  border-radius: 4px;
 `;
 
 const titleCss = css`
-  font-size: 32px;
-
-  @media ${Media.Mobile} {
-    font-size: 28px;
-  }
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
 `;
 
 const subtitleCss = css`
-  font-weight: 100;
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
   margin-bottom: 16px;
+`;
 
-  @media ${Media.Mobile} {
-    font-size: 20px;
+const metaCss = css`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+`;
+
+const dateCss = css``;
+const dotCss = css`color: var(--color-accent);`;
+
+const heroCss = css`
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  border: 1px solid var(--color-border);
+`;
+
+const loaderCss = css`
+  display: flex;
+  justify-content: center;
+  padding: 64px 0;
+`;
+
+const spinnerCss = css`
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--color-border);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 `;
 
-const imgCss = css`
-  margin: 0 0 32px;
-`;
-
-const sectionCss = (theme: Theme) => css`
-  a {
-    padding: 2px;
-    border-radius: 2px;
-
-    color: ${theme.hyperlinkColor};
-    background-color: ${theme.hyperlinkBackgroundColor};
-
-    :hover {
-      opacity: 0.8;
-    }
-  }
+const contentCss = css`
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
 
   h2 {
+    font-family: var(--font-heading);
     font-size: 28px;
-    margin-bottom: 4px;
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 40px 0 12px;
+    letter-spacing: -0.5px;
   }
 
   h3 {
-    font-size: 24px;
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 32px 0 8px;
   }
-
-  @media ${Media.Mobile} {
-    h2 {
-      font-size: 24px;
-    }
-
-    h3 {
-      font-size: 20px;
-    }
-  }
-`;
-
-const postTimeCss = css`
-  display: flex;
-  align-items: center;
-`;
-
-const postInfoCss = css`
-  display: flex;
-  justify-content: space-between;
 
   p {
-    margin-bottom: 0;
-    font-size: 14px;
+    margin-bottom: 16px;
   }
 
-  @media ${Media.Mobile} {
-    flex-direction: column;
+  a {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: opacity var(--transition-fast);
+    &:hover { opacity: 0.8; }
+  }
 
-    p {
-      font-size: 12px;
+  img {
+    border-radius: 12px;
+    margin: 24px 0;
+    border: 1px solid var(--color-border);
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    background: var(--color-bg-card);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--color-accent);
+  }
+
+  pre {
+    background: var(--color-bg-card) !important;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 24px 0;
+    overflow-x: auto;
+
+    code {
+      background: none;
+      padding: 0;
+      color: var(--color-text);
     }
   }
-`;
 
-const dateCss = css`
-  margin-right: 4px;
+  ul, ol {
+    padding-left: 24px;
+    margin-bottom: 16px;
+    list-style: disc;
+  }
 
-  @media ${Media.Mobile} {
-    // font-size: 28px;
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 20px;
+    margin: 24px 0;
+    font-style: italic;
+    color: var(--color-text-muted);
+  }
+
+  strong {
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
   }
 `;
 
-const timeCss = css`
-  margin-left: 4px;
+const shareCss = css`
+  max-width: 760px;
+  margin: 48px auto 0;
+  padding: 32px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  text-align: center;
+`;
 
-  @media ${Media.Mobile} {
-    // font-size: 28px;
-  }
+const shareTextCss = css`
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.5;
 `;
 
 export default Post;
