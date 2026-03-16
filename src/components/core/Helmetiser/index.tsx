@@ -109,7 +109,7 @@ function Helmetiser(props: IHelmetiserProps) {
     upsertStructuredData(structuredData);
   }, [description, image, keywords, structuredData, title, type, url]);
 
-  return <></>;
+  return null;
 }
 
 export default Helmetiser;
