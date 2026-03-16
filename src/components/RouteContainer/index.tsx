@@ -17,22 +17,26 @@ const routeContainerCss = (
   isNormalizeHeaderHeightEnabled: boolean,
   isPureCenteringEnabled: boolean,
 ) => css`
-  padding: 64px ${isPureCenteringEnabled ? '8px 0' : '16px 32px 192px'};
+  position: relative;
+  z-index: 1;
+
+  padding: 36px ${isPureCenteringEnabled ? '8px 0' : '12px 20px 96px'};
   margin: 0 auto;
 
-  max-width: 1072px;
+  max-width: 1180px;
   width: 100%;
   min-height: ${isNormalizeHeaderHeightEnabled
     ? 'calc(100vh - 48px)'
     : '100vh'};
 
   @media ${Media.Tablet} {
-    padding-left: 88px;
-    max-width: 992px;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 1080px;
   }
 
   @media ${Media.Mobile} {
-    padding: 32px 8px;
+    padding: 20px 6px 72px;
   }
 `;
 

@@ -24,22 +24,36 @@ export interface ILogoDiving {
 }
 
 const headerDesktopCss = css`
+  position: sticky;
+  top: 14px;
+  z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 12px;
 
-  padding: 4px 16px;
+  padding: 10px 14px;
   margin: 0 auto;
-  max-width: 1072px;
-  height: 48px;
+  max-width: 1180px;
+  min-height: 64px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 14px 35px rgba(8, 15, 45, 0.16);
 
   @media ${Media.Tablet} {
-    max-width: 992px;
+    max-width: 1080px;
+    top: 10px;
   }
 `;
 
 const logoLinkCss = css`
-  height: 40px;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
 `;
 
 const logoCss = (
@@ -56,13 +70,14 @@ const logoCss = (
           : isDesktop
           ? '720px'
           : 'calc(100vw - 282px)'
-        : '16px'}
+        : '0'}
     )
-    translateY(${isMoving ? (isJumping ? '200px' : '0') : '0'})
+    translateY(${isMoving ? (isJumping ? '180px' : '0') : '0'})
     rotate(${isJumping ? '220deg' : '0'});
 
-  width: ${isMoving ? (isJumping ? '256px' : '0') : '40px'};
-  height: ${isMoving ? (isJumping ? '256px' : '0') : '40px'};
+  width: ${isMoving ? (isJumping ? '256px' : '0') : '42px'};
+  height: ${isMoving ? (isJumping ? '256px' : '0') : '42px'};
+  object-fit: cover;
 
   transition: transform 1s ease-in-out, width 0.9s ease-in-out,
     height 0.9s ease-in-out;

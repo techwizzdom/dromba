@@ -91,9 +91,13 @@ const TestimonialsGrid: React.FC<ITestimonialsGridProps> = (
 
 const testimonialsGridCss = css`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
   align-items: flex-start;
+
+  @media ${Media.Tablet} {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   @media ${Media.Mobile} {
     display: none;
@@ -103,7 +107,7 @@ const testimonialsGridCss = css`
 const testimonialsGridMobileCss = css`
   display: none;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 14px;
   align-items: flex-start;
 
   @media ${Media.Mobile} {

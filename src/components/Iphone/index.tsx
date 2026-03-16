@@ -66,28 +66,40 @@ export function Iphone(props: IProps) {
 
 const iphoneContentCss = css`
   position: relative;
-  height: 610px;
-  width: 340px;
+  height: 620px;
+  width: 352px;
+  border-radius: 36px;
+  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(239, 243, 255, 0.72) 100%
+  );
+  box-shadow: 0 18px 45px rgba(7, 15, 42, 0.18);
   cursor: pointer;
 `;
 
 const iphoneVideoCss = css`
   position: absolute;
-  top: 20px;
-  left: 10px;
+  top: 28px;
+  left: 16px;
   border-radius: 24px;
 `;
 
 const iphoneupCss = css`
   position: absolute;
   width: 340px;
+  left: 6px;
+  top: 6px;
   z-index: 3;
 `;
 
 const iphonedownCss = css`
   position: absolute;
   width: 340px;
-  bottom: 0;
+  bottom: 6px;
+  left: 6px;
   z-index: 3;
 `;
 
@@ -95,8 +107,8 @@ const iphoneCoverCss = (hasStarted: boolean) => css`
   position: absolute;
   width: 320px;
   height: 568px;
-  top: 20px;
-  left: 10px;
+  top: 28px;
+  left: 16px;
   border-radius: 24px;
   z-index: 1;
   cursor: pointer;
@@ -110,9 +122,10 @@ const playIconCss = (isVideoPlaying: boolean) => css`
   left: 50%;
   transform: translate(-50%, -50%);
   height: 72px;
-  background-color: #f0cf1c;
+  background: linear-gradient(135deg, #6f5cff 0%, #4ad8ff 100%);
   border-radius: 50%;
   padding: 12px;
   width: 72px;
+  box-shadow: 0 10px 30px rgba(74, 216, 255, 0.38);
   z-index: 2;
 `;

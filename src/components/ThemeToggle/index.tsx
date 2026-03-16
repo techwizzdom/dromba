@@ -15,27 +15,41 @@ const togglerContainerCss = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 22px rgba(5, 12, 42, 0.2);
 
   cursor: pointer;
 `;
 
 const sunIconCss = (theme: Theme) => css`
-  width: ${theme.isDark ? '40px' : 0};
-  height: ${theme.isDark ? '40px' : 0};
+  position: absolute;
+  width: ${theme.isDark ? '24px' : 0};
+  height: ${theme.isDark ? '24px' : 0};
+  opacity: ${theme.isDark ? 1 : 0};
+  fill: ${theme.themeToggleColor};
 
-  transform: rotate(${theme.isDark ? 0 : '360deg'});
-  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+  transform: rotate(${theme.isDark ? 0 : '120deg'}) scale(${theme.isDark ? 1 : 0});
+  transition: transform 0.45s ease, width 0.35s ease, height 0.35s ease,
+    opacity 0.35s ease;
 `;
 const moonIconCss = (theme: Theme) => css`
-  padding: 4px;
-  width: ${theme.isDark ? 0 : '32px'};
-  height: ${theme.isDark ? 0 : '32px'};
+  position: absolute;
+  width: ${theme.isDark ? 0 : '20px'};
+  height: ${theme.isDark ? 0 : '20px'};
+  opacity: ${theme.isDark ? 0 : 1};
+  fill: ${theme.themeToggleLine};
 
-  transform: rotate(${theme.isDark ? 0 : '360deg'});
-  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+  transform: rotate(${theme.isDark ? '-120deg' : 0}) scale(${theme.isDark ? 0 : 1});
+  transition: transform 0.45s ease, width 0.35s ease, height 0.35s ease,
+    opacity 0.35s ease;
 `;
 
 const ThemeToggle: React.FC<IThemeToogleProps> = (props: IThemeToogleProps) => {

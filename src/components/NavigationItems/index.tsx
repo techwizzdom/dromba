@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
 import { Theme } from '../../styles';
 import { Routes } from '../../routes/Routes';
+import { Media } from '../../enums/Media';
 
 import { underlineOnHover, underline } from '../../styles/css/textHover';
 
@@ -20,16 +21,41 @@ const navigationItemCss = (
   isMobile: boolean,
   isSelected: boolean,
 ) => css`
-  display: ${isMobile ? 'flex' : 'block'};
+  display: ${isMobile ? 'flex' : 'inline-flex'};
+  align-items: center;
   justify-content: center;
   position: relative;
 
-  margin: ${isMobile ? '8px 0' : '0 32px 0 0'};
+  margin: ${isMobile ? '8px 0' : '0 8px 0 0'};
+  padding: ${isMobile ? '14px 18px' : '8px 14px'};
+  border-radius: 999px;
+  border: 1px solid
+    ${isSelected
+      ? theme.isDark
+        ? 'rgba(236, 241, 255, 0.6)'
+        : 'rgba(15, 20, 48, 0.2)'
+      : 'transparent'};
+  background: ${isSelected
+    ? theme.isDark
+      ? 'rgba(255, 255, 255, 0.12)'
+      : 'rgba(255, 255, 255, 0.74)'
+    : 'transparent'};
+  font-weight: ${isSelected ? 800 : 700};
 
   color: ${theme.textColor};
+  transition: background-color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
 
   ${underlineOnHover(theme)};
   ${isSelected ? underline(theme) : null}
+
+  &:hover {
+    opacity: 0.86;
+  }
+
+  @media ${Media.Mobile} {
+    width: 90%;
+    margin: 6px 0;
+  }
 `;
 
 const NavigationItems: React.FC<INavigationItemsProps> = (
@@ -46,17 +72,17 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
 
   return (
     <>
-      {/* <Link
-        to={Routes.Services}
+      <Link
+        to={Routes.Me}
         className={navigationItemCss(
           theme,
           isMobile,
-          isSelected(Routes.Services),
+          isSelected(Routes.Me),
         )}
         onClick={() => onNavigationItemClick && onNavigationItemClick()}
       >
-        {t.navigation.services}
-      </Link> */}
+        {t.navigation.home}
+      </Link>
       {/* <Link
         to={Routes.TheRichCreator}
         className={navigationItemCss(
@@ -111,6 +137,15 @@ const NavigationItems: React.FC<INavigationItemsProps> = (
       >
         {t.navigation.links}
       </Link>
+      <a
+        className={navigationItemCss(theme, isMobile, false)}
+        href={t.link.workWithMeForm}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => onNavigationItemClick && onNavigationItemClick()}
+      >
+        Work with me
+      </a>
     </>
   );
 };

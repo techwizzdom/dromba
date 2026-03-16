@@ -67,22 +67,32 @@ const TestimonialCard: React.FC<ITestimonialCardProps> = (
 };
 
 const testimonialTextImgCss = css`
-  width: 96px;
-  height: 96px;
-  border: 2px solid yellow;
+  width: 72px;
+  height: 72px;
+  border: 2px solid rgba(111, 92, 255, 0.42);
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 const testimonialTextCss = (theme: Theme) => css`
   width: 100%;
-  border: 4px solid ${theme.textColor};
-  border-radius: 16px;
-  padding: 16px;
+  border: 1px solid
+    ${theme.isDark ? 'rgba(238, 241, 255, 0.2)' : 'rgba(17, 20, 56, 0.14)'};
+  border-radius: 18px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 18px;
+  background: ${theme.isDark
+    ? 'rgba(18, 22, 50, 0.58)'
+    : 'rgba(255, 255, 255, 0.74)'};
+  box-shadow: 0 16px 35px rgba(8, 15, 40, 0.14);
+
+  p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
 `;
 
 const testimonialTextContentCss = css`

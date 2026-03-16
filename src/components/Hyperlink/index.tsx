@@ -23,31 +23,33 @@ export const hyperlinkCss = (
   alignCenter?: boolean,
 ) => css`
   position: relative;
-  padding: 2px;
-  border-radius: 2px;
+  padding: 1px 2px;
+  border-radius: 6px;
 
   ${isLarge && 'font-size: 24px;'}
   ${isLarge && 'font-weight: bold;'}
   ${alignCenter && 'text-align: center;'}
 
   display: inline;
+  color: ${theme.isDark ? '#c6d7ff' : '#2435b8'};
   background-image: linear-gradient(
-    transparent 40%,
-    ${theme.hyperlinkUnderlineColor} 94%,
+    transparent 62%,
+    ${theme.hyperlinkUnderlineColor} 93%,
     transparent 100%
   );
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
-  background-size: 100% 24px;
+  background-size: ${isUnderline ? '100% 7px' : '100% 5px'};
   transform: none;
-  transition: background-size 0.5s ease-in-out,
-    background-position 0s step-end 0.5s;
+  transition: background-size 0.35s ease-in-out,
+    background-position 0s step-end 0.35s, color 0.25s ease;
 
   &:hover {
     background-position-x: right;
     background-position-y: bottom;
-    background-size: 100% 8px;
+    background-size: 100% 12px;
+    color: ${theme.textColor};
   }
 `;
 

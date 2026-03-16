@@ -5,13 +5,16 @@ import NavigationItems from '../NavigationItems';
 
 const mainNavigationCss = css`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
 
-  padding: 0 32px;
+  padding: 0 16px;
   max-width: 992px;
   width: 100%;
 
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 `;
 
 const MainNavigation: React.FC = () => {

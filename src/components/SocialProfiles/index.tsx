@@ -94,32 +94,48 @@ const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: ${isMainScreenMode ? '64px' : '0'};
+  gap: 10px;
+  margin-top: ${isMainScreenMode ? '28px' : '0'};
+
+  a {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid
+      ${theme.isDark ? 'rgba(238, 241, 255, 0.28)' : 'rgba(17, 20, 56, 0.14)'};
+    background: ${theme.isDark
+      ? 'rgba(17, 20, 44, 0.46)'
+      : 'rgba(255, 255, 255, 0.72)'};
+    box-shadow: 0 10px 24px rgba(8, 15, 44, 0.14);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
 
   svg {
-    margin: 0 12px;
     fill: ${theme.svgFill.primary};
+    width: 23px;
+    height: 23px;
 
     .st1 {
       fill: ${theme.svgFill.primary};
     }
   }
 
-  svg:hover {
-    cursor: pointer;
-    fill-opacity: 0.5;
+  a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
 
-    .st1 {
-      fill-opacity: 0.5;
-    }
+    cursor: pointer;
   }
 `;
 
 const devToIconCss = css`
-  width: 54px;
-  margin: 0 4px !important;
+  width: 20px !important;
+  margin: 0 !important;
 `;
 
 const linkedInWrapperCss = css`
-  padding-bottom: 4px;
+  padding-bottom: 0;
 `;

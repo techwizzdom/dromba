@@ -13,8 +13,12 @@ interface IIconButtonProps {
 
 const iconButtonCss = (padding?: string) => css`
   padding: ${padding || '8px'};
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
 
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 24px rgba(8, 14, 40, 0.16);
 
   cursor: pointer;
 `;
