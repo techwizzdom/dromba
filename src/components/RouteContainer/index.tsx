@@ -3,7 +3,6 @@ import React from 'react';
 import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
-import { Routes } from '../../routes/Routes';
 // import BuyMeACroissant from '../BuyMeACroissant';
 
 interface IRouteContainerProps {
