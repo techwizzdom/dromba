@@ -161,6 +161,7 @@ export const t = {
     secondBrain:
       'https://www.thesecondbrain.io/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     devibe: 'https://devibe.network/',
+    replit: 'https://replit.com/refer/techwizzdom',
     ragapi:
       'https://www.ragapi.tech/?utm_source=website&utm_medium=personal&utm_campaign=links_page',
     sparroww:

@@ -52,10 +52,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Manus.AI', 'Manus.AI')}
-            href={t.link.manus}
+            onClick={() => trackEvent('Replit', 'Replit')}
+            href={t.link.replit}
           >
-            Manus.AI (Become a 10x founder)
+            Replit Agent 4
           </Hyperlink>
         </H5>
 
