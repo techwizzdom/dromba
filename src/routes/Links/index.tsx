@@ -52,10 +52,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Replit', 'Replit')}
-            href={t.link.replit}
+            onClick={() => trackEvent('Tinyfish', 'Tinyfish')}
+            href={t.link.tinyfish}
           >
-            Replit Agent 4
+            TinyFish
           </Hyperlink>
         </H5>
 

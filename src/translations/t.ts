@@ -297,7 +297,7 @@ export const t = {
       'https://10web.io/?utm_source=Instagram&utm_medium=Influencer&utm_campaign=techwizzdom',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
-    bearer: 'https://www.bearer.com/',
+    tinyfish: 'https://www.tinyfish.ai/',
     codium: 'https://codium.ai/pr-ext',
     abacus: 'https://chatllm.abacus.ai/',
     codejet: 'https://www.codejet.ai/',
