@@ -298,6 +298,7 @@ export const t = {
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
     brilliant: 'https://brilliant.org/techwizzdom/',
     tinyfish: 'https://www.tinyfish.ai/',
+    figma: 'https://psxid.figma.com/techwizzdom',
     codium: 'https://codium.ai/pr-ext',
     abacus: 'https://chatllm.abacus.ai/',
     codejet: 'https://www.codejet.ai/',

@@ -49,6 +49,16 @@ function Links() {
           </Hyperlink>
         </H5>
 
+           <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Figma', 'Figma')}
+            href={t.link.figma}
+          >
+            Figma Make
+          </Hyperlink>
+        </H5>
+
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
