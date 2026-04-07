@@ -52,20 +52,10 @@ function Links() {
            <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Figma', 'Figma')}
-            href={t.link.figma}
+            onClick={() => trackEvent('elevenlabs', 'elevenlabs')}
+            href={t.link.elevenlabs}
           >
-            Figma Make
-          </Hyperlink>
-        </H5>
-
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Tinyfish', 'Tinyfish')}
-            href={t.link.tinyfish}
-          >
-            TinyFish
+            ElevenLabs Agents
           </Hyperlink>
         </H5>
 

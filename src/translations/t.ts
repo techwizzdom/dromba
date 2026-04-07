@@ -300,6 +300,7 @@ export const t = {
     tinyfish: 'https://www.tinyfish.ai/',
     figma: 'https://psxid.figma.com/techwizzdom',
     codium: 'https://codium.ai/pr-ext',
+    elevenlabs: 'https://try.elevenlabs.io/ui9lcg2xr81x',
     abacus: 'https://chatllm.abacus.ai/',
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
