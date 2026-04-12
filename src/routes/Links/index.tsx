@@ -49,13 +49,23 @@ function Links() {
           </Hyperlink>
         </H5>
 
-           <H5 alignCenter={true}>
+        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('JunieCLI', 'JunieCLI')}
             href={t.link.juniecli}
           >
             Junie CLI
+          </Hyperlink>
+        </H5>
+
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('wildcommit', 'wildcommit')}
+            href={t.link.wildcommits}
+          >
+            Wildest commits
           </Hyperlink>
         </H5>
 

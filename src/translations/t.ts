@@ -296,6 +296,7 @@ export const t = {
     tenWeb:
       'https://10web.io/?utm_source=Instagram&utm_medium=Influencer&utm_campaign=techwizzdom',
     edrawMaxAi: 'https://bit.ly/3OyLYoP',
+    wildcommits: 'https://docs.google.com/document/d/1Z7eb5Ii5p-j7iLeh5wMSXdf6RtI5YhK0LgkJne8oiSY/edit?tab=t.0',
     brilliant: 'https://brilliant.org/techwizzdom/',
     tinyfish: 'https://www.tinyfish.ai/',
     figma: 'https://psxid.figma.com/techwizzdom',
