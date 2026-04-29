@@ -52,10 +52,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('JunieCLI', 'JunieCLI')}
-            href={t.link.juniecli}
+            onClick={() => trackEvent('Miro', 'Miro')}
+            href={t.link.miro}
           >
-            Junie CLI
+            Miro
           </Hyperlink>
         </H5>
 
