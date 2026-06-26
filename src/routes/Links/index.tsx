@@ -52,22 +52,14 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Miro', 'Miro')}
-            href={t.link.miro}
+            onClick={() => trackEvent('Remy', 'Remy')}
+            href={t.link.remy}
           >
-            Miro
+            Remy
           </Hyperlink>
         </H5>
 
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('wildcommit', 'wildcommit')}
-            href={t.link.wildcommits}
-          >
-            Wildest commits
-          </Hyperlink>
-        </H5>
+  
 
         <H5 alignCenter={true}>
           <Hyperlink

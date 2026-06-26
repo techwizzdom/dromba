@@ -306,6 +306,7 @@ export const t = {
     codejet: 'https://www.codejet.ai/',
     codesee: 'https://www.codesee.io/ai',
     miro: 'https://miro.pxf.io/domagojtt',
+    remy: 'https://app.mindstudio.ai/signup?plan=techwizzdom',
     aidtschool:
       'https://ai-dt.school/generative-ai/?utm_source=instagram&utm_medium=bloggers&utm_campaign=uforce&utm_content=tech_wizzdom',
     pieces:
