@@ -52,10 +52,10 @@ function Links() {
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Remy', 'Remy')}
-            href={t.link.remy}
+            onClick={() => trackEvent('Fish Audio', 'Fish Audio')}
+            href={t.link.fishaudio}
           >
-            Remy
+            Fish Audio
           </Hyperlink>
         </H5>
 
