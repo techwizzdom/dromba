@@ -320,6 +320,7 @@ export const t = {
     contra: 'https://contra.com/',
     ionos: 'https://www.ionos.com/websites/website-builder',
     tella: 'https://tella.tv/?via=techwizzdom',
+    relume: 'https://relume.1stcollab.com/tech_wizzdom_tt',
     fishaudio: 'https://fish.audio/?fpr=domagoj89',
     storyblokOreilly: 'https://get.storyblok.com/techwizzdom-oreilly',
     basecamp: 'https://basecamp.com/?utm_source=techwizzdom&utm_medium=social',
