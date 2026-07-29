@@ -3,7 +3,6 @@ import React from 'react';
 import { css } from 'emotion';
 
 import { Media } from '../../enums/Media';
-import { Routes } from '../../routes/Routes';
 // import BuyMeACroissant from '../BuyMeACroissant';
 
 interface IRouteContainerProps {
@@ -17,22 +16,26 @@ const routeContainerCss = (
   isNormalizeHeaderHeightEnabled: boolean,
   isPureCenteringEnabled: boolean,
 ) => css`
-  padding: 64px ${isPureCenteringEnabled ? '8px 0' : '16px 32px 192px'};
+  position: relative;
+  z-index: 1;
+
+  padding: 28px ${isPureCenteringEnabled ? '8px 0' : '8px 28px 92px'};
   margin: 0 auto;
 
-  max-width: 1072px;
+  max-width: 1280px;
   width: 100%;
   min-height: ${isNormalizeHeaderHeightEnabled
     ? 'calc(100vh - 48px)'
     : '100vh'};
 
   @media ${Media.Tablet} {
-    padding-left: 88px;
-    max-width: 992px;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1160px;
   }
 
   @media ${Media.Mobile} {
-    padding: 32px 8px;
+    padding: 16px 4px 64px;
   }
 `;
 

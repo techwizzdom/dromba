@@ -8,17 +8,15 @@ import { Theme } from './styles';
 
 export default () => {
   const [selectedTheme, setSelectedTheme] = useState<Themes | string>(
-    Themes.Light,
+    Themes.Dark,
   );
 
   const toggleTheme = () => {
     if (selectedTheme === Themes.Light) {
       window.localStorage.setItem('selectedTheme', Themes.Dark);
-      document.body.style.background = dark.gradientBackground;
       setSelectedTheme(Themes.Dark);
     } else {
       window.localStorage.setItem('selectedTheme', Themes.Light);
-      document.body.style.background = light.gradientBackground;
       setSelectedTheme(Themes.Light);
     }
   };
@@ -31,6 +29,11 @@ export default () => {
       setSelectedTheme(localTheme);
     }
   }, []);
+
+  useEffect(() => {
+    document.body.style.background =
+      selectedTheme === Themes.Dark ? dark.gradientBackground : light.gradientBackground;
+  }, [selectedTheme]);
 
   return [theme, toggleTheme] as const;
 };

@@ -67,22 +67,34 @@ const TestimonialCard: React.FC<ITestimonialCardProps> = (
 };
 
 const testimonialTextImgCss = css`
-  width: 96px;
-  height: 96px;
-  border: 2px solid yellow;
+  width: 72px;
+  height: 72px;
+  border: 1px solid rgba(255, 212, 0, 0.7);
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
 `;
 
 const testimonialTextCss = (theme: Theme) => css`
   width: 100%;
-  border: 4px solid ${theme.textColor};
-  border-radius: 16px;
-  padding: 16px;
+  border: 1px solid rgba(255, 212, 0, 0.6);
+  border-radius: 2px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 18px;
+  background: linear-gradient(
+    180deg,
+    rgba(13, 13, 13, 0.96) 0%,
+    rgba(17, 17, 17, 0.96) 100%
+  );
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+
+  p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #fff6c8;
+  }
 `;
 
 const testimonialTextContentCss = css`

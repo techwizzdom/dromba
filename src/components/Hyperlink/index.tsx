@@ -23,7 +23,7 @@ export const hyperlinkCss = (
   alignCenter?: boolean,
 ) => css`
   position: relative;
-  padding: 2px;
+  padding: 0 2px;
   border-radius: 2px;
 
   ${isLarge && 'font-size: 24px;'}
@@ -31,23 +31,26 @@ export const hyperlinkCss = (
   ${alignCenter && 'text-align: center;'}
 
   display: inline;
+  color: #fff6c8;
   background-image: linear-gradient(
-    transparent 40%,
-    ${theme.hyperlinkUnderlineColor} 94%,
+    transparent 64%,
+    rgba(255, 212, 0, 0.82) 94%,
     transparent 100%
   );
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: bottom;
-  background-size: 100% 24px;
+  background-size: ${isUnderline ? '100% 9px' : '100% 6px'};
   transform: none;
-  transition: background-size 0.5s ease-in-out,
-    background-position 0s step-end 0.5s;
+  transition: background-size 0.35s ease-in-out,
+    background-position 0s step-end 0.35s, color 0.25s ease, opacity 0.25s ease;
 
   &:hover {
     background-position-x: right;
     background-position-y: bottom;
-    background-size: 100% 8px;
+    background-size: 100% 14px;
+    color: #ffd400;
+    opacity: 0.95;
   }
 `;
 

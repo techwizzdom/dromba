@@ -94,32 +94,46 @@ const profilesCss = (theme: Theme, isMainScreenMode: boolean) => css`
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: ${isMainScreenMode ? '64px' : '0'};
+  gap: 8px;
+  margin-top: ${isMainScreenMode ? '28px' : '0'};
+
+  a {
+    width: 46px;
+    height: 46px;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 212, 0, 0.7);
+    background: rgba(255, 212, 0, 0.06);
+    box-shadow: inset 0 0 0 1px rgba(255, 212, 0, 0.2);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
 
   svg {
-    margin: 0 12px;
     fill: ${theme.svgFill.primary};
+    width: 23px;
+    height: 23px;
 
     .st1 {
       fill: ${theme.svgFill.primary};
     }
   }
 
-  svg:hover {
-    cursor: pointer;
-    fill-opacity: 0.5;
+  a:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+    background: rgba(255, 212, 0, 0.14);
 
-    .st1 {
-      fill-opacity: 0.5;
-    }
+    cursor: pointer;
   }
 `;
 
 const devToIconCss = css`
-  width: 54px;
-  margin: 0 4px !important;
+  width: 20px !important;
+  margin: 0 !important;
 `;
 
 const linkedInWrapperCss = css`
-  padding-bottom: 4px;
+  padding-bottom: 0;
 `;

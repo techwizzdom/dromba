@@ -13,10 +13,8 @@ import NavigationItems from '../NavigationItems';
 
 import Logodrobmba from '../../assets/images/wizz-transparent-bg.png';
 import { ReactComponent as HamburgerMenu } from '../../assets/icons/hamburger-menu.svg';
-import { useDevice } from '../../hooks/useDevice';
 
 import { ILogoDiving } from '../HeaderDesktop';
-import { DeviceType } from '../../enums/DeviceType';
 
 interface IHeaderMobileProps {
   toggleTheme: () => void;
@@ -24,33 +22,43 @@ interface IHeaderMobileProps {
 }
 
 const headerMobileCss = css`
-  position: relative;
-
+  position: sticky;
+  top: 8px;
+  z-index: 35;
   padding: 0;
+  border-radius: 2px;
+  border: 2px solid rgba(255, 212, 0, 0.75);
+  background: rgba(8, 8, 8, 0.96);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.36);
 `;
 
 const topBarCss = css`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+  padding: 8px 10px;
 `;
 
 const logoLinkCss = css`
-  margin: 4px 0;
-  height: 36px;
+  margin: 2px 0;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 212, 0, 0.48);
 `;
 
 const logoCss = (
   { isMoving, isJumping }: ILogoDiving,
-  isDesktop: boolean,
 ) => css`
   border-radius: 50%;
   transform: translateX(${isMoving ? (isJumping ? '30vw' : '20vw') : '0'})
     translateY(${isJumping ? '128px' : '0'})
     rotate(${isJumping ? '220deg' : '0'});
 
-  width: ${isMoving ? (isJumping ? '192px' : '0') : '36px'};
-  height: ${isMoving ? (isJumping ? '192px' : '0') : '36px'};
+  width: ${isMoving ? (isJumping ? '192px' : '0') : '40px'};
+  height: ${isMoving ? (isJumping ? '192px' : '0') : '40px'};
+  object-fit: cover;
 
   transition: transform 0.8s ease-in-out, width 0.9s ease-in-out,
     height 0.9s ease-in-out;
@@ -61,15 +69,20 @@ const navigationCss = (theme: Theme, isExpanded: boolean) => css`
   flex-direction: column;
   position: absolute;
 
-  height: ${isExpanded ? '100vh' : 0};
-  width: 100vw;
+  height: ${isExpanded ? 'calc(100vh - 88px)' : 0};
+  width: 100%;
 
-  padding-bottom: ${isExpanded ? '96px' : '0'};
-  top: 48px;
+  padding-bottom: ${isExpanded ? '40px' : '0'};
+  top: 56px;
   left: 0;
   z-index: 1;
+  border-top: 1px solid rgba(255, 212, 0, 0.28);
 
-  background: ${isExpanded ? theme.gradientBackground : 'transparent'};
+  background: ${isExpanded
+    ? theme.isDark
+      ? 'rgba(7, 7, 7, 0.98)'
+      : 'rgba(12, 12, 12, 0.98)'
+    : 'transparent'};
   overflow: hidden;
 
   transition: height ${isExpanded ? '0.5s' : '0.2s'} ease,
@@ -84,13 +97,13 @@ const navigationItemsCss = css`
   justify-content: center;
 
   margin: auto 0;
+  width: 100%;
 `;
 
 const HeaderMobile: React.FC<IHeaderMobileProps> = (
   props: IHeaderMobileProps,
 ) => {
   const { toggleTheme, isLogoDiving } = props;
-  const deviceType = useDevice();
 
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const theme = React.useContext(ThemeContext);
@@ -111,11 +124,11 @@ const HeaderMobile: React.FC<IHeaderMobileProps> = (
         <IconButton
           Icon={HamburgerMenu}
           onClick={() => toggleMenu()}
-          customPadding="8px 24px 24px 8px"
+          customPadding="8px"
         />
         <Link to={Routes.Me} className={logoLinkCss}>
           <img
-            className={logoCss(isLogoDiving, deviceType === DeviceType.Desktop)}
+            className={logoCss(isLogoDiving)}
             src={Logodrobmba}
             alt="logo"
           />
