@@ -48,24 +48,14 @@ function Links() {
             Enlead (Bulk find influencer emails)
           </Hyperlink>
         </H5>
-
+        
         <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Fish Audio', 'Fish Audio')}
-            href={t.link.fishaudio}
+            onClick={() => trackEvent('Replit', 'Replit')}
+            href={t.link.replit}
           >
-            Fish Audio
-          </Hyperlink>
-        </H5>
-
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Relume', 'Relume')}
-            href={t.link.relume}
-          >
-            Relume
+            Replit
           </Hyperlink>
         </H5>
 
