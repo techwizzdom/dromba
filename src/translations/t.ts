@@ -143,7 +143,7 @@ export const t = {
     },
   },
   link: {
-    devin: 'https://devin.ai/',
+    devin: 'https://bit.ly/trydevin-dom-tt',
     skywork: 'https://skywork.ai/p/KD6C8c',
     mysiteai: 'https://www.producthunt.com/products/mysite-ai',
     limitless: 'https://limitless.1stcollab.com/tech_wizzdom_tt',
