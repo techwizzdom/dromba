@@ -46,6 +46,7 @@ const logoCss = (
   { isMoving, isJumping }: ILogoDiving,
   isDesktop: boolean,
 ) => css`
+  border-radius: 50%;
   transform: translateX(
       ${isMoving
         ? isJumping

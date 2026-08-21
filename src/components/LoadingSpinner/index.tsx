@@ -6,6 +6,7 @@ import Logodrobmba from '../../assets/images/wizz-transparent-bg.png';
 const loadingSpinnerCss = css`
   width: 40px;
   height: 40px;
+  border-radius: 50%;
 
   animation: spin-it 1s ease infinite;
 
