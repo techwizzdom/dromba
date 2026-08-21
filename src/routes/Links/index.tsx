@@ -48,6 +48,16 @@ function Links() {
             Enlead (Bulk find influencer emails)
           </Hyperlink>
         </H5>
+
+          <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Repurpose', 'Repurpose')}
+            href={t.link.repurpose}
+          >
+            Repurpose.io
+          </Hyperlink>
+        </H5>
         
         <H5 alignCenter={true}>
           <Hyperlink
