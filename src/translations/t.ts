@@ -152,6 +152,7 @@ export const t = {
     jamMcp: 'https://jam.dev/docs/debug-a-jam/mcp',
     warpCode: 'https://go.warp.dev/techwizz',
     hume: 'https://try.hume.ai/techwizzdom',
+    creao: 'https://creao.ai/?utm_source=meta&utm_medium=influencer&utm_campaign=general&utm_content=tech_wizzdom&utm_term=globeinflu',
     repurpose: 'https://repurpose.io/?utm_source=instagram&utm_medium=tech_wizzdom&utm_campaign=AKG+August',
     granola:
       'https://granola.ai/?utm_source=Influencer&utm_medium=TikTok&utm_content=33',
