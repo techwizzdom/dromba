@@ -13,17 +13,53 @@ interface IMainContainerProps {
 
 const mainContainerCss = (theme: Theme) => css`
   position: relative;
+  isolation: isolate;
 
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 
   background: ${theme.gradientBackground};
   color: ${theme.textColor};
 
-  transition-property: color;
-  transition-duration: 1s;
-  transition-timing-function: ease;
-  padding-bottom: 128px;
+  transition: color 0.4s ease, background 0.4s ease;
+  padding-bottom: 84px;
+  overflow-x: hidden;
+
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(80px);
+    opacity: 0.5;
+  }
+
+  &::before {
+    width: 420px;
+    height: 420px;
+    left: -80px;
+    top: -120px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 212, 0, 0.58) 0%,
+      rgba(255, 212, 0, 0) 70%
+    );
+  }
+
+  &::after {
+    width: 500px;
+    height: 500px;
+    right: -120px;
+    top: -60px;
+    border-radius: 50%;
+    background: radial-gradient(
+      circle,
+      rgba(255, 212, 0, 0.32) 0%,
+      rgba(255, 212, 0, 0) 68%
+    );
+  }
 `;
 
 const appCss = (isArtVisible: boolean) => css`
@@ -35,6 +71,7 @@ const appCss = (isArtVisible: boolean) => css`
   transition: opacity 0.5s ease-in-out;
 
   pointer-events: ${isArtVisible ? 'none' : 'auto'};
+  padding: 0 16px;
 `;
 
 const MainContainer: React.FC<IMainContainerProps> = (
