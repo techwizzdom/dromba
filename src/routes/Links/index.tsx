@@ -49,6 +49,16 @@ function Links() {
           </Hyperlink>
         </H5>
 
+          <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Gamma', 'Gamma')}
+            href={t.link.gamma}
+          >
+            Gamma
+          </Hyperlink>
+        </H5>
+
             <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
@@ -92,15 +102,7 @@ function Links() {
         
     
          
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Devin', 'Devin')}
-            href={t.link.devin}
-          >
-            Devin Desktop
-          </Hyperlink>
-        </H5>
+      
 
         <H5 alignCenter={true}>
           <Hyperlink
