@@ -233,6 +233,8 @@ export const t = {
     recrooit: 'https://www.recrooit.com/',
     statusHero: 'https://statushero.com/',
     bigDevSoon: 'https://bigdevsoon.me/',
+    rayneotiktok: 'https://www.tiktok.com/t/ZS9SjkfcfKqWN-yE0bs/#linkSource=DirectLink',
+    rayneoamazon: 'https://dada.link/Xj8Zx2',
     epal: 'https://go.epal.gg/3dFj72r',
     locofy: 'https://www.locofy.ai/',
     workWithMeForm: 'https://forms.gle/DiWUnuNsj46b7Riu7',

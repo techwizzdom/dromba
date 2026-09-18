@@ -52,54 +52,24 @@ function Links() {
           <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Gamma', 'Gamma')}
-            href={t.link.gamma}
+            onClick={() => trackEvent('RN TT', 'RN TT')}
+            href={t.link.rayneotiktok}
           >
-            Gamma
+            RayNeo TikTok
           </Hyperlink>
         </H5>
 
             <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('Replit', 'Replit')}
-            href={t.link.replit}
+            onClick={() => trackEvent('RN AM', 'RN AM')}
+            href={t.link.rayneoamazon}
           >
-            Replit
+            RayNeo Amazon
           </Hyperlink>
         </H5>
 
 
-          <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Teamily', 'Teamily')}
-            href={t.link.teamily}
-          >
-            Teamily
-          </Hyperlink>
-        </H5>
-          <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('CREAO', 'CREAO')}
-            href={t.link.creao}
-          >
-            CREAO
-          </Hyperlink>
-        </H5>
-        
-
-          <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Repurpose', 'Repurpose')}
-            href={t.link.repurpose}
-          >
-            Repurpose.io
-          </Hyperlink>
-        </H5>
-        
     
          
       
