@@ -49,6 +49,16 @@ function Links() {
           </Hyperlink>
         </H5>
 
+                <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Replit', 'Replit')}
+            href={t.link.replit}
+          >
+            Replit!!
+          </Hyperlink>
+        </H5>
+
           <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
