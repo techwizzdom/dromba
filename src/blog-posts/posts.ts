@@ -9,6 +9,38 @@ export const Posts = [
   //   tags: [],
   // },
   {
+    title: '15 ways to make side money as a developer',
+    subtitle: 'How to get extra cash for your programming skills',
+    path: '15-ways-to-make-side-money-as-a-developer',
+    img: 'https://gxdihcirmcsiuoncjmhr.supabase.co/storage/v1/object/public/sparroww-public/15waystomake.jpg',
+    thumbnail:
+      'https://gxdihcirmcsiuoncjmhr.supabase.co/storage/v1/object/public/sparroww-public/15waystomake.jpg',
+    previewImg:
+      'https://gxdihcirmcsiuoncjmhr.supabase.co/storage/v1/object/public/sparroww-public/15waystomake.jpg',
+    postDate: new Date('14 May 2024'),
+    tags: [],
+  },
+  {
+    title: 'BREAKING: Creators don’t post promo deals to annoy you',
+    subtitle: 'They actually need to earn money.',
+    path: 'creators-business-model',
+    img: 'https://i.imgur.com/7hwnQvY.jpg',
+    previewImg: 'https://i.imgur.com/7hwnQvY.jpg',
+    thumbnail: 'https://i.imgur.com/7hwnQvY.jpg',
+    postDate: new Date('28 Aug 2023'),
+    tags: ['#creators', '#socialmedia'],
+  },
+  {
+    title: 'Coding is hard',
+    subtitle: "And that's a good thing.",
+    path: 'coding-is-hard',
+    img: 'https://i.imgur.com/NIUippO.jpg',
+    previewImg: 'https://i.imgur.com/nsRREAh.jpg',
+    thumbnail: 'https://i.imgur.com/nsRREAh.jpg',
+    postDate: new Date('06 Dec 2022'),
+    tags: ['#coding', '#career'],
+  },
+  {
     title: 'Stop Using Margins For Spacing Between Components',
     subtitle: 'Layout Guide For 2022',
     path: 'stop-using-margins-for-spacing-between-components',

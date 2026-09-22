@@ -1,6 +1,6 @@
 import React from 'react';
 import logoMe from '../../assets/images/wizz.png';
-import { H3, H4 } from '../../components/core/Heading';
+import { H3, H4, H5 } from '../../components/core/Heading';
 
 import { ReactComponent as DevTo } from '../../assets/icons/devto.svg';
 import { ReactComponent as Twitter } from '../../assets/icons/twitter.svg';
@@ -16,9 +16,8 @@ import IndexDown from '../../assets/images/index-down.png';
 import { css } from 'emotion';
 import { ThemeContext } from '../../context/ThemeContext';
 import { trackEvent } from '../../util/metrics';
-import Hyperlink, { hyperlinkCss } from '../Hyperlink';
+import Hyperlink from '../Hyperlink';
 import { Routes } from '../../routes/Routes';
-import { Link } from 'react-router-dom';
 
 interface IThisIsMeProps {
   isMainScreenMode?: boolean;
@@ -34,32 +33,27 @@ function ThisIsMe(props: IThisIsMeProps) {
         <div>
           {isMainScreenMode && <H3>Hey, I'm Dom.</H3>}
           <p className={pCss(isMainScreenMode)} style={{ maxWidth: '450px' }}>
-            Senior frontend engineer turned into tech content creator and
-            influencer. I make viral tech content.
-          </p>
-          <p className={pCss(isMainScreenMode, true)}>
-            {isMainScreenMode ? (
-              "LET'S SUPERCHARGE YOUR CAREER."
-            ) : (
-              <>
-                I offer fabulous services,
-                <Link
-                  to={Routes.Services}
-                  className={hyperlinkCss(theme)}
-                  style={{ margin: '0 4px' }}
-                  onClick={() =>
-                    trackEvent('This is me', 'click here (services)')
-                  }
-                >
-                  click here
-                </Link>
-                to see them
-              </>
-            )}
+            A 9-5 senior frontend engineer turned into tech content creator,
+            influencer and tech startup founder. I make viral technology
+            content.
           </p>
         </div>
       </div>
       {isMainScreenMode && (
+        <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            isLarge
+            onClick={() =>
+              trackEvent('Content wizzard course', 'Click from blogpost')
+            }
+            route={Routes.ContentWizzard}
+          >
+            Click here to quit your job and live the life of freedom.
+          </Hyperlink>
+        </H5>
+      )}
+      {/* {isMainScreenMode && (
         <>
           <div className={planWrapperCss}>
             <div className={emojiWrapper}>
@@ -74,6 +68,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             <Hyperlink
               isUnderline={true}
               isLarge={true}
+              alignCenter={true}
               onClick={() => trackEvent('Booking', '60 min')}
               href={t.link.book60mins}
             >
@@ -93,6 +88,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             <Hyperlink
               isUnderline={true}
               isLarge={true}
+              alignCenter={true}
               onClick={() => trackEvent('Booking', '30 min')}
               href={t.link.book30mins}
             >
@@ -111,7 +107,7 @@ function ThisIsMe(props: IThisIsMeProps) {
             </Hyperlink>
           </div>
         </>
-      )}
+      )} */}
       <div className={profilesCss(theme, isMainScreenMode)}>
         <a
           target="_blank"

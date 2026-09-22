@@ -33,25 +33,25 @@ function Me() {
   };
 
   const testimonials = [
-    testimonialsFromPeople[4],
-    testimonialsFromPeople[2],
-    testimonialsFromPeople[5],
     testimonialsFromPeople[0],
-    testimonialsFromPeople[3],
-    testimonialsFromPeople[6],
+    testimonialsFromPeople[1],
+    testimonialsFromPeople[2],
+    testimonialsFromPeople[8],
+    testimonialsFromPeople[4],
+    testimonialsFromPeople[7],
   ];
 
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
-        title="JavaScript Wizz"
-        description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
-        url="https://www.domagojvidovic.com"
+        title="Tech Wizzdom"
+        description="A 9-5 senior frontend engineer turned into tech content creator, influencer and tech startup founder. I make viral technology content."
+        url="https://www.techwizzdom.com"
       />
       <div className={meContentCss}>
         <img
           className={logoMeCss}
-          src="https://i.imgur.com/YI0X9tD.png"
+          src="https://i.imgur.com/o7M8EtZ.jpg"
           alt="Dom standing and smiling"
         />
         <div className={meTextContentCss}>
@@ -66,14 +66,15 @@ function Me() {
           </H2>
           <div>
             <H4>
-              A senior frontend engineer turned into tech content creator.
+              A 9-5 senior frontend engineer turned into tech content creator,
+              influencer and tech startup founder.
             </H4>
             <H4>I make viral tech content.</H4>
           </div>
           <div className={statsCss}>
-            <H3 isMegaBold={true}>220k+ followers</H3>
-            <H3 isMegaBold={true}>5M+ likes</H3>
-            <H3 isMegaBold={true}>75M+ views</H3>
+            <H3 isMegaBold={true}>{t.socials.followers}+ followers</H3>
+            <H3 isMegaBold={true}>{t.socials.likes}+ likes</H3>
+            <H3 isMegaBold={true}>{t.socials.views}+ views</H3>
           </div>
           <a
             className={letsWorkButton(theme, true)}
@@ -90,29 +91,29 @@ function Me() {
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <div className={contentExamplesCss}>
         <Iphone
-          video="https://i.imgur.com/2KjbSR8.mp4"
-          cover="https://i.imgur.com/KQ2FcFV.jpg"
+          video="https://i.imgur.com/9prWR8s.mp4"
+          cover="https://i.imgur.com/i2ydFoW.jpg"
         />
         <Iphone
-          video="https://i.imgur.com/XAhiYs6.mp4"
-          cover="https://i.imgur.com/aAlfbzd.png"
+          video="https://i.imgur.com/pBpPeHA.mp4"
+          cover="https://i.imgur.com/s3NcAx4.jpg"
           height={570}
         />
         <Iphone
-          video="https://i.imgur.com/ihujSIB.mp4"
-          cover="https://i.imgur.com/UyXVYLv.png"
+          video="https://i.imgur.com/gzLKdl7.mp4"
+          cover="https://i.imgur.com/eLPYfJD.jpg"
         />
         <Iphone
-          video="https://i.imgur.com/Owo7QpG.mp4"
-          cover="https://i.imgur.com/U6URS5S.png"
+          video="https://i.imgur.com/iwYhniR.mp4"
+          cover="https://i.imgur.com/1YCQu4t.jpg"
         />
         <Iphone
-          video="https://i.imgur.com/qXFnKSD.mp4"
-          cover="https://i.imgur.com/u1JWWAf.png"
+          video="https://i.imgur.com/n2LXaky.mp4"
+          cover="https://i.imgur.com/cHki3lR.jpg"
         />
         <Iphone
-          video="https://i.imgur.com/vjKd8fb.mp4"
-          cover="https://i.imgur.com/dnrUUxs.png"
+          video="https://i.imgur.com/2qgK2b1.mp4"
+          cover="https://i.imgur.com/O3Vo609.jpg"
         />
       </div>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
@@ -123,8 +124,11 @@ function Me() {
       <H2>I charge way less than your local TV station.</H2>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
       <H5>
-        Starting at $200 for a UGC video, and $1200 for a promo post on my
-        social media.
+        Starting at:
+        <ul>
+          <li>$300 for an hour of consulting</li>
+          <li>$4500 for a promo post on my social media</li>
+        </ul>
       </H5>
       <VerticalSpacing height={VerticalSpacingHeight.Giant} />
       <H2>Do you want me to make viral tech content for you?</H2>
@@ -140,8 +144,8 @@ function Me() {
         </a>
         <H5 alignCenter>
           or drop me an email at{' '}
-          <Hyperlink href={t.email.javascriptwizz} isEmail={true}>
-            {t.email.javascriptwizz}
+          <Hyperlink href={t.email.pr} isEmail={true}>
+            {t.email.pr}
           </Hyperlink>
         </H5>
         <VerticalSpacing height={VerticalSpacingHeight.Medium} />

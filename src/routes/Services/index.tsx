@@ -33,9 +33,9 @@ function Services() {
   return (
     <RouteContainer isPureCenteringEnabled={true} onClick={closePolicy}>
       <Helmetiser
-        title="JavaScript Wizz"
-        description="Senior frontend engineer turned into tech content creator and influencer. I make viral tech content."
-        url="https://www.domagojvidovic.com"
+        title="Tech Wizzdom"
+        description="A 9-5 senior frontend engineer turned into tech content creator, influencer and tech startup founder. I make viral technology content."
+        url="https://www.techwizzdom.com"
       />
       <H1>Together, we can create anything.</H1>
       <VerticalSpacing height={VerticalSpacingHeight.Large} />
@@ -44,12 +44,12 @@ function Services() {
         {' '}
         Or drop me an email at{' '}
         <Hyperlink
-          href={t.email.javascriptwizz}
+          href={t.email.pr}
           isUnderline={true}
           isEmail={true}
           onClick={() => trackEvent('Email', 'Links')}
         >
-          {t.email.javascriptwizz}
+          {t.email.pr}
         </Hyperlink>
         .
       </H5>
