@@ -49,6 +49,17 @@ function Links() {
           </Hyperlink>
         </H5>
 
+                 <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('Plaud', 'Plaud')}
+            href={t.link.plaud}
+          >
+            Plaud NotePin S
+          </Hyperlink>
+        </H5>
+
+
                 <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
