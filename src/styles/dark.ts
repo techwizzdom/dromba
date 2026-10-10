@@ -8,6 +8,7 @@ export const dark: Theme = {
   gradientBackground: colors.gradientDark,
   gradientMedian: colors.baseDark,
   border: colors.baseLight,
+  darkGreen: colors.darkGreen,
   textColor: colors.baseLight,
   textColorSecondary: colors.vanishingGray,
   hyperlinkColor: colors.baseDark,
