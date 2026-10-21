@@ -151,6 +151,7 @@ export const t = {
     enlead: 'https://enlead.co/',
     jamMcp: 'https://jam.dev/docs/debug-a-jam/mcp',
     warpCode: 'https://go.warp.dev/techwizz',
+    plusai: 'https://plusai.com/?utm_medium=creator&utm_content=tech_wizzdom',
     hume: 'https://try.hume.ai/techwizzdom',
     teamily: 'https://teamily.ai/i/7A5UPP',
     greptile: 'https://www.greptile.com/',

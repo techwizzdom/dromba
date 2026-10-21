@@ -27,49 +27,21 @@ function Links() {
             onClick={() => trackEvent('Second Brain', 'Second Brain')}
             href={t.link.secondBrain}
           >
-            Second Brain (the smartest AI)
+            Rescroll (AI Motion Graphics)
           </Hyperlink>
         </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Devibe', 'Devibe')}
-            href={t.link.devibe}
-          >
-            DeVibe (Connecting devs and vibe coders)
-          </Hyperlink>
-        </H5>
-        <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Enlead', 'Enlead')}
-            href={t.link.enlead}
-          >
-            Enlead (Bulk find influencer emails)
-          </Hyperlink>
-        </H5>
-
        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
-            onClick={() => trackEvent('greptile', 'greptile')}
-            href={t.link.greptile}
+            onClick={() => trackEvent('plusai', 'plusai')}
+            href={t.link.plusai}
           >
-            Greptile
+            Plusai
           </Hyperlink>
         </H5>
 
 
-                <H5 alignCenter={true}>
-          <Hyperlink
-            isUnderline={true}
-            onClick={() => trackEvent('Replit', 'Replit')}
-            href={t.link.replit}
-          >
-            Replit!!
-          </Hyperlink>
-        </H5>
-
+      
      
 
     
