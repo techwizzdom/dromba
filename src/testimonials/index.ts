@@ -12,12 +12,55 @@ export interface IPersonTestimonial {
 
 export const testimonialsFromPeople: Array<IPersonTestimonial> = [
   {
+    avatar: 'https://i.imgur.com/SezXyii.jpg',
+    name: 'Andy Didorosi, Head of Marketing',
+    companyName: 'Status Hero',
+    href: t.link.statusHero,
+    quote1: 'Dom is great!',
+    quote2:
+      'He came up with a whole concept for our ad, filmed it, and edited it in the time it takes most people to respond to the first email.',
+    quote3: 'Five stars.',
+  },
+  {
+    avatar: 'https://i.imgur.com/cPnrjR1.png',
+    name: 'Victoria Tokarz, Head of Influencer Marketing',
+    companyName: 'Scribe',
+    href: t.link.scribe,
+    quote1:
+      'Dom is a pleasure to work with! His insight, enthusiasm and dedication to delivering top-notch content is unmatched. ',
+    quote2:
+      'He even created a second video concept without being asked to help drive optimal results for our campaign - I cannot praise his professionalism enough!',
+  },
+  {
     avatar: 'https://i.imgur.com/g1eQfaG.jpg',
     name: 'Dani Grant, CEO',
     companyName: 'Jam',
     href: t.link.jam,
     quote1:
       'We loved working with Dom, he was super quick, creative, reliable, and the video he created with us was just outstanding. Thank you, Dom!',
+  },
+  {
+    avatar: 'https://i.imgur.com/GvlwEYj.jpg',
+    name: 'Armine Hayrapetyan, Digital Marketing Specialist',
+    companyName: '10Web',
+    href: t.link.tenWeb,
+    quote1:
+      "It was an absolute pleasure to work with Dom throughout the partnership. He's professional, responsive, and always open to collaboration. His dedication to delivering high-quality content is evident in every interaction we've had. ",
+    quote2:
+      'The video he created generated a lot of positive feedback and sparked genuine interest in our product.',
+    quote3: '',
+  },
+  {
+    avatar: 'https://i.imgur.com/pR1yQxX.jpg',
+    name: 'Dani Avitz, CMO',
+    companyName: 'CodiumAI',
+    href: t.link.codium,
+    quote1:
+      'I had the pleasure of working with Domagoj and it was an incredible experience.',
+    quote2:
+      'His dedication delivered outstanding results for our campaign. His lightning-fast execution left me thoroughly impressed.',
+    quote3:
+      'I highly recommend collaborating with Domagoj for an exceptional partnership.',
   },
   {
     avatar: 'https://i.imgur.com/31Gfu7B.jpg',
@@ -28,16 +71,6 @@ export const testimonialsFromPeople: Array<IPersonTestimonial> = [
     quote2:
       'Content that previously seemed unbearably intricate Dom dissected in easy-to-understand chunks.',
     quote3: 'Patient, diligent and knows his stuff. Highly recommended!',
-  },
-  {
-    avatar: 'https://i.imgur.com/SezXyii.jpg',
-    name: 'Andy Didorosi, Head of Marketing',
-    companyName: 'Status Hero',
-    href: t.link.statusHero,
-    quote1: 'Dom is great!',
-    quote2:
-      'He came up with a whole concept for our ad, filmed it, and edited it in the time it takes most people to respond to the first email.',
-    quote3: 'Five stars.',
   },
   {
     avatar: 'https://i.imgur.com/6EEfqS2.png',
