@@ -34,7 +34,7 @@ function Links() {
           <Hyperlink
             isUnderline={true}
             onClick={() => trackEvent('devin', 'devin')}
-            href={t.link.devibe}
+            href={t.link.devin}
           >
             Devin
           </Hyperlink>
