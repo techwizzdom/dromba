@@ -30,6 +30,16 @@ function Links() {
             Rescroll (AI Motion Graphics)
           </Hyperlink>
         </H5>
+               <H5 alignCenter={true}>
+          <Hyperlink
+            isUnderline={true}
+            onClick={() => trackEvent('devin', 'devin')}
+            href={t.link.devibe}
+          >
+            Devin
+          </Hyperlink>
+        </H5>
+
        <H5 alignCenter={true}>
           <Hyperlink
             isUnderline={true}
